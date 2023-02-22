@@ -1,0 +1,161 @@
+@import "../variables.scss";
+
+.contact {
+	max-width: 1440px;
+	width: calc(100% - 200px);
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 40px;
+	@media screen and (max-width: 1285px) {
+		width: calc(100% - 100px);
+	}
+	@media screen and (max-width: 1050px) {
+		width: calc(100% - 60px);
+		padding: 0;
+	}
+	.contact__left {
+		flex: 1;
+		height: 247px;
+		@media screen and (max-width: 992px) {
+			height: auto;
+		}
+		.contact__subTitle {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 130%;
+			letter-spacing: 0.003em;
+			color: $primary-main;
+			margin-bottom: 10px;
+		}
+		.contact__left_title {
+			font-weight: 700;
+			font-size: 42px;
+			line-height: 120%;
+			letter-spacing: 0.003em;
+			color: $color-text;
+			margin-bottom: 20px;
+			@media screen and (max-width: 992px) {
+				font-size: 32px;
+				line-height: 120%;
+			}
+			@media screen and (max-width: 768px) {
+				font-size: 23px;
+				line-height: 120%;
+			}
+		}
+		.contact__left_time {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 120%;
+			letter-spacing: -0.007em;
+			color: $sub-title;
+			span {
+				margin-left: 8px;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 120%;
+				letter-spacing: 0.003em;
+				color: $color-text;
+			}
+		}
+		.support {
+			margin-top: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 6px;
+			width: 256px;
+			height: 40px;
+			background: $primary-main;
+			backdrop-filter: blur(18px);
+			border-radius: 22px;
+			transition: all 0.5s linear;
+			&:hover {
+				background: #5d43ff;
+			}
+			p {
+				font-size: 16px;
+				line-height: 120%;
+				letter-spacing: 0.003em;
+				color: $white;
+			}
+		}
+	}
+	.contact__right {
+		flex: 1;
+		position: relative;
+		height: 350px;
+		display: flex;
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+		.iconOne {
+			position: absolute;
+			left: 167px;
+			top: 0px;
+			animation: aniOne 1.5s infinite;
+			img {
+				@media screen and (max-width: 992px) {
+					width: 112px;
+				}
+			}
+		}
+		.iconTwo {
+			position: absolute;
+			left: 0px;
+			top: 128px;
+			animation: aniTwo 2s infinite;
+			img {
+				@media screen and (max-width: 992px) {
+					width: 160px;
+				}
+			}
+		}
+		.iconThree {
+			position: absolute;
+			left: 232px;
+			top: 34px;
+			animation: aniThree 2.5s infinite;
+			img {
+				@media screen and (max-width: 992px) {
+					width: 244.67px;
+				}
+			}
+		}
+	}
+	@keyframes aniOne {
+		0% {
+			top: 0px;
+		}
+		50% {
+			top: 4px;
+		}
+		100% {
+			top: 0px;
+		}
+	}
+	@keyframes aniTwo {
+		0% {
+			top: 128px;
+		}
+		50% {
+			top: 132px;
+		}
+		100% {
+			top: 128px;
+		}
+	}
+	@keyframes aniThree {
+		0% {
+			top: 30px;
+		}
+		50% {
+			top: 34px;
+		}
+		100% {
+			top: 30px;
+		}
+	}
+}

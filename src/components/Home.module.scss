@@ -1,0 +1,14 @@
+.home {
+	overflow: hidden;
+	margin-top: 148px;
+	display: flex;
+	flex-direction: column;
+	gap: 120px;
+	background: #fff;
+	@media screen and (max-width: 768px) {
+		margin-top: 120px;
+	}
+	@media screen and (max-width: 560px) {
+		gap: 60px;
+	}
+}
