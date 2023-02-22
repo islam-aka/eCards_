@@ -10,16 +10,23 @@
 	background: $white;
 	box-shadow: 20px 34px 59px 7px rgba(0, 25, 225, 0.05);
 	border-radius: 20px;
+
 	@media screen and (max-width: 1285px) {
 		width: calc(100% - 100px);
 	}
+
 	@media screen and (max-width: 1050px) {
 		width: calc(100% - 60px);
 		padding: 40px;
 	}
+	@media screen and (max-width: 768px) {
+		width: calc(100% - 60px);
+		padding: 20px;
+	}
 	@media screen and (max-width: 575px) {
 		padding: 30px;
 	}
+
 	@media screen and (max-width: 560px) {
 		overflow: visible;
 		box-shadow: none;
@@ -71,7 +78,7 @@
 				justify-content: start;
 				flex-direction: column;
 				gap: 10px;
-				height: 590px;
+				height: 470px;
 			}
 
 			.score__left {
@@ -87,6 +94,7 @@
 
 				@media screen and (max-width: 560px) {
 					height: 100%;
+					max-width: 100%;
 				}
 				.score__icon {
 					padding: 10px;
@@ -96,13 +104,13 @@
 					background: $primary-main;
 					box-shadow: 0px 3px 24px rgba(116, 139, 255, 0.51), inset 3px 4px 7px rgba(255, 255, 255, 0.31);
 					border-radius: 40px;
-					@media screen and (max-width: 575px) {
+					@media screen and (max-width: 768px) {
 						margin-bottom: 30px;
 						width: 44px;
 						height: 44px;
 					}
 					img {
-						@media screen and (max-width: 575px) {
+						@media screen and (max-width: 768px) {
 							width: 24px;
 							height: 24px;
 						}
@@ -158,7 +166,8 @@
 					width: 280px;
 				}
 				@media screen and (max-width: 560px) {
-					margin-left: -26px;
+					width: 100%;
+					margin: 0 auto;
 				}
 				.img {
 					position: absolute;
@@ -277,12 +286,26 @@
 				overflow: hidden;
 				z-index: 6;
 				margin-left: -130px;
-				width: 692px;
+				max-width: 692px;
+				width: 100%;
 				height: 440px;
 				@media screen and (max-width: 1280px) {
 					height: 400px;
 				}
+				@media screen and (max-width: 992px) {
+					overflow: visible;
+					height: 350px;
+					max-width: 540px;
+				}
+				@media screen and (max-width: 700px) {
+					height: 300px;
+				}
+				@media screen and (max-width: 575px) {
+					max-width: 260px;
+				}
 				@media screen and (max-width: 560px) {
+					margin-left: -60px;
+					max-width: 100%;
 					height: 360px;
 				}
 				img {
@@ -294,6 +317,9 @@
 					}
 					@media screen and (max-width: 768px) {
 						width: 280px;
+					}
+					@media screen and (max-width: 700px) {
+						width: 230px;
 					}
 					@media screen and (max-width: 560px) {
 						width: 350px;
@@ -315,11 +341,17 @@
 						top: 123px;
 					}
 					@media screen and (max-width: 768px) {
-						animation: aniCardOne560 3s linear;
-						left: 15px;
-						top: 80px;
+						animation: aniCardOne768 3s linear;
+						left: 175px;
+						top: 92px;
+					}
+					@media screen and (max-width: 700px) {
+						animation: ani700 1s linear;
+						left: 45px;
+						top: 70px;
 					}
 					@media screen and (max-width: 560px) {
+						animation: aniCardOne560 3s linear;
 						width: 350px;
 						left: 234px;
 						top: 115px;
@@ -335,14 +367,18 @@
 						left: -100px;
 					}
 					@media screen and (max-width: 768px) {
-						animation: aniCardMobile768 3s linear;
+						animation: aniCardTwo768 3s linear;
 						left: 15px;
-						top: 165px;
+						top: 125px;
+					}
+					@media screen and (max-width: 700px) {
+						animation: ani700 1s linear;
+						left: 45px;
+						top: 140px;
 					}
 					@media screen and (max-width: 560px) {
 						animation: aniCardTwo560 3s linear;
 						left: 15px;
-						top: 140px;
 					}
 				}
 				.card__imgThree {
@@ -358,13 +394,24 @@
 					@media screen and (max-width: 992px) {
 						animation: aniCardThree992 3s linear;
 						top: 165px;
-						left: -99px;
+						left: 0;
+					}
+					@media screen and (max-width: 970px) {
+						animation: aniCardThree970 3s linear;
+						top: 165px;
+						left: -100px;
 					}
 					@media screen and (max-width: 768px) {
-						animation: aniCardMobile768 3s linear;
+						animation: aniCardThree768 3s linear;
 						left: 15px;
 						top: 0;
 					}
+					@media screen and (max-width: 700px) {
+						animation: ani700 1s linear;
+						left: 45px;
+						top: 0;
+					}
+
 					@media screen and (max-width: 560px) {
 						animation: aniCardThree560 3s linear;
 						left: 40px;
@@ -376,20 +423,43 @@
 			.card__info {
 				width: 490px;
 				height: 294px;
-				@media screen and (max-width: 560px) {
+				@media screen and (max-width: 992px) {
+					max-width: 400px;
 					width: 100%;
 				}
+				@media screen and (max-width: 890px) {
+					max-width: 290px;
+				}
+				@media screen and (max-width: 575px) {
+					max-width: 280px;
+				}
+				@media screen and (max-width: 560px) {
+					max-width: 100%;
+				}
 				.card__icon {
+					margin-bottom: 40px;
 					padding: 20.55px 12.83px;
 					width: 54px;
 					height: 54px;
 					background: $primary-main;
 					box-shadow: 0px 3px 24px rgba(116, 139, 255, 0.51), inset 3px 4px 7px rgba(255, 255, 255, 0.31);
 					border-radius: 40px;
+					@media screen and (max-width: 768px) {
+						margin-bottom: 30px;
+						padding: 10px;
+						width: 44px;
+						height: 44px;
+					}
+					img {
+						@media screen and (max-width: 768px) {
+							width: 24px;
+							height: 24px;
+						}
+					}
 				}
 				.card__block {
-					margin-top: 40px;
 					p:first-child {
+						font-weight: 500;
 						font-size: 14px;
 						line-height: 130%;
 						letter-spacing: 0.003em;
@@ -448,17 +518,30 @@
 				height: 378px;
 			}
 			@media screen and (max-width: 992px) {
+				padding: 20px 0;
 				align-items: center;
-				height: 400px;
-			}
-			@media screen and (max-width: 768px) {
-				align-items: start;
 				height: auto;
+			}
+			@media screen and (max-width: 575px) {
+				gap: 0;
+			}
+			@media screen and (max-width: 560px) {
+				gap: 20px;
+				align-items: start;
 				flex-direction: column;
 			}
-			.distribution__info {
+			&__info {
+				@media screen and (max-width: 575px) {
+					max-width: 280px;
+				}
 				width: 490px;
 				height: 100%;
+				@media screen and (max-width: 992px) {
+					width: 400px;
+				}
+				@media screen and (max-width: 560px) {
+					max-width: 100%;
+				}
 				.distribution__icon {
 					display: flex;
 					align-items: center;
@@ -469,9 +552,22 @@
 					background: $primary-main;
 					box-shadow: 0px 3px 24px rgba(116, 139, 255, 0.51), inset 3px 4px 7px rgba(255, 255, 255, 0.31);
 					border-radius: 40px;
+					@media screen and (max-width: 768px) {
+						margin-bottom: 30px;
+						padding: 10px;
+						width: 44px;
+						height: 44px;
+					}
+					img {
+						@media screen and (max-width: 768px) {
+							width: 24px;
+							height: 24px;
+						}
+					}
 				}
 				.distribution__block {
 					p:first-child {
+						font-weight: 500;
 						font-size: 14px;
 						line-height: 130%;
 						letter-spacing: 0.003em;
@@ -484,6 +580,9 @@
 						line-height: 120%;
 						letter-spacing: 0.003em;
 						color: $sub-title;
+						@media screen and (max-width: 575px) {
+							font-size: 14px;
+						}
 					}
 					h2 {
 						font-weight: 700;
@@ -496,6 +595,9 @@
 							font-size: 23px;
 							line-height: 120%;
 						}
+						@media screen and (max-width: 575px) {
+							font-size: 18px;
+						}
 					}
 				}
 			}
@@ -505,6 +607,12 @@
 				width: 623px;
 				height: 286px;
 				z-index: 10;
+				@media screen and (max-width: 992px) {
+					width: 320px;
+				}
+				@media screen and (max-width: 575px) {
+					width: 175px;
+				}
 				@media screen and (max-width: 650px) {
 					height: 240px;
 				}
@@ -550,9 +658,8 @@
 		.data {
 			display: flex;
 			justify-content: space-between;
-			@media screen and (max-width: 610px) {
+			@media screen and (max-width: 560px) {
 				flex-direction: column-reverse;
-				gap: 11px;
 			}
 			.blockBlur__data {
 				position: absolute;
@@ -578,9 +685,10 @@
 				@media screen and (max-width: 768px) {
 					width: 175px;
 				}
-				@media screen and (max-width: 610px) {
-					width: 335px;
-					height: 243px;
+				@media screen and (max-width: 560px) {
+					height: 217px;
+					width: 320px;
+					margin: 0 auto;
 				}
 				@media screen and (max-width: 420px) {
 					width: 305px;
@@ -592,13 +700,19 @@
 					@media screen and (max-width: 1200px) {
 						margin-left: -120px;
 					}
+					@media screen and (max-width: 992px) {
+						margin-left: -60px;
+					}
 					@media screen and (max-width: 900px) {
 						width: 290px;
 					}
 					@media screen and (max-width: 768px) {
 						margin-left: -165px;
 					}
-					@media screen and (max-width: 610px) {
+					@media screen and (max-width: 575px) {
+						width: 260px;
+					}
+					@media screen and (max-width: 560px) {
 						margin-left: 0;
 					}
 					@media screen and (max-width: 420px) {
@@ -625,6 +739,9 @@
 						width: 220px;
 						right: 40px;
 					}
+					@media screen and (max-width: 992px) {
+						right: -25px;
+					}
 					@media screen and (max-width: 900px) {
 						width: 170px;
 						top: 50px;
@@ -633,9 +750,14 @@
 					@media screen and (max-width: 768px) {
 						right: 0;
 					}
-					@media screen and (max-width: 610px) {
-						width: 225px;
-						right: -55px;
+					@media screen and (max-width: 575px) {
+						gap: 4.6px;
+						padding: 11.7136px 9.37091px;
+						width: 136px;
+						right: 50px;
+					}
+					@media screen and (max-width: 560px) {
+						right: 0;
 					}
 					@media screen and (max-width: 420px) {
 						right: -40px;
@@ -645,12 +767,21 @@
 						height: 12.95px;
 						border: 0.809375px solid $color-text;
 						border-radius: 27.5187px;
+						@media screen and (max-width: 575px) {
+							border: 0.585682px solid #1e1e1e;
+							border-radius: 19.9132px;
+							width: 9.37px;
+							height: 9.37px;
+						}
 					}
 					p {
 						font-size: 12.95px;
 						line-height: 120%;
 						letter-spacing: 0.003em;
 						color: $color-text;
+						@media screen and (max-width: 575px) {
+							font-size: 9.37091px;
+						}
 					}
 				}
 				.checked__two {
@@ -672,6 +803,9 @@
 						width: 220px;
 						right: 40px;
 					}
+					@media screen and (max-width: 992px) {
+						right: -25px;
+					}
 					@media screen and (max-width: 900px) {
 						width: 170px;
 						top: 105px;
@@ -680,9 +814,14 @@
 					@media screen and (max-width: 768px) {
 						right: 0;
 					}
-					@media screen and (max-width: 610px) {
-						width: 225px;
-						right: -55px;
+					@media screen and (max-width: 575px) {
+						gap: 4.6px;
+						padding: 11.7136px 9.37091px;
+						width: 136px;
+						right: 50px;
+					}
+					@media screen and (max-width: 560px) {
+						right: 0;
 					}
 					@media screen and (max-width: 420px) {
 						right: -40px;
@@ -692,12 +831,21 @@
 						height: 12.95px;
 						border: 0.809375px solid $color-text;
 						border-radius: 27.5187px;
+						@media screen and (max-width: 575px) {
+							border: 0.585682px solid #1e1e1e;
+							border-radius: 19.9132px;
+							width: 9.37px;
+							height: 9.37px;
+						}
 					}
 					p {
 						font-size: 12.95px;
 						line-height: 120%;
 						letter-spacing: 0.003em;
 						color: $color-text;
+						@media screen and (max-width: 575px) {
+							font-size: 9.37091px;
+						}
 					}
 				}
 			}
@@ -711,6 +859,9 @@
 				@media screen and (max-width: 768px) {
 					width: 280px;
 				}
+				@media screen and (max-width: 560px) {
+					width: 100%;
+				}
 				.data__icon {
 					padding: 11px;
 					width: 54px;
@@ -719,9 +870,22 @@
 					box-shadow: 0px 3px 24px rgba(116, 139, 255, 0.51), inset 3px 4px 7px rgba(255, 255, 255, 0.31);
 					border-radius: 40px;
 					margin-bottom: 40px;
+					@media screen and (max-width: 768px) {
+						margin-bottom: 30px;
+						padding: 10px;
+						width: 44px;
+						height: 44px;
+					}
+					img {
+						@media screen and (max-width: 768px) {
+							width: 24px;
+							height: 24px;
+						}
+					}
 				}
 				.data__block {
 					p:first-child {
+						font-weight: 500;
 						font-size: 14px;
 						line-height: 130%;
 						letter-spacing: 0.003em;
@@ -734,6 +898,9 @@
 						line-height: 120%;
 						letter-spacing: 0.003em;
 						color: $sub-title;
+						@media screen and (max-width: 768px) {
+							font-size: 14px;
+						}
 					}
 					h2 {
 						font-weight: 700;
@@ -742,7 +909,7 @@
 						letter-spacing: 0.003em;
 						color: $color-text;
 						margin-bottom: 20px;
-						@media screen and (max-width: 900px) {
+						@media screen and (max-width: 768px) {
 							font-size: 18px;
 							line-height: 120%;
 						}
@@ -756,17 +923,24 @@
 			justify-content: space-between;
 			gap: 40px;
 			width: 100%;
-
-			@media screen and (max-width: 715px) {
-				justify-content: flex-start;
+			@media screen and (max-width: 768px) {
+				gap: 0;
+			}
+			@media screen and (max-width: 560px) {
 				flex-direction: column;
 			}
-
 			.notification__left {
 				width: 490px;
-				@media screen and (max-width: 590px) {
+				@media screen and (max-width: 992px) {
+					width: 400px;
+				}
+				@media screen and (max-width: 768px) {
+					width: 280px;
+				}
+				@media screen and (max-width: 768px) {
 					width: 100%;
 				}
+
 				.notification__icon {
 					padding: 10px;
 					width: 54px;
@@ -775,9 +949,22 @@
 					box-shadow: 0px 3px 24px rgba(116, 139, 255, 0.51), inset 3px 4px 7px rgba(255, 255, 255, 0.31);
 					border-radius: 40px;
 					margin-bottom: 40px;
+					@media screen and (max-width: 768px) {
+						margin-bottom: 30px;
+						padding: 10px;
+						width: 44px;
+						height: 44px;
+					}
+					img {
+						@media screen and (max-width: 768px) {
+							width: 24px;
+							height: 24px;
+						}
+					}
 				}
 				.notification__block {
 					p:first-child {
+						font-weight: 500;
 						font-size: 14px;
 						line-height: 130%;
 						letter-spacing: 0.003em;
@@ -790,6 +977,9 @@
 						line-height: 120%;
 						letter-spacing: 0.003em;
 						color: $sub-title;
+						@media screen and (max-width: 768px) {
+							font-size: 14px;
+						}
 					}
 					h2 {
 						font-weight: 700;
@@ -802,30 +992,39 @@
 							font-size: 23px;
 							line-height: 120%;
 						}
+						@media screen and (max-width: 768px) {
+							font-size: 18px;
+						}
 					}
 				}
 			}
 			.notification__right {
 				position: relative;
+				z-index: 7;
 				width: 594px;
-				height: 312;
+				height: 312px;
 				@media screen and (max-width: 1290px) {
 					margin-right: -175px;
 				}
 				@media screen and (max-width: 992px) {
-					margin-right: -285px;
+					margin-right: -240px;
 				}
 				@media screen and (max-width: 768px) {
-					margin-right: -334px;
+					width: 175px;
+					margin: 0;
 				}
 				@media screen and (max-width: 560px) {
-					margin-left: -55px;
+					height: 240px;
 				}
 				@media screen and (max-width: 490px) {
 					display: none;
 				}
 				img {
 					width: 800px;
+					@media screen and (max-width: 768px) {
+						margin-left: -35px;
+						width: 600px;
+					}
 				}
 			}
 			.blockBlur__notification {
@@ -838,6 +1037,7 @@
 				background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
 				opacity: 0.2;
 				filter: blur(112px);
+
 				@media screen and (max-width: 560px) {
 					display: none;
 				}
@@ -853,6 +1053,10 @@
 			background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
 			opacity: 0.2;
 			filter: blur(112px);
+			@media screen and (max-width: 768px) {
+				left: 217px;
+				top: 20px;
+			}
 			@media screen and (max-width: 560px) {
 				display: none;
 			}
@@ -921,26 +1125,40 @@
 	100% {
 	}
 }
-
-@keyframes aniCardMobile768 {
+@keyframes aniCardOne768 {
 	0% {
-		left: -270px;
+		left: -150px;
+		top: 121px;
 	}
 	33% {
-		left: 15px;
+		left: 175px;
+		top: 92px;
 	}
 	34% {
 	}
 	100% {
 	}
 }
+@keyframes ani700 {
+	0% {
+		left: -150px;
+	}
+	33% {
+	}
+	34% {
+	}
+	100% {
+		left: 45px;
+	}
+}
+
 @keyframes aniCardOne560 {
 	0% {
 		left: -270px;
 	}
 	33% {
-		left: 15px;
-		top: 80px;
+		left: 234px;
+		top: 115px;
 	}
 	34% {
 	}
@@ -980,34 +1198,35 @@
 	100% {
 	}
 }
+
 @keyframes aniCardTwo768 {
 	0% {
-		left: -275px;
+		left: -150px;
 	}
 	33% {
-		left: -275px;
 	}
 	34% {
 	}
 	66% {
-		left: 0;
-		top: 0;
+		left: -150px;
 	}
 	100% {
+		left: 15px;
 	}
 }
 @keyframes aniCardTwo560 {
 	0% {
-		left: -275px;
+		left: -305px;
 	}
 	33% {
 	}
 	34% {
 	}
 	66% {
-		left: -275px;
+		left: -305px;
 	}
 	100% {
+		left: 15px;
 		top: 140px;
 	}
 }
@@ -1047,9 +1266,47 @@
 	}
 	100% {
 		top: 165px;
-		left: -99px;
+		left: 0px;
 	}
 }
+@keyframes aniCardThree970 {
+	0% {
+		left: -275px;
+	}
+	33% {
+	}
+	34% {
+	}
+	66% {
+		left: -275px;
+	}
+	67% {
+		left: -275px;
+	}
+	100% {
+		top: 165px;
+		left: -100px;
+	}
+}
+@keyframes aniCardThree768 {
+	0% {
+		left: -150px;
+	}
+	33% {
+	}
+	34% {
+		left: -150px;
+	}
+	66% {
+		top: 0;
+		left: 15px;
+	}
+	67% {
+	}
+	100% {
+	}
+}
+
 @keyframes aniCardThree560 {
 	0% {
 		left: -295px;
@@ -1067,16 +1324,7 @@
 	100% {
 	}
 }
-@keyframes aniCardThree560 {
-	0% {
-	}
-	50% {
-	}
-	51% {
-	}
-	100% {
-	}
-}
+
 @keyframes aniTwo {
 	0% {
 		left: 585px;

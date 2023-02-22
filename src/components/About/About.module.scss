@@ -12,6 +12,10 @@
 		margin-left: 650px;
 		margin-top: -50px;
 		z-index: 5;
+		@media screen and (max-width: 575px) {
+			margin-left: 50px;
+			margin-top: 80px;
+		}
 		img {
 			padding: 0;
 		}

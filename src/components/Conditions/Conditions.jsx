@@ -56,7 +56,7 @@ const Conditions = () => {
 			<div className={styles.conditions__bottom}>
 				<span>
 					Для крупных арбитражных команд с оборотом более 100 000$ в месяц
-					возможно предоставление индивидуальных условий Получить инвайт
+					возможно предоставление индивидуальных условий
 				</span>
 				<Link to={'in'}>
 					<div className={styles.btn__invite}>

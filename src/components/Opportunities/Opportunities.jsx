@@ -81,8 +81,8 @@ const Opportunities = () => {
 						</div>
 					</div>
 				</div>
-				<div className={styles.opportunities__cards}>
-					<div className={styles.blockBlur__cards} ref={ref}></div>
+				<div ref={ref} className={styles.opportunities__cards}>
+					<div className={styles.blockBlur__cards}></div>
 					{inView && (
 						<div className={styles.card__img}>
 							<div className={styles.card__imgTwo}>
@@ -139,34 +139,37 @@ const Opportunities = () => {
 						)}
 					</div>
 				</div>
-				<div className={styles.data} ref={refData}>
+				<div className={styles.data}>
 					<div className={styles.blockBlur__data}></div>
-					{inViewData && (
-						<div className={styles.data__left}>
-							<img src={imgExport} alt=' export data' />
+					<div ref={refData} className={styles.data__left}>
+						{inViewData && (
+							<>
+								<img src={imgExport} alt=' export data' />
 
-							<div className={styles.checked__one}>
-								<div className={styles.checked}></div>
-								<p>В формате СSV</p>
-							</div>
-							<div className={styles.checked__two}>
-								<div className={styles.checked}></div>
-								<p>Таблица Excel</p>
-							</div>
-						</div>
-					)}
+								<div className={styles.checked__one}>
+									<div className={styles.checked}></div>
+									<p>В формате СSV</p>
+								</div>
+								<div className={styles.checked__two}>
+									<div className={styles.checked}></div>
+									<p>Таблица Excel</p>
+								</div>
+							</>
+						)}
+					</div>
 
 					<div className={styles.data__right}>
 						<div className={styles.data__icon}>
 							<img src={iconDownload} alt='icon download' />
 						</div>
 						<div className={styles.data__block}>
-							<p>Распределение и группировка</p>
-							<h2>Распределение карт по баерам и группировка сотрудников</h2>
+							<p>Данные</p>
+							<h2>Подробная отчетность и выгрузка данных</h2>
 							<p>
-								Подключайте неограниченное количество сотрудников к своему
-								аккаунту, создавайте группы баеров и распределяйте карты между
-								ними
+								Создавайте и выгружайте подробные отчеты по расходам по каждой
+								карте, группе карт, сотруднику или группе сотрудников. Для
+								формирования отчетов доступны гибкие фильтры, а также выгрузка
+								результатов в .CSV и .XLSX
 							</p>
 						</div>
 					</div>

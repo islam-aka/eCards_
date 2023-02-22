@@ -16,7 +16,11 @@
 		height: 705px;
 	}
 	@media screen and (max-width: 575px) {
+		height: 600px;
 		width: calc(100% - 60px);
+	}
+	@media screen and (max-width: 560px) {
+		height: 530px;
 	}
 
 	&__info {
@@ -33,6 +37,7 @@
 		@media screen and (max-width: 768px) {
 			width: 100%;
 		}
+
 		.container__title {
 			width: 685px;
 			color: $color-text;
@@ -50,6 +55,9 @@
 			@media screen and (max-width: 680px) {
 				font-size: 42px;
 				line-height: 120%;
+			}
+			@media screen and (max-width: 560px) {
+				font-size: 24px;
 			}
 		}
 

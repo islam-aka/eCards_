@@ -41,29 +41,31 @@ const Footer = () => {
 					</div>
 				</div>
 				<div className={styles.footer__right}>
-					<h2>Следите за нашими новостями</h2>
-					<a
-						href='https://t.me/joinchat/AAAAAE3STg6obgvsxPakiw'
-						target='_blank'
-					>
-						<div className={styles.btn}>
-							<p>Подписаться</p>
-							<img src={iconTel} alt='icon telegram' />
+					<div className={styles.btn}>
+						<h2>Следите за нашими новостями</h2>
+						<div>
+							<a
+								href='https://t.me/joinchat/AAAAAE3STg6obgvsxPakiw'
+								target='_blank'
+							>
+								<p>Подписаться</p>
+								<img src={iconTel} alt='icon telegram' />
+							</a>
 						</div>
-					</a>
+					</div>
 					<h3>
 						Служба поддержки{' '}
 						<a href='https://t.me/ecards_support' target='_blank'>
 							<span>@ecards_support</span>
 						</a>
 					</h3>
-					<div className={styles.footer__info__mobbile}>
-						<div>
-							<img src={icon} alt='icon' />
-							<p className={styles.info}>eCards 2023</p>
-						</div>
-						<p>Политика конфиденциальности</p>
+				</div>
+				<div className={styles.footer__info__mobbile}>
+					<div>
+						<img src={icon} alt='icon' />
+						<p className={styles.info}>eCards 2023</p>
 					</div>
+					<p>Политика конфиденциальности</p>
 				</div>
 			</div>
 			<div className={styles.footer__bg}>

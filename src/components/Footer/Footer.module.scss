@@ -10,6 +10,9 @@
 	@media screen and (max-width: 992px) {
 		height: auto;
 	}
+	@media screen and (max-width: 900px) {
+		padding: 20px;
+	}
 	.footer {
 		max-width: 1440px;
 		width: calc(100% - 200px);
@@ -23,10 +26,11 @@
 			width: calc(100% - 60px);
 			padding: 0;
 		}
-		@media screen and (max-width: 992px) {
+		@media screen and (max-width: 900px) {
+			width: 100%;
 			justify-content: flex-start;
 			flex-direction: column;
-			gap: 100px;
+			gap: 82px;
 		}
 		@media screen and (max-width: 560px) {
 			gap: 40px;
@@ -60,7 +64,7 @@
 			.footer__info {
 				margin-top: 50px;
 				display: flex;
-				@media screen and (max-width: 560px) {
+				@media screen and (max-width: 900px) {
 					display: none;
 				}
 				.info {
@@ -85,36 +89,71 @@
 			z-index: 7;
 			width: 334px;
 			height: 144px;
+			@media screen and (max-width: 900px) {
+				display: flex;
+				flex-wrap: wrap;
+				max-width: 450px;
+				width: 100%;
+				height: 100%;
+			}
 			@media screen and (max-width: 560px) {
 				width: 100%;
 				height: 100%;
 			}
-			h2 {
-				font-weight: 400;
-				font-size: 18px;
-				line-height: 120%;
-				letter-spacing: 0.003em;
-				color: $white;
-				margin-bottom: 10px;
-			}
 			.btn {
-				display: flex;
-				align-items: center;
-				padding: 10px 20px;
-				gap: 6px;
-				width: 172px;
-				height: 40px;
-				background: $white;
-				border: 1px solid #748bff;
-				backdrop-filter: blur(18px);
-				border-radius: 22px;
-				margin-bottom: 50px;
-				@media screen and (max-width: 560px) {
-					margin-bottom: 30px;
+				@media screen and (max-width: 900px) {
+					width: 100%;
+					margin-top: 10px;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
 				}
-				img {
-					width: 16px;
-					height: 14.4px;
+				@media screen and (max-width: 390px) {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 10px;
+				}
+				h2 {
+					font-weight: 400;
+					font-size: 18px;
+					line-height: 120%;
+					letter-spacing: 0.003em;
+					color: $white;
+					margin-bottom: 10px;
+					@media screen and (max-width: 900px) {
+						font-size: 16px;
+						margin: 0;
+					}
+				}
+				div {
+					height: 40px;
+					margin-bottom: 50px;
+					@media screen and (max-width: 900px) {
+						margin: 0;
+					}
+					a {
+						display: flex;
+						align-items: center;
+						padding: 10px 20px;
+						gap: 6px;
+						width: 172px;
+						height: 40px;
+						background: $white;
+						border: 1px solid #748bff;
+						backdrop-filter: blur(18px);
+						border-radius: 22px;
+						margin-bottom: 50px;
+						@media screen and (max-width: 900px) {
+							margin: 0;
+						}
+						@media screen and (max-width: 560px) {
+							margin-bottom: 30px;
+						}
+						img {
+							width: 16px;
+							height: 14.4px;
+						}
+					}
 				}
 			}
 			h3 {
@@ -123,6 +162,9 @@
 				line-height: 120%;
 				letter-spacing: 0.003em;
 				color: #ffffff;
+				@media screen and (max-width: 900px) {
+					order: -1;
+				}
 				span {
 					font-weight: 500;
 					font-size: 18px;
@@ -130,20 +172,21 @@
 					letter-spacing: 0.003em;
 				}
 			}
-			.footer__info__mobbile {
-				display: none;
-				font-size: 12px;
-				line-height: 120%;
-				letter-spacing: 0.02em;
-				color: $white;
-				@media screen and (max-width: 560px) {
-					margin-top: 40px;
-					display: block;
-				}
-				div {
-					@media screen and (max-width: 560px) {
-						display: flex;
-					}
+		}
+		.footer__info__mobbile {
+			display: none;
+			font-size: 12px;
+			line-height: 120%;
+			letter-spacing: 0.02em;
+			color: $white;
+			@media screen and (max-width: 900px) {
+				display: flex;
+				justify-content: space-between;
+			}
+			div {
+				@media screen and (max-width: 900px) {
+					display: flex;
+					gap: 10px;
 				}
 			}
 		}
