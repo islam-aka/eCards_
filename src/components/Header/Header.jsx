@@ -26,9 +26,9 @@ const Header = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.header}>
-				<a href='#' className={styles.logo}>
+				<Link to={'/'} className={styles.logo}>
 					<img src={logo} alt='logo' />
-				</a>
+				</Link>
 				<nav className={styles.header__nav}>
 					<ul>
 						<li>
@@ -50,12 +50,12 @@ const Header = () => {
 				</nav>
 				<div className={styles.header__btn}>
 					<div className={styles.btn__logIn}>
-						<a href='#'>
+						<a href='https://ecards.cab' target='_blank'>
 							<p>Войти</p>
 							<img src={iconRightLogIn} alt='icon right' />
 						</a>
 					</div>
-					<Link to={'in'}>
+					<Link to={'invite'}>
 						<div className={styles.btn__invite}>
 							<p>Получить инвайт</p>
 							<img src={iconRight} alt='icon right' />
@@ -152,7 +152,9 @@ const Header = () => {
 							onMouseEnter={onMouseEnter}
 							onMouseLeave={onMouseLeave}
 						>
-							<p>Войти</p>
+							<a href='https://ecards.cab' target='_blank'>
+								<p>Войти</p>
+							</a>
 							<svg
 								width='8'
 								height='12'

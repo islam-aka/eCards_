@@ -17,10 +17,12 @@ const Contacts = () => {
 					Наша служба поддержки работает ежедневно
 					<span>с 08:00 до 22:00 по UTC +3.</span>
 				</p>
-				<div className={styles.support}>
-					<p>Написать в поддержку</p>
-					<img src={icontel} alt='icon' />
-				</div>
+				<a href='https://t.me/ecards_support' target='_blank'>
+					<div className={styles.support}>
+						<p>Написать в поддержку</p>
+						<img src={icontel} alt='icon' />
+					</div>
+				</a>
 			</div>
 			<div className={styles.contact__right}>
 				<div className={styles.iconOne}>

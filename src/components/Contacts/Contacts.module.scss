@@ -22,7 +22,7 @@
 			height: auto;
 		}
 		.contact__subTitle {
-			font-weight: 400;
+			font-weight: 500;
 			font-size: 14px;
 			line-height: 130%;
 			letter-spacing: 0.003em;
@@ -44,6 +44,9 @@
 				font-size: 23px;
 				line-height: 120%;
 			}
+			@media screen and (max-width: 575px) {
+				max-width: 369px;
+			}
 		}
 		.contact__left_time {
 			font-weight: 500;
@@ -51,6 +54,10 @@
 			line-height: 120%;
 			letter-spacing: -0.007em;
 			color: $sub-title;
+			@media screen and (max-width: 575px) {
+				display: flex;
+				flex-direction: column;
+			}
 			span {
 				margin-left: 8px;
 				font-weight: 500;
@@ -58,6 +65,9 @@
 				line-height: 120%;
 				letter-spacing: 0.003em;
 				color: $color-text;
+				@media screen and (max-width: 575px) {
+					margin: 0;
+				}
 			}
 		}
 		.support {

@@ -12,7 +12,7 @@
 	}
 	.conditions__top {
 		.top__subTitle {
-			font-weight: 400;
+			font-weight: 500;
 			font-size: 14px;
 			line-height: 130%;
 			letter-spacing: 0.003em;
@@ -31,6 +31,10 @@
 				font-size: 32px;
 				line-height: 120%;
 				max-width: 631px;
+			}
+			@media screen and (max-width: 575px) {
+				font-size: 23px;
+				line-height: 120%;
 			}
 		}
 	}
@@ -123,10 +127,9 @@
 					@media screen and (max-width: 768px) {
 						padding-left: 20px;
 					}
-					@media screen and (max-width: 536px) {
+					@media screen and (max-width: 575px) {
 						padding: 0;
-						width: 97px;
-						font-size: 14px;
+						font-size: 16px;
 						line-height: 130%;
 						text-align: end;
 					}

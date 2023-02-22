@@ -42,12 +42,20 @@ const Footer = () => {
 				</div>
 				<div className={styles.footer__right}>
 					<h2>Следите за нашими новостями</h2>
-					<div className={styles.btn}>
-						<p>Подписаться</p>
-						<img src={iconTel} alt='icon telegram' />
-					</div>
+					<a
+						href='https://t.me/joinchat/AAAAAE3STg6obgvsxPakiw'
+						target='_blank'
+					>
+						<div className={styles.btn}>
+							<p>Подписаться</p>
+							<img src={iconTel} alt='icon telegram' />
+						</div>
+					</a>
 					<h3>
-						Служба поддержки <span>@ecards_support</span>
+						Служба поддержки{' '}
+						<a href='https://t.me/ecards_support' target='_blank'>
+							<span>@ecards_support</span>
+						</a>
 					</h3>
 					<div className={styles.footer__info__mobbile}>
 						<div>
