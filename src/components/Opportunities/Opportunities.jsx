@@ -23,9 +23,9 @@ const Opportunities = () => {
 	const [refAni, inViewAni] = useInView({ threshold: 0.1 })
 	const [refImage, inViewImage] = useInView({ threshold: 0.1 })
 	const [refData, inViewData] = useInView({ threshold: 0.1 })
-	console.log(inView)
 	return (
-		<div id='opportunities' className={styles.container}>
+		<div className={styles.container}>
+			<div id='#opportunities' className={styles.link}></div>
 			<div className={styles.container__title}>
 				<p>eCards предоставляет</p>
 				<h2>Возможности и фичи</h2>
@@ -83,19 +83,23 @@ const Opportunities = () => {
 				</div>
 				<div ref={ref} className={styles.opportunities__cards}>
 					<div className={styles.blockBlur__cards}></div>
-					{inView && (
-						<div className={styles.card__img}>
-							<div className={styles.card__imgTwo}>
-								<img src={imgCardOne} alt='card ' />
-							</div>
-							<div className={styles.card__imgOne}>
-								<img src={imgCardTwo} alt='card ' />
-							</div>
-							<div className={styles.card__imgThree}>
-								<img src={imgCardThree} alt='card ' />
-							</div>
-						</div>
-					)}
+
+					<div className={styles.card__img}>
+						{inView && (
+							<>
+								<div className={styles.card__imgTwo}>
+									<img src={imgCardOne} alt='card ' />
+								</div>
+								<div className={styles.card__imgOne}>
+									<img src={imgCardTwo} alt='card ' />
+								</div>
+								<div className={styles.card__imgThree}>
+									<img src={imgCardThree} alt='card ' />
+								</div>
+							</>
+						)}
+					</div>
+
 					<div className={styles.card__info}>
 						<div className={styles.card__icon}>
 							<img src={iconInfinitely} alt='wallet icon' />

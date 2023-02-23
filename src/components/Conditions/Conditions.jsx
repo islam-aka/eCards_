@@ -6,6 +6,7 @@ import styles from './Conditions.module.scss'
 const Conditions = () => {
 	return (
 		<div className={styles.container}>
+			<div id='#conditions' className={styles.link}></div>
 			<div className={styles.conditions__top}>
 				<p className={styles.top__subTitle}>Выгодные условия работы сервиса</p>
 				<p className={styles.top__title}>
@@ -58,7 +59,7 @@ const Conditions = () => {
 					Для крупных арбитражных команд с оборотом более 100 000$ в месяц
 					возможно предоставление индивидуальных условий
 				</span>
-				<Link to={'in'}>
+				<Link to={'invite'}>
 					<div className={styles.btn__invite}>
 						<p>Получить инвайт</p>
 						<img src={iconRight} alt='icon right' />

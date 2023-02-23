@@ -7,10 +7,12 @@ import styles from './Header.module.scss'
 import DropDown from '../DropDown/DropDown'
 import { useTranslation } from 'react-i18next'
 import iconRight from '../../assets/svg/right.svg'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 
 const Header = () => {
+	const { url } = useParams()
 	const { t } = useTranslation()
+	const location = useLocation()
 	const [menu, setMenu] = useState(false)
 	const [hover, setHover] = useState(false)
 
@@ -32,19 +34,48 @@ const Header = () => {
 				<nav className={styles.header__nav}>
 					<ul>
 						<li>
-							<a href='#eСards'>{t('navBar.aboutECards')}</a>
+							<Link
+								to={'/eСards'}
+								className={url === 'eСards' ? styles.active : styles.noActive}
+							>
+								{t('navBar.aboutECards')}
+							</Link>
 						</li>
 						<li>
-							<a href='#opportunities'>{t('navBar.opportunities')}</a>
+							<Link
+								to={'/opportunities'}
+								className={
+									url === 'opportunities' ? styles.active : styles.noActive
+								}
+							>
+								{t('navBar.opportunities')}
+							</Link>
 						</li>
 						<li>
-							<a href='#'>{t('navBar.conditions')}</a>
+							<Link
+								to={'/conditions'}
+								className={
+									url === 'conditions' ? styles.active : styles.noActive
+								}
+							>
+								{t('navBar.conditions')}
+							</Link>
 						</li>
 						<li>
-							<a href='#'>{t('navBar.partners')}</a>
+							<Link
+								to={'/partners'}
+								className={url === 'partners' ? styles.active : styles.noActive}
+							>
+								{t('navBar.partners')}
+							</Link>
 						</li>
 						<li>
-							<a href='#'>{t('navBar.contacts')}</a>
+							<Link
+								to={'/contact'}
+								className={url === 'contact' ? styles.active : styles.noActive}
+							>
+								{t('navBar.contacts')}
+							</Link>
 						</li>
 					</ul>
 				</nav>
@@ -55,7 +86,7 @@ const Header = () => {
 							<img src={iconRightLogIn} alt='icon right' />
 						</a>
 					</div>
-					<Link to={'invite'}>
+					<Link to='/invite'>
 						<div className={styles.btn__invite}>
 							<p>Получить инвайт</p>
 							<img src={iconRight} alt='icon right' />
@@ -140,50 +171,49 @@ const Header = () => {
 					</div>
 				</a>
 				<div className={styles.btn}>
-					<Link to={'in'}>
+					<Link to={'invite'}>
 						<div className={styles.btn__invite}>
 							<p>Получить инвайт</p>
 							<img src={iconRight} alt='icon' />
 						</div>
 					</Link>
-					<a href='#'>
-						<div
-							className={styles.btn__logIn}
-							onMouseEnter={onMouseEnter}
-							onMouseLeave={onMouseLeave}
+
+					<div
+						className={styles.btn__logIn}
+						onMouseEnter={onMouseEnter}
+						onMouseLeave={onMouseLeave}
+					>
+						<a href='https://ecards.cab' target='_blank'>
+							<p>Войти</p>
+						</a>
+						<svg
+							width='8'
+							height='12'
+							viewBox='0 0 8 12'
+							fill='none'
+							xmlns='http://www.w3.org/2000/svg'
 						>
-							<a href='https://ecards.cab' target='_blank'>
-								<p>Войти</p>
-							</a>
-							<svg
-								width='8'
-								height='12'
-								viewBox='0 0 8 12'
-								fill='none'
-								xmlns='http://www.w3.org/2000/svg'
-							>
-								<path
-									fillRule='evenodd'
-									clipRule='evenodd'
-									d='M0.910582 0.410582C1.23602 0.0851447 1.76366 0.0851447 2.08909 0.410582L7.08909 5.41058C7.41453 5.73602 7.41453 6.26366 7.08909 6.58909L2.08909 11.5891C1.76366 11.9145 1.23602 11.9145 0.910582 11.5891C0.585145 11.2637 0.585145 10.736 0.910582 10.4106L5.32133 5.99984L0.910582 1.58909C0.585145 1.26366 0.585145 0.736018 0.910582 0.410582Z'
-									fill={hover ? '#5d43ff' : '#ffffff'}
-								/>
-								<defs>
-									<linearGradient
-										id='paint0_linear_1387_7486'
-										x1='2.31996'
-										y1='15.0977'
-										x2='13.4084'
-										y2='8.78755'
-										gradientUnits='userSpaceOnUse'
-									>
-										<stop stopColor='#7AAFFF' />
-										<stop offset='1' stopColor='#642DFF' />
-									</linearGradient>
-								</defs>
-							</svg>
-						</div>
-					</a>
+							<path
+								fillRule='evenodd'
+								clipRule='evenodd'
+								d='M0.910582 0.410582C1.23602 0.0851447 1.76366 0.0851447 2.08909 0.410582L7.08909 5.41058C7.41453 5.73602 7.41453 6.26366 7.08909 6.58909L2.08909 11.5891C1.76366 11.9145 1.23602 11.9145 0.910582 11.5891C0.585145 11.2637 0.585145 10.736 0.910582 10.4106L5.32133 5.99984L0.910582 1.58909C0.585145 1.26366 0.585145 0.736018 0.910582 0.410582Z'
+								fill={hover ? '#5d43ff' : '#ffffff'}
+							/>
+							<defs>
+								<linearGradient
+									id='paint0_linear_1387_7486'
+									x1='2.31996'
+									y1='15.0977'
+									x2='13.4084'
+									y2='8.78755'
+									gradientUnits='userSpaceOnUse'
+								>
+									<stop stopColor='#7AAFFF' />
+									<stop offset='1' stopColor='#642DFF' />
+								</linearGradient>
+							</defs>
+						</svg>
+					</div>
 				</div>
 			</div>
 		</div>

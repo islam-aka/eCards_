@@ -14,7 +14,7 @@ const About = () => {
 
 	return (
 		<div className={styles.container}>
-			<div className={styles.link} id='eСards'></div>
+			<div className={styles.link} id='#eСards'></div>
 			<div className={styles.about__bg}>
 				<img src={image} alt='background' />
 			</div>

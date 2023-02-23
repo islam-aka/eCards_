@@ -8,6 +8,7 @@ import icontel from '../../assets/svg/tel.svg'
 const Contacts = () => {
 	return (
 		<div className={styles.contact}>
+			<div id='#contact' className={styles.link}></div>
 			<div className={styles.contact__left}>
 				<p className={styles.contact__subTitle}>Контакты</p>
 				<h3 className={styles.contact__left_title}>

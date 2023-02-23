@@ -19,7 +19,7 @@ const MainScreen = () => {
 					Facebook, Google и др., удобный интерфейс и оперативная тех.поддержка
 				</p>
 				<div className={styles.container__btn}>
-					<Link to={'in'}>
+					<Link to='invite'>
 						<div className={styles.btn__invite}>
 							<p>Получить инвайт</p>
 							<img src={iconRight} alt='icon right' />

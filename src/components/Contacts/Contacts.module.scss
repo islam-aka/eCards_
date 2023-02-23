@@ -1,6 +1,7 @@
 @import "../variables.scss";
 
 .contact {
+	position: relative;
 	max-width: 1440px;
 	width: calc(100% - 200px);
 	margin: 0 auto;
@@ -172,5 +173,9 @@
 		100% {
 			top: 30px;
 		}
+	}
+	.link {
+		position: absolute;
+		top: -130px;
 	}
 }
