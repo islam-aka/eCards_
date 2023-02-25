@@ -12,11 +12,9 @@
 @keyframes aniCardOne {
 	0% {
 		left: -320px;
-		top: 150px;
 	}
 	33% {
-		left: 282px;
-		top: 150px;
+		left: 290px;
 	}
 	34% {
 	}
@@ -27,12 +25,9 @@
 @keyframes aniCardOne1280 {
 	0% {
 		left: -247px;
-
-		top: 120px;
 	}
 	33% {
-		left: 280px;
-		top: 120px;
+		left: 264px;
 	}
 	34% {
 	}
@@ -43,11 +38,9 @@
 @keyframes aniCardOne992 {
 	0% {
 		left: -270px;
-		top: 131px;
 	}
 	33% {
-		left: 274px;
-		top: 131px;
+		left: 285px;
 	}
 	34% {
 	}
@@ -57,11 +50,9 @@
 @keyframes aniCardOne768 {
 	0% {
 		left: -77px;
-		top: 95px;
 	}
 	33% {
 		left: 145px;
-		top: 95px;
 	}
 	34% {
 	}
@@ -74,7 +65,30 @@
 	}
 	33% {
 		left: 234px;
-		top: 115px;
+	}
+	34% {
+	}
+	100% {
+	}
+}
+@keyframes aniCardOne420 {
+	0% {
+		left: -270px;
+	}
+	33% {
+		left: 192px;
+	}
+	34% {
+	}
+	100% {
+	}
+}
+@keyframes aniCardOn320 {
+	0% {
+		left: -270px;
+	}
+	33% {
+		left: 135px;
 	}
 	34% {
 	}
@@ -92,7 +106,7 @@
 		left: -332px;
 	}
 	66% {
-		left: 40px;
+		left: 68px;
 	}
 	67% {
 	}
@@ -126,7 +140,7 @@
 	34% {
 	}
 	66% {
-		left: 67px;
+		left: 90px;
 	}
 	100% {
 	}
@@ -135,17 +149,13 @@
 @keyframes aniCardTwo768 {
 	0% {
 		left: -77px;
-		top: 195px;
 	}
 	33% {
+		left: 145px;
 	}
 	34% {
-		left: -77px;
-		top: 195px;
 	}
 	66% {
-		left: 145px;
-		top: 195px;
 	}
 	100% {
 	}
@@ -163,9 +173,9 @@
 	}
 	100% {
 		left: 15px;
-		top: 140px;
 	}
 }
+
 //
 
 @keyframes aniCardThree {
@@ -187,7 +197,7 @@
 }
 @keyframes aniCardThree1280 {
 	0% {
-		left: -247px;
+		left: -285px;
 	}
 	33% {
 	}
@@ -196,16 +206,15 @@
 	66% {
 	}
 	67% {
-		left: -247px;
+		left: -285px;
 	}
 	100% {
-		left: 11px;
+		left: 0;
 	}
 }
 @keyframes aniCardThree992 {
 	0% {
 		left: -195px;
-		top: 150px;
 	}
 	33% {
 	}
@@ -215,10 +224,8 @@
 	}
 	67% {
 		left: -195px;
-		top: 150px;
 	}
 	100% {
-		top: 150px;
 		left: -15px;
 	}
 }
@@ -237,7 +244,6 @@
 		left: -275px;
 	}
 	100% {
-		top: 165px;
 		left: -100px;
 	}
 }
@@ -246,18 +252,15 @@
 		left: -77px;
 	}
 	33% {
+		left: 145px;
 	}
 	34% {
 	}
 	66% {
 	}
 	67% {
-		top: 0;
-		left: -77px;
 	}
 	100% {
-		left: 145px;
-		top: 0;
 	}
 }
 
@@ -278,7 +281,41 @@
 	100% {
 	}
 }
-
+@keyframes aniCardThree420 {
+	0% {
+		left: -295px;
+	}
+	33% {
+	}
+	34% {
+		left: -295px;
+	}
+	66% {
+		left: 30px;
+	}
+	67% {
+	}
+	100% {
+	}
+}
+@keyframes aniCardThree320 {
+	0% {
+		left: -295px;
+	}
+	33% {
+	}
+	34% {
+		left: -295px;
+	}
+	66% {
+		left: 20px;
+	}
+	67% {
+	}
+	100% {
+	}
+}
+//
 @keyframes aniTwo {
 	0% {
 		left: 585px;

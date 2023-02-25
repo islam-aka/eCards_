@@ -151,7 +151,6 @@ const Header = () => {
 						<ul className={styles.navBar}>
 							<li>
 								<Link
-									onClick={() => setMenu(!menu)}
 									to={'/eСards'}
 									className={url === 'eСards' ? styles.active : styles.noActive}
 								>
@@ -160,7 +159,6 @@ const Header = () => {
 							</li>
 							<li>
 								<Link
-									onClick={() => setMenu(!menu)}
 									to={'/opportunities'}
 									className={
 										url === 'opportunities' ? styles.active : styles.noActive
@@ -171,19 +169,16 @@ const Header = () => {
 							</li>
 							<li>
 								<Link
-									onClick={() => setMenu(!menu)}
 									to={'/conditions'}
 									className={
 										url === 'conditions' ? styles.active : styles.noActive
 									}
 								>
 									{t('navBar.conditions')}
-								</Link>{' '}
-								onClick={() => setMenu(!menu)}
+								</Link>
 							</li>
 							<li>
 								<Link
-									onClick={() => setMenu(!menu)}
 									to={'/partners'}
 									className={
 										url === 'partners' ? styles.active : styles.noActive
@@ -194,7 +189,6 @@ const Header = () => {
 							</li>
 							<li>
 								<Link
-									onClick={() => setMenu(!menu)}
 									to={'/contact'}
 									className={
 										url === 'contact' ? styles.active : styles.noActive
@@ -204,7 +198,7 @@ const Header = () => {
 								</Link>
 							</li>
 						</ul>
-						<a href='#'>
+						<a href='https://t.me/ecards_support' target='_blank'>
 							<div className={styles.support}>
 								<p>Служба поддержки</p>
 								<div>

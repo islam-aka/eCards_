@@ -143,7 +143,7 @@
 					width: 100%;
 					height: 100%;
 					background: linear-gradient(49.19deg, #642dff 1.96%, #7aafff 86.77%);
-					transition: opacity 0.5s ease-in-out;
+					transition: opacity 0.2s ease-in-out;
 					border-radius: 22px;
 					z-index: -49;
 				}
@@ -177,7 +177,7 @@
 					align-items: center;
 					gap: 3px;
 					div {
-						transition: all 0.7s ease;
+						transition: all 0.5s ease;
 						width: 18px;
 						height: 2px;
 						background: #748bff;
@@ -302,6 +302,9 @@
 				flex-direction: column;
 				align-items: center;
 				gap: 20px;
+				@media screen and (max-width: 450px) {
+					max-width: 100%;
+				}
 				div {
 					gap: 10.67px;
 					display: flex;
@@ -374,5 +377,165 @@
 		position: fixed;
 		width: 100%;
 		top: -100vh;
+		.menuTop {
+			width: 100%;
+			margin: 24px auto 0 auto;
+			display: flex;
+			justify-content: space-between;
+			.burger__wrapper {
+				cursor: pointer;
+				width: 36px;
+				height: 36px;
+				border: 1px solid $primary-main;
+				border-radius: 6px;
+				display: none;
+				justify-content: center;
+				align-items: center;
+				@media screen and (max-width: 768px) {
+					display: flex;
+				}
+				.burger {
+					position: relative;
+					width: 24px;
+					padding: 6px 0;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					gap: 3px;
+					div {
+						transition: all 0.7s ease;
+						width: 18px;
+						height: 2px;
+						background: #748bff;
+						border-radius: 5px;
+					}
+					.line__top_active {
+						position: absolute;
+						transform: rotate(45deg);
+					}
+					.line__middle_none {
+						opacity: 0;
+					}
+					.line__bottom_active {
+						position: absolute;
+						transform: rotate(-45deg);
+					}
+				}
+			}
+		}
+		.block {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			.navBar {
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+				margin: 40px 0 30px 0;
+				li {
+					font-style: normal;
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 130%;
+					letter-spacing: 0.003em;
+					color: $white;
+				}
+			}
+			.support {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				p {
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 130%;
+					letter-spacing: 0.003em;
+					color: $white;
+				}
+				div {
+					width: 32px;
+					height: 30px;
+					border: 1px solid #748bff;
+					border-radius: 30px;
+					padding: 2px 0px 3px 3px;
+				}
+			}
+			.btn {
+				max-width: 284px;
+				margin-top: 75px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 20px;
+				@media screen and (max-width: 450px) {
+					max-width: 100%;
+				}
+				div {
+					gap: 10.67px;
+					display: flex;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 120%;
+					letter-spacing: 0.003em;
+					color: $white;
+				}
+				.btn__invite {
+					width: 284px;
+					height: 40px;
+					cursor: pointer;
+					position: relative;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
+					border-radius: 22px;
+					z-index: 150;
+					p {
+						color: $white;
+						font-style: normal;
+						font-weight: 500;
+						font-size: 16px;
+						line-height: 120%;
+						letter-spacing: 0.003em;
+					}
+					&::before {
+						content: "";
+						display: block;
+						opacity: 0;
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background: #5d43ff;
+						transition: opacity 0.2s ease-in-out;
+						border-radius: 22px;
+						z-index: -150;
+					}
+
+					&:hover::before {
+						background: #5d43ff;
+						opacity: 1;
+					}
+				}
+				.btn__logIn {
+					display: flex;
+					align-items: center;
+					font-weight: 500;
+					font-size: 16px;
+					line-height: 120%;
+					letter-spacing: 0.003em;
+					color: $white;
+					&:hover {
+						background: linear-gradient(45.12deg, $secondary -1.54%, #7aafff 108.79%);
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
+						background-clip: text;
+						text-fill-color: transparent;
+					}
+				}
+			}
+		}
 	}
 }

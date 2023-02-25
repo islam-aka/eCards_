@@ -19,13 +19,13 @@
 	}
 	@media screen and (max-width: 992px) {
 		gap: 100px;
-
 		height: 270px;
 	}
 	@media screen and (max-width: 768px) {
 		margin: 0 auto;
 	}
 	@media screen and (max-width: 575px) {
+		height: 220px;
 		gap: 80px;
 	}
 	@media screen and (max-width: 450px) {
@@ -45,6 +45,9 @@
 			letter-spacing: 0.003em;
 			color: $primary-main;
 			margin-bottom: 10px;
+			@media screen and (max-width: 575px) {
+				margin-bottom: 4px;
+			}
 		}
 		.contact__left_title {
 			font-weight: 700;
@@ -97,7 +100,7 @@
 			background: $primary-main;
 			backdrop-filter: blur(18px);
 			border-radius: 22px;
-			transition: all 0.5s linear;
+			transition: all 0.2s linear;
 			&:hover {
 				background: #5d43ff;
 			}

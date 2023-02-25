@@ -29,6 +29,7 @@
 
 		span {
 			font-style: normal;
+			height: 15px;
 			font-weight: 500;
 			font-size: 13px;
 			line-height: 120%;
@@ -59,8 +60,11 @@
 			cursor: pointer;
 			width: 100%;
 			padding: 8px 0 6px 8px;
+			border-radius: 6px;
 			margin: 1px;
-			transition: 0.5s;
+			border: 1px solid $white;
+			transition: all 0.3s cubic-bezier(0.08, 0.43, 0.18, 0.72);
+
 			&:hover {
 				background: #ffffff;
 				border: 1px solid #748bff;
@@ -88,6 +92,7 @@
 				line-height: 120%;
 			}
 			span {
+				height: 15px;
 			}
 		}
 	}
@@ -116,11 +121,13 @@
 		align-items: center;
 		justify-content: center;
 		.activeNone {
+			margin-top: 2px;
 			transition: all 0.2s;
 		}
 
 		span {
 			font-style: normal;
+			height: 15px;
 			font-weight: 500;
 			font-size: 13px;
 			color: $primary-main;
@@ -133,5 +140,27 @@
 	.dropdown__list {
 		opacity: 0;
 		visibility: hidden;
+		.dropdown__list__item {
+			cursor: pointer;
+			width: 100%;
+			padding: 8px 0 6px 8px;
+			border-radius: 6px;
+			margin: 1px;
+			border: 1px solid $white;
+			transition: all 0.3s cubic-bezier(0.08, 0.43, 0.18, 0.72);
+
+			&:hover {
+				background: #ffffff;
+				border: 1px solid #748bff;
+				border-radius: 6px;
+			}
+
+			p {
+				font-style: normal;
+				font-weight: 400;
+				font-size: 13px;
+				line-height: 120%;
+			}
+		}
 	}
 }

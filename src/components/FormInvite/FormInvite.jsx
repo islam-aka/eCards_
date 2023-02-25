@@ -1,5 +1,6 @@
 import InputText from '../../UI/Text/InputText'
 import InputEmail from '../../UI/Email/InputEmail'
+import InputTel from '../../UI/Tel/InputTel'
 import InputNumber from '../../UI/InputNumber'
 import React, { useState } from 'react'
 import imgCardOne from '../../assets/img/cardOne.png'
@@ -87,7 +88,7 @@ const FormInvite = () => {
 							labels={'*Электронная почта'}
 							name={'email'}
 						/>
-						<InputNumber
+						<InputTel
 							type={'text'}
 							invite={invite}
 							fun={handleChange}

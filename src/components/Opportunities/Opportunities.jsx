@@ -63,18 +63,21 @@ const Opportunities = () => {
 											className={styles.statistics__title}
 											start={0}
 											end={98}
+											duration={1.2}
 										/>
 										.
 										<CountUp
 											className={styles.statistics__title}
 											start={0}
 											end={879}
+											duration={1.2}
 										/>
 										.
 										<CountUp
 											className={styles.statistics__title}
 											start={0}
 											end={87}
+											duration={1.2}
 										/>
 									</div>
 								)}
@@ -89,12 +92,13 @@ const Opportunities = () => {
 					<div className={styles.card__img}>
 						{inView && (
 							<>
-								<div className={styles.card__imgTwo}>
-									<img src={imgCardOne} alt='card ' />
-								</div>
 								<div className={styles.card__imgOne}>
 									<img src={imgCardTwo} alt='card ' />
 								</div>
+								<div className={styles.card__imgTwo}>
+									<img src={imgCardOne} alt='card ' />
+								</div>
+
 								<div className={styles.card__imgThree}>
 									<img src={imgCardThree} alt='card ' />
 								</div>
