@@ -5,32 +5,36 @@ import icons from '../../assets/img/bgFooter.png'
 import icon from '../../assets/svg/icon.svg'
 import iconTel from '../../assets/svg/Path.svg'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
 	const { t } = useTranslation()
+	const scrollToTop = () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' })
+	}
 	return (
 		<div className={styles.container}>
 			<div className={styles.footer}>
 				<div className={styles.footer__left}>
-					<a href='#'>
+					<Link to={'/'} onClick={scrollToTop} className={styles.logo}>
 						<img src={logo} alt='logo' />
-					</a>
+					</Link>
 					<nav className={styles.footer__nav}>
 						<ul>
 							<li>
-								<a href='#eСards'>{t('navBar.aboutECards')}</a>
+								<Link to={'/eСards'}>{t('navBar.aboutECards')}</Link>
 							</li>
 							<li>
-								<a href='#opportunities'>{t('navBar.opportunities')}</a>
+								<Link to={'/opportunities'}>{t('navBar.opportunities')}</Link>
 							</li>
 							<li>
-								<a href='#'>{t('navBar.conditions')}</a>
+								<Link to={'/conditions'}>{t('navBar.conditions')}</Link>
 							</li>
 							<li>
-								<a href='#'>{t('navBar.partners')}</a>
+								<Link to={'/partners'}>{t('navBar.partners')}</Link>
 							</li>
 							<li>
-								<a href='#'>{t('navBar.contacts')}</a>
+								<Link to={'/contact'}>{t('navBar.contacts')}</Link>
 							</li>
 						</ul>
 					</nav>

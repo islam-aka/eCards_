@@ -15,7 +15,6 @@ const Home = () => {
 
 	function scrollToElement(url) {
 		const element = document.getElementById(`#${url}`)
-		console.log(element)
 		if (element) {
 			element.scrollIntoView({ behavior: 'smooth' })
 		}
@@ -23,7 +22,6 @@ const Home = () => {
 
 	useEffect(() => {
 		if (url) {
-			console.log(url)
 			scrollToElement(url)
 		}
 	}, [url])

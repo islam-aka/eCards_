@@ -12,7 +12,6 @@ import { Link, useLocation, useParams } from 'react-router-dom'
 const Header = () => {
 	const { url } = useParams()
 	const { t } = useTranslation()
-	const location = useLocation()
 	const [menu, setMenu] = useState(false)
 	const [hover, setHover] = useState(false)
 
@@ -30,7 +29,7 @@ const Header = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.header}>
-				<Link to={'/eСards'} onClick={scrollToTop} className={styles.logo}>
+				<Link to={'/'} onClick={scrollToTop} className={styles.logo}>
 					<img src={logo} alt='logo' />
 				</Link>
 				<nav className={styles.header__nav}>

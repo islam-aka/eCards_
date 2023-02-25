@@ -1,0 +1,222 @@
+@import "../variables.scss";
+
+.container {
+	position: fixed;
+	top: 450px;
+	height: 100px;
+	width: 100%;
+	z-index: 50;
+	@media screen and (max-width: 1285px) {
+		top: 360px;
+	}
+
+	.cookie {
+		padding: 30px 20px;
+		background: #ffffff;
+		max-width: 1440px;
+		margin: 0 auto;
+		width: calc(100% - 200px);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 16px;
+		padding: 30px 20px;
+		background: #ffffff;
+		border: 1px solid #e3e8ff;
+		box-shadow: 0px 14px 22px rgba(21, 21, 21, 0.08);
+		border-radius: 20px;
+		@media screen and (max-width: 1285px) {
+			width: calc(100% - 100px);
+		}
+		@media screen and (max-width: 768px) {
+			flex-direction: column;
+		}
+		@media screen and (max-width: 560px) {
+			width: calc(100% - 60px);
+			border-radius: 70px;
+			padding: 10px;
+			flex-direction: row;
+		}
+
+		&__left {
+			max-width: 700px;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			@media screen and (max-width: 1285px) {
+				max-width: 540px;
+			}
+			@media screen and (max-width: 992px) {
+				max-width: 412px;
+			}
+			@media screen and (max-width: 768px) {
+				gap: 40px;
+				max-width: 100%;
+			}
+			@media screen and (max-width: 560px) {
+				gap: 17px;
+			}
+			img {
+				@media screen and (max-width: 560px) {
+					width: 50px;
+				}
+			}
+			p {
+				max-width: 596px;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 120%;
+				letter-spacing: 0.003em;
+				color: #636363;
+				@media screen and (max-width: 1285px) {
+					max-width: 434px;
+				}
+				@media screen and (max-width: 992px) {
+					max-width: 306px;
+				}
+				@media screen and (max-width: 768px) {
+					max-width: 500px;
+				}
+				@media screen and (max-width: 560px) {
+					display: none;
+				}
+			}
+			span {
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 120%;
+				letter-spacing: 0.02em;
+				color: #636363;
+				display: none;
+				@media screen and (max-width: 560px) {
+					display: block;
+				}
+			}
+		}
+		&__right {
+			display: flex;
+			align-items: center;
+			@media screen and (max-width: 768px) {
+				margin-top: 48px;
+				justify-content: center;
+				max-width: 100%;
+				width: 100%;
+			}
+			@media screen and (max-width: 560px) {
+				max-width: 50px;
+				margin-top: 0;
+				justify-content: center;
+			}
+			.accept {
+				font-weight: 500;
+				position: relative;
+				transition: al 0.5s linear;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				padding: 10px 20px;
+				gap: 6px;
+				color: #ffffff;
+				width: 178px;
+				height: 40px;
+				background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
+				border-radius: 22px;
+				margin-right: 10px;
+
+				z-index: 49;
+				&::before {
+					content: "";
+					display: block;
+					opacity: 0;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background: linear-gradient(49.19deg, #642dff 1.96%, #7aafff 86.77%);
+					transition: opacity 0.5s ease-in-out;
+					border-radius: 22px;
+					z-index: -49;
+				}
+
+				&:hover::before {
+					background: linear-gradient(49.19deg, #642dff 1.96%, #7aafff 86.77%);
+					opacity: 1;
+				}
+				@media screen and (max-width: 768px) {
+					justify-content: center;
+					flex: 1;
+				}
+				@media screen and (max-width: 560px) {
+					display: none;
+				}
+			}
+			.reject {
+				transition: all 0.5s ease-in-out;
+				font-weight: 500;
+				cursor: pointer;
+				background: $white;
+				border: 1px solid #748bff;
+				border-radius: 22px;
+				padding: 10px 20px;
+				gap: 4px;
+				width: 130px;
+				height: 40px;
+				font-size: 16px;
+				line-height: 120%;
+				letter-spacing: 0.003em;
+				color: $primary-main;
+				&:hover {
+					color: #5d43ff;
+					border: 1px solid #5d43ff;
+				}
+				@media screen and (max-width: 768px) {
+					text-align: center;
+					flex: 1;
+				}
+				@media screen and (max-width: 560px) {
+					display: none;
+				}
+			}
+			.close {
+				margin-left: 60px;
+				position: relative;
+				cursor: pointer;
+				width: 24px;
+				height: 24px;
+				@media screen and (max-width: 1285px) {
+					margin-left: 40px;
+				}
+				@media screen and (max-width: 992px) {
+					margin-left: 20px;
+				}
+				@media screen and (max-width: 768px) {
+					display: none;
+				}
+				@media screen and (max-width: 560px) {
+					margin-left: 0;
+					display: flex;
+				}
+				div {
+					position: absolute;
+					width: 3px;
+					height: 23px;
+					background: #afafaf;
+					border-radius: 20px;
+				}
+				.close__line_top {
+					transform: rotate(45deg);
+					left: 10px;
+				}
+				.close__line_bottom {
+					transform: rotate(-45deg);
+					left: 10px;
+				}
+			}
+		}
+	}
+}
+.container__none {
+	display: none;
+}

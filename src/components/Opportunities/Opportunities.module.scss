@@ -339,7 +339,11 @@
 						left: 280px;
 						top: 120px;
 					}
-
+					@media screen and (max-width: 992px) {
+						animation: aniCardOne992 2s linear;
+						left: 274px;
+						top: 131px;
+					}
 					@media screen and (max-width: 768px) {
 						animation: aniCardOne768 1.5s linear;
 						left: 145px;
@@ -399,8 +403,8 @@
 					}
 					@media screen and (max-width: 992px) {
 						animation: aniCardThree992 1.5s linear;
-						top: 140px;
-						left: 13px;
+						top: 150px;
+						left: -15px;
 					}
 
 					@media screen and (max-width: 768px) {
