@@ -6,14 +6,15 @@ import iconProfile from '../../assets/svg/profile-2user.svg'
 import iconDownload from '../../assets/svg/download.svg'
 import iconNotification from '../../assets/svg/notification.svg'
 import imgBalance from '../../assets/img/BalanceBG.png'
-import imgCardOne from '../../assets/img/cardOne.png'
-import imgCardTwo from '../../assets/img/cardTwo.png'
-import imgCardThree from '../../assets/img/cardThree.png'
+import imgCardOne from '../../assets/svg/cardOne.svg'
+import imgCardTwo from '../../assets/svg/cardTwo.svg'
+import imgCardThree from '../../assets/svg/cardThree.svg'
 import icons from '../../assets/svg/$.svg'
 import imgGroupOne from '../../assets/img/group1.png'
 import imgGroupTwo from '../../assets/img/group2.png'
-import imgExport from '../../assets/img/Экспорт таблицы.png'
-import imgNotification from '../../assets/img/notification.png'
+import imgExport from '../../assets/img/table.png'
+import notificationImgOne from '../../assets/img/noti.png'
+import notificationImgTwo from '../../assets/img/noti2.png'
 import { useInView } from 'react-intersection-observer'
 import Circle from '../Circle/Circle'
 import CountUp from 'react-countup'
@@ -22,6 +23,7 @@ const Opportunities = () => {
 	const [ref, inView] = useInView({ threshold: 0.1 })
 	const [refAni, inViewAni] = useInView({ threshold: 0.1 })
 	const [refImage, inViewImage] = useInView({ threshold: 0.1 })
+	const [refNoti, inViewNoti] = useInView({ threshold: 0.1 })
 	const [refData, inViewData] = useInView({ threshold: 0.1 })
 	return (
 		<div className={styles.container}>
@@ -105,11 +107,13 @@ const Opportunities = () => {
 							<img src={iconInfinitely} alt='wallet icon' />
 						</div>
 						<div className={styles.card__block}>
-							<p>Пополнение</p>
-							<h2>Пополнение счета eCards различными способами</h2>
+							<p>Выпуск карт</p>
+							<h2>Безлимитный моментальный выпуск виртуальных карт</h2>
 							<p>
-								Пополняйте свой счет eCards c помощью отправки wire или USDT.
-								Затем распределяйте деньги по картам и байрам на свое усмотрение
+								На платформе доступны карты VISA, MasterCard, UnionPay. Бины
+								постоянно пополняются. Для выпуска карт массовым запросом
+								необходимо всего несколько кликов. Ограничений на выпуск карт
+								нет
 							</p>
 						</div>
 					</div>
@@ -178,7 +182,7 @@ const Opportunities = () => {
 						</div>
 					</div>
 				</div>
-				<div className={styles.notification}>
+				<div className={styles.notification} ref={refNoti}>
 					<div className={styles.notification__left}>
 						<div className={styles.notification__icon}>
 							<img src={iconNotification} alt='icon notification' />
@@ -194,10 +198,17 @@ const Opportunities = () => {
 							</p>
 						</div>
 					</div>
-					<div className={styles.notification__right}>
-						<img src={imgNotification} alt=' notification system' />
-					</div>
-					<div className={styles.blockBlur__opportunities}></div>
+					{inViewNoti && (
+						<div className={styles.notification__right}>
+							<div className={styles.notiOne}>
+								<img src={notificationImgOne} alt='notification system' />
+							</div>
+							<div className={styles.notiTwo}>
+								<img src={notificationImgTwo} alt='notification system' />
+							</div>
+						</div>
+					)}
+					<div className={styles.blockBlur__notification}></div>
 				</div>
 			</div>
 		</div>

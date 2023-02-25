@@ -4,12 +4,18 @@
 	position: relative;
 	max-width: 1440px;
 	width: calc(100% - 200px);
-	margin: 0 auto;
+	margin: 120px auto;
 	@media screen and (max-width: 1285px) {
 		width: calc(100% - 100px);
 	}
 	@media screen and (max-width: 1050px) {
 		width: calc(100% - 60px);
+	}
+	@media screen and (max-width: 768px) {
+		margin: 0 auto;
+	}
+	@media screen and (max-width: 450px) {
+		width: calc(100% - 36px);
 	}
 	.conditions__top {
 		.top__subTitle {
@@ -168,7 +174,6 @@
 			display: flex;
 			background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
 			border-radius: 22px;
-			gap: 10.04px;
 			padding: 10px 20px;
 			z-index: 49;
 			@media screen and (max-width: 420px) {

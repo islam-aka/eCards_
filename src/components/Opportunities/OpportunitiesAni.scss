@@ -1,12 +1,22 @@
 @import "../variables.scss";
+
+@keyframes noti {
+	from {
+		margin-right: -650px;
+	}
+	to {
+		margin-right: -50px;
+	}
+}
+
 @keyframes aniCardOne {
 	0% {
 		left: -320px;
-		top: 149px;
+		top: 150px;
 	}
 	33% {
-		left: 252px;
-		top: 149px;
+		left: 282px;
+		top: 150px;
 	}
 	34% {
 	}
@@ -16,11 +26,12 @@
 
 @keyframes aniCardOne1280 {
 	0% {
-		left: -320px;
-		top: 128px;
+		left: -247px;
+
+		top: 120px;
 	}
 	33% {
-		left: 205px;
+		left: 280px;
 		top: 120px;
 	}
 	34% {
@@ -45,31 +56,18 @@
 }
 @keyframes aniCardOne768 {
 	0% {
-		left: -150px;
-		top: 121px;
+		left: -77px;
+		top: 95px;
 	}
 	33% {
-		left: 175px;
-		top: 92px;
+		left: 145px;
+		top: 95px;
 	}
 	34% {
 	}
 	100% {
 	}
 }
-@keyframes ani700 {
-	0% {
-		left: -150px;
-	}
-	33% {
-	}
-	34% {
-	}
-	100% {
-		left: 45px;
-	}
-}
-
 @keyframes aniCardOne560 {
 	0% {
 		left: -270px;
@@ -94,7 +92,24 @@
 		left: -332px;
 	}
 	66% {
-		left: 0;
+		left: 40px;
+	}
+	67% {
+	}
+	100% {
+	}
+}
+@keyframes aniCardTwo1280 {
+	0% {
+		left: -246px;
+	}
+	33% {
+	}
+	34% {
+		left: -246px;
+	}
+	66% {
+		left: 67px;
 	}
 	67% {
 	}
@@ -103,15 +118,15 @@
 }
 @keyframes aniCardTwo992 {
 	0% {
-		left: -275px;
+		left: -140px;
 	}
 	33% {
-		left: -275px;
+		left: -140px;
 	}
 	34% {
 	}
 	66% {
-		left: -100px;
+		left: 67px;
 	}
 	100% {
 	}
@@ -119,17 +134,20 @@
 
 @keyframes aniCardTwo768 {
 	0% {
-		left: -150px;
+		left: -77px;
+		top: 195px;
 	}
 	33% {
 	}
 	34% {
+		left: -77px;
+		top: 195px;
 	}
 	66% {
-		left: -150px;
+		left: 145px;
+		top: 195px;
 	}
 	100% {
-		left: 15px;
 	}
 }
 @keyframes aniCardTwo560 {
@@ -159,7 +177,6 @@
 	34% {
 	}
 	66% {
-		left: -332px;
 	}
 	67% {
 		left: -332px;
@@ -168,23 +185,40 @@
 		left: 0;
 	}
 }
-@keyframes aniCardThree992 {
+@keyframes aniCardThree1280 {
 	0% {
-		left: -275px;
+		left: -247px;
 	}
 	33% {
 	}
 	34% {
 	}
 	66% {
-		left: -275px;
 	}
 	67% {
-		left: -275px;
+		left: -247px;
 	}
 	100% {
-		top: 165px;
-		left: 0px;
+		left: 11px;
+	}
+}
+@keyframes aniCardThree992 {
+	0% {
+		left: -136px;
+	}
+	33% {
+	}
+	34% {
+	}
+	66% {
+		left: -136px;
+	}
+	67% {
+		left: -136px;
+	}
+	100% {
+		top: 140px;
+		left: 13px;
 	}
 }
 @keyframes aniCardThree970 {
@@ -208,20 +242,21 @@
 }
 @keyframes aniCardThree768 {
 	0% {
-		left: -150px;
+		left: -77px;
 	}
 	33% {
 	}
 	34% {
-		left: -150px;
 	}
 	66% {
-		top: 0;
-		left: 15px;
 	}
 	67% {
+		top: 0;
+		left: -77px;
 	}
 	100% {
+		left: 145px;
+		top: 0;
 	}
 }
 

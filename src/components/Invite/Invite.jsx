@@ -8,8 +8,10 @@ import InviteNotification from '../../assets/svg/InviteNotification.svg'
 const Invite = () => {
 	return (
 		<div className={styles.container}>
-			<p className={styles.container__subTitle}>Форма заявки</p>
-			<h2 className={styles.container__title}>Как получить инвайт?</h2>
+			<div className={styles.container__title}>
+				<p>Форма заявки</p>
+				<h2>Как получить инвайт?</h2>
+			</div>
 			<div className={styles.container__info}>
 				<div className={styles.info__item}>
 					<div className={styles.info__icon}>

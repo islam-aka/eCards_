@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import styles from './DropDown.module.scss'
-import iconBottom from '../../assets/svg/rightLogIn.svg'
+import iconBottom from '../../assets/svg/rightBlue.svg'
 import { useTranslation } from 'react-i18next'
 import '../../i18next'
 
@@ -24,7 +24,7 @@ const DropDown = () => {
 	const check = str => {
 		document.cookie = `language=${language}; domain=http://localhost:3000/#eСards; path=/`
 		document.cookie = `language=${str}`
-
+		dropDownActive()
 		console.log(str)
 		if (
 			document.cookie.replace(

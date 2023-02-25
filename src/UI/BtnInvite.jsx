@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './UI.module.scss'
+import styles from './BtnInvite.module.scss'
 import iconRight from '../assets/svg/right.svg'
 
 const BtnInvite = ({ color, ...style }) => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './About.module.scss'
 import iconCard from '../../assets/svg/card.svg'
-import icon from '../../assets/svg/icons.svg'
+import icon from '../../assets/svg/people.svg'
 import iconDollar from '../../assets/svg/dollar-circle.svg'
 import image from '../../assets//img/ОeCards.png'
 import CountUp from 'react-countup'
@@ -32,9 +32,9 @@ const About = () => {
 						{inViewOne && (
 							<CountUp
 								className={styles.about__title}
-								start={0}
+								delay={0}
 								end={700000}
-								duration={1}
+								duration={1.5}
 							/>
 						)}
 						<p className={styles.about__subTitle}>
@@ -46,9 +46,9 @@ const About = () => {
 						{inViewTwo && (
 							<CountUp
 								className={styles.about__title}
-								start={0}
+								delay={1}
 								end={5000}
-								duration={1}
+								duration={1.5}
 							/>
 						)}
 						<p className={styles.about__subTitle}>
@@ -58,13 +58,13 @@ const About = () => {
 					<div ref={refThree} className={styles.numbers__three}>
 						<img src={iconDollar} alt='icon dollar' />
 						<h3 className={styles.about__title}>
-							Более
+							Более &nbsp;
 							{inViewThree && (
 								<CountUp
 									className={styles.about__title}
-									start={0}
+									delay={2}
 									end={500}
-									duration={1}
+									duration={1.5}
 								/>
 							)}{' '}
 							млн.$

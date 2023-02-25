@@ -31,14 +31,13 @@
 			font-style: normal;
 			font-weight: 500;
 			font-size: 13px;
-			// line-height: 120%;
+			line-height: 120%;
 			color: $primary-main;
 		}
 
 		.active {
 			transition: all 0.2s;
 			transform: rotate(-90deg);
-			padding: 6px 2.72px;
 		}
 	}
 
@@ -62,7 +61,6 @@
 			padding: 8px 0 6px 8px;
 			margin: 1px;
 			transition: 0.5s;
-			border: 1px solid $white;
 			&:hover {
 				background: #ffffff;
 				border: 1px solid #748bff;
@@ -125,12 +123,10 @@
 			font-style: normal;
 			font-weight: 500;
 			font-size: 13px;
-			// line-height: 120%;
 			color: $primary-main;
 		}
 		img {
 			transform: rotate(90deg);
-			padding: 6px 2.72px;
 		}
 	}
 

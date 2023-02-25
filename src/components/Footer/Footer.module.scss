@@ -13,6 +13,9 @@
 	@media screen and (max-width: 900px) {
 		padding: 20px;
 	}
+	@media screen and (max-width: 450px) {
+		padding: 20px 0;
+	}
 	.footer {
 		max-width: 1440px;
 		width: calc(100% - 200px);
@@ -34,6 +37,9 @@
 		}
 		@media screen and (max-width: 560px) {
 			gap: 40px;
+		}
+		@media screen and (max-width: 450px) {
+			width: calc(100% - 36px);
 		}
 		.footer__left {
 			width: 490px;
@@ -125,7 +131,7 @@
 						margin: 0;
 					}
 				}
-				div {
+				.btn__subscribe {
 					height: 40px;
 					margin-bottom: 50px;
 					@media screen and (max-width: 900px) {
@@ -134,6 +140,9 @@
 					a {
 						display: flex;
 						align-items: center;
+						color: $primary-main;
+						transition: all 0.2s linear;
+						font-weight: 500;
 						padding: 10px 20px;
 						gap: 6px;
 						width: 172px;
@@ -143,6 +152,18 @@
 						backdrop-filter: blur(18px);
 						border-radius: 22px;
 						margin-bottom: 50px;
+						&:hover {
+							color: #5d43ff;
+						}
+						&:hover path {
+							fill: #5d43ff !important;
+						}
+						svg {
+							path {
+								transition: all 0.2s linear;
+								fill: #748bff;
+							}
+						}
 						@media screen and (max-width: 900px) {
 							margin: 0;
 						}

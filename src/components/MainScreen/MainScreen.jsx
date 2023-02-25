@@ -25,10 +25,12 @@ const MainScreen = () => {
 							<img src={iconRight} alt='icon right' />
 						</div>
 					</Link>
-					<div className={styles.btn__conditions}>
-						<p>Ознакомиться с условиями </p>
-						<img src={iconRightLogIn} alt='icon right' />
-					</div>
+					<Link to={'/conditions'}>
+						<div className={styles.btn__conditions}>
+							<p>Ознакомиться с условиями </p>
+							<img src={iconRightLogIn} alt='icon right' />
+						</div>
+					</Link>
 				</div>
 				<div className={styles.block}>
 					<div className={styles.info}>

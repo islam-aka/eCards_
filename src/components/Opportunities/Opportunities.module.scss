@@ -29,6 +29,7 @@
 	}
 
 	@media screen and (max-width: 560px) {
+		width: calc(100% - 36px);
 		overflow: visible;
 		box-shadow: none;
 		padding: 10px;
@@ -280,11 +281,10 @@
 			gap: 20px;
 			@media screen and (max-width: 560px) {
 				justify-content: start;
-				flex-direction: column;
+				flex-direction: column-reverse;
 			}
 			.card__img {
 				position: relative;
-				overflow: hidden;
 				z-index: 6;
 				margin-left: -130px;
 				max-width: 692px;
@@ -297,22 +297,24 @@
 					overflow: visible;
 					height: 350px;
 					max-width: 540px;
+					margin-left: -220px;
 				}
 				@media screen and (max-width: 700px) {
 					height: 300px;
 				}
 				@media screen and (max-width: 575px) {
 					max-width: 260px;
+					margin-left: -127px;
 				}
 				@media screen and (max-width: 560px) {
-					margin-left: -60px;
+					margin-left: -20px;
 					max-width: 100%;
 					height: 360px;
 				}
 				img {
-					width: 436px;
+					width: 360px;
 					@media screen and (max-width: 1280px) {
-						width: 370px;
+						width: 320px;
 						left: 220px;
 						top: 128px;
 					}
@@ -323,28 +325,25 @@
 						width: 230px;
 					}
 					@media screen and (max-width: 560px) {
-						width: 350px;
+						width: 300px;
 					}
 				}
 				.card__imgOne {
+					filter: drop-shadow(0px 30.8803px 30.8803px rgba(0, 0, 0, 0.1));
 					position: absolute;
-					left: 252px;
-					top: 149px;
+					left: 276px;
+					top: 150px;
 					animation: aniCardOne 3s linear;
 					@media screen and (max-width: 1280px) {
-						animation: aniCardOne1280 3s linear;
-						left: 205px;
+						animation: aniCardOne1280 1.5s linear;
+						left: 280px;
 						top: 120px;
 					}
-					@media screen and (max-width: 970px) {
-						animation: aniCardOne992 3s linear;
-						left: 120px;
-						top: 123px;
-					}
+
 					@media screen and (max-width: 768px) {
-						animation: aniCardOne768 3s linear;
-						left: 175px;
-						top: 92px;
+						animation: aniCardOne768 1.5s linear;
+						left: 145px;
+						top: 95px;
 					}
 					@media screen and (max-width: 700px) {
 						animation: ani700 1s linear;
@@ -352,25 +351,29 @@
 						top: 70px;
 					}
 					@media screen and (max-width: 560px) {
-						animation: aniCardOne560 3s linear;
+						animation: aniCardOne560 1.5s linear;
 						width: 350px;
 						left: 234px;
 						top: 115px;
 					}
 				}
 				.card__imgTwo {
-					animation: aniCardTwo 3s linear;
+					filter: drop-shadow(0px 30.8803px 30.8803px rgba(0, 0, 0, 0.1));
+					animation: aniCardTwo 1.5s linear;
 					position: absolute;
-					left: 0;
+					left: 40px;
 					top: 0;
-					@media screen and (max-width: 970px) {
-						animation: aniCardTwo992 3s linear;
-						left: -100px;
+					@media screen and (max-width: 1280px) {
+						animation: aniCardTwo1280 1.5s linear;
+						left: 67px;
+					}
+					@media screen and (max-width: 992px) {
+						animation: aniCardTwo992 1.5s linear;
 					}
 					@media screen and (max-width: 768px) {
-						animation: aniCardTwo768 3s linear;
-						left: 15px;
-						top: 125px;
+						animation: aniCardTwo768 1.5s linear;
+						left: 145px;
+						top: 195px;
 					}
 					@media screen and (max-width: 700px) {
 						animation: ani700 1s linear;
@@ -378,33 +381,31 @@
 						top: 140px;
 					}
 					@media screen and (max-width: 560px) {
-						animation: aniCardTwo560 3s linear;
+						animation: aniCardTwo560 1.5s linear;
 						left: 15px;
 					}
 				}
 				.card__imgThree {
-					animation: aniCardThree 3s linear;
+					filter: drop-shadow(0px 30.8803px 30.8803px rgba(0, 0, 0, 0.1));
+					animation: aniCardThree 1.5s linear;
 					position: absolute;
-					left: 0;
-					bottom: -40px;
+					left: -17px;
+					bottom: 30px;
+
 					@media screen and (max-width: 1280px) {
-						bottom: 13px;
-						top: 165px;
-						left: 0;
+						animation: aniCardThree1280 1.3s linear;
+						top: 140px;
+						left: 11px;
 					}
 					@media screen and (max-width: 992px) {
-						animation: aniCardThree992 3s linear;
-						top: 165px;
-						left: 0;
+						animation: aniCardThree992 1.5s linear;
+						top: 140px;
+						left: 13px;
 					}
-					@media screen and (max-width: 970px) {
-						animation: aniCardThree970 3s linear;
-						top: 165px;
-						left: -100px;
-					}
+
 					@media screen and (max-width: 768px) {
-						animation: aniCardThree768 3s linear;
-						left: 15px;
+						animation: aniCardThree768 1.5s linear;
+						left: 145px;
 						top: 0;
 					}
 					@media screen and (max-width: 700px) {
@@ -414,9 +415,19 @@
 					}
 
 					@media screen and (max-width: 560px) {
-						animation: aniCardThree560 3s linear;
+						animation: aniCardThree560 1.5s linear;
 						left: 40px;
 						top: 0;
+					}
+					img {
+						width: 380px;
+
+						@media screen and (max-width: 560px) {
+							width: 290px;
+							animation: aniCardThree560 1.5s linear;
+							left: 40px;
+							top: 0;
+						}
 					}
 				}
 			}
@@ -451,11 +462,10 @@
 						padding: 10px;
 						width: 44px;
 						height: 44px;
+						padding: 14px 7px;
 					}
 					img {
 						@media screen and (max-width: 768px) {
-							width: 24px;
-							height: 24px;
 						}
 					}
 				}
@@ -499,10 +509,10 @@
 				width: 520px;
 				height: 520px;
 				left: -260px;
-				top: 538px;
+				top: 390px;
 				background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
-				opacity: 0.2;
-				filter: blur(112px);
+				opacity: 0.25;
+				filter: blur(71px);
 				@media screen and (max-width: 560px) {
 					display: none;
 				}
@@ -626,7 +636,7 @@
 					z-index: 9;
 					top: 65px;
 					left: -20px;
-					animation: aniOne 1.5s linear;
+					animation: aniOne 1s linear;
 					@media screen and (max-width: 650px) {
 						top: 42px;
 					}
@@ -644,12 +654,14 @@
 					z-index: 8;
 					top: 0;
 					left: 0;
-					animation: aniTwo 1.5s linear;
+
+					animation: aniTwo 1s linear;
 					@media screen and (max-width: 650px) {
 						height: 240px;
 					}
 
 					img {
+						width: 684px;
 						@media screen and (max-width: 650px) {
 							width: 500px;
 						}
@@ -669,9 +681,9 @@
 				width: 520px;
 				height: 520px;
 				left: -260px;
-				top: 1250 px;
+				top: 1250px;
 				background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
-				opacity: 0.2;
+				opacity: 0.25;
 				filter: blur(112px);
 				@media screen and (max-width: 560px) {
 					display: none;
@@ -696,8 +708,9 @@
 					width: 305px;
 				}
 				img {
-					animation: aniDataOne 1.5s linear;
+					animation: aniDataOne 1s linear;
 					position: absolute;
+					width: 360px;
 
 					@media screen and (max-width: 1200px) {
 						margin-left: -120px;
@@ -723,7 +736,7 @@
 				}
 
 				.checked__one {
-					animation: aniDataTwo 1.5s linear;
+					animation: aniDataTwo 1s linear;
 					position: absolute;
 					top: 70px;
 					right: 0;
@@ -787,7 +800,7 @@
 					}
 				}
 				.checked__two {
-					animation: aniDataTwo 1.5s linear;
+					animation: aniDataTwo 1s linear;
 					position: absolute;
 					top: 127px;
 					right: 0;
@@ -939,9 +952,6 @@
 				@media screen and (max-width: 768px) {
 					width: 280px;
 				}
-				@media screen and (max-width: 768px) {
-					width: 100%;
-				}
 
 				.notification__icon {
 					padding: 10px;
@@ -1002,42 +1012,66 @@
 			}
 			.notification__right {
 				position: relative;
-				z-index: 7;
-				width: 594px;
-				height: 312px;
-				@media screen and (max-width: 1290px) {
-					margin-right: -175px;
-				}
-				@media screen and (max-width: 992px) {
-					margin-right: -240px;
-				}
+				width: 596px;
+				animation: noti 0.5s linear;
+				margin-right: -50px;
 				@media screen and (max-width: 768px) {
-					width: 175px;
-					margin: 0;
+					width: 320px;
+				}
+				@media screen and (max-width: 575px) {
+					width: 220px;
 				}
 				@media screen and (max-width: 560px) {
-					height: 240px;
-				}
-				@media screen and (max-width: 490px) {
-					display: none;
+					height: 250px;
 				}
 				img {
-					width: 800px;
+					width: 700px;
 					@media screen and (max-width: 768px) {
-						margin-left: -35px;
 						width: 600px;
+					}
+					@media screen and (max-width: 575px) {
+						width: 460px;
+					}
+					@media screen and (max-width: 560px) {
+						width: 550px;
+					}
+				}
+				.notiOne {
+					position: absolute;
+					z-index: 6;
+					top: 80px;
+					@media screen and (max-width: 768px) {
+						top: 75px;
+					}
+					@media screen and (max-width: 575px) {
+						top: 112px;
+					}
+					@media screen and (max-width: 560px) {
+						top: 72px;
+					}
+				}
+				.notiTwo {
+					position: absolute;
+					z-index: 5;
+					left: 25px;
+					@media screen and (max-width: 575px) {
+						left: 20px;
+						top: 55px;
+					}
+					@media screen and (max-width: 560px) {
+						top: 0;
 					}
 				}
 			}
 			.blockBlur__notification {
 				position: absolute;
-				z-index: 5;
+				z-index: 4;
 				width: 520px;
 				height: 520px;
-				left: 980px;
-				top: 1866px;
+				left: 837px;
+				top: 108px;
 				background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
-				opacity: 0.2;
+				opacity: 0.25;
 				filter: blur(112px);
 
 				@media screen and (max-width: 560px) {
@@ -1045,15 +1079,16 @@
 				}
 			}
 		}
+
 		.blockBlur__opportunities {
 			position: absolute;
 			z-index: 5;
 			width: 520px;
 			height: 520px;
 			left: 992px;
-			top: 240px;
+			top: 713px;
 			background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
-			opacity: 0.2;
+			opacity: 0.3;
 			filter: blur(112px);
 			@media screen and (max-width: 768px) {
 				left: 217px;
@@ -1073,9 +1108,9 @@
 		width: 520px;
 		height: 520px;
 		right: -285px;
-		top: -320px;
+		top: -214px;
 		background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
-		opacity: 0.2;
+		opacity: 0.3;
 		filter: blur(112px);
 		@media screen and (max-width: 560px) {
 			display: none;

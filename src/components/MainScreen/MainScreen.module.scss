@@ -7,7 +7,8 @@
 	margin: 0 auto;
 	height: 700px;
 	display: flex;
-	gap: 40px;
+	justify-content: space-between;
+	gap: 20px;
 	@media screen and (max-width: 1285px) {
 		width: calc(100% - 100px);
 		height: auto;
@@ -22,7 +23,9 @@
 	@media screen and (max-width: 560px) {
 		height: 530px;
 	}
-
+	@media screen and (max-width: 450px) {
+		width: calc(100% - 36px);
+	}
 	&__info {
 		max-width: 685px;
 
@@ -39,19 +42,18 @@
 		}
 
 		.container__title {
-			width: 685px;
+			width: 100%;
 			color: $color-text;
 			font-weight: bold;
 			font-size: 52px;
 			line-height: 120%;
 			letter-spacing: 0.003em;
-			@media screen and (max-width: 1280px) {
-				width: 100%;
-			}
+
 			@media screen and (max-width: 1120px) {
 				font-size: 42px;
 				line-height: 120%;
 			}
+
 			@media screen and (max-width: 680px) {
 				font-size: 42px;
 				line-height: 120%;
@@ -62,7 +64,8 @@
 		}
 
 		.container__subTitle {
-			width: 600px;
+			max-width: 600px;
+			width: 100%;
 			margin-top: 20px;
 			font-weight: 400;
 			font-size: 16px;
@@ -93,9 +96,9 @@
 				cursor: pointer;
 				position: relative;
 				display: flex;
+				gap: 4px;
 				background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
 				border-radius: 22px;
-				gap: 10.04px;
 				padding: 10px 20px;
 				z-index: 49;
 				p {
@@ -171,8 +174,7 @@
 			}
 			.info {
 				display: flex;
-				flex-direction: column;
-
+				align-items: center;
 				gap: 20px;
 				width: 364px;
 				@media screen and (max-width: 992px) {
@@ -188,7 +190,7 @@
 				}
 				.info__icon {
 					display: flex;
-					padding: 6.67px;
+					padding: 7px;
 					width: 36px;
 					height: 36px;
 					background: $primary-main;
@@ -229,10 +231,16 @@
 	}
 	&__bg {
 		position: relative;
-		width: 685px;
+		z-index: 6;
+		width: 482px;
+
 		img {
+			width: 1075px;
 			margin-left: -29px;
 			margin-top: -16px;
+			@media screen and (max-width: 992px) {
+				width: 930px;
+			}
 		}
 		@media screen and (max-width: 992px) {
 			width: 320px;
@@ -246,7 +254,7 @@
 		height: 480px;
 		position: absolute;
 		z-index: 5;
-		right: 370px;
+		right: 160px;
 		bottom: 34px;
 		background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
 		opacity: 0.1;
@@ -259,14 +267,14 @@
 		}
 	}
 	.blockBlur__two {
-		display: none;
+		// display: none;
 		position: absolute;
-		width: 250px;
-		height: 250px;
-		left: -135px;
-		top: 130px;
+		width: 480px;
+		height: 480px;
+		top: -60px;
+		right: -300px;
 		background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
-		opacity: 0.2;
+		opacity: 0.1;
 		filter: blur(50px);
 		@media screen and (max-width: 560px) {
 			display: block;

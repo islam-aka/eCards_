@@ -3,7 +3,7 @@ import styles from './Contacts.module.scss'
 import iconOne from '../../assets/svg/iconOne.svg'
 import iconTwo from '../../assets/svg/iconTwo.svg'
 import iconThree from '../../assets/svg/iconThree.svg'
-import icontel from '../../assets/svg/tel.svg'
+import icontel from '../../assets/svg/icons.svg'
 
 const Contacts = () => {
 	return (
