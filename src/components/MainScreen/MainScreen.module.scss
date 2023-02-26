@@ -21,7 +21,7 @@
 		width: calc(100% - 60px);
 	}
 	@media screen and (max-width: 560px) {
-		height: 530px;
+		height: 600px;
 	}
 	@media screen and (max-width: 450px) {
 		width: calc(100% - 36px);
@@ -185,10 +185,11 @@
 					flex-direction: row;
 				}
 				@media screen and (max-width: 575px) {
-					flex-direction: row;
 					align-items: center;
 				}
 				@media screen and (max-width: 560px) {
+					flex-direction: column;
+					align-items: flex-start;
 					width: 284px;
 				}
 				.info__icon {

@@ -16,7 +16,6 @@ function App() {
 
 	useEffect(() => {
 		checkCookie()
-		console.log(check)
 	}, [check])
 
 	return (

@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './Contacts.module.scss'
-import iconOne from '../../assets/svg/iconOne.svg'
-import iconTwo from '../../assets/svg/iconTwo.svg'
-import iconThree from '../../assets/svg/iconThree.svg'
+import iconOne from '../../assets/img/iconOne.png'
+import iconTwo from '../../assets/img/iconTwo.png'
+import iconThree from '../../assets/img/iconThree.png'
 import icontel from '../../assets/svg/icons.svg'
 
 const Contacts = () => {
