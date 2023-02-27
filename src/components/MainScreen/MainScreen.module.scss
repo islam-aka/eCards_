@@ -95,8 +95,11 @@
 				width: 206px;
 				cursor: pointer;
 				position: relative;
+				display: -webkit-box;
+				display: -ms-flexbox;
 				display: flex;
 				gap: 4px;
+				background: -o-linear-gradient(44.88deg, #7aafff 7.03%, #642dff 98.91%);
 				background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
 				border-radius: 22px;
 				padding: 10px 20px;
@@ -118,13 +121,17 @@
 					left: 0;
 					width: 100%;
 					height: 100%;
+					background: -o-linear-gradient(40.81deg, #642dff 1.96%, #7aafff 86.77%);
 					background: linear-gradient(49.19deg, #642dff 1.96%, #7aafff 86.77%);
+					-webkit-transition: opacity 0.2s ease-in-out;
+					-o-transition: opacity 0.2s ease-in-out;
 					transition: opacity 0.2s ease-in-out;
 					border-radius: 22px;
 					z-index: -49;
 				}
 
 				&:hover::before {
+					background: -o-linear-gradient(40.81deg, #642dff 1.96%, #7aafff 86.77%);
 					background: linear-gradient(49.19deg, #642dff 1.96%, #7aafff 86.77%);
 					opacity: 1;
 				}
@@ -271,7 +278,6 @@
 		}
 	}
 	.blockBlur__two {
-		// display: none;
 		position: absolute;
 		width: 480px;
 		height: 480px;

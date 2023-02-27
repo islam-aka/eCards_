@@ -9,7 +9,7 @@
 	padding: 60px;
 	margin: 0 auto;
 	margin-top: 120px;
-	background: $white;
+	background-color: $white;
 	box-shadow: 20px 34px 59px 7px rgba(0, 25, 225, 0.05);
 	border-radius: 20px;
 
@@ -108,7 +108,7 @@
 					margin-bottom: 40px;
 					width: 54px;
 					height: 54px;
-					background: $primary-main;
+					background-color: $primary-main;
 					box-shadow: 0px 3px 24px rgba(116, 139, 255, 0.51), inset 3px 4px 7px rgba(255, 255, 255, 0.31);
 					border-radius: 40px;
 					@media screen and (max-width: 768px) {
@@ -242,7 +242,7 @@
 					align-items: center;
 					width: 75.35px;
 					height: 36.18px;
-					background: $primary-main;
+					background-color: $primary-main;
 					border: 2.36267px solid rgba(255, 255, 255, 0.4);
 					box-shadow: 0px 16.5387px 25.9893px rgba(21, 21, 21, 0.08);
 					border-radius: 19px;
@@ -267,7 +267,7 @@
 					padding: 5.08px 0 0 12.17px;
 					width: 109.86px;
 					height: 35.44px;
-					background: $primary-light;
+					background-color: $primary-light;
 					border: 2.36267px solid rgba(255, 255, 255, 0.4);
 					box-shadow: 0px 16.5387px 25.9893px rgba(21, 21, 21, 0.08);
 					border-radius: 18.9013px;
@@ -533,7 +533,7 @@
 					padding: 20.55px 12.83px;
 					width: 54px;
 					height: 54px;
-					background: $primary-main;
+					background-color: $primary-main;
 					box-shadow: 0px 3px 24px rgba(116, 139, 255, 0.51), inset 3px 4px 7px rgba(255, 255, 255, 0.31);
 					border-radius: 40px;
 					@media screen and (max-width: 768px) {
@@ -589,7 +589,7 @@
 				height: 520px;
 				left: -260px;
 				top: 390px;
-				background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
+				background-color: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
 				opacity: 0.25;
 				filter: blur(71px);
 				@media screen and (max-width: 768px) {
@@ -644,7 +644,7 @@
 					margin-bottom: 40px;
 					width: 54px;
 					height: 54px;
-					background: $primary-main;
+					background-color: $primary-main;
 					box-shadow: 0px 3px 24px rgba(116, 139, 255, 0.51), inset 3px 4px 7px rgba(255, 255, 255, 0.31);
 					border-radius: 40px;
 					@media screen and (max-width: 768px) {
@@ -765,7 +765,7 @@
 				height: 520px;
 				left: -260px;
 				top: 1250px;
-				background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
+				background-color: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
 				opacity: 0.25;
 				filter: blur(112px);
 				@media screen and (max-width: 768px) {
@@ -830,7 +830,7 @@
 					border: 0.81px solid #7aafff;
 					width: 259px;
 					height: 48.56px;
-					background: $white;
+					background-color: $white;
 					box-shadow: 20px 34px 59px 7px rgba(0, 25, 225, 0.05);
 					border-radius: 12.95px;
 					@media screen and (max-width: 1290px) {
@@ -894,7 +894,7 @@
 					border: 0.81px solid #7aafff;
 					width: 259px;
 					height: 48.56px;
-					background: $white;
+					background-color: $white;
 					box-shadow: 20px 34px 59px 7px rgba(0, 25, 225, 0.05);
 					border-radius: 12.95px;
 					@media screen and (max-width: 1290px) {
@@ -964,7 +964,7 @@
 					padding: 11px;
 					width: 54px;
 					height: 54px;
-					background: $primary-main;
+					background-color: $primary-main;
 					box-shadow: 0px 3px 24px rgba(116, 139, 255, 0.51), inset 3px 4px 7px rgba(255, 255, 255, 0.31);
 					border-radius: 40px;
 					margin-bottom: 40px;
@@ -1040,7 +1040,7 @@
 					padding: 10px;
 					width: 54px;
 					height: 54px;
-					background: $primary-main;
+					background-color: $primary-main;
 					box-shadow: 0px 3px 24px rgba(116, 139, 255, 0.51), inset 3px 4px 7px rgba(255, 255, 255, 0.31);
 					border-radius: 40px;
 					margin-bottom: 40px;
@@ -1153,7 +1153,7 @@
 				height: 520px;
 				left: 837px;
 				top: 108px;
-				background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
+				background-color: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
 				opacity: 0.25;
 				filter: blur(112px);
 				@media screen and (max-width: 768px) {
@@ -1172,7 +1172,7 @@
 			height: 520px;
 			left: 992px;
 			top: 713px;
-			background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
+			background-color: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
 			opacity: 0.3;
 			filter: blur(112px);
 			@media screen and (max-width: 768px) {
@@ -1195,7 +1195,7 @@
 		height: 520px;
 		right: -285px;
 		top: -214px;
-		background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
+		background-color: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
 		opacity: 0.3;
 		filter: blur(112px);
 		@media screen and (max-width: 560px) {

@@ -66,14 +66,19 @@
 		}
 
 		.header__btn {
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
 			align-items: center;
 			gap: 16px;
 
 			@media screen and (max-width: 1285px) {
-				gap: 10px;
 			}
 			@media screen and (max-width: 768px) {
+				-webkit-box-pack: justify;
+				-ms-flex-pack: justify;
 				justify-content: space-between;
 				width: 113px;
 				gap: 0;
@@ -84,7 +89,9 @@
 					display: none;
 				}
 				a {
-					transition: all 1s ease;
+					-webkit-transition: all 0.8s ease;
+					-o-transition: all 0.8s ease;
+					transition: all 0.8s ease;
 					display: flex;
 					align-items: center;
 					gap: 10.67px;
@@ -377,6 +384,7 @@
 		position: fixed;
 		width: 100%;
 		top: -100vh;
+		visibility: hidden;
 		.menuTop {
 			width: 100%;
 			margin: 24px auto 0 auto;
@@ -481,14 +489,20 @@
 					color: $white;
 				}
 				.btn__invite {
-					width: 284px;
+					transition: all 1s linear;
 					height: 40px;
 					cursor: pointer;
 					position: relative;
+					display: -webkit-box;
+					display: -ms-flexbox;
 					display: flex;
+					-webkit-box-align: center;
+					-ms-flex-align: center;
 					align-items: center;
+					-webkit-box-pack: center;
+					-ms-flex-pack: center;
 					justify-content: center;
-					background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
+					background-color: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
 					border-radius: 22px;
 					z-index: 150;
 					p {
@@ -508,14 +522,14 @@
 						left: 0;
 						width: 100%;
 						height: 100%;
-						background: #5d43ff;
-						transition: opacity 0.2s ease-in-out;
+						background-color: #5d43ff;
+						transition: all 0.2s ease-in-out;
 						border-radius: 22px;
 						z-index: -150;
 					}
 
 					&:hover::before {
-						background: #5d43ff;
+						background-color: #5d43ff;
 						opacity: 1;
 					}
 				}
