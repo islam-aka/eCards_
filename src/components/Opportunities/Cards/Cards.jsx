@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './Cards.module.scss'
 import iconInfinitely from '../../../assets/svg/infinitely.svg'
 import imgCardOne from '../../../assets/cards/cardOne.png'
