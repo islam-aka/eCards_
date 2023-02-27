@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Cards.module.scss'
 import iconInfinitely from '../../../assets/svg/infinitely.svg'
 import imgCardOne from '../../../assets/cards/cardOne.png'
@@ -9,11 +9,16 @@ import { useInView } from 'react-intersection-observer'
 
 const Cards = () => {
 	const [ref, inView] = useInView({ threshold: 0 })
+	const [width, setWidth] = useState(window.innerWidth)
+
+	useEffect(() => {
+		setWidth(window.innerWidth)
+	}, [])
 
 	return (
 		<div ref={ref} className={styles.cards}>
 			<div className={styles.blockBlur__cards}></div>
-
+			{width}
 			<div className={styles.card__img}>
 				{inView && (
 					<>
