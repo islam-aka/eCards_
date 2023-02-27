@@ -71,14 +71,15 @@
 
 			@media screen and (max-width: 560px) {
 				animation: aniCardOne560 1.5s linear;
-				width: 350px;
+				transform: translate(223px, 127px);
 			}
 			@media screen and (max-width: 420px) {
-				animation: aniCardOne420 2s linear;
+				animation: aniCardOne420 1.5s linear;
+				transform: translate(174px, 102px);
 			}
 			@media screen and (max-width: 320px) {
-				-webkit-animation: aniCardOn320 2s linear;
-				animation: aniCardOn320 2s linear;
+				animation: aniCardOne320 1.5s linear;
+				transform: translate(126px, 75px);
 			}
 			img {
 				width: 345px;
@@ -98,7 +99,7 @@
 					width: 240px;
 				}
 				@media screen and (max-width: 320px) {
-					width: 180px;
+					width: 170px;
 				}
 			}
 		}
@@ -123,16 +124,14 @@
 				animation: aniCardTwo768 1.5s linear;
 				transform: translate(150px, 200px);
 			}
-			@media screen and (max-width: 575px) {
-				animation: aniCardTwo768 1.5s linear;
-			}
 
 			@media screen and (max-width: 560px) {
 				animation: aniCardTwo560 1.5s linear;
-			}
-			@media screen and (max-width: 420px) {
+				transform: translate(15px, 10px);
 			}
 			@media screen and (max-width: 320px) {
+				animation: aniCardTwo320 1.5s linear;
+				transform: translate(15px, 10px);
 			}
 
 			img {
@@ -182,12 +181,15 @@
 
 			@media screen and (max-width: 560px) {
 				animation: aniCardThree560 1.5s linear;
+				transform: translate(-13px, 150px);
 			}
 			@media screen and (max-width: 420px) {
-				animation: aniCardThree320 2s linear;
+				animation: aniCardThree420 1.5s linear;
+				transform: translate(-13px, 117px);
 			}
 			@media screen and (max-width: 320px) {
-				animation: aniCardThree320 2s linear;
+				animation: aniCardThree320 1.5s linear;
+				transform: translate(-13px, 85px);
 			}
 			img {
 				width: 380px;
@@ -202,9 +204,6 @@
 				}
 				@media screen and (max-width: 560px) {
 					width: 290px;
-					animation: aniCardThree560 1.5s linear;
-					left: 40px;
-					top: 0;
 				}
 				@media screen and (max-width: 420px) {
 					width: 240px;
