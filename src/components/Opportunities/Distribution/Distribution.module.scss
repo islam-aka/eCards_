@@ -1,0 +1,155 @@
+@import "../../variables.scss";
+@import "../OpportunitiesAni.scss";
+
+.distribution {
+	width: 100%;
+	height: 313px;
+	position: relative;
+	z-index: 7;
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+	@media screen and (max-width: 1115px) {
+		height: 378px;
+	}
+	@media screen and (max-width: 992px) {
+		padding: 20px 0;
+		align-items: center;
+		height: auto;
+	}
+	@media screen and (max-width: 575px) {
+		padding: 0;
+		gap: 0;
+	}
+	@media screen and (max-width: 560px) {
+		gap: 20px;
+		align-items: start;
+		flex-direction: column;
+	}
+	&__info {
+		@media screen and (max-width: 575px) {
+			max-width: 280px;
+		}
+		width: 490px;
+		height: 100%;
+		@media screen and (max-width: 992px) {
+			width: 400px;
+		}
+		@media screen and (max-width: 560px) {
+			max-width: 100%;
+		}
+		.distribution__icon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 40px;
+			width: 54px;
+			height: 54px;
+			background: $primary-main;
+			box-shadow: 0px 3px 24px rgba(116, 139, 255, 0.51), inset 3px 4px 7px rgba(255, 255, 255, 0.31);
+			border-radius: 40px;
+			@media screen and (max-width: 768px) {
+				margin-bottom: 30px;
+				padding: 10px;
+				width: 44px;
+				height: 44px;
+			}
+			img {
+				@media screen and (max-width: 768px) {
+					width: 24px;
+					height: 24px;
+				}
+			}
+		}
+		.distribution__block {
+			p:first-child {
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 130%;
+				letter-spacing: 0.003em;
+				color: $primary-main;
+				margin-bottom: 10px;
+			}
+			p:last-child {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 120%;
+				letter-spacing: 0.003em;
+				color: $sub-title;
+				@media screen and (max-width: 575px) {
+					font-size: 14px;
+				}
+			}
+			h2 {
+				font-weight: 700;
+				font-size: 32px;
+				line-height: 120%;
+				letter-spacing: 0.003em;
+				color: $color-text;
+				margin-bottom: 20px;
+				@media screen and (max-width: 768px) {
+					font-size: 23px;
+					line-height: 120%;
+				}
+				@media screen and (max-width: 575px) {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+
+	.distribution__image {
+		position: relative;
+		width: 623px;
+		height: 286px;
+		z-index: 10;
+		@media screen and (max-width: 992px) {
+			width: 320px;
+		}
+		@media screen and (max-width: 575px) {
+			width: 175px;
+		}
+		@media screen and (max-width: 650px) {
+			height: 240px;
+		}
+		@media screen and (max-width: 382px) {
+			width: 100%;
+		}
+		.imageOne {
+			position: absolute;
+			z-index: 9;
+			top: 65px;
+			left: -20px;
+			animation: aniOne 1s linear;
+			@media screen and (max-width: 650px) {
+				top: 42px;
+			}
+			img {
+				@media screen and (max-width: 650px) {
+					width: 265px;
+				}
+				@media screen and (max-width: 382px) {
+					width: 220px;
+				}
+			}
+		}
+		.imageTwo {
+			position: absolute;
+			z-index: 8;
+			top: 0;
+			left: 0;
+
+			animation: aniTwo 1s linear;
+			@media screen and (max-width: 650px) {
+				height: 240px;
+			}
+
+			img {
+				width: 684px;
+				@media screen and (max-width: 650px) {
+					width: 500px;
+				}
+			}
+		}
+	}
+}

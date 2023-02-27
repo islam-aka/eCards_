@@ -47,9 +47,10 @@ const MainScreen = () => {
 					<LogoSocial />
 				</div>
 			</div>
-			<div className={styles.blockBlur}></div>
+
 			<div className={styles.blockBlur__two}></div>
 			<div className={styles.container__bg}>
+				<div className={styles.blockBlur}></div>
 				<img src={image} alt='asd' />
 			</div>
 		</div>

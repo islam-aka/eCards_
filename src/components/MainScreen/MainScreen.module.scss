@@ -27,6 +27,8 @@
 		width: calc(100% - 36px);
 	}
 	&__info {
+		position: relative;
+		z-index: 6;
 		max-width: 685px;
 
 		@media screen and (max-width: 1280px) {
@@ -231,8 +233,6 @@
 						font-weight: 400;
 						font-size: 14px;
 						line-height: 130%;
-						/* or 18px */
-
 						letter-spacing: 0.003em;
 						color: $sub-title;
 					}
@@ -246,6 +246,8 @@
 		width: 482px;
 
 		img {
+			position: relative;
+			z-index: 2;
 			width: 1075px;
 			margin-left: -29px;
 			margin-top: -16px;
@@ -259,24 +261,27 @@
 		@media screen and (max-width: 768px) {
 			display: none;
 		}
-	}
-	.blockBlur {
-		width: 480px;
-		height: 480px;
-		position: absolute;
-		z-index: 5;
-		right: 160px;
-		bottom: 34px;
-		background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
-		opacity: 0.1;
-		filter: blur(50px);
-		@media screen and (max-width: 768px) {
-			right: -135px;
-			bottom: -290px;
-			width: 280px;
-			height: 280px;
+		.blockBlur {
+			width: 480px;
+			height: 480px;
+			position: absolute;
+			z-index: 1;
+			right: 160px;
+			bottom: 34px;
+			background: -o-linear-gradient(336.52deg, #ff8de6 7.05%, #4c3fe7 105.43%);
+			background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
+			opacity: 0.2;
+			-webkit-filter: blur(50px);
+			filter: blur(50px);
+			@media screen and (max-width: 768px) {
+				right: -135px;
+				bottom: -290px;
+				width: 280px;
+				height: 280px;
+			}
 		}
 	}
+
 	.blockBlur__two {
 		position: absolute;
 		width: 480px;
