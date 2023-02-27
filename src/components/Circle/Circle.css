@@ -181,3 +181,9 @@
 	-webkit-animation: animate-svg-stroke-6 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
 	animation: animate-svg-stroke-6 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
 }
+
+@media screen and (max-width: 768px) {
+	.svg {
+		width: 120px;
+	}
+}

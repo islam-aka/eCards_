@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './Cards.module.scss'
 import iconInfinitely from '../../../assets/svg/infinitely.svg'
-import imgCardOne from '../../../assets/svg/cardOne.svg'
-import imgCardTwo from '../../../assets/svg/cardTwo.svg'
-import imgCardThree from '../../../assets/svg/cardThree.svg'
+import imgCardOne from '../../../assets/cards/cardOne.png'
+import imgCardTwo from '../../../assets/cards/cardTwo.png'
+import imgCardThree from '../../../assets/cards/cardThree.png'
 
 import { useInView } from 'react-intersection-observer'
 

@@ -46,6 +46,12 @@
 			@media screen and (max-width: 560px) {
 				width: 100%;
 			}
+			.logo {
+				img {
+					width: 120px;
+					height: 40px;
+				}
+			}
 			.footer__nav {
 				margin-top: 20px;
 
