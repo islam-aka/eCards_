@@ -18,7 +18,7 @@ const Cards = () => {
 	return (
 		<div ref={ref} className={styles.cards}>
 			<div className={styles.blockBlur__cards}></div>
-			{width}
+
 			<div className={styles.card__img}>
 				{inView && (
 					<>
@@ -41,7 +41,7 @@ const Cards = () => {
 					<img src={iconInfinitely} alt='wallet icon' />
 				</div>
 				<div className={styles.card__block}>
-					<p>Выпуск карт</p>
+					<p>Выпуск карт {width}</p>
 					<h2>Безлимитный моментальный выпуск виртуальных карт</h2>
 					<p>
 						На платформе доступны карты VISA, MasterCard, UnionPay. Бины
