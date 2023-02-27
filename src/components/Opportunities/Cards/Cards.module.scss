@@ -51,15 +51,13 @@
 			z-index: 5;
 			-webkit-transform: translateX(290px);
 			-ms-transform: translateX(290px);
-			transform: translateX(290px);
-			top: 135px;
+			transform: translate(300px, 130px);
 			-webkit-animation: -webkit-aniCardOne 3s linear;
 			animation: aniCardOne 3s both;
 
 			@media screen and (max-width: 1280px) {
 				animation: aniCardOne1280 1.5s linear;
-				left: 264px;
-				top: 120px;
+				transform: translate(267px, 115px);
 			}
 			@media screen and (max-width: 992px) {
 				animation: aniCardOne992 2s linear;
@@ -94,9 +92,9 @@
 				top: 66px;
 			}
 			img {
-				width: 375px;
+				width: 345px;
 				@media screen and (max-width: 1280px) {
-					width: 330px;
+					width: 300px;
 				}
 				@media screen and (max-width: 768px) {
 					width: 280px;
@@ -121,12 +119,11 @@
 			-webkit-animation: aniCardTwo 1.5s linear;
 			animation: aniCardTwo 1.5s linear;
 			position: absolute;
-			transform: translateX(72px);
-			top: 0;
+			transform: translate(72px, 0);
 
 			@media screen and (max-width: 1280px) {
 				animation: aniCardTwo1280 1.5s linear;
-				left: 67px;
+				transform: translateX(67px);
 			}
 			@media screen and (max-width: 992px) {
 				animation: aniCardTwo992 1.5s linear;
@@ -182,9 +179,8 @@
 			-webkit-animation: aniCardThree 1.5s linear;
 			animation: aniCardThree 1.5s linear;
 			position: absolute;
-			// left: 0;
-			bottom: 50px;
 			z-index: 1;
+			transform: translate(65px, 183px);
 			@media screen and (max-width: 1280px) {
 				animation: aniCardThree1280 1.3s linear;
 				top: 140px;
@@ -218,7 +214,7 @@
 			img {
 				width: 380px;
 				@media screen and (max-width: 1280px) {
-					width: 360px;
+					width: 320px;
 				}
 				@media screen and (max-width: 768px) {
 					width: 285px;

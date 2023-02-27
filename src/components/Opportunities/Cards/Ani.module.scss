@@ -16,14 +16,14 @@
 }
 @keyframes aniCardOne {
 	0% {
-		-webkit-transform: translateX(-590px);
-		-ms-transform: translateX(-590px);
-		transform: translateX(-590px);
+		-webkit-transform: translate(-590px, 130px);
+		-ms-transform: translate(-590px, 130px);
+		transform: translate(-590px, 130px);
 	}
 	33% {
-		-webkit-transform: translateX(290px);
-		-ms-transform: translateX(290px);
-		transform: translateX(290px);
+		-webkit-transform: translate(300px, 130px);
+		-ms-transform: translate(300px, 130px);
+		transform: translate(300px, 130px);
 	}
 	34% {
 	}
@@ -33,10 +33,10 @@
 
 @keyframes aniCardOne1280 {
 	0% {
-		left: -247px;
+		transform: translate(-225px, -20px);
 	}
 	33% {
-		left: 264px;
+		transform: translate(267px, -20px);
 	}
 	34% {
 	}
@@ -107,15 +107,15 @@
 //
 @keyframes aniCardTwo {
 	0% {
-		transform: translateX(-333px);
+		transform: translate(-333px, 0);
 	}
 	33% {
 	}
 	34% {
-		transform: translateX(-333px);
+		transform: translate(-333px, 0);
 	}
 	66% {
-		transform: translateX(72px);
+		transform: translate(72px, 0);
 	}
 	67% {
 	}
@@ -124,15 +124,15 @@
 }
 @keyframes aniCardTwo1280 {
 	0% {
-		left: -246px;
+		transform: translateX(-228px);
 	}
 	33% {
 	}
 	34% {
-		left: -246px;
+		transform: translateX(-228px);
 	}
 	66% {
-		left: 67px;
+		transform: translateX(67px);
 	}
 	67% {
 	}
@@ -189,7 +189,7 @@
 
 @keyframes aniCardThree {
 	0% {
-		transform: translateX(-304px);
+		transform: translate(-310px, 183px);
 	}
 	33% {
 	}
@@ -198,10 +198,10 @@
 	66% {
 	}
 	67% {
-		transform: translateX(-304px);
+		transform: translate(-310px, 183px);
 	}
 	100% {
-		transform: translateX(0px);
+		transform: translate(65px, 183px);
 	}
 }
 @keyframes aniCardThree1280 {
