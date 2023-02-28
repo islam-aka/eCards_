@@ -1,8 +1,8 @@
 @-webkit-keyframes -webkit-aniCardOne {
 	0% {
-		-webkit-transform: translateX(-590px);
-		-ms-transform: translateX(-590px);
-		transform: translateX(-590px);
+		-webkit-transform: translateX(-270px);
+		-ms-transform: translateX(-270px);
+		transform: translateX(-270px);
 	}
 	33% {
 		-webkit-transform: translateX(290px);
@@ -12,14 +12,16 @@
 }
 @keyframes aniCardOne {
 	0% {
-		-webkit-transform: translate(-590px, 130px);
-		-ms-transform: translate(-590px, 130px);
-		transform: translate(-590px, 130px);
+		-webkit-transform: translate(-270px, 130px);
+		-ms-transform: translate(-270px, 130px);
+		transform: translate(-270px, 130px);
 	}
 	33% {
 		-webkit-transform: translate(300px, 130px);
 		-ms-transform: translate(300px, 130px);
 		transform: translate(300px, 130px);
+	}
+	100% {
 	}
 }
 
@@ -30,6 +32,8 @@
 	33% {
 		transform: translate(267px, 115px);
 	}
+	100% {
+	}
 }
 
 @keyframes aniCardOne992 {
@@ -38,6 +42,8 @@
 	}
 	33% {
 		transform: translate(280px, 115px);
+	}
+	100% {
 	}
 }
 @keyframes aniCardOne790 {
@@ -54,6 +60,8 @@
 	}
 	33% {
 		transform: translate(223px, 127px);
+	}
+	100% {
 	}
 }
 @keyframes aniCardOne420 {
@@ -75,15 +83,17 @@
 //
 @keyframes aniCardTwo {
 	0% {
-		transform: translate(-333px, 0);
+		transform: translate(-265px, 0);
 	}
 	33% {
 	}
 	34% {
-		transform: translate(-333px, 0);
+		transform: translate(-265px, 0);
 	}
 	66% {
 		transform: translate(72px, 0);
+	}
+	100% {
 	}
 }
 @keyframes aniCardTwo1280 {
