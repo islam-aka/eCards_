@@ -6,8 +6,10 @@ import iconDollar from '../../assets/svg/dollar-circle.svg'
 import image from '../../assets//img/ОeCards.png'
 import CountUp from 'react-countup'
 import { useInView } from 'react-intersection-observer'
+import { useTranslation } from 'react-i18next'
 
 const About = () => {
+	const { t } = useTranslation()
 	const [refOne, inViewOne] = useInView({ threshold: 0.5 })
 	const [refTwo, inViewTwo] = useInView({ threshold: 0.5 })
 	const [refThree, inViewThree] = useInView({ threshold: 0.5 })
@@ -16,15 +18,15 @@ const About = () => {
 		<div className={styles.container}>
 			<div className={styles.link} id='#eСards'></div>
 			<div className={styles.about__bg}>
-				<img src={image} alt='background' />
+				<img
+					src='https://cdn.glitch.global/06428a02-45cf-4a7e-aa2e-dcfd0f6ac920/%D0%9EeCards.png?v=1677566727362'
+					alt='background'
+				/>
 			</div>
 			<div className={styles.about}>
 				<div className={styles.about__title}>
-					<p className={styles.megaTitle}>О eCards в цифрах</p>
-					<p className={styles.subTitle}>
-						eCards одними из первых в мире представили автоматизированную
-						финансовую инфраструктуру для арбитража рекламного трафика
-					</p>
+					<p className={styles.megaTitle}>{t('about.title')}</p>
+					<p className={styles.subTitle}>{t('about.subTitle')}</p>
 				</div>
 				<div className={styles.about__numbers}>
 					<div className={styles.numbers__one} ref={refOne}>
@@ -37,9 +39,7 @@ const About = () => {
 								duration={1.5}
 							/>
 						)}
-						<p className={styles.about__subTitle}>
-							Выпущенных виртуальных карт
-						</p>
+						<p className={styles.about__subTitle}>{t('about.block.one')}</p>
 					</div>
 					<div ref={refTwo} className={styles.numbers__two}>
 						<img src={icon} alt='icon' />
@@ -51,14 +51,12 @@ const About = () => {
 								duration={1.5}
 							/>
 						)}
-						<p className={styles.about__subTitle}>
-							Баеров и арбитражных команд
-						</p>
+						<p className={styles.about__subTitle}>{t('about.block.two')}</p>
 					</div>
 					<div ref={refThree} className={styles.numbers__three}>
 						<img src={iconDollar} alt='icon dollar' />
 						<h3 className={styles.about__title}>
-							Более &nbsp;
+							{t('about.block.three.topOne')} &nbsp;
 							{inViewThree && (
 								<CountUp
 									className={styles.about__title}

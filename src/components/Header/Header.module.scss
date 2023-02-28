@@ -128,9 +128,10 @@
 				cursor: pointer;
 				position: relative;
 				display: flex;
+				justify-content: center;
 				background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
 				border-radius: 22px;
-				padding: 10px 20px;
+				padding: 10px 0;
 				z-index: 49;
 				p {
 					color: $white;

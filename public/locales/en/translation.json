@@ -1,9 +1,36 @@
 {
-	"navBar": {
-		"aboutECards": "eCards",
-		"opportunities": "Opportunities",
-		"conditions": "Conditions",
-		"partners": "Partners",
-		"contacts": "Contacts"
+	"header": {
+		"nav": {
+			"aboutECards": "About eСards",
+			"features": "Features",
+			"pricing": "Pricing",
+			"partners": "Partners",
+			"contacts": "Contacts",
+			"signIn": "Sign In",
+			"invite": "Get an invite"
+		}
+	},
+	"mainScreen": {
+		"title": "Reliable financial solution for affiliate traffic",
+		"subTitle": "Unlimited and free issue of 3D Secure cards, good trust from Facebook, Google, etc., user-friendly interface and prompt technical support",
+		"pricingDetails": "Pricing details",
+		"info": {
+			"title": "Services available for payment",
+			"subTitle": "Other services can be added on individual request "
+		}
+	},
+	"about": {
+		"title": "About eCards in numbers",
+		"subTitle": "eCards was among the first in the world to introduce an automated financial infrastructure for advertising traffic arbitrage",
+		"block": {
+			"one": "Virtual cards issued",
+			"two": "Buyrs and &nbsp; affiliate teams",
+			"three": {
+				"topOne": "Over",
+				"topTwo": "$",
+				"topThree": "million",
+				"bottom": "turnover of advertising expenses through the service"
+			}
+		}
 	}
 }

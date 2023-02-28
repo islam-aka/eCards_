@@ -39,7 +39,7 @@ const Header = () => {
 								to={'/eСards'}
 								className={url === 'eСards' ? styles.active : styles.noActive}
 							>
-								{t('navBar.aboutECards')}
+								{t('header.nav.aboutECards')}
 							</Link>
 						</li>
 						<li>
@@ -49,7 +49,7 @@ const Header = () => {
 									url === 'opportunities' ? styles.active : styles.noActive
 								}
 							>
-								{t('navBar.opportunities')}
+								{t('header.nav.features')}
 							</Link>
 						</li>
 						<li>
@@ -59,7 +59,7 @@ const Header = () => {
 									url === 'conditions' ? styles.active : styles.noActive
 								}
 							>
-								{t('navBar.conditions')}
+								{t('header.nav.pricing')}
 							</Link>
 						</li>
 						<li>
@@ -67,7 +67,7 @@ const Header = () => {
 								to={'/partners'}
 								className={url === 'partners' ? styles.active : styles.noActive}
 							>
-								{t('navBar.partners')}
+								{t('header.nav.partners')}
 							</Link>
 						</li>
 						<li>
@@ -75,7 +75,7 @@ const Header = () => {
 								to={'/contact'}
 								className={url === 'contact' ? styles.active : styles.noActive}
 							>
-								{t('navBar.contacts')}
+								{t('header.nav.contacts')}
 							</Link>
 						</li>
 					</ul>
@@ -83,13 +83,13 @@ const Header = () => {
 				<div className={styles.header__btn}>
 					<div className={styles.btn__logIn}>
 						<a href='https://ecards.cab' target='_blank'>
-							<p>Войти</p>
+							<p>{t('header.nav.signIn')}</p>
 							<img src={iconRightLogIn} alt='icon right' />
 						</a>
 					</div>
 					<Link to='/invite'>
 						<div className={styles.btn__invite}>
-							<p>Получить инвайт</p>
+							<p>{t('header.nav.invite')}</p>
 							<img src={iconRight} alt='icon right' />
 						</div>
 					</Link>

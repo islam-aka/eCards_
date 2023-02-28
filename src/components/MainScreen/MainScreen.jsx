@@ -6,28 +6,25 @@ import iconRightLogIn from '../../assets/svg/rightLogIn.svg'
 import iconPlus from '../../assets/svg/plus.svg'
 import LogoSocial from '../LogoSocial/LogoSocial'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const MainScreen = () => {
+	const { t } = useTranslation()
 	return (
 		<div className={styles.container}>
 			<div className={styles.container__info}>
-				<p className={styles.container__title}>
-					Надежное финансовое решение для арбитража рекламного трафика
-				</p>
-				<p className={styles.container__subTitle}>
-					Безлимитный и бесплатный выпуск 3D Secure карт, хороший траст от
-					Facebook, Google и др., удобный интерфейс и оперативная тех.поддержка
-				</p>
+				<p className={styles.container__title}>{t('mainScreen.title')}</p>
+				<p className={styles.container__subTitle}>{t('mainScreen.subTitle')}</p>
 				<div className={styles.container__btn}>
 					<Link to='invite'>
 						<div className={styles.btn__invite}>
-							<p>Получить инвайт</p>
+							<p>{t('header.nav.invite')}</p>
 							<img src={iconRight} alt='icon right' />
 						</div>
 					</Link>
 					<Link to={'/conditions'}>
 						<div className={styles.btn__conditions}>
-							<p>Ознакомиться с условиями </p>
+							<p>{t('mainScreen.pricingDetails')}</p>
 							<img src={iconRightLogIn} alt='icon right' />
 						</div>
 					</Link>
@@ -38,10 +35,8 @@ const MainScreen = () => {
 							<img src={iconPlus} alt='icon plus' />
 						</div>
 						<div>
-							<h4>Доступные для оплаты сервисы</h4>
-							<p>
-								Возможно добавление других сервисов по индивидуальному запросу
-							</p>
+							<h4>{t('mainScreen.info.title')}</h4>
+							<p>{t('mainScreen.info.subTitle')}</p>
 						</div>
 					</div>
 					<LogoSocial />
