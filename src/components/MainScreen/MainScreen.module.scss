@@ -21,7 +21,7 @@
 		width: calc(100% - 60px);
 	}
 	@media screen and (max-width: 560px) {
-		height: 600px;
+		height: auto;
 	}
 	@media screen and (max-width: 450px) {
 		width: calc(100% - 36px);
@@ -262,23 +262,12 @@
 			display: none;
 		}
 		.blockBlur {
-			width: 480px;
-			height: 480px;
 			position: absolute;
-			z-index: 1;
-			right: 160px;
-			bottom: 34px;
-			background: -o-linear-gradient(336.52deg, #ff8de6 7.05%, #4c3fe7 105.43%);
-			background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
-			opacity: 0.2;
-			-webkit-filter: blur(50px);
-			filter: blur(50px);
-			@media screen and (max-width: 768px) {
-				right: -135px;
-				bottom: -290px;
-				width: 280px;
-				height: 280px;
-			}
+			top: 0;
+			left: -200px;
+			width: 500px;
+			height: 700px;
+			opacity: 0.15;
 		}
 	}
 

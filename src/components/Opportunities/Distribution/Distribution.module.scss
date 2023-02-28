@@ -9,7 +9,7 @@
 	display: flex;
 	justify-content: space-between;
 	gap: 40px;
-	@media screen and (max-width: 1115px) {
+	@media screen and (max-width: 1430px) {
 		height: 378px;
 	}
 	@media screen and (max-width: 992px) {
@@ -27,14 +27,17 @@
 		flex-direction: column;
 	}
 	&__left {
-		@media screen and (max-width: 575px) {
-			max-width: 280px;
-		}
 		width: 490px;
 		height: 100%;
 		@media screen and (max-width: 992px) {
 			width: 400px;
 		}
+		@media screen and (max-width: 768px) {
+			flex: 1;
+			max-width: 280px;
+			width: 100%;
+		}
+
 		@media screen and (max-width: 560px) {
 			max-width: 100%;
 		}
@@ -99,18 +102,32 @@
 	}
 
 	.distribution__right {
+		@media screen and (max-width: 1430px) {
+			margin-right: -200px;
+		}
+		@media screen and (max-width: 992px) {
+			margin-right: -295px;
+		}
+		@media screen and (max-width: 768px) {
+			width: 400px;
+			margin-right: -255px;
+		}
+		@media screen and (max-width: 560px) {
+			margin-right: -155px;
+			margin-left: 55px;
+			margin-right: 0;
+		}
 		.ani {
-			animation: aniOne 0.5s linear;
-			transform: translateX(0);
+			transition: 2s;
 			position: relative;
 			width: 581.37px;
 			height: 286px;
 			background: $white;
-			opacity: 0.8;
 			box-shadow: 20px 34px 59px 7px rgba(0, 25, 225, 0.05);
 			border-radius: 16.9481px;
-			@media screen and (max-width: 1280px) {
-				transform: translate(200px, 10px);
+			@media screen and (max-width: 768px) {
+				height: auto;
+				width: 398px;
 			}
 			.block__one {
 				padding: 17px 20px 24.5px 20px;
@@ -131,11 +148,22 @@
 					-webkit-text-fill-color: transparent;
 					background-clip: text;
 					text-fill-color: transparent;
+					@media screen and (max-width: 768px) {
+						margin-top: 0;
+						font-size: 24px;
+						line-height: 120%;
+					}
 				}
 				.block__title {
 					width: 100%;
 					display: flex;
 					justify-content: space-between;
+					p {
+						@media screen and (max-width: 575px) {
+							font-size: 6.85543px;
+							line-height: 100%;
+						}
+					}
 					p:first-child {
 						font-weight: 400;
 						font-size: 12.7111px;
@@ -166,6 +194,10 @@
 							line-height: 130%;
 							letter-spacing: 0.003em;
 							color: $color-text;
+							@media screen and (max-width: 575px) {
+								font-size: 12px;
+								line-height: 130%;
+							}
 						}
 						.block__user {
 							display: flex;
@@ -179,6 +211,10 @@
 								border: 1.05926px solid rgba(255, 255, 255, 0.7);
 								background: $stroke;
 								border-radius: 50%;
+								@media screen and (max-width: 575px) {
+									width: 25px;
+									height: 25px;
+								}
 								p {
 									font-style: normal;
 									font-weight: 500;
@@ -189,7 +225,7 @@
 								}
 							}
 							.block__item {
-								margin-left: -12px;
+								margin-left: -10px;
 								svg {
 									width: 26px;
 									height: 26px;
@@ -206,11 +242,18 @@
 								background: $stroke;
 								border: 1.05926px solid rgba(255, 255, 255, 0.7);
 								border-radius: 50%;
+								@media screen and (max-width: 575px) {
+									width: 19px;
+									height: 19px;
+								}
 							}
 							.block__item_number {
 								margin-left: -12px;
 								background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
 								border: 2.11852px solid rgba(255, 255, 255, 0.4);
+								@media screen and (max-width: 768px) {
+									margin-left: -12px;
+								}
 								h4 {
 									margin-left: -3px;
 									font-weight: 400;
@@ -218,6 +261,11 @@
 									line-height: 130%;
 									letter-spacing: 0.003em;
 									color: $white;
+									@media screen and (max-width: 768px) {
+										margin-top: 0;
+										font-size: 11px;
+										line-height: 120%;
+									}
 								}
 							}
 						}
@@ -232,6 +280,10 @@
 					background: #ffffff;
 					border: 1.05926px solid $primary-main;
 					border-radius: 16.95px;
+					@media screen and (max-width: 575px) {
+						font-size: 14px;
+						line-height: 130%;
+					}
 					p {
 						margin-left: 2.12px;
 						font-weight: 400;
@@ -263,7 +315,14 @@
 				position: absolute;
 				top: 45px;
 				left: -50px;
-
+				@media screen and (max-width: 768px) {
+					width: 100%;
+					padding: 16px;
+					max-width: 166px;
+					height: auto;
+					top: 38px;
+					left: -30px;
+				}
 				h3 {
 					font-style: normal;
 					font-weight: 500;
@@ -271,6 +330,10 @@
 					line-height: 130%;
 					letter-spacing: 0.003em;
 					color: $color-text;
+					@media screen and (max-width: 768px) {
+						font-size: 9.93308px;
+						line-height: 130%;
+					}
 				}
 				.block__user {
 					margin-top: 13px;
@@ -286,17 +349,32 @@
 						border-radius: 50%;
 					}
 					.block__item_one {
+						@media screen and (max-width: 768px) {
+							width: 25px;
+							height: 25px;
+						}
 						svg {
 							width: 31px;
 							height: 31px;
+							@media screen and (max-width: 768px) {
+								width: 19px;
+								height: 19px;
+							}
 						}
 					}
 					.block__item {
-						margin-left: -13px;
-
+						margin-left: -10px;
+						@media screen and (max-width: 768px) {
+							width: 25px;
+							height: 25px;
+						}
 						svg {
 							width: 31px;
 							height: 31px;
+							@media screen and (max-width: 768px) {
+								width: 19px;
+								height: 19px;
+							}
 						}
 						p {
 							font-style: normal;
@@ -313,6 +391,12 @@
 						height: 44.73px;
 						background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
 						border: 2.63108px solid rgba(255, 255, 255, 0.4);
+						@media screen and (max-width: 768px) {
+							margin-left: -10px;
+							width: 25px;
+							height: 25px;
+						}
+
 						h4 {
 							margin-left: -2px;
 							font-weight: 400;
@@ -320,6 +404,11 @@
 							line-height: 130%;
 							letter-spacing: 0.003em;
 							color: $white;
+							@media screen and (max-width: 768px) {
+								margin-top: 0;
+								font-size: 11px;
+								line-height: 120%;
+							}
 						}
 					}
 				}

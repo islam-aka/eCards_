@@ -1,12 +1,15 @@
 import React from 'react'
 import styles from './MainScreen.module.scss'
 import image from '../../assets/img/Главная.png'
+// import blockBlurOne from '../../assets/img/bg.png'
+// import blockBlurTwo from '../../assets/mainScreen'
 import iconRight from '../../assets/svg/right.svg'
 import iconRightLogIn from '../../assets/svg/rightLogIn.svg'
 import iconPlus from '../../assets/svg/plus.svg'
 import LogoSocial from '../LogoSocial/LogoSocial'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import 'aos'
 
 const MainScreen = () => {
 	const { t } = useTranslation()
@@ -43,9 +46,13 @@ const MainScreen = () => {
 				</div>
 			</div>
 
-			<div className={styles.blockBlur__two}></div>
 			<div className={styles.container__bg}>
-				<div className={styles.blockBlur}></div>
+				{/* <div className={styles.blockBlur}>
+					<img src={blockBlurOne} alt='asd' />
+				</div>
+				<div className={styles.blockBlur}>
+					<img src={blockBlurTwo} alt='asd' />
+				</div> */}
 				<img src={image} alt='asd' />
 			</div>
 		</div>

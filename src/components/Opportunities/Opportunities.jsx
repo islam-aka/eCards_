@@ -1,19 +1,18 @@
 import React from 'react'
 import styles from './Opportunities.module.scss'
-import iconDownload from '../../assets/svg/download.svg'
 import iconNotification from '../../assets/svg/notification.svg'
 
-import imgExport from '../../assets/img/table.png'
 import notificationImgOne from '../../assets/img/noti.png'
 import notificationImgTwo from '../../assets/img/noti2.png'
 import { useInView } from 'react-intersection-observer'
 import Score from './Score/Score'
 import Cards from './Cards/Cards'
 import Distribution from './Distribution/Distribution'
+import 'aos'
+import Data from './Data/Data'
 
 const Opportunities = () => {
 	const [refNoti, inViewNoti] = useInView({ threshold: 0 })
-	const [refData, inViewData] = useInView({ threshold: 0 })
 	return (
 		<div className={styles.container}>
 			<div id='#opportunities' className={styles.link}></div>
@@ -26,42 +25,10 @@ const Opportunities = () => {
 				<Score />
 				<Cards />
 				<div className={styles.blockBlur__opportunities}></div>
+
 				<Distribution />
-				<div className={styles.data}>
-					<div className={styles.blockBlur__data}></div>
-					<div ref={refData} className={styles.data__left}>
-						{inViewData && (
-							<>
-								<img src={imgExport} alt=' export data' />
 
-								<div className={styles.checked__one}>
-									<div className={styles.checked}></div>
-									<p>В формате СSV</p>
-								</div>
-								<div className={styles.checked__two}>
-									<div className={styles.checked}></div>
-									<p>Таблица Excel</p>
-								</div>
-							</>
-						)}
-					</div>
-
-					<div className={styles.data__right}>
-						<div className={styles.data__icon}>
-							<img src={iconDownload} alt='icon download' />
-						</div>
-						<div className={styles.data__block}>
-							<p>Данные</p>
-							<h2>Подробная отчетность и выгрузка данных</h2>
-							<p>
-								Создавайте и выгружайте подробные отчеты по расходам по каждой
-								карте, группе карт, сотруднику или группе сотрудников. Для
-								формирования отчетов доступны гибкие фильтры, а также выгрузка
-								результатов в .CSV и .XLSX
-							</p>
-						</div>
-					</div>
-				</div>
+				<Data />
 				<div className={styles.notification} ref={refNoti}>
 					<div className={styles.notification__left}>
 						<div className={styles.notification__icon}>

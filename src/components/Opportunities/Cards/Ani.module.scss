@@ -1,0 +1,244 @@
+@-webkit-keyframes -webkit-aniCardOne {
+	0% {
+		-webkit-transform: translateX(-270px);
+		-ms-transform: translateX(-270px);
+		transform: translateX(-270px);
+	}
+	33% {
+		-webkit-transform: translateX(290px);
+		-ms-transform: translateX(290px);
+		transform: translateX(290px);
+	}
+}
+@keyframes aniCardOne {
+	0% {
+		-webkit-transform: translate(-270px, 130px);
+		-ms-transform: translate(-270px, 130px);
+		transform: translate(-270px, 130px);
+	}
+	33% {
+		-webkit-transform: translate(300px, 130px);
+		-ms-transform: translate(300px, 130px);
+		transform: translate(300px, 130px);
+	}
+	100% {
+	}
+}
+
+@keyframes aniCardOne1280 {
+	0% {
+		transform: translate(-225px, 115px);
+	}
+	33% {
+		transform: translate(267px, 115px);
+	}
+	100% {
+	}
+}
+
+@keyframes aniCardOne992 {
+	0% {
+		transform: translate(-225px, 115px);
+	}
+	33% {
+		transform: translate(280px, 115px);
+	}
+	100% {
+	}
+}
+@keyframes aniCardOne790 {
+	0% {
+		transform: translate(-65px, 100px);
+	}
+	33% {
+		transform: translate(147px, 100px);
+	}
+}
+@keyframes aniCardOne560 {
+	0% {
+		transform: translate(-305px, 127px);
+	}
+	33% {
+		transform: translate(223px, 127px);
+	}
+	100% {
+	}
+}
+@keyframes aniCardOne420 {
+	0% {
+		transform: translate(-245px, 102px);
+	}
+	33% {
+		transform: translate(174px, 102px);
+	}
+}
+@keyframes aniCardOne320 {
+	0% {
+		transform: translate(-176px, 75px);
+	}
+	33% {
+		transform: translate(126px, 75px);
+	}
+}
+//
+@keyframes aniCardTwo {
+	0% {
+		transform: translate(-265px, 0);
+	}
+	33% {
+	}
+	34% {
+		transform: translate(-265px, 0);
+	}
+	66% {
+		transform: translate(72px, 0);
+	}
+	100% {
+	}
+}
+@keyframes aniCardTwo1280 {
+	0% {
+		transform: translateX(-228px);
+	}
+
+	34% {
+		transform: translateX(-228px);
+	}
+	66% {
+		transform: translateX(67px);
+	}
+}
+@keyframes aniCardTwo992 {
+	0% {
+		transform: translateX(-115px);
+	}
+	33% {
+		transform: translateX(-115px);
+	}
+
+	66% {
+		transform: translateX(80px);
+	}
+}
+
+@keyframes aniCardTwo768 {
+	0% {
+		transform: translate(-65px, 200px);
+	}
+	33% {
+		transform: translate(150px, 200px);
+	}
+}
+@keyframes aniCardTwo560 {
+	0% {
+		transform: translate(-310px, 10px);
+	}
+	34% {
+		transform: translate(-310px, 10px);
+	}
+	66% {
+		transform: translate(15px, 10px);
+	}
+}
+
+@keyframes aniCardTwo320 {
+	0% {
+		transform: translate(-175px, 10px);
+	}
+	34% {
+		transform: translate(-175px, 10px);
+	}
+	66% {
+		transform: translate(15px, 10px);
+	}
+}
+//
+
+@keyframes aniCardThree {
+	0% {
+		transform: translate(-310px, 183px);
+	}
+	67% {
+		transform: translate(-310px, 183px);
+	}
+	100% {
+		transform: translate(65px, 183px);
+	}
+}
+@keyframes aniCardThree1280 {
+	0% {
+		transform: translate(-248px, 165px);
+	}
+	67% {
+		transform: translate(-248px, 165px);
+	}
+	100% {
+		transform: translate(65px, 165px);
+	}
+}
+@keyframes aniCardThree992 {
+	0% {
+		transform: translate(-135px, 120px);
+	}
+	67% {
+		transform: translate(-135px, 120px);
+	}
+	100% {
+		transform: translate(14px, 120px);
+	}
+}
+@keyframes aniCardThree970 {
+	0% {
+		left: -275px;
+	}
+
+	67% {
+		left: -275px;
+	}
+	100% {
+		left: -100px;
+	}
+}
+@keyframes aniCardThree790 {
+	0% {
+		transform: translate(-65px, 0px);
+	}
+	33% {
+		transform: translate(144px, 0px);
+	}
+}
+
+@keyframes aniCardThree560 {
+	0% {
+		transform: translate(-300px, 150px);
+	}
+
+	67% {
+		transform: translate(-300px, 150px);
+	}
+	100% {
+		transform: translate(-13px, 150px);
+	}
+}
+@keyframes aniCardThree420 {
+	0% {
+		transform: translate(-245px, 117px);
+	}
+	67% {
+		transform: translate(-245px, 117px);
+	}
+	100% {
+		transform: translate(-13px, 117px);
+	}
+}
+@keyframes aniCardThree320 {
+	0% {
+		transform: translate(-180px, 85px);
+	}
+	67% {
+		transform: translate(-180px, 85px);
+	}
+	100% {
+		transform: translate(-13px, 85px);
+	}
+}

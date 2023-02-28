@@ -7,7 +7,7 @@ import styles from './Header.module.scss'
 import DropDown from '../DropDown/DropDown'
 import { useTranslation } from 'react-i18next'
 import iconRight from '../../assets/svg/right.svg'
-import { Link, useLocation, useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 const Header = () => {
 	const { url } = useParams()

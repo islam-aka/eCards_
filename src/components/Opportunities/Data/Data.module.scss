@@ -1,0 +1,301 @@
+@import "../../variables.scss";
+.data {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	@media screen and (max-width: 560px) {
+		flex-direction: column-reverse;
+	}
+	.blockBlur__data {
+		position: absolute;
+		z-index: 1;
+		width: 520px;
+		height: 520px;
+		left: -260px;
+		top: 1250px;
+		background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
+		opacity: 0.25;
+		filter: blur(112px);
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+	.data__left {
+		width: 464px;
+		position: relative;
+		z-index: 7;
+
+		@media screen and (max-width: 1200px) {
+			margin-left: -75px;
+			width: 420px;
+		}
+		@media screen and (max-width: 768px) {
+			width: 175px;
+			margin-left: -115px;
+		}
+		@media screen and (max-width: 575px) {
+			margin-left: -135px;
+		}
+		@media screen and (max-width: 560px) {
+			height: 217px;
+			width: 320px;
+			margin: 0 auto;
+		}
+		@media screen and (max-width: 350px) {
+			margin-left: -50px;
+		}
+		.left__block {
+			padding: 20px;
+			width: 360px;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background: $white;
+			box-shadow: 20px 34px 59px 7px rgba(0, 25, 225, 0.05);
+			border-radius: 20px;
+			@media screen and (max-width: 768px) {
+				width: 259.78px;
+			}
+			.icon {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100px;
+				height: 100px;
+				background: #f1f3ff;
+				border-radius: 50%;
+				margin-bottom: 20px;
+				@media screen and (max-width: 1200px) {
+					width: 85px;
+					height: 85px;
+				}
+			}
+			.left__info {
+				width: 100%;
+				h3 {
+					font-style: normal;
+					font-weight: 500;
+					font-size: 18px;
+					line-height: 120%;
+					letter-spacing: 0.003em;
+					color: $color-text;
+					text-align: center;
+					margin-bottom: 11px;
+					@media screen and (max-width: 1200px) {
+						width: 100%;
+						font-size: 15.4641px;
+						line-height: 120%;
+					}
+				}
+				P {
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 130%;
+					text-align: center;
+					letter-spacing: 0.003em;
+					color: $text-non-active;
+					@media screen and (max-width: 992px) {
+						width: 98%;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+					}
+				}
+			}
+			.left__btn {
+				display: flex;
+				gap: 10px;
+				margin-top: 30px;
+				.close {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 155px;
+					height: 30px;
+					background: $white;
+					border: 1px solid $primary-main;
+					border-radius: 16px;
+					@media screen and (max-width: 768px) {
+						width: 112.16px;
+						height: 21.68px;
+					}
+					span {
+						font-weight: 400;
+						font-size: 14px;
+						line-height: 130%;
+						text-align: center;
+						letter-spacing: 0.003em;
+						color: $primary-main;
+						@media screen and (max-width: 768px) {
+							font-size: 10px;
+							line-height: 130%;
+						}
+					}
+				}
+				.export {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 155px;
+					height: 30px;
+					border-radius: 16px;
+					background: #748bff;
+					@media screen and (max-width: 768px) {
+						width: 112.16px;
+						height: 21.68px;
+					}
+					span {
+						font-weight: 400;
+						font-size: 14px;
+						line-height: 130%;
+						text-align: center;
+						letter-spacing: 0.003em;
+						color: $white;
+						@media screen and (max-width: 768px) {
+							font-size: 10px;
+							line-height: 130%;
+						}
+					}
+				}
+			}
+		}
+
+		.checkeds {
+			width: auto;
+			height: auto;
+			position: absolute;
+			top: 65px;
+			right: 0;
+			@media screen and (max-width: 768px) {
+				top: 45px;
+				right: -130px;
+			}
+			@media screen and (max-width: 575px) {
+				top: 45px;
+				right: -110px;
+			}
+			@media screen and (max-width: 560px) {
+				right: 0;
+			}
+			@media screen and (max-width: 350px) {
+				right: 30px;
+			}
+			div {
+				width: 259px;
+				height: 48.56px;
+				display: flex;
+				align-items: center;
+				gap: 6.47px;
+				padding: 16.1875px 12.95px;
+				border: 0.81px solid #7aafff;
+				background: $white;
+				box-shadow: 20px 34px 59px 7px rgba(0, 25, 225, 0.05);
+				border-radius: 12.95px;
+				@media screen and (max-width: 1290px) {
+					width: 220px;
+					right: 40px;
+				}
+				@media screen and (max-width: 768px) {
+					width: 136px;
+					height: 35px;
+					padding: 12px 9px;
+				}
+				span {
+					width: 12.95px;
+					height: 12.95px;
+					border: 0.809375px solid $color-text;
+					border-radius: 27.5187px;
+					@media screen and (max-width: 575px) {
+						border: 0.585682px solid #1e1e1e;
+						border-radius: 19.9132px;
+						width: 9.37px;
+						height: 9.37px;
+					}
+				}
+
+				p {
+					font-size: 12.95px;
+					line-height: 120%;
+					letter-spacing: 0.003em;
+					color: $color-text;
+					@media screen and (max-width: 768px) {
+						font-size: 9.37091px;
+						line-height: 120%;
+					}
+				}
+			}
+			.checked__two {
+				margin-top: 10px;
+			}
+		}
+	}
+	.data__right {
+		width: 490px;
+		position: relative;
+		z-index: 7;
+		@media screen and (max-width: 992px) {
+			width: 400px;
+		}
+		@media screen and (max-width: 768px) {
+			max-width: 280px;
+			width: 100%;
+		}
+		@media screen and (max-width: 560px) {
+			width: 100%;
+		}
+		.data__icon {
+			padding: 11px;
+			width: 54px;
+			height: 54px;
+			background: $primary-main;
+			box-shadow: 0px 3px 24px rgba(116, 139, 255, 0.51), inset 3px 4px 7px rgba(255, 255, 255, 0.31);
+			border-radius: 40px;
+			margin-bottom: 40px;
+			@media screen and (max-width: 768px) {
+				margin-bottom: 30px;
+				padding: 10px;
+				width: 44px;
+				height: 44px;
+			}
+			img {
+				@media screen and (max-width: 768px) {
+					width: 24px;
+					height: 24px;
+				}
+			}
+		}
+		.data__block {
+			p:first-child {
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 130%;
+				letter-spacing: 0.003em;
+				color: $primary-main;
+				margin-bottom: 10px;
+			}
+			p:last-child {
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 120%;
+				letter-spacing: 0.003em;
+				color: $sub-title;
+				@media screen and (max-width: 768px) {
+					font-size: 14px;
+				}
+			}
+			h2 {
+				font-weight: 700;
+				font-size: 32px;
+				line-height: 120%;
+				letter-spacing: 0.003em;
+				color: $color-text;
+				margin-bottom: 20px;
+				@media screen and (max-width: 768px) {
+					font-size: 18px;
+					line-height: 120%;
+				}
+			}
+		}
+	}
+}
