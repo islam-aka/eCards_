@@ -18,10 +18,7 @@ const About = () => {
 		<div className={styles.container}>
 			<div className={styles.link} id='#eСards'></div>
 			<div className={styles.about__bg}>
-				<img
-					src='https://cdn.glitch.global/06428a02-45cf-4a7e-aa2e-dcfd0f6ac920/%D0%9EeCards.png?v=1677566727362'
-					alt='background'
-				/>
+				<img src={image} alt='background' />
 			</div>
 			<div className={styles.about}>
 				<div className={styles.about__title}>
