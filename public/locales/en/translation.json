@@ -32,5 +32,109 @@
 				"bottom": "turnover of advertising expenses through the service"
 			}
 		}
+	},
+	"features": {
+		"subTitle": "eCards provides",
+		"title": "Features",
+		"content": {
+			"score": {
+				"subTitle": "Top up",
+				"title": "Top up your eCards account with a variety of methods",
+				"desc": "Top up your eCards account by sending wire or USDT. Then distribute the money to cards and buyers as you see fit",
+				"balance": {
+					"statistic": "Total turnover USDT",
+					"myBalance": "My balance",
+					"bill": "eCards account:",
+					"euro": "Euro",
+					"usd": "U.S. Dollars",
+					"topUptheBalance": "Top up the balance",
+					"amount": "Amount on the cards:"
+				}
+			},
+			"cards": {
+				"subTitle": "Card issue",
+				"title": "Unlimited instant issuance of virtual cards",
+				"desc": "VISA, MasterCard, UnionPay cards are available on the platform. Bins are constantly replenished. Only a few clicks are required for the multiple cards issue. There are no restrictions on the amount of cards"
+			},
+			"distribution": {
+				"left": {
+					"subTitle": "Allocation and grouping",
+					"title": "Allocation of cards by buyers and grouping of employees",
+					"desc": "Connect an unlimited number of employees to your account, create groups of buyers and distribute cards between them"
+				},
+				"right": {
+					"employees": "Employees",
+					"viewAll": "View all groups",
+					"group1": "Group 1",
+					"group2": "Group 2",
+					"invite": "Invite an employee"
+				}
+			},
+			"data": {
+				"left": {
+					"title": "Export table",
+					"desc": "Choose format to export the table",
+					"btn1": "Close",
+					"btn2": "Export",
+					"csv": "CSV file",
+					"excel": "Excel"
+				},
+				"right": {
+					"subTitle": "Data",
+					"title": "Detailed reports and data uploads",
+					"desc": "Create and upload detailed expense reports for each card, group of cards, employee, or group of employees. Flexible filters are available to generate reports, as well as uploading results to .CSV and .XLSX"
+				}
+			},
+			"opportunities": {
+				"subTitle": "Notification setup",
+				"title": "Notification setup",
+				"desc": "In your personal account you can set up to receive all the necessary notifications in Telegram: receiving 3D Secure code, reducing the balance below certain values, creating and paying invoices, changing card limits, etc."
+			}
+		}
+	},
+	"conditions": {
+		"top": {
+			"subTitle": "Favorable service conditions",
+			"title": "Pay only for topping up your eCards account. We have no hidden fees"
+		},
+		"middle": {
+			"left": {
+				"text1": "Card issue",
+				"text2": "Monthly maintenance",
+				"text3": "Transactions",
+				"text4": "Refunds to your eCards account",
+				"text5": "Topping up a card from an eCards account",
+				"text6": "Topping up eCards - USDT",
+				"text7": "Topping up eCards - Wire",
+				"text8": "The minimum amount to deposit into an eCards account"
+			},
+			"right": {
+				"free": "Free",
+				"noLimits": "No limits"
+			}
+		},
+		"bottom": {
+			"desc": "For big affiliate teams with a turnover of more than $100,000 per month, it is possible to provide individual conditions",
+			"btn": "Get an invite"
+		}
+	},
+	"partners": {
+		"subTitle": "About eCards Partners",
+		"title": "Our Partners",
+		"desc": "Get even better terms when you withdraw funds from affiliates to your eCards account!",
+		"btn": "Get an Invite"
+	},
+	"contacts": {
+		"subTitle": "Contact",
+		"title": "If you have questions, contact us!",
+		"desc": "Our support team is available daily",
+		"time": "from 08:00 to 22:00 UTC +3",
+		"btn": "Write to support"
+	},
+	"footer": {
+		"politic": "Privacy Policy",
+		"stayTuned": "Stay tuned for more news",
+		"followUs": "Follow us",
+		"support": "Support Service"
 	}
 }

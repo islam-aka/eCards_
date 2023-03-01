@@ -15,8 +15,7 @@ const About = () => {
 	const [refThree, inViewThree] = useInView({ threshold: 0.5 })
 
 	return (
-		<div className={styles.container}>
-			<div className={styles.link} id='#eСards'></div>
+		<div id='section-1' className={styles.container}>
 			<div className={styles.about__bg}>
 				<img src={image} alt='background' />
 			</div>

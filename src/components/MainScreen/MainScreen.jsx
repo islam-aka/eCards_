@@ -1,8 +1,6 @@
 import React from 'react'
 import styles from './MainScreen.module.scss'
 import image from '../../assets/img/Главная.png'
-// import blockBlurOne from '../../assets/img/bg.png'
-// import blockBlurTwo from '../../assets/mainScreen'
 import iconRight from '../../assets/svg/right.svg'
 import iconRightLogIn from '../../assets/svg/rightLogIn.svg'
 import iconPlus from '../../assets/svg/plus.svg'

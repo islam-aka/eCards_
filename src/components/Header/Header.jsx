@@ -10,22 +10,55 @@ import iconRight from '../../assets/svg/right.svg'
 import { Link, useParams } from 'react-router-dom'
 
 const Header = () => {
-	const { url } = useParams()
 	const { t } = useTranslation()
+	const [activeButton, setActiveButton] = useState(1)
 	const [menu, setMenu] = useState(false)
 	const [hover, setHover] = useState(false)
 
-	useEffect(() => {}, [menu])
+	const handleNavClick = index => {
+		setActiveButton(index)
+		const element = document.getElementById(`section-${index}`)
+		element.scrollIntoView({ behavior: 'smooth' })
+	}
 
+	const handleScroll = () => {
+		const scrollPosition = window.scrollY
+		const section1 = document.getElementById('section-1')
+		const section2 = document.getElementById('section-2')
+		const section3 = document.getElementById('section-3')
+
+		if (
+			scrollPosition >= section1.offsetTop &&
+			scrollPosition < section2.offsetTop
+		) {
+			setActiveButton(1)
+		} else if (
+			scrollPosition >= section2.offsetTop &&
+			scrollPosition < section3.offsetTop
+		) {
+			setActiveButton(2)
+		} else if (scrollPosition >= section3.offsetTop) {
+			setActiveButton(3)
+		}
+		console.log(section2.offsetTop)
+	}
+
+	useEffect(() => {
+		console.log(activeButton)
+		window.addEventListener('scroll', handleScroll)
+		return () => window.removeEventListener('scroll', handleScroll)
+	}, [menu])
+
+	const scrollToTop = () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' })
+	}
 	const onMouseEnter = () => {
 		setHover(true)
 	}
 	const onMouseLeave = () => {
 		setHover(false)
 	}
-	const scrollToTop = () => {
-		window.scrollTo({ top: 0, behavior: 'smooth' })
-	}
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.header}>
@@ -35,48 +68,54 @@ const Header = () => {
 				<nav className={styles.header__nav}>
 					<ul>
 						<li>
-							<Link
-								to={'/eСards'}
-								className={url === 'eСards' ? styles.active : styles.noActive}
+							<button
+								onClick={() => handleNavClick(1)}
+								className={
+									activeButton === '1' ? styles.active : styles.noActive
+								}
 							>
 								{t('header.nav.aboutECards')}
-							</Link>
+							</button>
 						</li>
 						<li>
-							<Link
-								to={'/opportunities'}
+							<button
+								onClick={() => handleNavClick(2)}
 								className={
-									url === 'opportunities' ? styles.active : styles.noActive
+									activeButton === '2' ? styles.active : styles.noActive
 								}
 							>
 								{t('header.nav.features')}
-							</Link>
+							</button>
 						</li>
 						<li>
-							<Link
-								to={'/conditions'}
+							<button
+								onClick={() => handleNavClick(3)}
 								className={
-									url === 'conditions' ? styles.active : styles.noActive
+									activeButton === '3' ? styles.active : styles.noActive
 								}
 							>
 								{t('header.nav.pricing')}
-							</Link>
+							</button>
 						</li>
 						<li>
-							<Link
-								to={'/partners'}
-								className={url === 'partners' ? styles.active : styles.noActive}
+							<button
+								onClick={() => handleNavClick(4)}
+								className={
+									activeButton === '4' ? styles.active : styles.noActive
+								}
 							>
 								{t('header.nav.partners')}
-							</Link>
+							</button>
 						</li>
 						<li>
-							<Link
-								to={'/contact'}
-								className={url === 'contact' ? styles.active : styles.noActive}
+							<button
+								onClick={() => handleNavClick(5)}
+								className={
+									activeButton === '5' ? styles.active : styles.noActive
+								}
 							>
 								{t('header.nav.contacts')}
-							</Link>
+							</button>
 						</li>
 					</ul>
 				</nav>
@@ -152,7 +191,9 @@ const Header = () => {
 							<li>
 								<Link
 									to={'/eСards'}
-									className={url === 'eСards' ? styles.active : styles.noActive}
+									className={
+										activeButton === 'eСards' ? styles.active : styles.noActive
+									}
 								>
 									{t('navBar.aboutECards')}
 								</Link>
@@ -161,7 +202,9 @@ const Header = () => {
 								<Link
 									to={'/opportunities'}
 									className={
-										url === 'opportunities' ? styles.active : styles.noActive
+										activeButton === 'opportunities'
+											? styles.active
+											: styles.noActive
 									}
 								>
 									{t('navBar.opportunities')}
@@ -171,7 +214,9 @@ const Header = () => {
 								<Link
 									to={'/conditions'}
 									className={
-										url === 'conditions' ? styles.active : styles.noActive
+										activeButton === 'conditions'
+											? styles.active
+											: styles.noActive
 									}
 								>
 									{t('navBar.conditions')}
@@ -181,7 +226,9 @@ const Header = () => {
 								<Link
 									to={'/partners'}
 									className={
-										url === 'partners' ? styles.active : styles.noActive
+										activeButton === 'partners'
+											? styles.active
+											: styles.noActive
 									}
 								>
 									{t('navBar.partners')}
@@ -191,7 +238,7 @@ const Header = () => {
 								<Link
 									to={'/contact'}
 									className={
-										url === 'contact' ? styles.active : styles.noActive
+										activeButton === 'contact' ? styles.active : styles.noActive
 									}
 								>
 									{t('navBar.contacts')}
