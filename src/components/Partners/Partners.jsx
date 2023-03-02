@@ -4,24 +4,23 @@ import iconOne from '../../assets/svg/icon-logo 1.svg'
 import iconTwo from '../../assets/svg/icon-logo 2.svg'
 import iconRight from '../../assets/svg/rightLogIn.svg'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const Partners = () => {
+	const { t } = useTranslation()
 	return (
 		<div className={styles.container}>
 			<div id='section-4' className={styles.link}></div>
 			<div className={styles.partner}>
 				<div className={styles.partner__left}>
 					<div className={styles.info}>
-						<p>О партнерах eCards</p>
-						<h2>Наши партнеры</h2>
-						<p>
-							Получайте еще более выгодные условия при выводе средств с
-							партнерок на счет eCards!
-						</p>
+						<p>{t("partners.subTitle")}</p>
+						<h2>{t("partners.title")}</h2>
+						<p>{t("partners.desc")}</p>
 					</div>
 					<Link to={'invite'}>
 						<div className={styles.partner__btnInvite}>
-							<p>Получить инвайт</p>
+							<p>{t("partners.btn")}</p>
 							<img src={iconRight} alt='icon right' />
 						</div>
 					</Link>

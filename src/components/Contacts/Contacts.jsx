@@ -4,23 +4,23 @@ import iconOne from '../../assets/img/iconOne.png'
 import iconTwo from '../../assets/img/iconTwo.png'
 import iconThree from '../../assets/img/iconThree.png'
 import icontel from '../../assets/svg/icons.svg'
+import { useTranslation } from 'react-i18next'
 
 const Contacts = () => {
+	const { t } =useTranslation()
 	return (
 		<div className={styles.contact}>
 			<div id='section-5' className={styles.link}></div>
 			<div className={styles.contact__left}>
-				<p className={styles.contact__subTitle}>Контакты</p>
-				<h3 className={styles.contact__left_title}>
-					Если у вас остались вопросы, напишите нам!
-				</h3>
+				<p className={styles.contact__subTitle}>{t("contacts.subTitle")}</p>
+				<h3 className={styles.contact__left_title}>{t("contacts.title")}</h3>
 				<p className={styles.contact__left_time}>
-					Наша служба поддержки работает ежедневно
-					<span>с 08:00 до 22:00 по UTC +3.</span>
+					{t("contacts.desc")}
+					<span>{t("contacts.time")}</span>
 				</p>
 				<a href='https://t.me/ecards_support' target='_blank'>
 					<div className={styles.support}>
-						<p>Написать в поддержку</p>
+						<p>{t("contacts.btn")}</p>
 						<img src={icontel} alt='icon' />
 					</div>
 				</a>

@@ -9,9 +9,12 @@ import LogoSocial from '../LogoSocial/LogoSocial'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import 'aos'
+import i18n from '../../i18next'
 
 const MainScreen = () => {
-	const [check, setCheck] = useState('ru')
+	let currentLanguage = i18n.language
+	const [check, setCheck] = useState('RU')
+	console.log(check, "123321");
 	const { t } = useTranslation()
 	function checkCookie() {
 		const cookies = document.cookie.split(';')
@@ -65,16 +68,20 @@ const MainScreen = () => {
 				<div className={styles.blockBlur__two}>
 					<img src={blockBlurTwo} alt='asd' />
 				</div>
-				{/* <img
-					className={styles.bg}
-					src='https://i.ibb.co/DWqCFzB/min.png'
-					alt='asd'
-				/> */}
-				<img
+				{currentLanguage === 'RU' 
+					? 
+					<img
 					className={styles.bg}
 					src='https://i.ibb.co/YpXwRPk/image.png'
 					alt='asd'
-				/>
+					/>
+					: 
+					<img 
+					className={styles.bg} 
+					src='https://i.ibb.co/DWqCFzB/min.png' 
+					alt='asd'
+					/> 
+				}
 			</div>
 		</div>
 	)

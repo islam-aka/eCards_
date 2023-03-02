@@ -5,7 +5,9 @@ import notificationImgOne from '../../../assets/img/noti.png'
 import notificationImgTwo from '../../../assets/img/noti2.png'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { useTranslation } from 'react-i18next'
 const Notification = () => {
+	const { t } = useTranslation()
 	useEffect(() => {
 		AOS.init()
 		AOS.refresh()
@@ -18,14 +20,9 @@ const Notification = () => {
 					<img src={iconNotification} alt='icon notification' />
 				</div>
 				<div className={styles.notification__block}>
-					<p>Настройка нотификаций</p>
-					<h2>Система уведомлений</h2>
-					<p>
-						В личном кабинете вы можете настроить получение всех необходимых
-						уведомлений в телеграм: получение 3D Secure code, снижение баланса
-						ниже определенных значений, создание и оплата инвойсов, изменение
-						лимита карт и т.д.
-					</p>
+					<p>{t("features.content.opportunities.subTitle")}</p>
+					<h2>{t("features.content.opportunities.title")}</h2>
+					<p>{t("features.content.opportunities.desc")}</p>
 				</div>
 			</div>
 			<div
