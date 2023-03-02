@@ -5,7 +5,8 @@ import styles from './Conditions.module.scss'
 
 const Conditions = () => {
 	return (
-		<div id='section-3' className={styles.container}>
+		<div className={styles.container}>
+			<div id='section-3' className={styles.link}></div>
 			<div className={styles.conditions__top}>
 				<p className={styles.top__subTitle}>Выгодные условия работы сервиса</p>
 				<p className={styles.top__title}>

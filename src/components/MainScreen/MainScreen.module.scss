@@ -243,9 +243,9 @@
 	&__bg {
 		position: relative;
 		z-index: 6;
-		width: 482px;
+		width: 530px;
 
-		img {
+		.bg {
 			position: relative;
 			z-index: 2;
 			width: 1075px;
@@ -265,23 +265,17 @@
 			position: absolute;
 			top: 0;
 			left: -200px;
-			width: 500px;
-			height: 700px;
+			width: 480px;
+			height: 480px;
 			opacity: 0.15;
 		}
-	}
-
-	.blockBlur__two {
-		position: absolute;
-		width: 480px;
-		height: 480px;
-		top: -60px;
-		right: -300px;
-		background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
-		opacity: 0.1;
-		filter: blur(50px);
-		@media screen and (max-width: 560px) {
-			display: block;
+		.blockBlur__two {
+			position: absolute;
+			width: 480px;
+			height: 480px;
+			top: -60px;
+			right: -300px;
+			opacity: 0.1;
 		}
 	}
 }

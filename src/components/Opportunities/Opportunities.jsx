@@ -9,7 +9,8 @@ import Notification from './Notification/Notification'
 
 const Opportunities = () => {
 	return (
-		<div id='section-2' className={styles.container}>
+		<div className={styles.container}>
+			<div className={styles.link} id='section-2'></div>
 			<div className={styles.container__title}>
 				<p>eCards предоставляет</p>
 				<h2>Возможности и фичи</h2>

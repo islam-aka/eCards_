@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './Partners.module.scss'
 import iconOne from '../../assets/svg/icon-logo 1.svg'
 import iconTwo from '../../assets/svg/icon-logo 2.svg'
@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 const Partners = () => {
 	return (
 		<div className={styles.container}>
-			<div id='#partners' className={styles.link}></div>
+			<div id='section-4' className={styles.link}></div>
 			<div className={styles.partner}>
 				<div className={styles.partner__left}>
 					<div className={styles.info}>

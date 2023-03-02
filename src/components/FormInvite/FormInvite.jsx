@@ -2,7 +2,7 @@ import InputText from '../../UI/Text/InputText'
 import InputEmail from '../../UI/Email/InputEmail'
 import InputTel from '../../UI/Tel/InputTel'
 import InputNumber from '../../UI/InputNumber'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import imgCardOne from '../../assets/img/cardOne.png'
 import imgCardTwo from '../../assets/img/cardTwo.png'
 import imgCardThree from '../../assets/img/cardThree.png'
@@ -65,6 +65,9 @@ const FormInvite = () => {
 	const handleChange = event => {
 		setInvite({ ...invite, [event.target.name]: event.target.value })
 	}
+	useEffect(() => {
+		window.scrollTo({ top: 0 })
+	}, [])
 
 	return (
 		<div className={styles.container}>

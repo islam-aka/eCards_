@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './MainScreen.module.scss'
-import image from '../../assets/img/Главная.png'
+import blockBlurOne from '../../assets/mainScreen/Ellipse 683.png'
+import blockBlurTwo from '../../assets/mainScreen/Ellipse 684.png'
 import iconRight from '../../assets/svg/right.svg'
 import iconRightLogIn from '../../assets/svg/rightLogIn.svg'
 import iconPlus from '../../assets/svg/plus.svg'
@@ -10,7 +11,20 @@ import { useTranslation } from 'react-i18next'
 import 'aos'
 
 const MainScreen = () => {
+	const [check, setCheck] = useState('ru')
 	const { t } = useTranslation()
+	function checkCookie() {
+		const cookies = document.cookie.split(';')
+		const myCookie = cookies.find(cookie =>
+			cookie.trim().startsWith('language=')
+		)
+		setCheck(myCookie)
+		console.log(myCookie)
+	}
+	useEffect(() => {
+		checkCookie()
+	}, [])
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.container__info}>
@@ -45,13 +59,22 @@ const MainScreen = () => {
 			</div>
 
 			<div className={styles.container__bg}>
-				{/* <div className={styles.blockBlur}>
+				<div className={styles.blockBlur}>
 					<img src={blockBlurOne} alt='asd' />
 				</div>
-				<div className={styles.blockBlur}>
+				<div className={styles.blockBlur__two}>
 					<img src={blockBlurTwo} alt='asd' />
-				</div> */}
-				<img src={image} alt='asd' />
+				</div>
+				{/* <img
+					className={styles.bg}
+					src='https://i.ibb.co/DWqCFzB/min.png'
+					alt='asd'
+				/> */}
+				<img
+					className={styles.bg}
+					src='https://i.ibb.co/YpXwRPk/image.png'
+					alt='asd'
+				/>
 			</div>
 		</div>
 	)

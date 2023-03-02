@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import logo from '../../assets/svg/Logo.svg'
 import LogoFooter from '../../assets/svg/LogoFooter.svg'
 import iconSupport from '../../assets/img/iconSupport.png'
@@ -7,18 +7,25 @@ import styles from './Header.module.scss'
 import DropDown from '../DropDown/DropDown'
 import { useTranslation } from 'react-i18next'
 import iconRight from '../../assets/svg/right.svg'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { Context } from '../..'
 
 const Header = () => {
 	const { t } = useTranslation()
-	const [activeButton, setActiveButton] = useState(1)
+	const { store } = useContext(Context)
+	const navigate = useNavigate()
+	const [activeButton, setActiveButton] = useState(0)
 	const [menu, setMenu] = useState(false)
 	const [hover, setHover] = useState(false)
+	let j = activeButton
 
-	const handleNavClick = index => {
-		setActiveButton(index)
+	const handleNavClick = async (index, event) => {
+		await setMenu(false)
+		await event.preventDefault()
+		await store.setLink(index)
+		await navigate('/')
 		const element = document.getElementById(`section-${index}`)
-		element.scrollIntoView({ behavior: 'smooth' })
+		await element.scrollIntoView({ behavior: 'smooth' })
 	}
 
 	const handleScroll = () => {
@@ -26,37 +33,58 @@ const Header = () => {
 		const section1 = document.getElementById('section-1')
 		const section2 = document.getElementById('section-2')
 		const section3 = document.getElementById('section-3')
+		const section4 = document.getElementById('section-4')
+		const section5 = document.getElementById('section-5')
 
 		if (
 			scrollPosition >= section1.offsetTop &&
 			scrollPosition < section2.offsetTop
 		) {
-			setActiveButton(1)
+			store.setLink(1)
 		} else if (
 			scrollPosition >= section2.offsetTop &&
 			scrollPosition < section3.offsetTop
 		) {
-			setActiveButton(2)
-		} else if (scrollPosition >= section3.offsetTop) {
-			setActiveButton(3)
+			store.setLink(2)
+		} else if (
+			scrollPosition >= section3.offsetTop &&
+			scrollPosition < section4.offsetTop
+		) {
+			store.setLink(3)
+		} else if (
+			scrollPosition >= section4.offsetTop &&
+			scrollPosition < section5.offsetTop
+		) {
+			store.setLink(4)
+		} else if (
+			scrollPosition >= section5.offsetTop &&
+			scrollPosition < section4.offsetTop
+		) {
+			setActiveButton(5)
 		}
-		console.log(section2.offsetTop)
 	}
 
 	useEffect(() => {
-		console.log(activeButton)
+		console.log(store.link)
 		window.addEventListener('scroll', handleScroll)
 		return () => window.removeEventListener('scroll', handleScroll)
-	}, [menu])
+	}, [activeButton, menu, store.link])
 
 	const scrollToTop = () => {
 		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}
+
 	const onMouseEnter = () => {
 		setHover(true)
 	}
 	const onMouseLeave = () => {
 		setHover(false)
+	}
+	const onMouseEnterNav = i => {
+		setActiveButton(i)
+	}
+	const onMouseLeaveNav = () => {
+		setActiveButton(j)
 	}
 
 	return (
@@ -68,54 +96,55 @@ const Header = () => {
 				<nav className={styles.header__nav}>
 					<ul>
 						<li>
-							<button
-								onClick={() => handleNavClick(1)}
-								className={
-									activeButton === '1' ? styles.active : styles.noActive
-								}
+							<a
+								onMouseEnter={() => onMouseEnterNav(1)}
+								onMouseLeaveNav={onMouseLeaveNav}
+								href='/'
+								onClick={event => handleNavClick(1, event)}
+								className={store.link === 1 ? styles.active : styles.noActive}
 							>
 								{t('header.nav.aboutECards')}
-							</button>
+							</a>
 						</li>
 						<li>
-							<button
-								onClick={() => handleNavClick(2)}
-								className={
-									activeButton === '2' ? styles.active : styles.noActive
-								}
+							<a
+								onMouseEnter={() => onMouseEnterNav(2)}
+								href='/'
+								onClick={event => handleNavClick(2, event)}
+								className={store.link === 2 ? styles.active : styles.noActive}
 							>
 								{t('header.nav.features')}
-							</button>
+							</a>
 						</li>
 						<li>
-							<button
-								onClick={() => handleNavClick(3)}
-								className={
-									activeButton === '3' ? styles.active : styles.noActive
-								}
+							<a
+								onMouseEnter={() => onMouseEnterNav(3)}
+								href='/'
+								onClick={event => handleNavClick(3, event)}
+								className={store.link === 3 ? styles.active : styles.noActive}
 							>
 								{t('header.nav.pricing')}
-							</button>
+							</a>
 						</li>
 						<li>
-							<button
-								onClick={() => handleNavClick(4)}
-								className={
-									activeButton === '4' ? styles.active : styles.noActive
-								}
+							<a
+								onMouseEnter={() => onMouseEnterNav(4)}
+								href='/'
+								onClick={event => handleNavClick(4, event)}
+								className={store.link === 4 ? styles.active : styles.noActive}
 							>
 								{t('header.nav.partners')}
-							</button>
+							</a>
 						</li>
 						<li>
-							<button
-								onClick={() => handleNavClick(5)}
-								className={
-									activeButton === '5' ? styles.active : styles.noActive
-								}
+							<a
+								onMouseEnter={() => onMouseEnterNav(5)}
+								href='/'
+								onClick={event => handleNavClick(5, event)}
+								className={activeButton === 5 ? styles.active : styles.noActive}
 							>
 								{t('header.nav.contacts')}
-							</button>
+							</a>
 						</li>
 					</ul>
 				</nav>
@@ -190,58 +219,57 @@ const Header = () => {
 						<ul className={styles.navBar}>
 							<li>
 								<Link
-									to={'/eСards'}
+									to='/'
+									onClick={() => handleNavClick(1)}
 									className={
-										activeButton === 'eСards' ? styles.active : styles.noActive
+										activeButton === 1 ? styles.active : styles.noActive
 									}
 								>
-									{t('navBar.aboutECards')}
+									{t('header.nav.aboutECards')}
 								</Link>
 							</li>
 							<li>
 								<Link
-									to={'/opportunities'}
+									to='/'
+									onClick={() => handleNavClick(2)}
 									className={
-										activeButton === 'opportunities'
-											? styles.active
-											: styles.noActive
+										activeButton === 2 ? styles.active : styles.noActive
 									}
 								>
-									{t('navBar.opportunities')}
+									{t('header.nav.features')}
 								</Link>
 							</li>
 							<li>
 								<Link
-									to={'/conditions'}
+									to='/'
+									onClick={() => handleNavClick(3)}
 									className={
-										activeButton === 'conditions'
-											? styles.active
-											: styles.noActive
+										activeButton === 3 ? styles.active : styles.noActive
 									}
 								>
-									{t('navBar.conditions')}
+									{t('header.nav.pricing')}
 								</Link>
 							</li>
 							<li>
 								<Link
-									to={'/partners'}
+									to='/'
+									onClick={() => handleNavClick(4)}
 									className={
-										activeButton === 'partners'
-											? styles.active
-											: styles.noActive
+										activeButton === 4 ? styles.active : styles.noActive
 									}
 								>
-									{t('navBar.partners')}
+									{t('header.nav.partners')}
 								</Link>
 							</li>
 							<li>
 								<Link
-									to={'/contact'}
+									to='/'
+									onClick={() => handleNavClick(5)}
 									className={
-										activeButton === 'contact' ? styles.active : styles.noActive
+										activeButton === 5 ? styles.active : styles.noActive
 									}
 								>
-									{t('navBar.contacts')}
+									{t('header.nav.contacts')}
 								</Link>
 							</li>
 						</ul>
