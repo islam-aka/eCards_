@@ -67,7 +67,7 @@ const MainScreen = () => {
 				</div>
 				{/* <img
 					className={styles.bg}
-					src='https://i.ibb.co/DWqCFzB/min.png'
+					src='https://i.ibb.co/JB27td9/EN.png'
 					alt='asd'
 				/> */}
 				<img

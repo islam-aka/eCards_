@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
 import styles from './Notification.module.scss'
 import iconNotification from '../../../assets/svg/notification.svg'
-import notificationImgOne from '../../../assets/img/noti.png'
-import notificationImgTwo from '../../../assets/img/noti2.png'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 const Notification = () => {
@@ -34,10 +32,16 @@ const Notification = () => {
 				data-aos-duration='1000'
 			>
 				<div className={styles.notiOne}>
-					<img src={notificationImgOne} alt='notification system' />
+					<img
+						src='https://i.ibb.co/RbxGmM4/noti.png'
+						alt='notification system'
+					/>
 				</div>
 				<div className={styles.notiTwo}>
-					<img src={notificationImgTwo} alt='notification system' />
+					<img
+						src='https://i.ibb.co/vz1YYff/noti2.png'
+						alt='notification system'
+					/>
 				</div>
 			</div>
 			<div className={styles.blockBlur__notification}></div>

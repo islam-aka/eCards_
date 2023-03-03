@@ -35,7 +35,7 @@ const Home = () => {
 
 	return (
 		<div className={styles.home}>
-			<Suspense fallback={<div>Loading...</div>}>
+			<Suspense fallback={''}>
 				<Header />
 				<MainScreen />
 				<About />
