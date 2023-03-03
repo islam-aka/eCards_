@@ -10,7 +10,7 @@ function App() {
 	function checkCookie() {
 		const cookies = document.cookie.split(';')
 		const myCookie = cookies.find(cookie =>
-			cookie.trim().startsWith('i18next=')
+			cookie.trim().startsWith('language=')
 		)
 		setCheck(myCookie === undefined)
 	}
