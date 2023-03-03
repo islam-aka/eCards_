@@ -17,14 +17,18 @@ const DropDown = () => {
 		let data = document.cookie
 			.replace(/(?:(?:^|.*;\s*)language\s*\s*([^;]*).*$)|^.*$/, '$1')
 			.slice(1)
-		i18n.changeLanguage(data)
+		if (lang) {
+			i18n.changeLanguage(lang)
+		} else {
+			i18n.changeLanguage(data)
+		}
 		setLanguage(data === '' ? 'RU' : data)
 	}
 
 	const check = str => {
-		document.cookie = `language=${language}; domain=http://localhost:3000/ path=/`
+		document.cookie = `language=${language}; domain=http://localhost:3000/#eСards; path=/`
 		document.cookie = `language=${str}`
-
+		dropDownActive()
 		console.log(str)
 		if (
 			document.cookie.replace(
@@ -45,7 +49,10 @@ const DropDown = () => {
 	}, [language])
 
 	return (
-		<div className={!active ? styles.dropdown : styles.dropdown__none}>
+		<div
+			className={!active ? styles.dropdown : styles.dropdown__none}
+			tabIndex={6}
+		>
 			<div className={styles.dropdown__select} onClick={dropDownActive}>
 				<span className={styles.select}>{language}</span>
 				<img
