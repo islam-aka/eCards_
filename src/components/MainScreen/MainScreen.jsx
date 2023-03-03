@@ -24,7 +24,7 @@ const MainScreen = () => {
 	}
 	useEffect(() => {
 		checkCookie()
-	}, [])
+	}, [check])
 
 	return (
 		<div className={styles.container}>
@@ -60,12 +60,8 @@ const MainScreen = () => {
 			</div>
 
 			<div className={styles.container__bg}>
-				<div className={styles.blockBlur}>
-					<img src={blockBlurOne} alt='asd' />
-				</div>
-				<div className={styles.blockBlur__two}>
-					<img src={blockBlurTwo} alt='asd' />
-				</div>
+				<div className={styles.blockBlur}></div>
+				<div className={styles.blockBlur__two}></div>
 				{currentLanguage === 'RU' ? (
 					<img
 						className={styles.bg}

@@ -268,6 +268,10 @@
 			width: 480px;
 			height: 480px;
 			opacity: 0.15;
+			background: -o-linear-gradient(336.52deg, #ff8de6 7.05%, #4c3fe7 105.43%);
+			background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
+			-webkit-filter: blur(50px);
+			filter: blur(50px);
 		}
 		.blockBlur__two {
 			position: absolute;
@@ -276,6 +280,9 @@
 			top: -60px;
 			right: -300px;
 			opacity: 0.1;
+			background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
+			opacity: 0.1;
+			filter: blur(50px);
 		}
 	}
 }
