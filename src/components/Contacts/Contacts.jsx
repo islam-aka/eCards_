@@ -7,7 +7,7 @@ import icontel from '../../assets/svg/icons.svg'
 import { useTranslation } from 'react-i18next'
 
 const Contacts = () => {
-	const { t } =useTranslation()
+	const { t } = useTranslation()
 	return (
 		<div className={styles.contact}>
 			<div id='section-5' className={styles.link}></div>
