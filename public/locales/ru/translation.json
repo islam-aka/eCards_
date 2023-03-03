@@ -131,6 +131,9 @@
 		"time": "с 08:00 до 22:00 по UTC +3.",
 		"btn": "Написать в поддержку"
 	},
+	"getInvite": {
+		
+	},
 	"footer": {
 		"politic": "Политика конфиденциальности",
 		"stayTuned": "Stay tuned for more news",

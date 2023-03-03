@@ -7,10 +7,11 @@ import imgCardThree from '../../../assets/cards/cardThree.png'
 import blockBlur from '../../../assets/cards/blockBlur.png'
 
 import { useInView } from 'react-intersection-observer'
+import { useTranslation } from 'react-i18next'
 
 const Cards = () => {
 	const [ref, inView] = useInView({ threshold: 0 })
-
+	const { t } = useTranslation()
 	return (
 		<div ref={ref} className={styles.cards}>
 			<div className={styles.blockBlur__cards}>
@@ -39,13 +40,9 @@ const Cards = () => {
 					<img src={iconInfinitely} alt='wallet icon' />
 				</div>
 				<div className={styles.card__block}>
-					<p>Выпуск карт </p>
-					<h2>Безлимитный моментальный выпуск виртуальных карт</h2>
-					<p>
-						На платформе доступны карты VISA, MasterCard, UnionPay. Бины
-						постоянно пополняются. Для выпуска карт массовым запросом необходимо
-						всего несколько кликов. Ограничений на выпуск карт нет
-					</p>
+					<p>{t("features.content.cards.subTitle")}</p>
+					<h2>{t("features.content.cards.title")}</h2>
+					<p>{t("features.content.cards.desc")}</p>
 				</div>
 			</div>
 		</div>

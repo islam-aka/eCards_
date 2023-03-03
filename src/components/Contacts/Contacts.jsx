@@ -5,11 +5,10 @@ import iconTwo from '../../assets/img/iconTwo.png'
 import iconThree from '../../assets/img/iconThree.png'
 import icontel from '../../assets/svg/icons.svg'
 import { Context } from '../..'
-import { gsap } from 'gsap'
-
+import { useTranslation } from 'react-i18next'
 const Contacts = () => {
 	const { store } = useContext(Context)
-
+	const { t } = useTranslation()
 	function test() {
 		const scrollPosition = window.scrollY
 		const section5 = document.getElementById('section5')
@@ -18,37 +17,31 @@ const Contacts = () => {
 			console.log(store.link)
 		}
 	}
-	const el = useRef()
 
 	useEffect(() => {
-		gsap.to(el.current, {
-			// полный поворот
-			rotation: '+=360',
-		})
 		window.addEventListener('scroll', test)
 		return () => window.removeEventListener('scroll', test)
 	}, [])
+
 	return (
 		<div id='section5' className={styles.contact}>
 			<div id='section-5' className={styles.link}></div>
 			<div className={styles.contact__left}>
-				<p className={styles.contact__subTitle}>Контакты</p>
-				<h3 className={styles.contact__left_title}>
-					Если у вас остались вопросы, напишите нам!
-				</h3>
+				<p className={styles.contact__subTitle}>{t('contacts.subTitle')}</p>
+				<h3 className={styles.contact__left_title}>{t('contacts.title')}</h3>
 				<p className={styles.contact__left_time}>
-					Наша служба поддержки работает ежедневно
-					<span>с 08:00 до 22:00 по UTC +3.</span>
+					{t('contacts.desc')}
+					<span>{t('contacts.time')}</span>
 				</p>
 				<a href='https://t.me/ecards_support' target='_blank'>
 					<div className={styles.support}>
-						<p>Написать в поддержку</p>
+						<p>{t('contacts.btn')}</p>
 						<img src={icontel} alt='icon' />
 					</div>
 				</a>
 			</div>
 			<div className={styles.contact__right}>
-				<div ref={el} className={styles.iconOne}>
+				<div className={styles.iconOne}>
 					<img src={iconOne} alt='icon' />
 				</div>
 				<div className={styles.iconThree}>

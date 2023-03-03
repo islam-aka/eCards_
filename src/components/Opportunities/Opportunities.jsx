@@ -8,8 +8,10 @@ import Data from './Data/Data'
 import Notification from './Notification/Notification'
 import { Context } from '../..'
 import { useInView } from 'react-intersection-observer'
+import { useTranslation } from 'react-i18next'
 
 const Opportunities = () => {
+	const { t } = useTranslation()
 	const { store } = useContext(Context)
 	const [ref, inView] = useInView({ threshold: 0.5 })
 
@@ -34,8 +36,8 @@ const Opportunities = () => {
 		<div id='section2' className={styles.container}>
 			<div className={styles.link} id='section-2' ref={ref}></div>
 			<div className={styles.container__title}>
-				<p>eCards предоставляет</p>
-				<h2>Возможности и фичи</h2>
+				<p>{t('features.subTitle')}</p>
+				<h2>{t('features.title')}</h2>
 			</div>
 
 			<div className={styles.opportunities}>
