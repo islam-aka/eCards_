@@ -24,7 +24,7 @@ const DropDown = () => {
 	const check = str => {
 		document.cookie = `language=${language}; domain=http://localhost:3000/#eСards; path=/`
 		document.cookie = `language=${str}`
-		dropDownActive()
+
 		console.log(str)
 		if (
 			document.cookie.replace(
