@@ -6,6 +6,7 @@
         url("GothamPro-Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -16,6 +17,7 @@
         url("GothamPro-Light.woff") format("woff"), url("GothamPro-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -26,6 +28,7 @@
         url("GothamPro-Black.woff") format("woff"), url("GothamPro-Black.ttf") format("truetype");
     font-weight: 900;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -37,6 +40,7 @@
         url("GothamProNarrow-Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -47,6 +51,7 @@
         url("GothamPro-Medium.woff") format("woff"), url("GothamPro-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -57,6 +62,7 @@
         url("GothamPro.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -68,4 +74,5 @@
         url("GothamProNarrow-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }

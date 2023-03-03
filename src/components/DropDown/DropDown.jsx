@@ -22,7 +22,7 @@ const DropDown = () => {
 	}
 
 	const check = str => {
-		document.cookie = `language=${language}; domain=http://localhost:3000/#eСards; path=/`
+		document.cookie = `language=${language}; domain=https://e-cards-va82.vercel.app/ path=/`
 		document.cookie = `language=${str}`
 
 		console.log(str)
