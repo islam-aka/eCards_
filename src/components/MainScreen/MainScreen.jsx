@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import styles from './MainScreen.module.scss'
-import blockBlurOne from '../../assets/mainScreen/Ellipse 683.png'
-import blockBlurTwo from '../../assets/mainScreen/Ellipse 684.png'
 import iconRight from '../../assets/svg/right.svg'
 import iconRightLogIn from '../../assets/svg/rightLogIn.svg'
 import iconPlus from '../../assets/svg/plus.svg'
