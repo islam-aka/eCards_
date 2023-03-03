@@ -16,15 +16,13 @@ const Score = () => {
 					</div>
 
 					<div className={styles.score__block}>
-						<p>{t("features.content.score.subTitle")}</p>
-						<h2>{t("features.content.score.title")}</h2>
-						<p>{t("features.content.score.desc")}</p>
+						<p>{t('features.content.score.subTitle')}</p>
+						<h2>{t('features.content.score.title')}</h2>
+						<p>{t('features.content.score.desc')}</p>
 					</div>
 				</div>
 				<div className={styles.score__right}>
-					<div className={styles.balance}>
-						<ScoreBalance />
-					</div>
+					<div className={styles.balance}>{/* <ScoreBalance /> */}</div>
 				</div>
 			</div>
 		</>
