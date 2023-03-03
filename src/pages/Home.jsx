@@ -41,8 +41,8 @@ const Home = () => {
 				<About />
 				<Opportunities />
 				<Conditions />
-				<Partners />
-				<Contacts />
+				{/* <Partners /> */}
+				{/* <Contacts /> */}
 				<Footer />
 			</Suspense>
 		</div>
