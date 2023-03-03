@@ -15,25 +15,29 @@ const DropDown = () => {
 
 	const changleLanguage = lang => {
 		let data = document.cookie
-			.replace(/(?:(?:^|.*;\s*)language\s*\s*([^;]*).*$)|^.*$/, '$1')
+			.replace(/(?:(?:^|.*;\s*)i18next\s*\s*([^;]*).*$)|^.*$/, '$1')
 			.slice(1)
 		i18n.changeLanguage(data)
-		setLanguage(data === '' ? 'RU' : data)
+		if (data === 'ru') {
+			setLanguage('RU')
+		} else {
+			setLanguage(data === '' ? 'RU' : data)
+		}
 	}
 
 	const check = str => {
-		document.cookie = `language=${language}; domain=https://e-cards-va82.vercel.app/ path=/`
-		document.cookie = `language=${str}`
+		document.cookie = `i18next=${language}; domain=https://e-cards-va82.vercel.app/ path=/`
+		document.cookie = `i18next=${str}`
 
 		console.log(str)
 		if (
 			document.cookie.replace(
-				/(?:(?:^|.*;\s*)language\s*\s*([^;]*).*$)|^.*$/,
+				/(?:(?:^|.*;\s*)i18next\s*\s*([^;]*).*$)|^.*$/,
 				'$1'
 			)
 		) {
 			let data = document.cookie.replace(
-				/(?:(?:^|.*;\s*)language\s*\s*([^;]*).*$)|^.*$/,
+				/(?:(?:^|.*;\s*)i18next\s*\s*([^;]*).*$)|^.*$/,
 				'$1'
 			)
 			data.slice(1)
