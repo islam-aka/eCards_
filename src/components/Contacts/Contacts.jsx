@@ -1,13 +1,35 @@
-import React from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import styles from './Contacts.module.scss'
 import iconOne from '../../assets/img/iconOne.png'
 import iconTwo from '../../assets/img/iconTwo.png'
 import iconThree from '../../assets/img/iconThree.png'
 import icontel from '../../assets/svg/icons.svg'
+import { Context } from '../..'
+import { gsap } from 'gsap'
 
 const Contacts = () => {
+	const { store } = useContext(Context)
+
+	function test() {
+		const scrollPosition = window.scrollY
+		const section5 = document.getElementById('section5')
+		if (scrollPosition + 200 >= section5.offsetTop) {
+			store.setLink(5)
+			console.log(store.link)
+		}
+	}
+	const el = useRef()
+
+	useEffect(() => {
+		gsap.to(el.current, {
+			// полный поворот
+			rotation: '+=360',
+		})
+		window.addEventListener('scroll', test)
+		return () => window.removeEventListener('scroll', test)
+	}, [])
 	return (
-		<div className={styles.contact}>
+		<div id='section5' className={styles.contact}>
 			<div id='section-5' className={styles.link}></div>
 			<div className={styles.contact__left}>
 				<p className={styles.contact__subTitle}>Контакты</p>
@@ -26,7 +48,7 @@ const Contacts = () => {
 				</a>
 			</div>
 			<div className={styles.contact__right}>
-				<div className={styles.iconOne}>
+				<div ref={el} className={styles.iconOne}>
 					<img src={iconOne} alt='icon' />
 				</div>
 				<div className={styles.iconThree}>

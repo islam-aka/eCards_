@@ -9,15 +9,15 @@ import { useTranslation } from 'react-i18next'
 import iconRight from '../../assets/svg/right.svg'
 import { Link, useNavigate } from 'react-router-dom'
 import { Context } from '../..'
+import { observer } from 'mobx-react-lite'
 
-const Header = () => {
+const Header = observer(() => {
 	const { t } = useTranslation()
 	const { store } = useContext(Context)
 	const navigate = useNavigate()
 	const [activeButton, setActiveButton] = useState(0)
 	const [menu, setMenu] = useState(false)
 	const [hover, setHover] = useState(false)
-	let j = activeButton
 
 	const handleNavClick = async (index, event) => {
 		await setMenu(false)
@@ -35,40 +35,38 @@ const Header = () => {
 		const section3 = document.getElementById('section-3')
 		const section4 = document.getElementById('section-4')
 		const section5 = document.getElementById('section-5')
-
-		if (
-			scrollPosition >= section1.offsetTop &&
-			scrollPosition < section2.offsetTop
-		) {
-			store.setLink(1)
-		} else if (
-			scrollPosition >= section2.offsetTop &&
-			scrollPosition < section3.offsetTop
-		) {
-			store.setLink(2)
-		} else if (
-			scrollPosition >= section3.offsetTop &&
-			scrollPosition < section4.offsetTop
-		) {
-			store.setLink(3)
-		} else if (
-			scrollPosition >= section4.offsetTop &&
-			scrollPosition < section5.offsetTop
-		) {
-			store.setLink(4)
-		} else if (
-			scrollPosition >= section5.offsetTop &&
-			scrollPosition < section4.offsetTop
-		) {
-			setActiveButton(5)
+		switch (scrollPosition) {
+			case scrollPosition >= section1.offsetTop &&
+				scrollPosition < section2.offsetTop:
+				store.setLink(1)
+				setActiveButton(1)
+				console.log(true, 1)
+				break
+			case scrollPosition >= section2.offsetTop &&
+				scrollPosition < section3.offsetTop:
+				store.setLink(2)
+				setActiveButton(2)
+				console.log(true, 2)
+				break
+			case scrollPosition >= section3.offsetTop &&
+				scrollPosition < section4.offsetTop:
+				store.setLink(3)
+				setActiveButton(3)
+				console.log(true, 3)
+				break
+			case scrollPosition >= section4.offsetTop &&
+				scrollPosition < section5.offsetTop:
+				store.setLink(4)
+				setActiveButton(4)
+				console.log(true, 4)
+				break
+			case scrollPosition >= section5.offsetTop:
+				store.setLink(5)
+				setActiveButton(5)
+				console.log(true, 5)
+				break
 		}
 	}
-
-	useEffect(() => {
-		console.log(store.link)
-		window.addEventListener('scroll', handleScroll)
-		return () => window.removeEventListener('scroll', handleScroll)
-	}, [activeButton, menu, store.link])
 
 	const scrollToTop = () => {
 		window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -81,11 +79,20 @@ const Header = () => {
 		setHover(false)
 	}
 	const onMouseEnterNav = i => {
-		setActiveButton(i)
+		setActiveButton(store.link)
+		store.setLink(i)
 	}
 	const onMouseLeaveNav = () => {
-		setActiveButton(j)
+		store.setLink(activeButton)
+		console.log(store.link)
 	}
+
+	useEffect(() => {
+		console.log(store.link)
+		console.log(activeButton)
+		window.addEventListener('scroll', handleScroll)
+		return () => window.removeEventListener('scroll', handleScroll)
+	}, [activeButton, menu, store.link])
 
 	return (
 		<div className={styles.container}>
@@ -98,7 +105,7 @@ const Header = () => {
 						<li>
 							<a
 								onMouseEnter={() => onMouseEnterNav(1)}
-								onMouseLeaveNav={onMouseLeaveNav}
+								onMouseLeave={onMouseLeaveNav}
 								href='/'
 								onClick={event => handleNavClick(1, event)}
 								className={store.link === 1 ? styles.active : styles.noActive}
@@ -109,6 +116,7 @@ const Header = () => {
 						<li>
 							<a
 								onMouseEnter={() => onMouseEnterNav(2)}
+								onMouseLeave={onMouseLeaveNav}
 								href='/'
 								onClick={event => handleNavClick(2, event)}
 								className={store.link === 2 ? styles.active : styles.noActive}
@@ -119,6 +127,7 @@ const Header = () => {
 						<li>
 							<a
 								onMouseEnter={() => onMouseEnterNav(3)}
+								onMouseLeave={onMouseLeaveNav}
 								href='/'
 								onClick={event => handleNavClick(3, event)}
 								className={store.link === 3 ? styles.active : styles.noActive}
@@ -129,6 +138,7 @@ const Header = () => {
 						<li>
 							<a
 								onMouseEnter={() => onMouseEnterNav(4)}
+								onMouseLeave={onMouseLeaveNav}
 								href='/'
 								onClick={event => handleNavClick(4, event)}
 								className={store.link === 4 ? styles.active : styles.noActive}
@@ -139,9 +149,10 @@ const Header = () => {
 						<li>
 							<a
 								onMouseEnter={() => onMouseEnterNav(5)}
+								onMouseLeave={onMouseLeaveNav}
 								href='/'
 								onClick={event => handleNavClick(5, event)}
-								className={activeButton === 5 ? styles.active : styles.noActive}
+								className={store.link === 5 ? styles.active : styles.noActive}
 							>
 								{t('header.nav.contacts')}
 							</a>
@@ -331,6 +342,6 @@ const Header = () => {
 			</div>
 		</div>
 	)
-}
+})
 
 export default Header

@@ -1,13 +1,33 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import styles from './Partners.module.scss'
 import iconOne from '../../assets/svg/icon-logo 1.svg'
 import iconTwo from '../../assets/svg/icon-logo 2.svg'
 import iconRight from '../../assets/svg/rightLogIn.svg'
 import { Link } from 'react-router-dom'
+import { Context } from '../..'
 
 const Partners = () => {
+	const { store } = useContext(Context)
+
+	function test() {
+		const scrollPosition = window.scrollY
+		const section4 = document.getElementById('section4')
+		const section5 = document.getElementById('section5')
+		if (
+			scrollPosition + 200 >= section4.offsetTop &&
+			scrollPosition < section5.offsetTop
+		) {
+			store.setLink(4)
+		}
+	}
+
+	useEffect(() => {
+		window.addEventListener('scroll', test)
+		return () => window.removeEventListener('scroll', test)
+	}, [])
+
 	return (
-		<div className={styles.container}>
+		<div id='section4' className={styles.container}>
 			<div id='section-4' className={styles.link}></div>
 			<div className={styles.partner}>
 				<div className={styles.partner__left}>

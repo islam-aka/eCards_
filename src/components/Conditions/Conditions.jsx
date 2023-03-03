@@ -1,11 +1,31 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { Context } from '../..'
 import iconRight from '../../assets/svg/right.svg'
 import styles from './Conditions.module.scss'
 
 const Conditions = () => {
+	const { store } = useContext(Context)
+
+	function test() {
+		const scrollPosition = window.scrollY
+		const section3 = document.getElementById('section3')
+		const section4 = document.getElementById('section4')
+		if (
+			scrollPosition + 200 >= section3.offsetTop &&
+			scrollPosition < section4.offsetTop
+		) {
+			store.setLink(3)
+		}
+	}
+
+	useEffect(() => {
+		window.addEventListener('scroll', test)
+		return () => window.removeEventListener('scroll', test)
+	}, [])
+
 	return (
-		<div className={styles.container}>
+		<div id='section3' className={styles.container}>
 			<div id='section-3' className={styles.link}></div>
 			<div className={styles.conditions__top}>
 				<p className={styles.top__subTitle}>Выгодные условия работы сервиса</p>

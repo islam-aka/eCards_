@@ -13,33 +13,28 @@ const About = () => {
 	const { t } = useTranslation()
 	const { store } = useContext(Context)
 	const [ref, inView] = useInView({ threshold: 0.5 })
-	const targetRef = useRef(null)
+
+	function test() {
+		const scrollPosition = window.scrollY
+		const section1 = document.getElementById('section1')
+		const section2 = document.getElementById('section2')
+		if (
+			scrollPosition >= section1.offsetTop - 150 &&
+			scrollPosition < section2.offsetTop - 200
+		) {
+			store.setLink(1)
+		}
+	}
 
 	useEffect(() => {
-		const observer = new IntersectionObserver(
-			([entry]) => {
-				if (entry.isIntersecting) {
-					store.setLink(1)
-					console.log(store.link)
-				}
-			},
-			{ threshold: 1.0 }
-		)
-
-		if (targetRef.current) {
-			observer.observe(targetRef.current)
-		}
-
-		return () => {
-			if (targetRef.current) {
-				observer.unobserve(targetRef.current)
-			}
-		}
+		window.addEventListener('scroll', test)
+		return () => window.removeEventListener('scroll', test)
 	}, [])
+
 	return (
 		<>
 			<div className={styles.link} id='section-1'></div>
-			<div className={styles.container}>
+			<div className={styles.container} id='section1'>
 				<div className={styles.about__bg}>
 					<img src={image} alt='background' />
 				</div>
@@ -48,7 +43,7 @@ const About = () => {
 						<p className={styles.megaTitle}>{t('about.title')}</p>
 						<p className={styles.subTitle}>{t('about.subTitle')}</p>
 					</div>
-					<div className={styles.about__numbers} ref={targetRef}>
+					<div className={styles.about__numbers}>
 						<div className={styles.numbers__one} ref={ref}>
 							<img src={iconCard} alt='icon card' />
 							{inView && (

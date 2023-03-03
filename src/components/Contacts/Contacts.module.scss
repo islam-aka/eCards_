@@ -130,7 +130,7 @@
 			z-index: 4;
 			left: 167px;
 			top: 0px;
-			animation: aniOne 1.3s infinite;
+			// animation: aniOne 1.3s infinite;
 
 			@media screen and (max-width: 992px) {
 				left: 110px;
@@ -147,7 +147,7 @@
 			z-index: 3;
 			left: 0px;
 			top: 128px;
-			animation: aniTwo 1.6s infinite;
+			// animation: aniTwo 1.6s infinite;
 			img {
 				@media screen and (max-width: 992px) {
 					width: 160px;
@@ -160,7 +160,7 @@
 			z-index: 2;
 			left: 232px;
 			top: 34px;
-			animation: aniThree 1.9s infinite;
+			// animation: aniThree 1.9s infinite;
 			@media screen and (max-width: 992px) {
 				left: 150px;
 			}
