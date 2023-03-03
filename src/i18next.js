@@ -8,8 +8,8 @@ i18n
 	.use(LanguageDetector)
 	.use(initReactI18next)
 	.init({
-		fallbackLng: 'RU',
-		whitelist: ['EN', 'RU'],
+		fallbackLng: 'ru',
+		whitelist: ['en', 'ru'],
 		debug: false,
 		detection: {
 			order: ['cookie'],
