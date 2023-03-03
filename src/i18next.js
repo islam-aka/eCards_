@@ -12,8 +12,8 @@ i18n
 		whitelist: ['en', 'ru'],
 		debug: false,
 		detection: {
-			order: ['Cookies'],
-			caches: ['Cookies'],
+			order: ['cookie'],
+			caches: ['cookie'],
 		},
 		interpolation: {
 			escapeValue: false,
