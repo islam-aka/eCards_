@@ -168,13 +168,12 @@
 			}
 		}
 		.btn__invite {
-			width: 206px;
 			cursor: pointer;
 			position: relative;
 			display: flex;
 			background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
 			border-radius: 22px;
-			padding: 10px 20px;
+			padding: 10.5px 20px;
 			z-index: 49;
 			@media screen and (max-width: 420px) {
 				width: 100%;

@@ -8,7 +8,7 @@
 	height: 700px;
 	display: flex;
 	justify-content: space-between;
-	gap: 20px;
+	gap: 40px;
 	@media screen and (max-width: 1285px) {
 		width: calc(100% - 100px);
 		height: auto;
@@ -243,13 +243,14 @@
 	&__bg {
 		position: relative;
 		z-index: 6;
-		width: 530px;
+		width: 515px;
+		height: auto;
 
 		.bg {
 			position: relative;
 			z-index: 2;
 			width: 1075px;
-			margin-left: -29px;
+			height: auto;
 			margin-top: -16px;
 			@media screen and (max-width: 992px) {
 				width: 930px;
@@ -263,14 +264,11 @@
 		}
 		.blockBlur {
 			position: absolute;
-			top: 0;
+			top: 200px;
 			left: -200px;
 			width: 480px;
 			height: 480px;
-			opacity: 0.15;
-			background: -o-linear-gradient(336.52deg, #ff8de6 7.05%, #4c3fe7 105.43%);
-			background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
-			-webkit-filter: blur(50px);
+			opacity: 0.1;
 			filter: blur(50px);
 		}
 		.blockBlur__two {
@@ -278,10 +276,8 @@
 			width: 480px;
 			height: 480px;
 			top: -60px;
-			right: -300px;
-			opacity: 0.1;
-			background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
-			opacity: 0.1;
+			right: -400px;
+			opacity: 0.2;
 			filter: blur(50px);
 		}
 	}

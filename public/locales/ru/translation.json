@@ -26,9 +26,9 @@
 			"one": "Выпущенных виртуальных карт",
 			"two": "Баеров и арбитражных команд",
 			"three": {
-				"topOne": "Over",
-				"topTwo": "$",
-				"topThree": "million",
+				"topOne": "Более",
+				"topTwo": "",
+				"topThree": "млн.$",
 				"bottom": "Рекламных расходов проведено через сервис"
 			}
 		}
@@ -131,12 +131,10 @@
 		"time": "с 08:00 до 22:00 по UTC +3.",
 		"btn": "Написать в поддержку"
 	},
-	"getInvite": {
-		
-	},
+	"getInvite": {},
 	"footer": {
 		"politic": "Политика конфиденциальности",
-		"stayTuned": "Stay tuned for more news",
+		"stayTuned": "Следите за нашими новостями",
 		"followUs": "Follow us",
 		"support": "Служба поддержки"
 	}

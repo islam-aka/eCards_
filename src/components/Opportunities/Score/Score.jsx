@@ -22,7 +22,9 @@ const Score = () => {
 					</div>
 				</div>
 				<div className={styles.score__right}>
-					<div className={styles.balance}>{/* <ScoreBalance /> */}</div>
+					<div className={styles.balance}>
+						<ScoreBalance />
+					</div>
 				</div>
 			</div>
 		</>

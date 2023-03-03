@@ -22,31 +22,31 @@ const Footer = () => {
 					<nav className={styles.footer__nav}>
 						<ul>
 							<li>
-								<Link to={'/eСards'}>{t('navBar.aboutECards')}</Link>
+								<Link to={'/eСards'}>{t('header.nav.aboutECards')}</Link>
 							</li>
 							<li>
-								<Link to={'/opportunities'}>{t('navBar.opportunities')}</Link>
+								<Link to={'/opportunities'}>{t('header.nav.features')}</Link>
 							</li>
 							<li>
-								<Link to={'/conditions'}>{t('navBar.conditions')}</Link>
+								<Link to={'/conditions'}>{t('header.nav.pricing')}</Link>
 							</li>
 							<li>
-								<Link to={'/partners'}>{t('navBar.partners')}</Link>
+								<Link to={'/partners'}>{t('header.nav.partners')}</Link>
 							</li>
 							<li>
-								<Link to={'/contact'}>{t('navBar.contacts')}</Link>
+								<Link to={'/contact'}>{t('header.nav.contacts')}</Link>
 							</li>
 						</ul>
 					</nav>
 					<div className={styles.footer__info}>
 						<img src={icon} alt='icon' />
 						<p className={styles.info}>eCards 2023</p>
-						<p>Политика конфиденциальности</p>
+						<p>{t('footer.politic')}</p>
 					</div>
 				</div>
 				<div className={styles.footer__right}>
 					<div className={styles.btn}>
-						<h2>Следите за нашими новостями</h2>
+						<h2>{t('footer.stayTuned')}</h2>
 						<div className={styles.btn__subscribe}>
 							<a
 								href='https://t.me/joinchat/AAAAAE3STg6obgvsxPakiw'

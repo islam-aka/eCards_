@@ -36,12 +36,15 @@ const Partners = () => {
 						<h2>{t('partners.title')}</h2>
 						<p>{t('partners.desc')}</p>
 					</div>
-					<Link to={'invite'}>
-						<div className={styles.partner__btnInvite}>
-							<p>{t('partners.btn')}</p>
-							<img src={iconRight} alt='icon right' />
-						</div>
-					</Link>
+
+					<div className={styles.btn}>
+						<Link to={'invite'}>
+							<div className={styles.partner__btnInvite}>
+								<p>{t('partners.btn')}</p>
+								<img src={iconRight} alt='icon right' />
+							</div>
+						</Link>
+					</div>
 				</div>
 				<div className={styles.partner__right}>
 					<div className={styles.block}>

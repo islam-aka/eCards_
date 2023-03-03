@@ -36,7 +36,7 @@ const About = () => {
 			<div className={styles.link} id='section-1'></div>
 			<div className={styles.container} id='section1'>
 				<div className={styles.about__bg}>
-					<img src={image} alt='background' />
+					<img src='https://i.ibb.co/Zd7xwPg/about.png' alt='background' />
 				</div>
 				<div className={styles.about}>
 					<div className={styles.about__title}>
@@ -71,7 +71,8 @@ const About = () => {
 						<div ref={ref} className={styles.numbers__three}>
 							<img src={iconDollar} alt='icon dollar' />
 							<h3 className={styles.about__title}>
-								{t('about.block.three.topOne')} &nbsp;
+								{t('about.block.three.topOne')}&nbsp;
+								{t('about.block.three.topTwo')}
 								{inView && (
 									<CountUp
 										className={styles.about__title}
@@ -80,10 +81,11 @@ const About = () => {
 										duration={1.5}
 									/>
 								)}
-								млн.$
+								&nbsp;
+								{t('about.block.three.topThree')}
 							</h3>
-							<p className={styles.about__subTitle}>
-								Рекламных расходов проведено через сервис
+							<p className={styles.about__subTitleThree}>
+								{t('about.block.three.bottom')}
 							</p>
 						</div>
 					</div>

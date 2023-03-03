@@ -60,19 +60,23 @@ const MainScreen = () => {
 			</div>
 
 			<div className={styles.container__bg}>
-				<div className={styles.blockBlur}></div>
-				<div className={styles.blockBlur__two}></div>
+				<div className={styles.blockBlur}>
+					<img src='https://i.ibb.co/5Gc5yj9/main-Blur-One.png' alt='blur' />
+				</div>
+				<div className={styles.blockBlur__two}>
+					<img src='https://i.ibb.co/G2q0JbW/main-Blur-Two.png' alt='blur' />
+				</div>
 				{currentLanguage === 'RU' ? (
 					<img
 						className={styles.bg}
 						src='https://i.ibb.co/gtRrZJ7/RU.png'
-						alt='asd'
+						alt='main screen'
 					/>
 				) : (
 					<img
 						className={styles.bg}
 						src='https://i.ibb.co/JB27td9/EN.png'
-						alt='asd'
+						alt='main screen'
 					/>
 				)}
 			</div>

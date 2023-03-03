@@ -6,7 +6,9 @@ import iconThree from '../../assets/img/iconThree.png'
 import icontel from '../../assets/svg/icons.svg'
 import { Context } from '../..'
 import { useTranslation } from 'react-i18next'
+import i18n from '../../i18next'
 const Contacts = () => {
+	let currentLanguage = i18n.language
 	const { store } = useContext(Context)
 	const { t } = useTranslation()
 	function test() {
@@ -28,7 +30,13 @@ const Contacts = () => {
 			<div id='section-5' className={styles.link}></div>
 			<div className={styles.contact__left}>
 				<p className={styles.contact__subTitle}>{t('contacts.subTitle')}</p>
-				<h3 className={styles.contact__left_title}>{t('contacts.title')}</h3>
+				{currentLanguage === 'RU' ? (
+					<h3 className={styles.contact__left_titleRu}>
+						{t('contacts.title')}
+					</h3>
+				) : (
+					<h3 className={styles.contact__left_title}>{t('contacts.title')}</h3>
+				)}
 				<p className={styles.contact__left_time}>
 					{t('contacts.desc')}
 					<span>{t('contacts.time')}</span>

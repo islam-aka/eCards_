@@ -1,6 +1,7 @@
 @import "../variables.scss";
 .container {
 	width: 100%;
+	height: auto;
 	background: rgba(255, 255, 255, 0.4);
 	backdrop-filter: blur(60px);
 	position: fixed;
@@ -16,7 +17,7 @@
 	.header {
 		max-width: 1440px;
 		width: calc(100% - 200px);
-		height: 100px;
+		height: auto;
 		margin: 0 auto;
 		display: flex;
 		align-items: center;
@@ -29,8 +30,7 @@
 		@media screen and (max-width: 1050px) {
 			max-width: 932px;
 			width: calc(100% - 60px);
-			height: 64px;
-			padding: 18px 0;
+			padding: 30px 0;
 		}
 		@media screen and (max-width: 450px) {
 			width: calc(100% - 36px);
@@ -49,7 +49,7 @@
 				width: 100%;
 				display: flex;
 				justify-content: space-between;
-				button {
+				a {
 					border: none;
 					background: none;
 					font-style: normal;
@@ -316,8 +316,15 @@
 			.btn {
 				max-width: 284px;
 				margin-top: 75px;
+				display: -webkit-box;
+				display: -ms-flexbox;
 				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
 				flex-direction: column;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
 				align-items: center;
 				gap: 20px;
 				@media screen and (max-width: 450px) {

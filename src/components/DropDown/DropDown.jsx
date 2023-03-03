@@ -45,10 +45,7 @@ const DropDown = () => {
 	}, [language])
 
 	return (
-		<div
-			className={!active ? styles.dropdown : styles.dropdown__none}
-			tabIndex={6}
-		>
+		<div className={!active ? styles.dropdown : styles.dropdown__none}>
 			<div className={styles.dropdown__select} onClick={dropDownActive}>
 				<span className={styles.select}>{language}</span>
 				<img

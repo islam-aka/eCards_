@@ -40,9 +40,9 @@ const Cards = () => {
 					<img src={iconInfinitely} alt='wallet icon' />
 				</div>
 				<div className={styles.card__block}>
-					<p>{t("features.content.cards.subTitle")}</p>
-					<h2>{t("features.content.cards.title")}</h2>
-					<p>{t("features.content.cards.desc")}</p>
+					<p>{t('features.content.cards.subTitle')}</p>
+					<h2>{t('features.content.cards.title')}</h2>
+					<p>{t('features.content.cards.desc')}</p>
 				</div>
 			</div>
 		</div>

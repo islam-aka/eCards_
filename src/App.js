@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Cookie from './components/Cookie/Cookie'
 
-const Home = React.lazy(() => import('./pages/Home'))
-const InvitePage = React.lazy(() => import('./pages/InvitePage'))
+import Home from './pages/Home'
+import InvitePage from './pages/InvitePage'
 
 function App() {
 	const [check, setCheck] = useState(true)

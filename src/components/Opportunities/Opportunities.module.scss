@@ -75,8 +75,10 @@
 			height: 520px;
 			left: 992px;
 			top: 713px;
+			background: -o-linear-gradient(336.52deg, #ff8de6 7.05%, #4c3fe7 105.43%);
 			background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
 			opacity: 0.3;
+			-webkit-filter: blur(112px);
 			filter: blur(112px);
 			@media screen and (max-width: 768px) {
 				opacity: 0.2;

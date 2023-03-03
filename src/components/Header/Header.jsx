@@ -40,30 +40,25 @@ const Header = observer(() => {
 				scrollPosition < section2.offsetTop:
 				store.setLink(1)
 				setActiveButton(1)
-				console.log(true, 1)
 				break
 			case scrollPosition >= section2.offsetTop &&
 				scrollPosition < section3.offsetTop:
 				store.setLink(2)
 				setActiveButton(2)
-				console.log(true, 2)
 				break
 			case scrollPosition >= section3.offsetTop &&
 				scrollPosition < section4.offsetTop:
 				store.setLink(3)
 				setActiveButton(3)
-				console.log(true, 3)
 				break
 			case scrollPosition >= section4.offsetTop &&
 				scrollPosition < section5.offsetTop:
 				store.setLink(4)
 				setActiveButton(4)
-				console.log(true, 4)
 				break
 			case scrollPosition >= section5.offsetTop:
 				store.setLink(5)
 				setActiveButton(5)
-				console.log(true, 5)
 				break
 		}
 	}
@@ -84,12 +79,9 @@ const Header = observer(() => {
 	}
 	const onMouseLeaveNav = () => {
 		store.setLink(activeButton)
-		console.log(store.link)
 	}
 
 	useEffect(() => {
-		console.log(store.link)
-		console.log(activeButton)
 		window.addEventListener('scroll', handleScroll)
 		return () => window.removeEventListener('scroll', handleScroll)
 	}, [activeButton, menu, store.link])
