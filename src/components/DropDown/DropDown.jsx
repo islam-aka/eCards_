@@ -14,38 +14,19 @@ const DropDown = () => {
 	}
 
 	const changleLanguage = lang => {
-		let data = document.cookie
-			.replace(/(?:(?:^|.*;\s*)language\s*\s*([^;]*).*$)|^.*$/, '$1')
-			.slice(1)
-		if (lang) {
-			i18n.changeLanguage(lang)
-		} else {
-			i18n.changeLanguage(data)
-		}
-		setLanguage(data === '' ? 'RU' : data)
+		i18n.changeLanguage(lang)
 	}
 
 	const check = str => {
-		document.cookie = `language=${language}; domain=http://localhost:3000/#eСards; path=/`
-		document.cookie = `language=${str}`
-		dropDownActive()
-		console.log(str)
-		if (
-			document.cookie.replace(
-				/(?:(?:^|.*;\s*)language\s*\s*([^;]*).*$)|^.*$/,
-				'$1'
-			)
-		) {
-			let data = document.cookie.replace(
-				/(?:(?:^|.*;\s*)language\s*\s*([^;]*).*$)|^.*$/,
-				'$1'
-			)
-			data.slice(1)
-			setLanguage(data)
+		changleLanguage(str)
+		if (localStorage.getItem('i18nextLng')) {
+			let data = localStorage.getItem('i18nextLng')
+			setLanguage(data === '' && data !== 'ru' ? 'RU' : data)
 		}
+		dropDownActive()
 	}
 	useEffect(() => {
-		changleLanguage()
+		check()
 	}, [language])
 
 	return (
