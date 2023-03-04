@@ -12,7 +12,11 @@ function App() {
 		const myCookie = cookies.find(cookie =>
 			cookie.trim().startsWith('language=')
 		)
-		setCheck(myCookie === undefined)
+
+		if (localStorage.getItem('i18nextLng')) {
+		} else {
+			setCheck(myCookie === undefined)
+		}
 	}
 
 	useEffect(() => {

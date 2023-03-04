@@ -6,7 +6,6 @@ import '../../i18next'
 
 const DropDown = () => {
 	const { i18n } = useTranslation()
-	let currentLanguage = i18n.language
 	const [language, setLanguage] = useState(undefined)
 	const [active, setActive] = useState(true)
 
@@ -16,7 +15,7 @@ const DropDown = () => {
 
 	const changleLanguage = lang => {
 		let data = document.cookie
-			.replace(/(?:(?:^|.*;\s*)i18next\s*\s*([^;]*).*$)|^.*$/, '$1')
+			.replace(/(?:(?:^|.*;\s*)language\s*\s*([^;]*).*$)|^.*$/, '$1')
 			.slice(1)
 		if (lang) {
 			i18n.changeLanguage(lang)
@@ -27,17 +26,18 @@ const DropDown = () => {
 	}
 
 	const check = str => {
-		document.cookie = `i18next=${str}`
+		document.cookie = `language=${language}; domain=http://localhost:3000/#eСards; path=/`
+		document.cookie = `language=${str}`
 		dropDownActive()
 		console.log(str)
 		if (
 			document.cookie.replace(
-				/(?:(?:^|.*;\s*)i18next\s*\s*([^;]*).*$)|^.*$/,
+				/(?:(?:^|.*;\s*)language\s*\s*([^;]*).*$)|^.*$/,
 				'$1'
 			)
 		) {
 			let data = document.cookie.replace(
-				/(?:(?:^|.*;\s*)i18next\s*\s*([^;]*).*$)|^.*$/,
+				/(?:(?:^|.*;\s*)language\s*\s*([^;]*).*$)|^.*$/,
 				'$1'
 			)
 			data.slice(1)
