@@ -3,7 +3,9 @@ import { Route, Routes } from 'react-router-dom'
 import Cookie from './components/Cookie/Cookie'
 
 import Home from './pages/Home'
+import HomeEN from './pages/HomeEn'
 import InvitePage from './pages/InvitePage'
+import InvitePageEN from './pages/InvitePageEN'
 
 function App() {
 	const [check, setCheck] = useState(true)
@@ -28,8 +30,10 @@ function App() {
 			{check && <Cookie />}
 			<Routes>
 				<Route path='/' element={<Home />} />
+				<Route path='/en' element={<HomeEN />} />
 				<Route path='/:url' element={<Home />} />
 				<Route path='/invite' element={<InvitePage />} />
+				<Route path='/inviteEN' element={<InvitePageEN />} />
 			</Routes>
 		</div>
 	)

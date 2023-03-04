@@ -22,23 +22,26 @@ const Distribution = () => {
 					<img src={iconProfile} alt='wallet icon' />
 				</div>
 				<div className={styles.distribution__info}>
-					<p>{t("features.content.distribution.left.subTitle")}</p>
-					<h2>{t("features.content.distribution.left.title")}</h2>
-					<p>{t("features.content.distribution.left.desc")}</p>
+					<p>Распределение и группировка</p>
+					<h2>Распределение карт по баерам и группировка сотрудников</h2>
+					<p>
+						Подключайте неограниченное количество сотрудников к своему аккаунту,
+						создавайте группы баеров и распределяйте карты между ними
+					</p>
 				</div>
 			</div>
 			<div data-aos='fade-left' className={styles.distribution__right}>
 				<div className={styles.ani}>
 					<div className={styles.block__one}>
 						<div className={styles.block__title}>
-							<p>{t("features.content.distribution.right.employees")}</p>
-							<p>{t("features.content.distribution.right.viewAll")}</p>
+							<p>Сотрудники</p>
+							<p>Смотреть все группы</p>
 						</div>
 						<h3>27</h3>
 						<div className={styles.block__group}>
 							<div className={styles.block__group_left}></div>
 							<div className={styles.block__group_right}>
-								<p className={styles.block__group_title}>{t("features.content.distribution.right.group2")}</p>
+								<p className={styles.block__group_title}>Группа 2</p>
 
 								<div className={styles.block__user}>
 									<div className={styles.block__item_one}>
@@ -76,7 +79,7 @@ const Distribution = () => {
 						</div>
 						<div className={styles.btn}>
 							<AiOutlinePlus color='#748BFF' />
-							<p>{t("features.content.distribution.right.invite")}</p>
+							<p>Пригласить сотрудника</p>
 						</div>
 					</div>
 
@@ -87,7 +90,7 @@ const Distribution = () => {
 						data-aos-offset='0'
 						className={styles.block__two}
 					>
-						<h3>{t("features.content.distribution.right.group1")}</h3>
+						<h3>Группа 1</h3>
 						<div className={styles.block__user}>
 							<div className={styles.block__item_one}>
 								<MdPersonOutline color='#ACB9FF' />

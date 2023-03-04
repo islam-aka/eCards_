@@ -1,0 +1,100 @@
+@import "../variables.scss";
+@import "./OpportunitiesAni.scss";
+
+.container {
+	overflow: hidden;
+	position: relative;
+	max-width: 1440px;
+	width: calc(100% - 200px);
+	padding: 60px;
+	margin: 0 auto;
+	background: $white;
+	-webkit-box-shadow: 20px 34px 59px 7px rgba(0, 25, 225, 0.05);
+	box-shadow: 20px 34px 59px 7px rgba(0, 25, 225, 0.05);
+	border-radius: 20px;
+	@media screen and (max-width: 1285px) {
+		width: calc(100% - 100px);
+	}
+
+	@media screen and (max-width: 1050px) {
+		width: calc(100% - 60px);
+		padding: 40px;
+	}
+	@media screen and (max-width: 992px) {
+		margin: 0;
+	}
+	@media screen and (max-width: 768px) {
+		width: calc(100% - 60px);
+		padding: 20px;
+	}
+	@media screen and (max-width: 575px) {
+		padding: 30px;
+	}
+
+	@media screen and (max-width: 560px) {
+		width: calc(100% - 36px);
+		overflow: visible;
+		box-shadow: none;
+		padding: 10px;
+		margin: 0 auto;
+	}
+
+	&__title {
+		p {
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 130%;
+			letter-spacing: 0.003em;
+			color: $primary-main;
+		}
+		h2 {
+			font-size: 42px;
+			line-height: 120%;
+			letter-spacing: 0.003em;
+			color: $color-text;
+
+			@media screen and (max-width: 768px) {
+				margin-top: 4px;
+				font-size: 23px;
+				line-height: 120%;
+			}
+		}
+	}
+	.opportunities {
+		display: flex;
+		flex-direction: column;
+		gap: 60px;
+		position: relative;
+		z-index: 6;
+		width: 100%;
+
+		.blockBlur__opportunities {
+			position: absolute;
+			z-index: 1;
+			width: 520px;
+			height: 520px;
+			left: 992px;
+			top: 713px;
+			background: -o-linear-gradient(336.52deg, #ff8de6 7.05%, #4c3fe7 105.43%);
+			background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
+			opacity: 0.3;
+			-webkit-filter: blur(112px);
+			filter: blur(112px);
+			@media screen and (max-width: 768px) {
+				opacity: 0.2;
+				left: 217px;
+				top: 730px;
+			}
+			@media screen and (max-width: 560px) {
+				display: none;
+			}
+		}
+	}
+	img {
+		padding: 0;
+	}
+}
+.link {
+	position: absolute;
+	top: -150px;
+}

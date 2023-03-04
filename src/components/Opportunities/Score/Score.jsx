@@ -16,9 +16,12 @@ const Score = () => {
 					</div>
 
 					<div className={styles.score__block}>
-						<p>{t('features.content.score.subTitle')}</p>
-						<h2>{t('features.content.score.title')}</h2>
-						<p>{t('features.content.score.desc')}</p>
+						<p>Пополнение</p>
+						<h2>Пополнение счета eCards различными способами</h2>
+						<p>
+							Пополняйте свой счет eCards c помощью отправки wire или USDT.
+							Затем распределяйте деньги по картам и байрам на свое усмотрение
+						</p>
 					</div>
 				</div>
 				<div className={styles.score__right}>

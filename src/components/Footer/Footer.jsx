@@ -22,31 +22,31 @@ const Footer = () => {
 					<nav className={styles.footer__nav}>
 						<ul>
 							<li>
-								<Link to={'/eСards'}>{t('header.nav.aboutECards')}</Link>
+								<Link to={'/eСards'}>О eСards"</Link>
 							</li>
 							<li>
-								<Link to={'/opportunities'}>{t('header.nav.features')}</Link>
+								<Link to={'/opportunities'}>Возможности</Link>
 							</li>
 							<li>
-								<Link to={'/conditions'}>{t('header.nav.pricing')}</Link>
+								<Link to={'/conditions'}>Условия</Link>
 							</li>
 							<li>
-								<Link to={'/partners'}>{t('header.nav.partners')}</Link>
+								<Link to={'/partners'}>Партнеры</Link>
 							</li>
 							<li>
-								<Link to={'/contact'}>{t('header.nav.contacts')}</Link>
+								<Link to={'/contact'}>Контакты</Link>
 							</li>
 						</ul>
 					</nav>
 					<div className={styles.footer__info}>
 						<img src={icon} alt='icon' />
 						<p className={styles.info}>eCards 2023</p>
-						<p>{t('footer.politic')}</p>
+						<p>Политика конфиденциальности</p>
 					</div>
 				</div>
 				<div className={styles.footer__right}>
 					<div className={styles.btn}>
-						<h2>{t('footer.stayTuned')}</h2>
+						<h2>Следите за нашими новостями</h2>
 						<div className={styles.btn__subscribe}>
 							<a
 								href='https://t.me/joinchat/AAAAAE3STg6obgvsxPakiw'

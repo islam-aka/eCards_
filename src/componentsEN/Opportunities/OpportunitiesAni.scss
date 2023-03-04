@@ -1,0 +1,41 @@
+@import "../variables.scss";
+
+@keyframes noti {
+	from {
+		margin-right: -650px;
+	}
+	to {
+		margin-right: -50px;
+	}
+}
+
+//
+
+// ani data
+
+@keyframes aniDataOne {
+	0% {
+		left: -425px;
+	}
+	50% {
+		left: 0;
+	}
+	51% {
+	}
+	100% {
+	}
+}
+
+@keyframes aniDataTwo {
+	0% {
+		opacity: 0;
+	}
+	50% {
+	}
+	51% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

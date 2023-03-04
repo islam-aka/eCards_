@@ -21,9 +21,9 @@ const Header = observer(() => {
 
 	const handleNavClick = async (index, event) => {
 		await setMenu(false)
+		await navigate('/')
 		await event.preventDefault()
 		await store.setLink(index)
-		await navigate('/')
 		const element = document.getElementById(`section-${index}`)
 		await element.scrollIntoView({ behavior: 'smooth' })
 	}
@@ -35,6 +35,7 @@ const Header = observer(() => {
 		const section3 = document.getElementById('section-3')
 		const section4 = document.getElementById('section-4')
 		const section5 = document.getElementById('section-5')
+
 		switch (scrollPosition) {
 			case scrollPosition >= section1.offsetTop &&
 				scrollPosition < section2.offsetTop:
@@ -102,7 +103,7 @@ const Header = observer(() => {
 								onClick={event => handleNavClick(1, event)}
 								className={store.link === 1 ? styles.active : styles.noActive}
 							>
-								{t('header.nav.aboutECards')}
+								О eСards
 							</a>
 						</li>
 						<li>
@@ -113,7 +114,7 @@ const Header = observer(() => {
 								onClick={event => handleNavClick(2, event)}
 								className={store.link === 2 ? styles.active : styles.noActive}
 							>
-								{t('header.nav.features')}
+								Возможности
 							</a>
 						</li>
 						<li>
@@ -124,7 +125,7 @@ const Header = observer(() => {
 								onClick={event => handleNavClick(3, event)}
 								className={store.link === 3 ? styles.active : styles.noActive}
 							>
-								{t('header.nav.pricing')}
+								Условия
 							</a>
 						</li>
 						<li>
@@ -135,7 +136,7 @@ const Header = observer(() => {
 								onClick={event => handleNavClick(4, event)}
 								className={store.link === 4 ? styles.active : styles.noActive}
 							>
-								{t('header.nav.partners')}
+								Партнеры
 							</a>
 						</li>
 						<li>
@@ -146,7 +147,7 @@ const Header = observer(() => {
 								onClick={event => handleNavClick(5, event)}
 								className={store.link === 5 ? styles.active : styles.noActive}
 							>
-								{t('header.nav.contacts')}
+								Контакты
 							</a>
 						</li>
 					</ul>
@@ -154,13 +155,13 @@ const Header = observer(() => {
 				<div className={styles.header__btn}>
 					<div className={styles.btn__logIn}>
 						<a href='https://ecards.cab' target='_blank'>
-							<p>{t('header.nav.signIn')}</p>
+							<p>Войти</p>
 							<img src={iconRightLogIn} alt='icon right' />
 						</a>
 					</div>
 					<Link to='/invite'>
 						<div className={styles.btn__invite}>
-							<p>{t('header.nav.invite')}</p>
+							<p>Получить инвайт</p>
 							<img src={iconRight} alt='icon right' />
 						</div>
 					</Link>
@@ -221,59 +222,59 @@ const Header = observer(() => {
 					<div>
 						<ul className={styles.navBar}>
 							<li>
-								<Link
-									to='/'
-									onClick={() => handleNavClick(1)}
+								<a
+									href='/'
+									onClick={event => handleNavClick(1, event)}
 									className={
 										activeButton === 1 ? styles.active : styles.noActive
 									}
 								>
-									{t('header.nav.aboutECards')}
-								</Link>
+									О eСards
+								</a>
 							</li>
 							<li>
-								<Link
-									to='/'
-									onClick={() => handleNavClick(2)}
+								<a
+									href='/'
+									onClick={event => handleNavClick(2, event)}
 									className={
 										activeButton === 2 ? styles.active : styles.noActive
 									}
 								>
-									{t('header.nav.features')}
-								</Link>
+									Возможности
+								</a>
 							</li>
 							<li>
-								<Link
-									to='/'
-									onClick={() => handleNavClick(3)}
+								<a
+									href='/'
+									onClick={event => handleNavClick(3, event)}
 									className={
 										activeButton === 3 ? styles.active : styles.noActive
 									}
 								>
-									{t('header.nav.pricing')}
-								</Link>
+									Условия
+								</a>
 							</li>
 							<li>
-								<Link
-									to='/'
-									onClick={() => handleNavClick(4)}
+								<a
+									href='/'
+									onClick={event => handleNavClick(4, event)}
 									className={
 										activeButton === 4 ? styles.active : styles.noActive
 									}
 								>
-									{t('header.nav.partners')}
-								</Link>
+									Партнеры
+								</a>
 							</li>
 							<li>
-								<Link
-									to='/'
-									onClick={() => handleNavClick(5)}
+								<a
+									href='/'
+									onClick={event => handleNavClick(1, event)}
 									className={
 										activeButton === 5 ? styles.active : styles.noActive
 									}
 								>
-									{t('header.nav.contacts')}
-								</Link>
+									Контакты
+								</a>
 							</li>
 						</ul>
 						<a href='https://t.me/ecards_support' target='_blank'>

@@ -21,15 +21,15 @@ const Data = () => {
 						<img src={icon} alt=' icon download' />
 					</div>
 					<div className={styles.left__info}>
-						<h3>{t("features.content.data.left.title")}</h3>
-						<p>{t("features.content.data.left.desc")}</p>
+						<h3>Экспорт таблицы</h3>
+						<p>"Выберите в каком формате экспортировать таблицу</p>
 					</div>
 					<div className={styles.left__btn}>
 						<div className={styles.close}>
-							<span>{t("features.content.data.left.btn1")}</span>
+							<span>Закрыть</span>
 						</div>
 						<div className={styles.export}>
-							<span>{t("features.content.data.left.btn2")}</span>
+							<span>Экспортировать</span>
 						</div>
 					</div>
 				</div>
@@ -42,11 +42,11 @@ const Data = () => {
 				>
 					<div className={styles.checked__one}>
 						<span className={styles.checked}></span>
-						<p>{t("features.content.data.left.csv")}</p>
+						<p>В формате СSV</p>
 					</div>
 					<div className={styles.checked__two}>
 						<span className={styles.checked}></span>
-						<p>{t("features.content.data.left.excel")}</p>
+						<p>Таблица Excel</p>
 					</div>
 				</div>
 			</div>
@@ -55,9 +55,14 @@ const Data = () => {
 					<img src={iconDownload} alt='icon download' />
 				</div>
 				<div className={styles.data__block}>
-					<p>{t("features.content.data.right.subTitle")}</p>
-					<h2>{t("features.content.data.right.title")}</h2>
-					<p>{t("features.content.data.right.desc")}</p>
+					<p>Данные</p>
+					<h2>Подробная отчетность и выгрузка данных</h2>
+					<p>
+						Создавайте и выгружайте подробные отчеты по расходам по каждой
+						карте, группе карт, сотруднику или группе сотрудников. Для
+						формирования отчетов доступны гибкие фильтры, а также выгрузка
+						результатов в .CSV и .XLSX
+					</p>
 				</div>
 			</div>
 		</div>

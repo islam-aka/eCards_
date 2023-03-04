@@ -12,6 +12,7 @@
 
 	@media screen and (max-width: 1285px) {
 		width: calc(100% - 100px);
+		margin: 0 auto;
 	}
 	@media screen and (max-width: 1050px) {
 		width: calc(100% - 60px);
@@ -150,8 +151,11 @@
 			z-index: 4;
 			left: 167px;
 			top: 0px;
-			// animation: aniOne 1.3s infinite;
+			animation: aniOne 1.3s infinite;
 
+			@media screen and (max-width: 1280px) {
+				left: 120px;
+			}
 			@media screen and (max-width: 992px) {
 				left: 110px;
 			}
@@ -167,7 +171,7 @@
 			z-index: 3;
 			left: 0px;
 			top: 128px;
-			// animation: aniTwo 1.6s infinite;
+			animation: aniTwo 1.6s infinite;
 			img {
 				@media screen and (max-width: 992px) {
 					width: 160px;
@@ -180,7 +184,10 @@
 			z-index: 2;
 			left: 232px;
 			top: 34px;
-			// animation: aniThree 1.9s infinite;
+			animation: aniThree 1.9s infinite;
+			@media screen and (max-width: 1280px) {
+				left: 175px;
+			}
 			@media screen and (max-width: 992px) {
 				left: 150px;
 			}
@@ -193,35 +200,35 @@
 	}
 	@keyframes aniOne {
 		0% {
-			top: 0px;
+			transform: translateY(4px);
 		}
 		50% {
-			top: 4px;
+			transform: translateY(0px);
 		}
 		100% {
-			top: 0px;
+			transform: translateY(4px);
 		}
 	}
 	@keyframes aniTwo {
 		0% {
-			top: 128px;
+			transform: translateY(4px);
 		}
 		50% {
-			top: 132px;
+			transform: translateY(0px);
 		}
 		100% {
-			top: 128px;
+			transform: translateY(4px);
 		}
 	}
 	@keyframes aniThree {
 		0% {
-			top: 30px;
+			transform: translateY(4px);
 		}
 		50% {
-			top: 34px;
+			transform: translateY(0px);
 		}
 		100% {
-			top: 30px;
+			transform: translateY(4px);
 		}
 	}
 }

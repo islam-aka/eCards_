@@ -1,0 +1,135 @@
+@import "../components/variables.scss";
+
+.inpEmpty {
+	width: 100% !important;
+	margin: 0 !important;
+	height: 50px;
+
+	label {
+		width: 95%;
+		z-index: 6;
+		margin-top: 0px;
+		transition: all 0.2s linear;
+		font-family: "Gotham Pro";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 130%;
+		letter-spacing: 0.003em;
+		color: $text-non-active;
+		background: $white;
+		padding: 0 4px;
+		font-size: 14px;
+		transform: translate(14px, 16px) scale(1);
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	div {
+		height: 50px;
+		padding: 0;
+		border: none;
+		outline: none;
+		div {
+			z-index: 5;
+			position: absolute;
+			left: 14px;
+		}
+
+		input {
+			width: 100%;
+			height: 16px;
+			color: $color-text;
+			transition: all 0.2s linear;
+			padding: 16px;
+			padding-left: 22px !important;
+			background: $white;
+			border: 1px solid #d5dcff;
+			border-radius: 22px;
+			position: relative;
+			&:hover {
+				border: 1px solid #748bff;
+			}
+		}
+		input[type="number"]::-webkit-inner-spin-button,
+		input[type="number"]::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		fieldset {
+			border: none;
+			outline: none;
+		}
+	}
+	&:focus-within label {
+		color: $primary-main;
+		transform: translate(14px, -8px) scale(1);
+	}
+}
+
+//
+.inp {
+	width: 100% !important;
+	margin: 0 !important;
+	@media screen and (max-width: 450px) {
+		width: 284px;
+	}
+	label {
+		z-index: 6;
+		margin-top: -25px;
+		transition: all 0.2s linear;
+		font-family: "Gotham Pro";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 130%;
+		letter-spacing: 0.003em;
+		color: $text-non-active;
+		background: $white;
+		padding: 0 4px;
+		font-size: 14px;
+		transform: translate(14px, 16px) scale(1);
+	}
+	div {
+		width: 100%;
+		padding: 0;
+		border: none;
+		outline: none;
+		div {
+			z-index: 5;
+			position: absolute;
+			left: 15px;
+			top: 26px;
+		}
+
+		input {
+			width: 100%;
+			height: 16px;
+			color: $color-text;
+			transition: all 0.2s linear;
+			padding: 16px;
+			padding-left: 22px !important;
+			background: $white;
+			border: 1px solid #d5dcff;
+			border-radius: 22px;
+			position: relative;
+			&:hover {
+				border: 1px solid #748bff;
+			}
+		}
+		input[type="number"]::-webkit-inner-spin-button,
+		input[type="number"]::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		fieldset {
+			border: none;
+			outline: none;
+		}
+	}
+}
+
+.inp:hover label {
+}

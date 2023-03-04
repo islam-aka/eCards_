@@ -8,6 +8,9 @@
 	@media screen and (max-width: 1280px) {
 		margin: 0;
 	}
+	@media screen and (max-width: 992px) {
+		height: 370px;
+	}
 	.about__bg {
 		display: flex;
 		width: 100%;
@@ -20,10 +23,12 @@
 		}
 		@media screen and (max-width: 1280px) {
 			margin-left: 570px;
-		}
-		@media screen and (max-width: 1280px) {
-			margin-left: 500px;
 			margin-top: 30px;
+		}
+		@media screen and (max-width: 992px) {
+			height: 420px;
+			margin-left: 530px;
+			margin-top: -35px;
 		}
 		@media screen and (max-width: 575px) {
 			margin-left: 50px;
@@ -42,10 +47,11 @@
 		margin: 50px auto 0 auto;
 		@media screen and (max-width: 1285px) {
 			width: calc(100% - 100px);
+			margin-bottom: 50px;
 		}
 		@media screen and (max-width: 1050px) {
 			max-width: 932px;
-			width: calc(100% - 60px);
+			width: calc(100% - 100px);
 		}
 		@media screen and (max-width: 992px) {
 			margin: 0 auto;
@@ -152,18 +158,13 @@
 					color: $sub-title;
 				}
 			}
-			.numbers__one {
-				@media screen and (max-width: 1000px) {
-				}
-			}
-			.numbers__two {
-			}
-			.about__title {
-			}
 		}
 	}
 	.link {
 		position: absolute;
 		top: -80px;
+		@media screen and (max-width: 992px) {
+			top: -120px;
+		}
 	}
 }

@@ -3,7 +3,6 @@ import styles from './About.module.scss'
 import iconCard from '../../assets/svg/card.svg'
 import icon from '../../assets/svg/people.svg'
 import iconDollar from '../../assets/svg/dollar-circle.svg'
-import image from '../../assets//img/ОeCards.png'
 import CountUp from 'react-countup'
 import { useInView } from 'react-intersection-observer'
 import { useTranslation } from 'react-i18next'
@@ -33,15 +32,18 @@ const About = () => {
 
 	return (
 		<>
-			<div className={styles.link} id='section-1'></div>
 			<div className={styles.container} id='section1'>
+				<div className={styles.link} id='section-1'></div>
 				<div className={styles.about__bg}>
 					<img src='https://i.ibb.co/Zd7xwPg/about.png' alt='background' />
 				</div>
 				<div className={styles.about}>
 					<div className={styles.about__title}>
-						<p className={styles.megaTitle}>{t('about.title')}</p>
-						<p className={styles.subTitle}>{t('about.subTitle')}</p>
+						<p className={styles.megaTitle}>О eCards в цифрах</p>
+						<p className={styles.subTitle}>
+							eCards одними из первых в мире представили автоматизированную
+							финансовую инфраструктуру для арбитража рекламного трафика
+						</p>
 					</div>
 					<div className={styles.about__numbers}>
 						<div className={styles.numbers__one} ref={ref}>
@@ -54,7 +56,9 @@ const About = () => {
 									duration={1.5}
 								/>
 							)}
-							<p className={styles.about__subTitle}>{t('about.block.one')}</p>
+							<p className={styles.about__subTitle}>
+								Выпущенных виртуальных карт
+							</p>
 						</div>
 						<div ref={ref} className={styles.numbers__two}>
 							<img src={icon} alt='icon' />
@@ -66,13 +70,14 @@ const About = () => {
 									duration={1.5}
 								/>
 							)}
-							<p className={styles.about__subTitle}>{t('about.block.two')}</p>
+							<p className={styles.about__subTitle}>
+								Баеров и арбитражных команд
+							</p>
 						</div>
 						<div ref={ref} className={styles.numbers__three}>
 							<img src={iconDollar} alt='icon dollar' />
 							<h3 className={styles.about__title}>
-								{t('about.block.three.topOne')}&nbsp;
-								{t('about.block.three.topTwo')}
+								Более&nbsp;
 								{inView && (
 									<CountUp
 										className={styles.about__title}
@@ -81,11 +86,10 @@ const About = () => {
 										duration={1.5}
 									/>
 								)}
-								&nbsp;
-								{t('about.block.three.topThree')}
+								&nbsp; млн.$
 							</h3>
 							<p className={styles.about__subTitleThree}>
-								{t('about.block.three.bottom')}
+								Рекламных расходов проведено через сервис
 							</p>
 						</div>
 					</div>

@@ -5,18 +5,13 @@ import iconTwo from '../../assets/img/iconTwo.png'
 import iconThree from '../../assets/img/iconThree.png'
 import icontel from '../../assets/svg/icons.svg'
 import { Context } from '../..'
-import { useTranslation } from 'react-i18next'
-import i18n from '../../i18next'
 const Contacts = () => {
-	let currentLanguage = i18n.language
 	const { store } = useContext(Context)
-	const { t } = useTranslation()
 	function test() {
 		const scrollPosition = window.scrollY
 		const section5 = document.getElementById('section5')
-		if (scrollPosition + 200 >= section5.offsetTop) {
+		if (scrollPosition + 250 >= section5.offsetTop) {
 			store.setLink(5)
-			console.log(store.link)
 		}
 	}
 
@@ -29,21 +24,18 @@ const Contacts = () => {
 		<div id='section5' className={styles.contact}>
 			<div id='section-5' className={styles.link}></div>
 			<div className={styles.contact__left}>
-				<p className={styles.contact__subTitle}>{t('contacts.subTitle')}</p>
-				{currentLanguage === 'RU' ? (
-					<h3 className={styles.contact__left_titleRu}>
-						{t('contacts.title')}
-					</h3>
-				) : (
-					<h3 className={styles.contact__left_title}>{t('contacts.title')}</h3>
-				)}
+				<p className={styles.contact__subTitle}>Контакты</p>
+				<h3 className={styles.contact__left_titleRu}>
+					Если у вас остались вопросы, напишите нам!
+				</h3>
+
 				<p className={styles.contact__left_time}>
-					{t('contacts.desc')}
-					<span>{t('contacts.time')}</span>
+					Наша служба поддержки работает ежедневно
+					<span>с 08:00 до 22:00 по UTC +3.</span>
 				</p>
 				<a href='https://t.me/ecards_support' target='_blank'>
 					<div className={styles.support}>
-						<p>{t('contacts.btn')}</p>
+						<p>Написать в поддержку</p>
 						<img src={icontel} alt='icon' />
 					</div>
 				</a>

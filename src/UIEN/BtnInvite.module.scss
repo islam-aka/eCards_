@@ -1,0 +1,23 @@
+@import "../components/variables.scss";
+
+.btn__invite {
+	width: 206px;
+	a {
+		display: flex;
+		gap: 10.04px;
+
+		border-radius: 22px;
+
+		p {
+			color: $white;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 120%;
+			letter-spacing: 0.003em;
+		}
+	}
+}
+img {
+	padding-right: 6.67px;
+}

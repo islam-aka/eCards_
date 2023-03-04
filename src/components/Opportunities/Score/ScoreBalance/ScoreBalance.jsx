@@ -44,15 +44,14 @@ const ScoreBalance = () => {
 								/>
 							</div>
 						)}
-						{/* <p className={styles.about__subTitle}>Весь оборот в USDT</p> */}
-						<p className={styles.about__subTitle}>{t('features.content.score.balance.statistic')}</p>
+						<p className={styles.about__subTitle}>Весь оборот в USDT</p>
 					</div>
 				</div>
 
 				<div className={styles.balance}>
 					<div>
 						<img src={icon} alt='wallet-money' />
-						<p>{t('features.content.score.balance.myBalance')}</p>
+						<p>Мой баланс</p>
 					</div>
 					<IoIosArrowForward
 						color='#AFAFAF'
@@ -70,34 +69,34 @@ const ScoreBalance = () => {
 				</div>
 				<div className={styles.info}>
 					<div className={styles.info__account}>
-						<h5>{t('features.content.score.balance.bill')}</h5>
+						<h5>Cчет в eCards:</h5>
 						<div className={styles.info__sum}>
 							<div>
 								<BiEuro color='#1E1E1E' width={'12.77px'} />
 								<p>28,394.61</p>
 							</div>
-							<span>{t('features.content.score.balance.euro')}</span>
+							<span>Евро</span>
 						</div>
 						<div className={styles.info__sum}>
 							<div>
 								<TbCurrencyDollar color='#1E1E1E' width={' 7.22px'} />
 								<p>0.00</p>
 							</div>
-							<span>{t('features.content.score.balance.usd')}</span>
+							<span>Доллары США</span>
 						</div>
 						<div className={styles.btn}>
-							<p>{t('features.content.score.balance.topUptheBalance')}</p>
+							<p>Пополнить баланс</p>
 							<IoIosArrowForward color='#748BFF' />
 						</div>
 					</div>
 					<div className={styles.info__amount}>
-						<h5>{t('features.content.score.balance.amount')}</h5>
+						<h5>Cумма на картах:</h5>
 						<div>
 							<div>
 								<BiEuro color='#1E1E1E' width={'12.77px'} />
 								<p>179,328.93</p>
 							</div>
-							<span>{t('features.content.score.balance.euro')}</span>
+							<span>Евро</span>
 						</div>
 					</div>
 				</div>

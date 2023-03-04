@@ -36,8 +36,8 @@ const Opportunities = () => {
 		<div id='section2' className={styles.container}>
 			<div className={styles.link} id='section-2' ref={ref}></div>
 			<div className={styles.container__title}>
-				<p>{t('features.subTitle')}</p>
-				<h2>{t('features.title')}</h2>
+				<p>eCards предоставляет</p>
+				<h2>Возможности и фичи</h2>
 			</div>
 
 			<div className={styles.opportunities}>

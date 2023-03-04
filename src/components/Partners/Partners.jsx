@@ -32,15 +32,18 @@ const Partners = () => {
 			<div className={styles.partner}>
 				<div className={styles.partner__left}>
 					<div className={styles.info}>
-						<p>{t('partners.subTitle')}</p>
-						<h2>{t('partners.title')}</h2>
-						<p>{t('partners.desc')}</p>
+						<p>О партнерах eCards</p>
+						<h2>Наши партнеры</h2>
+						<p>
+							Получайте еще более выгодные условия при выводе средств с
+							партнерок на счет eCards!
+						</p>
 					</div>
 
 					<div className={styles.btn}>
 						<Link to={'invite'}>
 							<div className={styles.partner__btnInvite}>
-								<p>{t('partners.btn')}</p>
+								<p>Получить инвайт</p>
 								<img src={iconRight} alt='icon right' />
 							</div>
 						</Link>

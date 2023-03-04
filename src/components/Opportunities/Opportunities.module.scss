@@ -17,11 +17,11 @@
 	}
 
 	@media screen and (max-width: 1050px) {
-		width: calc(100% - 60px);
+		width: calc(100% - 100px);
 		padding: 40px;
 	}
 	@media screen and (max-width: 992px) {
-		margin: 0;
+		margin: 0 auto;
 	}
 	@media screen and (max-width: 768px) {
 		width: calc(100% - 60px);
