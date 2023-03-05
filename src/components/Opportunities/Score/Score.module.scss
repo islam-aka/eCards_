@@ -13,6 +13,7 @@
 		height: 100%;
 	}
 	@media screen and (max-width: 575px) {
+		height: 266px;
 		margin-top: 40px;
 	}
 	@media screen and (max-width: 560px) {
@@ -108,8 +109,10 @@
 			right: -189px;
 		}
 		@media screen and (max-width: 768px) {
-			margin-left: 100px;
-			right: -275px;
+			right: -190px;
+		}
+		@media screen and (max-width: 575px) {
+			right: -260px;
 		}
 
 		@media screen and (max-width: 560px) {

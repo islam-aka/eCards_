@@ -10,6 +10,7 @@
 		height: 350px;
 	}
 	@media screen and (max-width: 560px) {
+		height: auto;
 		justify-content: start;
 		flex-direction: column-reverse;
 	}
@@ -40,7 +41,7 @@
 		@media screen and (max-width: 560px) {
 			margin-left: -20px;
 			max-width: 100%;
-			height: 360px;
+			height: 320px;
 		}
 		@media screen and (max-width: 420px) {
 			height: 260px;

@@ -11,7 +11,9 @@
 		gap: 0;
 	}
 	@media screen and (max-width: 560px) {
+		height: auto;
 		flex-direction: column;
+		gap: 17px;
 	}
 	.notification__left {
 		width: 490px;
@@ -20,6 +22,9 @@
 		}
 		@media screen and (max-width: 768px) {
 			width: 280px;
+		}
+		@media screen and (max-width: 560px) {
+			width: 100%;
 		}
 
 		.notification__icon {
