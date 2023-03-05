@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Cookie from './components/Cookie/Cookie'
+import CookieEN from './componentsEN/Cookie/Cookie'
 
 import Home from './pages/Home'
 import HomeEN from './pages/HomeEn'
@@ -9,6 +10,8 @@ import InvitePageEN from './pages/InvitePageEN'
 
 function App() {
 	const [check, setCheck] = useState(true)
+	const [locales, setLocales] = useState('ru')
+	const currentPath = window.location.pathname
 	function checkCookie() {
 		const cookies = document.cookie.split(';')
 		const myCookie = cookies.find(cookie =>
@@ -23,11 +26,14 @@ function App() {
 
 	useEffect(() => {
 		checkCookie()
+		if (localStorage.getItem('locales')) {
+			setLocales(localStorage.getItem('localse'))
+		}
 	}, [check])
 
 	return (
 		<div className='App'>
-			{check && <Cookie />}
+			{check !== false && (currentPath === '/en' ? <CookieEN /> : <Cookie />)}
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/en' element={<HomeEN />} />

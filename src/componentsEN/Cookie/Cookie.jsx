@@ -22,10 +22,10 @@ const Cookie = () => {
 				<div className={styles.cookie__right}>
 					<div onClick={() => setfirst(true)} className={styles.accept}>
 						<img src={cookieIcon} alt='icon cookie' />
-						<p>Принять куки</p>
+						<p>Accept cookies</p>
 					</div>
 					<div className={styles.reject} onClick={() => setfirst(true)}>
-						<p>Отклонить</p>
+						<p>Decline</p>
 					</div>
 					<div className={styles.close} onClick={() => setfirst(true)}>
 						<div className={styles.close__line_top}></div>

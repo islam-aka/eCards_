@@ -14,6 +14,7 @@ const DropDown = () => {
 	}
 	const check = () => {
 		navigate('/en')
+		localStorage.setItem('locales', 'en')
 	}
 
 	return (
