@@ -286,7 +286,7 @@ const Header = observer(() => {
 						</a>
 					</div>
 					<div className={styles.btn}>
-						<Link to='/invite' onClick={() => setMenu(!menu)}>
+						<Link to='/inviteEN' onClick={() => setMenu(!menu)}>
 							<div className={styles.btn__invite}>
 								<p>Get an invite</p>
 								<img src={iconRight} alt='icon right' />
