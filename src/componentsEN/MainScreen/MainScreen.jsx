@@ -4,11 +4,12 @@ import iconRight from '../../assets/svg/right.svg'
 import iconRightLogIn from '../../assets/svg/rightLogIn.svg'
 import iconPlus from '../../assets/svg/plus.svg'
 import LogoSocial from '../LogoSocial/LogoSocial'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import 'aos'
 import i18n from '../../i18next'
 
 const MainScreen = () => {
+	const navigate = useNavigate()
 	let currentLanguage = i18n.language
 	const [check, setCheck] = useState('RU')
 	function checkCookie() {
@@ -22,6 +23,12 @@ const MainScreen = () => {
 		checkCookie()
 	}, [check])
 
+	const handleNavClick = async (index, event) => {
+		navigate('/en')
+		event.preventDefault()
+		const element = document.getElementById(`sectionEN-${index}`)
+		element.scrollIntoView({ behavior: 'smooth' })
+	}
 	return (
 		<div className={styles.container}>
 			<div className={styles.container__info}>
@@ -33,18 +40,18 @@ const MainScreen = () => {
 					Google, etc., user-friendly interface and prompt technical support
 				</p>
 				<div className={styles.container__btn}>
-					<Link to='invite'>
+					<Link to='/inviteEN'>
 						<div className={styles.btn__invite}>
 							<p>Get an invite</p>
 							<img src={iconRight} alt='icon right' />
 						</div>
 					</Link>
-					<Link to={'/conditions'}>
+					<a href={'/en'} onClick={event => handleNavClick(3, event)}>
 						<div className={styles.btn__conditions}>
 							<p>Pricing details</p>
 							<img src={iconRightLogIn} alt='icon right' />
 						</div>
-					</Link>
+					</a>
 				</div>
 				<div className={styles.block}>
 					<div className={styles.info}>

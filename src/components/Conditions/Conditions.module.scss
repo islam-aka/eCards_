@@ -168,9 +168,54 @@
 				max-width: 606px;
 			}
 		}
-		a {
-			.btn__invite {
+
+		.btn__invite {
+			a {
 				max-width: 206px;
+				cursor: pointer;
+				position: relative;
+				display: flex;
+				background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
+				border-radius: 22px;
+				padding: 10.5px 20px;
+				z-index: 49;
+				@media screen and (max-width: 420px) {
+					width: 100%;
+					padding: 10px 0;
+					justify-content: center;
+				}
+				p {
+					color: $white;
+					font-style: normal;
+					font-weight: 500;
+					font-size: 16px;
+					line-height: 120%;
+					letter-spacing: 0.003em;
+				}
+				&::before {
+					content: "";
+					display: block;
+					opacity: 0;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background: linear-gradient(49.19deg, #642dff 1.96%, #7aafff 86.77%);
+					transition: opacity 0.2s ease-in-out;
+					border-radius: 22px;
+					z-index: -49;
+				}
+
+				&:hover::before {
+					background: linear-gradient(49.19deg, #642dff 1.96%, #7aafff 86.77%);
+					opacity: 1;
+				}
+			}
+		}
+		.btn__inviteEN {
+			a {
+				max-width: 167px;
 				cursor: pointer;
 				position: relative;
 				display: flex;

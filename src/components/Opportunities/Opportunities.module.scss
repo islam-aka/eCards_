@@ -24,7 +24,8 @@
 		margin: 0 auto;
 	}
 	@media screen and (max-width: 768px) {
-		width: calc(100% - 60px);
+		width: calc(100% - 100px);
+		margin: 0 auto;
 		padding: 20px;
 	}
 	@media screen and (max-width: 575px) {

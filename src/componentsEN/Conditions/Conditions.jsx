@@ -48,7 +48,7 @@ const Conditions = () => {
 					</div>
 					<div className={styles.text}>
 						<p className={styles.left__text}>Transactions</p>
-						<p className={styles.right__text}>"free": "Free",</p>
+						<p className={styles.right__text}>Free</p>
 					</div>
 
 					<div className={styles.text}>
@@ -82,12 +82,12 @@ const Conditions = () => {
 					For big affiliate teams with a turnover of more than $100,000 per
 					month, it is possible to provide individual conditions
 				</span>
-				<Link to={'invite'}>
-					<div className={styles.btn__invite}>
+				<div className={styles.btn__inviteEN}>
+					<Link to={'/inviteEN'}>
 						<p>Get an invite</p>
 						<img src={iconRight} alt='icon right' />
-					</div>
-				</Link>
+					</Link>
+				</div>
 			</div>
 		</div>
 	)

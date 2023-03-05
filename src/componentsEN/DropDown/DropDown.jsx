@@ -10,7 +10,7 @@ const DropDown = () => {
 		setActive(!active)
 	}
 	const check = () => {
-		navigate('/ru')
+		navigate('/')
 	}
 
 	return (

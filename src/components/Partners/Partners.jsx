@@ -41,7 +41,7 @@ const Partners = () => {
 					</div>
 
 					<div className={styles.btn}>
-						<Link to={'invite'}>
+						<Link to={'/invite'}>
 							<div className={styles.partner__btnInvite}>
 								<p>Получить инвайт</p>
 								<img src={iconRight} alt='icon right' />

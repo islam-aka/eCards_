@@ -33,7 +33,7 @@ const Conditions = () => {
 			<div className={styles.conditions__top}>
 				<p className={styles.top__subTitle}>Выгодные условия работы сервиса</p>
 				<p className={styles.top__title}>
-					Платите только за пополнение счета eCards. <span> У насs</span> нет
+					Платите только за пополнение счета eCards. <span> У нас</span> нет
 					скрытых комиссий
 				</p>
 			</div>
@@ -83,12 +83,12 @@ const Conditions = () => {
 					Для крупных арбитражных команд с оборотом более 100000$ в месяц
 					возможно предоставление индивидуальных условий
 				</span>
-				<Link to={'invite'}>
-					<div className={styles.btn__invite}>
+				<div className={styles.btn__invite}>
+					<Link to={'/invite'}>
 						<p>Получить инвайт</p>
 						<img src={iconRight} alt='icon right' />
-					</div>
-				</Link>
+					</Link>
+				</div>
 			</div>
 		</div>
 	)
