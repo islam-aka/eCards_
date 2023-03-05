@@ -50,6 +50,7 @@
 				display: flex;
 				justify-content: space-between;
 				a {
+					transition: all 0.1s linear;
 					border: none;
 					background: none;
 					font-style: normal;
@@ -311,6 +312,9 @@
 					border: 1px solid #748bff;
 					border-radius: 30px;
 					padding: 2px 0px 3px 3px;
+					img {
+						margin-left: -1px;
+					}
 				}
 			}
 			.btn {

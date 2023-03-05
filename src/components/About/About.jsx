@@ -71,22 +71,25 @@ const About = () => {
 								/>
 							)}
 							<p className={styles.about__subTitle}>
-								Баеров и арбитражных команд
+								Баеров и <br /> арбитражных команд
 							</p>
 						</div>
 						<div ref={ref} className={styles.numbers__three}>
 							<img src={iconDollar} alt='icon dollar' />
 							<h3 className={styles.about__title}>
 								Более&nbsp;
-								{inView && (
-									<CountUp
-										className={styles.about__title}
-										delay={2}
-										end={500}
-										duration={1.5}
-									/>
-								)}
-								&nbsp; млн.$
+								<span>
+									{inView && (
+										<CountUp
+											className={styles.about__title}
+											delay={2}
+											end={500}
+											duration={1.5}
+										/>
+									)}
+								</span>
+								&nbsp;
+								<span>млн.$</span>
 							</h3>
 							<p className={styles.about__subTitleThree}>
 								Рекламных расходов проведено через сервис

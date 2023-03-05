@@ -4,12 +4,14 @@ import iconRight from '../../assets/svg/right.svg'
 import iconRightLogIn from '../../assets/svg/rightLogIn.svg'
 import iconPlus from '../../assets/svg/plus.svg'
 import LogoSocial from '../LogoSocial/LogoSocial'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import 'aos'
 import i18n from '../../i18next'
 
 const MainScreen = () => {
+	const navigate = useNavigate()
+
 	let currentLanguage = i18n.language
 	const [check, setCheck] = useState('RU')
 	const { t } = useTranslation()
@@ -23,6 +25,13 @@ const MainScreen = () => {
 	useEffect(() => {
 		checkCookie()
 	}, [check])
+
+	const handleNavClick = async (index, event) => {
+		navigate('/')
+		event.preventDefault()
+		const element = document.getElementById(`section-${index}`)
+		element.scrollIntoView({ behavior: 'smooth' })
+	}
 
 	return (
 		<div className={styles.container}>
@@ -41,12 +50,12 @@ const MainScreen = () => {
 							<img src={iconRight} alt='icon right' />
 						</div>
 					</Link>
-					<Link to={'/conditions'}>
+					<a href={'/'} onClick={event => handleNavClick(3, event)}>
 						<div className={styles.btn__conditions}>
 							<p>Ознакомиться с условиями</p>
 							<img src={iconRightLogIn} alt='icon right' />
 						</div>
-					</Link>
+					</a>
 				</div>
 				<div className={styles.block}>
 					<div className={styles.info}>

@@ -33,13 +33,13 @@ const Role = ({ value, setValue }) => {
 								: styles.selectUndefined
 						}
 					>
-						*Выберите роль
+						Выберите роль*
 					</span>
 				) : (
 					<span
 						className={value.role === '' ? styles.select__none : styles.select}
 					>
-						*Выберите роль
+						Выберите роль*
 					</span>
 				)}
 

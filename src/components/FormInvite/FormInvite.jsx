@@ -14,6 +14,7 @@ import { Link } from 'react-router-dom'
 
 const FormInvite = () => {
 	const [done, setDone] = useState(false)
+	const [bool, setBool] = useState(false)
 	const [invite, setInvite] = useState({
 		name: '',
 		email: '',
@@ -72,8 +73,8 @@ const FormInvite = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.container__title}>
-				<p>Шаг 1</p>
-				<h2>Заполните форму заявки</h2>
+				<p>{!done ? 'Шаг 1' : 'Шаг 2'}</p>
+				<h2>{!done ? 'Заполните форму заявки' : 'Ожидайте обратной связи'}</h2>
 			</div>
 			<div className={styles.invite}>
 				{!done ? (
@@ -82,21 +83,23 @@ const FormInvite = () => {
 							type={'text'}
 							invite={invite}
 							fun={handleChange}
-							labels={'*Имя'}
+							labels={'Имя*'}
 							name={'name'}
 						/>
 						<InputEmail
 							type={'email'}
 							invite={invite}
 							fun={handleChange}
-							labels={'*Электронная почта'}
+							labels={'Электронная почта*'}
+							bool={bool}
+							setBool={setBool}
 							name={'email'}
 						/>
 						<InputTel
 							type={'text'}
 							invite={invite}
 							fun={handleChange}
-							labels={'*Телеграм'}
+							labels={'Телеграм*'}
 							name={'telegram'}
 							elem={'@'}
 						/>
@@ -105,18 +108,19 @@ const FormInvite = () => {
 							type={'text'}
 							invite={invite}
 							fun={handleChange}
-							labels={'*В какой вертикали работаете?'}
+							labels={'В какой вертикали работаете?*'}
 							name={'vertical'}
 						/>
-						<Role value={invite} setValue={setInvite} />
+
 						<InputNumber
 							type={'number'}
 							invite={invite}
 							fun={handleChange}
-							labels={'*Примерный оборот в месяц на рекламу'}
+							labels={'Примерный оборот в месяц на рекламу, $*'}
 							name={'turnover'}
 							elem={'$'}
 						/>
+						<Role value={invite} setValue={setInvite} />
 						<div
 							onClick={handleSubmit}
 							className={
@@ -131,7 +135,8 @@ const FormInvite = () => {
 								invite.telegram !== undefined &&
 								invite.vertical !== undefined &&
 								invite.role !== undefined &&
-								invite.turnover !== undefined
+								invite.turnover !== undefined &&
+								bool !== false
 									? styles.btn__active
 									: styles.btn__noActive
 							}

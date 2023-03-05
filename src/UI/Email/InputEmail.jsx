@@ -2,13 +2,12 @@ import { TextField } from '@mui/material'
 import React from 'react'
 import styles from './InputEmail.module.scss'
 
-const InputEmail = ({ invite, fun, name, labels, type }) => {
-	let bool
-
+const InputEmail = ({ invite, fun, name, labels, type, bool, setBool }) => {
 	if (invite.email) {
 		let test = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-		bool = test.test(invite.email)
+		setBool(test.test(invite.email))
 	}
+
 	return (
 		<>
 			{invite.email !== '' ? (

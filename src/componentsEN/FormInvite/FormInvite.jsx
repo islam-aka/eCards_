@@ -14,6 +14,7 @@ import { Link } from 'react-router-dom'
 
 const FormInvite = () => {
 	const [done, setDone] = useState(false)
+	const [bool, setBool] = useState(false)
 	const [invite, setInvite] = useState({
 		name: '',
 		email: '',
@@ -72,8 +73,10 @@ const FormInvite = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.container__title}>
-				<p>Step 1</p>
-				<h2>Fill out the invitation form</h2>
+				<p>{!done ? 'Step 1' : 'Step 2'}</p>
+				<h2>
+					{!done ? 'Fill out the invitation form' : 'Wait for the feedback'}
+				</h2>
 			</div>
 			<div className={styles.invite}>
 				{!done ? (
@@ -91,6 +94,8 @@ const FormInvite = () => {
 							fun={handleChange}
 							labels={'Email*'}
 							name={'email'}
+							bool={bool}
+							setBool={setBool}
 						/>
 						<InputTel
 							type={'text'}
@@ -108,7 +113,7 @@ const FormInvite = () => {
 							labels={'What vertical do you work in?*'}
 							name={'vertical'}
 						/>
-						<Role value={invite} setValue={setInvite} />
+
 						<InputNumber
 							type={'number'}
 							invite={invite}
@@ -117,6 +122,7 @@ const FormInvite = () => {
 							name={'turnover'}
 							elem={'$'}
 						/>
+						<Role value={invite} setValue={setInvite} />
 						<div
 							onClick={handleSubmit}
 							className={
@@ -131,7 +137,8 @@ const FormInvite = () => {
 								invite.telegram !== undefined &&
 								invite.vertical !== undefined &&
 								invite.role !== undefined &&
-								invite.turnover !== undefined
+								invite.turnover !== undefined &&
+								bool !== false
 									? styles.btn__active
 									: styles.btn__noActive
 							}
@@ -149,7 +156,7 @@ const FormInvite = () => {
 							<p>The application has been sent</p>
 							<p>Our support team will get back to you soon!</p>
 						</div>
-						<Link to={'/'}>
+						<Link to={'/en'}>
 							<div className={styles.check__btn}>
 								<img src={iconRight} alt='' />
 								<p>Back to the home page</p>
