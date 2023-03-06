@@ -5,14 +5,12 @@ import iconSupport from '../../assets/img/iconSupport.png'
 import iconRightLogIn from '../../assets/svg/rightLogIn.svg'
 import styles from '../../components/Header/Header.module.scss'
 import DropDown from '../DropDown/DropDown'
-import { useTranslation } from 'react-i18next'
 import iconRight from '../../assets/svg/right.svg'
 import { Link, useNavigate } from 'react-router-dom'
 import { Context } from '../..'
 import { observer } from 'mobx-react-lite'
 
 const Header = observer(() => {
-	const { t } = useTranslation()
 	const { store } = useContext(Context)
 	const navigate = useNavigate()
 	const [activeButton, setActiveButton] = useState(0)
@@ -89,7 +87,7 @@ const Header = observer(() => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.header}>
-				<Link to={'/'} onClick={scrollToTop} className={styles.logo}>
+				<Link to={'/en'} onClick={scrollToTop} className={styles.logo}>
 					<img src={logo} alt='logo' />
 				</Link>
 				<nav className={styles.header__nav}>
@@ -299,7 +297,7 @@ const Header = observer(() => {
 							onMouseLeave={onMouseLeave}
 						>
 							<a href='https://ecards.cab' target='_blank'>
-								<p>Войти</p>
+								<p>Sign In</p>
 							</a>
 							<svg
 								width='8'

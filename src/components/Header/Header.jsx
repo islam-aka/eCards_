@@ -91,7 +91,7 @@ const Header = observer(() => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.header}>
-				<Link to={'/en'} onClick={scrollToTop} className={styles.logo}>
+				<Link to={'/'} onClick={scrollToTop} className={styles.logo}>
 					<img src={logo} alt='logo' />
 				</Link>
 				<nav className={styles.header__nav}>

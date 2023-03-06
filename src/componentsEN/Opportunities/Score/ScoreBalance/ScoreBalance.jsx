@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './ScoreBalance.module.scss'
+import styles from '../../../../components/Opportunities/Score/ScoreBalance/ScoreBalance.module.scss'
 import icon from '../../../../assets/score/wallet-money.svg'
 import { IoIosArrowForward } from 'react-icons/io'
 import { BiEuro } from 'react-icons/bi'

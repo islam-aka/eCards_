@@ -35,13 +35,13 @@ const Notification = () => {
 			>
 				<div className={styles.notiOne}>
 					<img
-						src='https://i.ibb.co/RbxGmM4/noti.png'
+						src='https://i.ibb.co/Ch5KFbS/notiOne.png'
 						alt='notification system'
 					/>
 				</div>
 				<div className={styles.notiTwo}>
 					<img
-						src='https://i.ibb.co/vz1YYff/noti2.png'
+						src='https://i.ibb.co/2ZmVpXG/Frame-15017.png'
 						alt='notification system'
 					/>
 				</div>

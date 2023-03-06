@@ -22,7 +22,7 @@ const LogoSocial = () => {
 
 	return (
 		<>
-			{WindowWidth > 768 ? (
+			{WindowWidth > 574 ? (
 				<div className={styles.social}>
 					<svg
 						onMouseEnter={() => onMouseEnter('facebook')}

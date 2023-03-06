@@ -125,6 +125,12 @@
 					@media screen and (max-width: 536px) {
 						border: none;
 					}
+					br {
+						display: none;
+						@media screen and (max-width: 575px) {
+							display: block;
+						}
+					}
 				}
 				.bottom__text_right {
 					font-size: 16px;
@@ -139,9 +145,13 @@
 					}
 					@media screen and (max-width: 575px) {
 						padding: 0;
+						padding-left: 20px;
 						font-size: 16px;
 						line-height: 130%;
+					}
+					@media screen and (max-width: 575px) {
 						text-align: end;
+						font-size: 14px;
 					}
 				}
 			}

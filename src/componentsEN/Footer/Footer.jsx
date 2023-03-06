@@ -1,16 +1,29 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import styles from '../../components/Footer/Footer.module.scss'
 import logo from '../../assets/svg/LogoFooter.svg'
 import icons from '../../assets/img/bgFooter.png'
 import icon from '../../assets/svg/icon.svg'
-import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { Context } from '../..'
 
 const Footer = () => {
-	const { t } = useTranslation()
+	const { store } = useContext(Context)
+	const [menu, setMenu] = useState(false)
+	const navigate = useNavigate()
+
+	const handleNavClick = async (index, event) => {
+		await setMenu(false)
+		await event.preventDefault()
+		await store.setLink(index)
+		await navigate('/en')
+		const element = document.getElementById(`sectionEN-${index}`)
+		await element.scrollIntoView({ behavior: 'smooth' })
+	}
+
 	const scrollToTop = () => {
 		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.footer}>
@@ -21,19 +34,35 @@ const Footer = () => {
 					<nav className={styles.footer__nav}>
 						<ul>
 							<li>
-								<Link to={'/eСards'}>About eСards</Link>
+								<a href={'/en'} onClick={event => handleNavClick(1, event)}>
+									About eСards
+								</a>
 							</li>
 							<li>
-								<Link to={'/opportunities'}>Features</Link>
+								<a href={'/en'} onClick={event => handleNavClick(2, event)}>
+									Features
+								</a>
 							</li>
 							<li>
-								<Link to={'/conditions'}>Pricing</Link>
+								<a href={'/en'} onClick={event => handleNavClick(3, event)}>
+									Pricing
+								</a>
 							</li>
 							<li>
-								<Link to={'/partners'}>Partners</Link>
+								<a
+									href={'/partners'}
+									onClick={event => handleNavClick(4, event)}
+								>
+									Partners
+								</a>
 							</li>
 							<li>
-								<Link to={'/contact'}>Contacts</Link>
+								<a
+									href={'/contact'}
+									onClick={event => handleNavClick(5, event)}
+								>
+									Contacts
+								</a>
 							</li>
 						</ul>
 					</nav>
@@ -80,6 +109,7 @@ const Footer = () => {
 						<img src={icon} alt='icon' />
 						<p className={styles.info}>eCards 2023</p>
 					</div>
+
 					<p>Privacy Policy</p>
 				</div>
 			</div>

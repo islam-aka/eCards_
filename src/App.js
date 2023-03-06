@@ -10,7 +10,6 @@ import InvitePageEN from './pages/InvitePageEN'
 
 function App() {
 	const [check, setCheck] = useState(true)
-	const [locales, setLocales] = useState('ru')
 	const currentPath = window.location.pathname
 	function checkCookie() {
 		const cookies = document.cookie.split(';')
@@ -26,9 +25,6 @@ function App() {
 
 	useEffect(() => {
 		checkCookie()
-		if (localStorage.getItem('locales')) {
-			setLocales(localStorage.getItem('localse'))
-		}
 	}, [check])
 
 	return (

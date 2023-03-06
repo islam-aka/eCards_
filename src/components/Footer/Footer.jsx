@@ -3,12 +3,9 @@ import styles from './Footer.module.scss'
 import logo from '../../assets/svg/LogoFooter.svg'
 import icons from '../../assets/img/bgFooter.png'
 import icon from '../../assets/svg/icon.svg'
-import iconTel from '../../assets/svg/Path.svg'
-import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
-	const { t } = useTranslation()
 	const scrollToTop = () => {
 		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}
@@ -22,7 +19,7 @@ const Footer = () => {
 					<nav className={styles.footer__nav}>
 						<ul>
 							<li>
-								<Link to={'/eСards'}>О eСards"</Link>
+								<Link to={'/eСards'}>О eСards</Link>
 							</li>
 							<li>
 								<Link to={'/opportunities'}>Возможности</Link>
@@ -51,8 +48,9 @@ const Footer = () => {
 							<a
 								href='https://t.me/joinchat/AAAAAE3STg6obgvsxPakiw'
 								target='_blank'
+								rel='noopener noreferrer'
 							>
-								<p>Подписаться</p>
+								<span>Подписаться</span>
 								<svg
 									width='16'
 									height='16'
@@ -71,7 +69,11 @@ const Footer = () => {
 					</div>
 					<h3>
 						Служба поддержки&nbsp;
-						<a href='https://t.me/ecards_support' target='_blank'>
+						<a
+							href='https://t.me/ecards_support'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
 							<span>@ecards_support</span>
 						</a>
 					</h3>

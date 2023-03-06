@@ -6,12 +6,19 @@ import { useNavigate } from 'react-router-dom'
 const DropDown = () => {
 	const [active, setActive] = useState(true)
 	const navigate = useNavigate()
+	const currentPath = window.location.pathname
+
 	const dropDownActive = () => {
 		setActive(!active)
 	}
+
 	const check = () => {
-		navigate('/')
-		localStorage.setItem('locales', 'ru')
+		if (currentPath === '/inviteEN') {
+			navigate('/invite')
+			localStorage.setItem('locales', 'ru')
+		} else {
+			navigate('/')
+		}
 	}
 
 	return (

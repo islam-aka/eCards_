@@ -72,7 +72,7 @@ const Conditions = () => {
 					</div>
 					<div className={styles.text_bottom}>
 						<p className={styles.bottom__text_left}>
-							Минимальная сумма для пополнения счета eCards
+							Минимальная сумма для <br /> пополнения счета eCards
 						</p>
 						<p className={styles.bottom__text_right}>Ограничений нет</p>
 					</div>

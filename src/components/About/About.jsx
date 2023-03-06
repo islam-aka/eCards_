@@ -1,15 +1,13 @@
-import React, { useContext, useEffect, useRef } from 'react'
+import React, { useContext, useEffect } from 'react'
 import styles from './About.module.scss'
 import iconCard from '../../assets/svg/card.svg'
 import icon from '../../assets/svg/people.svg'
 import iconDollar from '../../assets/svg/dollar-circle.svg'
 import CountUp from 'react-countup'
 import { useInView } from 'react-intersection-observer'
-import { useTranslation } from 'react-i18next'
 import { Context } from '../..'
 
 const About = () => {
-	const { t } = useTranslation()
 	const { store } = useContext(Context)
 	const [ref, inView] = useInView({ threshold: 0.5 })
 
@@ -28,7 +26,7 @@ const About = () => {
 	useEffect(() => {
 		window.addEventListener('scroll', test)
 		return () => window.removeEventListener('scroll', test)
-	}, [])
+	})
 
 	return (
 		<>
@@ -48,13 +46,15 @@ const About = () => {
 					<div className={styles.about__numbers}>
 						<div className={styles.numbers__one} ref={ref}>
 							<img src={iconCard} alt='icon card' />
-							{inView && (
+							{inView ? (
 								<CountUp
 									className={styles.about__title}
 									delay={0}
 									end={700000}
 									duration={1.5}
 								/>
+							) : (
+								<span className={styles.about__title}>0</span>
 							)}
 							<p className={styles.about__subTitle}>
 								Выпущенных виртуальных карт
@@ -62,13 +62,15 @@ const About = () => {
 						</div>
 						<div ref={ref} className={styles.numbers__two}>
 							<img src={icon} alt='icon' />
-							{inView && (
+							{inView ? (
 								<CountUp
 									className={styles.about__title}
-									delay={1}
+									delay={0.5}
 									end={5000}
 									duration={1.5}
 								/>
+							) : (
+								<span className={styles.about__title}>0</span>
 							)}
 							<p className={styles.about__subTitle}>
 								Баеров и <br /> арбитражных команд
@@ -79,13 +81,15 @@ const About = () => {
 							<h3 className={styles.about__title}>
 								Более&nbsp;
 								<span>
-									{inView && (
+									{inView ? (
 										<CountUp
 											className={styles.about__title}
-											delay={2}
+											delay={1}
 											end={500}
 											duration={1.5}
 										/>
+									) : (
+										<span className={styles.about__title}>0</span>
 									)}
 								</span>
 								&nbsp;

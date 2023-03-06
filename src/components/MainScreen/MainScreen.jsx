@@ -5,16 +5,12 @@ import iconRightLogIn from '../../assets/svg/rightLogIn.svg'
 import iconPlus from '../../assets/svg/plus.svg'
 import LogoSocial from '../LogoSocial/LogoSocial'
 import { Link, useNavigate } from 'react-router-dom'
-import { useTranslation } from 'react-i18next'
 import 'aos'
-import i18n from '../../i18next'
 
 const MainScreen = () => {
 	const navigate = useNavigate()
 
-	let currentLanguage = i18n.language
 	const [check, setCheck] = useState('RU')
-	const { t } = useTranslation()
 	function checkCookie() {
 		const cookies = document.cookie.split(';')
 		const myCookie = cookies.find(cookie =>
@@ -80,19 +76,11 @@ const MainScreen = () => {
 				<div className={styles.blockBlur__two}>
 					<img src='https://i.ibb.co/G2q0JbW/main-Blur-Two.png' alt='blur' />
 				</div>
-				{currentLanguage === 'RU' ? (
-					<img
-						className={styles.bg}
-						src='https://i.ibb.co/gtRrZJ7/RU.png'
-						alt='main screen'
-					/>
-				) : (
-					<img
-						className={styles.bg}
-						src='https://i.ibb.co/JB27td9/EN.png'
-						alt='main screen'
-					/>
-				)}
+				<img
+					className={styles.bg}
+					src='https://i.ibb.co/gtRrZJ7/RU.png'
+					alt='main screen'
+				/>
 			</div>
 		</div>
 	)

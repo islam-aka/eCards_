@@ -11,7 +11,7 @@ import { useInView } from 'react-intersection-observer'
 import { useTranslation } from 'react-i18next'
 
 const ScoreBalance = () => {
-	const [refAni, inViewAni] = useInView({ threshold: 0 })
+	const [refAni, inViewAni] = useInView({ threshold: 1 })
 	const { t } = useTranslation()
 	return (
 		<>

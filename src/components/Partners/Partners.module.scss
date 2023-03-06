@@ -22,6 +22,7 @@
 		padding: 40px;
 	}
 	@media screen and (max-width: 575px) {
+		padding: 20px;
 		height: 284px;
 	}
 	@media screen and (max-width: 560px) {
@@ -204,7 +205,8 @@
 						top: 172px;
 					}
 					@media screen and (max-width: 575px) {
-						top: 105px;
+						left: 30px;
+						top: -27px;
 						animation-name: none;
 					}
 					@media screen and (max-width: 560px) {
@@ -238,8 +240,8 @@
 						left: 120px;
 					}
 					@media screen and (max-width: 575px) {
-						top: -20px;
-						left: 80px;
+						top: 0;
+						left: 100px;
 						animation-name: none;
 					}
 
@@ -264,9 +266,14 @@
 					background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
 					opacity: 0.3;
 					filter: blur(112px);
+					@media screen and (max-width: 992px) {
+						left: 175px;
+						top: 35px;
+					}
 					@media screen and (max-width: 768px) {
 						left: -130px;
 						top: 20px;
+						opacity: 0.25;
 					}
 					@media screen and (max-width: 560px) {
 						display: none;

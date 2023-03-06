@@ -1,19 +1,17 @@
-import React, { useContext, useEffect, useRef } from 'react'
+import React, { useContext, useEffect } from 'react'
 import styles from '../../components/About/About.module.scss'
 import iconCard from '../../assets/svg/card.svg'
 import icon from '../../assets/svg/people.svg'
 import iconDollar from '../../assets/svg/dollar-circle.svg'
 import CountUp from 'react-countup'
 import { useInView } from 'react-intersection-observer'
-import { useTranslation } from 'react-i18next'
 import { Context } from '../..'
 
 const About = () => {
-	const { t } = useTranslation()
 	const { store } = useContext(Context)
 	const [ref, inView] = useInView({ threshold: 0.5 })
 
-	function test() {
+	function check() {
 		const scrollPosition = window.scrollY
 		const section1 = document.getElementById('sectionEN1')
 		const section2 = document.getElementById('sectionEN2')
@@ -26,9 +24,9 @@ const About = () => {
 	}
 
 	useEffect(() => {
-		window.addEventListener('scroll', test)
-		return () => window.removeEventListener('scroll', test)
-	}, [])
+		window.addEventListener('scroll', check)
+		return () => window.removeEventListener('scroll', check)
+	})
 
 	return (
 		<>
@@ -48,25 +46,29 @@ const About = () => {
 					<div className={styles.about__numbers}>
 						<div className={styles.numbers__one} ref={ref}>
 							<img src={iconCard} alt='icon card' />
-							{inView && (
+							{inView ? (
 								<CountUp
 									className={styles.about__title}
 									delay={0}
 									end={700000}
 									duration={1.5}
 								/>
+							) : (
+								<span className={styles.about__title}>0</span>
 							)}
 							<p className={styles.about__subTitle}>Virtual cards issued</p>
 						</div>
 						<div ref={ref} className={styles.numbers__two}>
 							<img src={icon} alt='icon' />
-							{inView && (
+							{inView ? (
 								<CountUp
 									className={styles.about__title}
 									delay={1}
 									end={5000}
 									duration={1.5}
 								/>
+							) : (
+								<span className={styles.about__title}>0</span>
 							)}
 							<p className={styles.about__subTitle}>
 								Buyrs and affiliate teams
@@ -75,16 +77,18 @@ const About = () => {
 						<div ref={ref} className={styles.numbers__three}>
 							<img src={iconDollar} alt='icon dollar' />
 							<h3 className={styles.about__title}>
-								Over&nbsp; $
-								{inView && (
+								Over&nbsp;$
+								{inView ? (
 									<CountUp
 										className={styles.about__title}
 										delay={2}
 										end={500}
 										duration={1.5}
 									/>
+								) : (
+									<span className={styles.about__title}>0</span>
 								)}
-								&nbsp; million
+								&nbsp;million
 							</h3>
 							<p className={styles.about__subTitleThree}>
 								turnover of advertising expenses through the service

@@ -1,5 +1,4 @@
 import React from 'react'
-import { useInView } from 'react-intersection-observer'
 import './Circle.css'
 
 const Circle = ({ inView }) => {

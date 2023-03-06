@@ -244,7 +244,7 @@
 	}
 	&__bg {
 		position: relative;
-		z-index: 6;
+		z-index: 1;
 		width: 515px;
 		height: auto;
 		@media screen and (max-width: 992px) {
@@ -271,18 +271,39 @@
 
 		.blockBlur {
 			position: absolute;
+			z-index: 1;
 			top: 200px;
-			left: -200px;
+			left: -160px;
 			width: 480px;
 			height: 480px;
-			opacity: 0.1;
+			opacity: 0.2;
 			filter: blur(50px);
 			@media screen and (max-width: 1280px) {
 				left: -80px;
 			}
-			@media screen and (max-width: 768px) {
-				opacity: 0.2;
+			@media screen and (max-width: 992px) {
 				top: 40px;
+			}
+			@media screen and (max-width: 768px) {
+				top: 250px;
+				left: -140px;
+			}
+			@media screen and (max-width: 575px) {
+				opacity: 0.15;
+				top: 160px;
+				left: -290px;
+			}
+			@media screen and (max-width: 560px) {
+				opacity: 0.2;
+				top: 65px;
+				width: 250px;
+				height: 250px;
+			}
+			img {
+				@media screen and (max-width: 560px) {
+					width: 250px;
+					height: 250px;
+				}
 			}
 		}
 
@@ -291,7 +312,7 @@
 			width: 480px;
 			height: 480px;
 			top: -60px;
-			right: -400px;
+			right: -350px;
 			opacity: 0.2;
 			filter: blur(50px);
 			@media screen and (max-width: 768px) {
