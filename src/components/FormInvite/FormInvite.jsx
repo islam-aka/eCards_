@@ -1,7 +1,5 @@
 import InputText from '../../UI/Text/InputText'
 import InputEmail from '../../UI/Email/InputEmail'
-import InputTel from '../../UI/Tel/InputTel'
-import InputNumber from '../../UI/InputNumber'
 import React, { useEffect, useState } from 'react'
 import imgCardOne from '../../assets/img/cardOne.png'
 import imgCardTwo from '../../assets/img/cardTwo.png'
@@ -79,13 +77,6 @@ const FormInvite = () => {
 			<div className={styles.invite}>
 				{!done ? (
 					<form className={styles.form}>
-						<InputText
-							type={'text'}
-							invite={invite}
-							fun={handleChange}
-							labels={'Имя*'}
-							name={'name'}
-						/>
 						<InputEmail
 							type={'email'}
 							invite={invite}
@@ -95,14 +86,23 @@ const FormInvite = () => {
 							setBool={setBool}
 							name={'email'}
 						/>
-						<InputTel
+						<InputText
 							type={'text'}
 							invite={invite}
 							fun={handleChange}
-							labels={'Телеграм*'}
-							name={'telegram'}
-							elem={'@'}
+							labels={'Имя*'}
+							name={'name'}
 						/>
+						<div className={styles.labs}>
+							<span className={styles.lab}>@</span>
+							<InputText
+								type={'text'}
+								invite={invite}
+								fun={handleChange}
+								labels={'Телеграм*'}
+								name={'telegram'}
+							/>
+						</div>
 
 						<InputText
 							type={'text'}
@@ -112,14 +112,16 @@ const FormInvite = () => {
 							name={'vertical'}
 						/>
 
-						<InputNumber
-							type={'number'}
-							invite={invite}
-							fun={handleChange}
-							labels={'Примерный оборот в месяц на рекламу, $*'}
-							name={'turnover'}
-							elem={'$'}
-						/>
+						<div className={styles.labs}>
+							<span className={styles.lab}>$</span>
+							<InputText
+								type={'number'}
+								invite={invite}
+								fun={handleChange}
+								labels={'Примерный оборот в месяц на рекламу, $*'}
+								name={'turnover'}
+							/>
+						</div>
 						<Role value={invite} setValue={setInvite} />
 						<div
 							onClick={handleSubmit}

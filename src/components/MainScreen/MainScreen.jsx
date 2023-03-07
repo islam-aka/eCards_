@@ -66,6 +66,12 @@ const MainScreen = () => {
 						</div>
 					</div>
 					<LogoSocial />
+					<div className={styles.blockBlur}>
+						<img src='https://i.ibb.co/5Gc5yj9/main-Blur-One.png' alt='blur' />
+					</div>
+					<div className={styles.blockBlur__two}>
+						<img src='https://i.ibb.co/G2q0JbW/main-Blur-Two.png' alt='blur' />
+					</div>
 				</div>
 			</div>
 
@@ -78,7 +84,7 @@ const MainScreen = () => {
 				</div>
 				<img
 					className={styles.bg}
-					src='https://i.ibb.co/gtRrZJ7/RU.png'
+					src='https://i.ibb.co/Gnby1dJ/image.png'
 					alt='main screen'
 				/>
 			</div>

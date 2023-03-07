@@ -1,7 +1,5 @@
 import InputText from '../../UI/Text/InputText'
 import InputEmail from '../../UI/Email/InputEmail'
-import InputTel from '../../UI/Tel/InputTel'
-import InputNumber from '../../UI/InputNumber'
 import React, { useEffect, useState } from 'react'
 import imgCardOne from '../../assets/img/cardOne.png'
 import imgCardTwo from '../../assets/img/cardTwo.png'
@@ -81,13 +79,6 @@ const FormInvite = () => {
 			<div className={styles.invite}>
 				{!done ? (
 					<form className={styles.form}>
-						<InputText
-							type={'text'}
-							invite={invite}
-							fun={handleChange}
-							labels={'First name*'}
-							name={'name'}
-						/>
 						<InputEmail
 							type={'email'}
 							invite={invite}
@@ -97,31 +88,42 @@ const FormInvite = () => {
 							bool={bool}
 							setBool={setBool}
 						/>
-						<InputTel
+						<InputText
 							type={'text'}
 							invite={invite}
 							fun={handleChange}
-							labels={'Telegram*'}
-							name={'telegram'}
-							elem={'@'}
+							labels={'First name*'}
+							name={'name'}
 						/>
+						<div className={styles.labs}>
+							<span className={styles.lab}>@</span>
+							<InputText
+								type={'text'}
+								invite={invite}
+								fun={handleChange}
+								labels={'Telegram*'}
+								name={'telegram'}
+							/>
+						</div>
 
 						<InputText
 							type={'text'}
 							invite={invite}
 							fun={handleChange}
-							labels={'What vertical do you work in?*'}
+							labels={'Specify your field*'}
 							name={'vertical'}
 						/>
+						<div className={styles.labs}>
+							<span className={styles.lab}>$</span>
+							<InputText
+								type={'number'}
+								invite={invite}
+								fun={handleChange}
+								labels={'Monthly advertising turnover, $*'}
+								name={'turnover'}
+							/>
+						</div>
 
-						<InputNumber
-							type={'number'}
-							invite={invite}
-							fun={handleChange}
-							labels={'Monthly advertising turnover, $*'}
-							name={'turnover'}
-							elem={'$'}
-						/>
 						<Role value={invite} setValue={setInvite} />
 						<div
 							onClick={handleSubmit}
@@ -157,7 +159,7 @@ const FormInvite = () => {
 							<p>Our support team will get back to you soon!</p>
 						</div>
 						<Link to={'/en'}>
-							<div className={styles.check__btn}>
+							<div className={styles.check__btnEN}>
 								<img src={iconRight} alt='' />
 								<p>Back to the home page</p>
 							</div>

@@ -72,7 +72,6 @@ const LogoSocial = () => {
 							fill={!hover.google ? '#9D9D9D' : '#EA4335'}
 						/>
 					</svg>
-
 					<svg
 						width='80'
 						height='80'
@@ -99,7 +98,6 @@ const LogoSocial = () => {
 							fill={!hover.tikTok ? '#CECECE' : '#33F3ED'}
 						/>
 					</svg>
-
 					<svg
 						width='80'
 						height='80'
@@ -126,7 +124,6 @@ const LogoSocial = () => {
 							fill={!hover.paypal ? '#767676' : '#253B80'}
 						/>
 					</svg>
-
 					<svg
 						width='80'
 						height='80'
@@ -141,7 +138,6 @@ const LogoSocial = () => {
 							fill={!hover.up ? '#9D9D9D' : '#6FDA44'}
 						/>
 					</svg>
-
 					<svg
 						width='80'
 						height='80'

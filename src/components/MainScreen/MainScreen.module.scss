@@ -94,6 +94,7 @@
 			@media screen and (max-width: 560px) {
 				flex-direction: column;
 				align-items: start;
+				margin-top: 40px;
 			}
 			.btn__invite {
 				width: auto;
@@ -152,7 +153,9 @@
 				backdrop-filter: blur(18px);
 				border-radius: 22px;
 				color: $primary-main;
+
 				@media screen and (max-width: 560px) {
+					background: transparent;
 					border: none;
 					padding: 0;
 				}
@@ -240,15 +243,65 @@
 					}
 				}
 			}
+			.blockBlur {
+				position: absolute;
+				z-index: 1;
+				top: 200px;
+				left: -160px;
+				width: 480px;
+				height: 480px;
+				opacity: 0.1;
+				filter: blur(50px);
+				display: none;
+
+				@media screen and (max-width: 560px) {
+					width: 250px;
+					height: 250px;
+					display: block;
+					top: 90px;
+					left: 185px;
+				}
+				img {
+					@media screen and (max-width: 560px) {
+						width: 250px;
+						height: 250px;
+					}
+				}
+			}
+			.blockBlur__two {
+				position: absolute;
+				width: 480px;
+				height: 480px;
+				opacity: 0.1;
+				filter: blur(50px);
+				display: none;
+				@media screen and (max-width: 560px) {
+					width: 250px;
+					height: 250px;
+					display: block;
+					top: -35px;
+					left: -80px;
+				}
+				img {
+					@media screen and (max-width: 560px) {
+						width: 250px;
+						height: 250px;
+					}
+				}
+			}
 		}
 	}
 	&__bg {
 		position: relative;
+
 		z-index: 1;
 		width: 515px;
 		height: auto;
 		@media screen and (max-width: 992px) {
 			left: -80px;
+		}
+		@media screen and (max-width: 560px) {
+			display: none;
 		}
 		.bg {
 			position: relative;
@@ -268,7 +321,6 @@
 			width: 320px;
 			left: 10px;
 		}
-
 		.blockBlur {
 			position: absolute;
 			z-index: 1;
@@ -298,6 +350,7 @@
 				top: 65px;
 				width: 250px;
 				height: 250px;
+				display: none;
 			}
 			img {
 				@media screen and (max-width: 560px) {

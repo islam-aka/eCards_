@@ -59,9 +59,19 @@
 			padding: 40px 0 60px 40px;
 			gap: 34px;
 		}
+		@media screen and (max-width: 992px) {
+			height: 610px;
+		}
 		@media screen and (max-width: 768px) {
 			padding: 60px;
 			justify-content: center;
+		}
+		@media screen and (max-width: 575px) {
+			height: 650px;
+		}
+		@media screen and (max-width: 560px) {
+			height: auto;
+			overflow: visible;
 		}
 		@media screen and (max-width: 450px) {
 			padding: 0;
@@ -125,6 +135,9 @@
 					left: 130px;
 					bottom: 36px;
 				}
+				@media screen and (max-width: 992px) {
+					bottom: 12px;
+				}
 			}
 			.blockBlur {
 				position: absolute;
@@ -146,6 +159,22 @@
 				align-items: center;
 				padding: 5px 0;
 			}
+			input {
+				font-size: 14px;
+			}
+			.labs {
+				position: relative;
+				.lab {
+					position: absolute;
+					z-index: 2;
+					top: 15px;
+					left: 14px;
+				}
+				input {
+					padding-left: 32px;
+				}
+			}
+
 			.btn__noActive {
 				display: flex;
 				justify-content: center;
@@ -238,9 +267,27 @@
 				margin: 0 auto;
 				display: flex;
 				gap: 4px;
-
 				padding: 10px 20px;
 				width: 251px;
+				height: 40px;
+				background: $primary-main;
+				border-radius: 22px;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 120%;
+				letter-spacing: 0.003em;
+				color: $white;
+
+				img {
+					transform: rotate(180deg);
+				}
+			}
+			.check__btnEN {
+				margin: 0 auto;
+				display: flex;
+				gap: 4px;
+				padding: 10px 20px;
+				width: 253px;
 				height: 40px;
 				background: $primary-main;
 				border-radius: 22px;

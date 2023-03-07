@@ -5,23 +5,29 @@
 	justify-content: space-between;
 	width: 100%;
 	overflow: auto;
+	gap: 20px;
 	&::-webkit-scrollbar {
-		height: 0;
-		width: 0;
+		display: none;
+	}
+	@media screen and (max-width: 992px) {
+		gap: 10px;
 	}
 	@media screen and (max-width: 575px) {
-		gap: 7px;
+		gap: 15px;
 		margin-top: 0;
 	}
 	@media screen and (max-width: 560px) {
-		overflow: auto;
+		overflow-y: scroll;
+		gap: 20px;
 	}
-	&::-webkit-scrollbar {
-		width: 0;
-		height: 0;
-	}
+
 	svg {
 		min-width: 80px;
+		@media screen and (max-width: 560px) {
+			min-width: 70px;
+			width: 70px;
+			height: 70px;
+		}
 	}
 	path {
 		transition: all 0.5s ease-in-out;

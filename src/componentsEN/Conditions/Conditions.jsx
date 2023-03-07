@@ -79,8 +79,9 @@ const Conditions = () => {
 			</div>
 			<div className={styles.conditions__bottom}>
 				<span>
-					For big affiliate teams with a turnover of more than $100,000 per
-					month, it is possible to provide individual conditions
+					For big affiliate teams with a turnover of more than &nbsp;
+					<span>$100,000</span> per month, it is possible to provide individual
+					conditions
 				</span>
 				<div className={styles.btn__inviteEN}>
 					<Link to={'/inviteEN'}>

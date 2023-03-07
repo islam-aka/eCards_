@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef } from 'react'
-import styles from './Opportunities.module.scss'
+import styles from '../../components/Opportunities/Opportunities.module.scss'
 import Score from './Score/Score'
 import Cards from './Cards/Cards'
 import Distribution from './Distribution/Distribution'

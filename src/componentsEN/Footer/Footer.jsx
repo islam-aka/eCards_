@@ -28,7 +28,7 @@ const Footer = () => {
 		<div className={styles.container}>
 			<div className={styles.footer}>
 				<div className={styles.footer__left}>
-					<Link to={'/'} onClick={scrollToTop} className={styles.logo}>
+					<Link to={'/en'} onClick={scrollToTop} className={styles.logo}>
 						<img src={logo} alt='logo' />
 					</Link>
 					<nav className={styles.footer__nav}>

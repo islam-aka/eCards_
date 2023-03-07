@@ -26,7 +26,7 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		@media screen and (max-width: 450px) {
-			width: 284px;
+			width: auto;
 		}
 	}
 	div {
@@ -80,7 +80,7 @@
 	width: 100% !important;
 	margin: 0 !important;
 	@media screen and (max-width: 450px) {
-		width: 284px;
+		width: auto;
 	}
 	label {
 		width: 78px;

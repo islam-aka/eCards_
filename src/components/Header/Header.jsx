@@ -269,7 +269,7 @@ const Header = observer(() => {
 							<li>
 								<a
 									href='/'
-									onClick={event => handleNavClick(1, event)}
+									onClick={event => handleNavClick(5, event)}
 									className={
 										activeButton === 5 ? styles.active : styles.noActive
 									}

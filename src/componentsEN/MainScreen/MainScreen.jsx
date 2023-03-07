@@ -61,7 +61,14 @@ const MainScreen = () => {
 							<p>Other services can be added on individual request </p>
 						</div>
 					</div>
+
 					<LogoSocial />
+					<div className={styles.blockBlur}>
+						<img src='https://i.ibb.co/5Gc5yj9/main-Blur-One.png' alt='blur' />
+					</div>
+					<div className={styles.blockBlur__two}>
+						<img src='https://i.ibb.co/G2q0JbW/main-Blur-Two.png' alt='blur' />
+					</div>
 				</div>
 			</div>
 
@@ -75,7 +82,7 @@ const MainScreen = () => {
 
 				<img
 					className={styles.bg}
-					src='https://i.ibb.co/JB27td9/EN.png'
+					src='https://i.ibb.co/5khnpMK/EN.png'
 					alt='main screen'
 				/>
 			</div>

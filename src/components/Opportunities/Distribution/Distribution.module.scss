@@ -256,8 +256,9 @@
 								border: 1.05926px solid rgba(255, 255, 255, 0.7);
 								border-radius: 50%;
 								@media screen and (max-width: 575px) {
-									width: 19px;
-									height: 19px;
+									padding-top: 1px;
+									width: 25px;
+									height: 25px;
 								}
 							}
 							.block__item_number {

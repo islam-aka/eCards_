@@ -49,8 +49,8 @@ const About = () => {
 							{inView ? (
 								<CountUp
 									className={styles.about__title}
-									delay={0}
-									end={700000}
+									delay={0.25}
+									end={843722}
 									duration={1.5}
 								/>
 							) : (
@@ -63,15 +63,15 @@ const About = () => {
 							{inView ? (
 								<CountUp
 									className={styles.about__title}
-									delay={1}
-									end={5000}
+									delay={0.6}
+									end={5776}
 									duration={1.5}
 								/>
 							) : (
 								<span className={styles.about__title}>0</span>
 							)}
 							<p className={styles.about__subTitle}>
-								Buyrs and affiliate teams
+								Buyrs and <br /> affiliate teams
 							</p>
 						</div>
 						<div ref={ref} className={styles.numbers__three}>
@@ -81,17 +81,17 @@ const About = () => {
 								{inView ? (
 									<CountUp
 										className={styles.about__title}
-										delay={2}
+										delay={1}
 										end={500}
 										duration={1.5}
 									/>
 								) : (
 									<span className={styles.about__title}>0</span>
 								)}
-								&nbsp;million
+								&nbsp;millions
 							</h3>
 							<p className={styles.about__subTitleThree}>
-								turnover of advertising expenses through the service
+								Turnover of advertising expenses through the service
 							</p>
 						</div>
 					</div>

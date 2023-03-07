@@ -44,7 +44,6 @@ const ScoreBalance = () => {
 								/>
 							</div>
 						)}
-						{/* <p className={styles.about__subTitle}>Весь оборот в USDT</p> */}
 						<p className={styles.about__subTitle}>Total turnover USDT</p>
 					</div>
 				</div>

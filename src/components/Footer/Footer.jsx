@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import styles from './Footer.module.scss'
 import logo from '../../assets/svg/LogoFooter.svg'
 import icons from '../../assets/img/bgFooter.png'
 import icon from '../../assets/svg/icon.svg'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { Context } from '../..'
 
 const Footer = () => {
+	const { store } = useContext(Context)
+	const navigate = useNavigate()
+	const [menu, setMenu] = useState(false)
+
+	const handleNavClick = async (index, event) => {
+		await setMenu(false)
+		await event.preventDefault()
+		await store.setLink(index)
+		await navigate('/')
+		const element = document.getElementById(`section-${index}`)
+		await element.scrollIntoView({ behavior: 'smooth' })
+	}
+
 	const scrollToTop = () => {
 		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}
@@ -19,19 +33,29 @@ const Footer = () => {
 					<nav className={styles.footer__nav}>
 						<ul>
 							<li>
-								<Link to={'/eСards'}>О eСards</Link>
+								<a href={'/'} onClick={event => handleNavClick(1, event)}>
+									О eСards
+								</a>
 							</li>
 							<li>
-								<Link to={'/opportunities'}>Возможности</Link>
+								<a href={'/'} onClick={event => handleNavClick(2, event)}>
+									Возможности
+								</a>
 							</li>
 							<li>
-								<Link to={'/conditions'}>Условия</Link>
+								<a href={'/'} onClick={event => handleNavClick(3, event)}>
+									Условия
+								</a>
 							</li>
 							<li>
-								<Link to={'/partners'}>Партнеры</Link>
+								<a href={'/'} onClick={event => handleNavClick(4, event)}>
+									Партнеры
+								</a>
 							</li>
 							<li>
-								<Link to={'/contact'}>Контакты</Link>
+								<a href={'/'} onClick={event => handleNavClick(5, event)}>
+									Контакты
+								</a>
 							</li>
 						</ul>
 					</nav>

@@ -45,7 +45,7 @@ const Distribution = () => {
 
 								<div className={styles.block__user}>
 									<div className={styles.block__item_one}>
-										<p>Л</p>
+										<p>V</p>
 									</div>
 									<div className={styles.block__item}>
 										<MdPersonOutline color='#ACB9FF' />

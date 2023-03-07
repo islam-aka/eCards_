@@ -49,8 +49,8 @@ const About = () => {
 							{inView ? (
 								<CountUp
 									className={styles.about__title}
-									delay={0}
-									end={700000}
+									delay={0.25}
+									end={843722}
 									duration={1.5}
 								/>
 							) : (
@@ -65,8 +65,8 @@ const About = () => {
 							{inView ? (
 								<CountUp
 									className={styles.about__title}
-									delay={0.5}
-									end={5000}
+									delay={0.6}
+									end={5776}
 									duration={1.5}
 								/>
 							) : (
