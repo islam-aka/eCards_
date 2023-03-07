@@ -71,7 +71,7 @@ const About = () => {
 								<span className={styles.about__title}>0</span>
 							)}
 							<p className={styles.about__subTitle}>
-								Buyrs and <br /> affiliate teams
+								Buyers and <br /> affiliate teams
 							</p>
 						</div>
 						<div className={styles.numbers__three}>

@@ -65,10 +65,12 @@ const Header = observer(() => {
 		}
 	}
 
-	const scrollToTop = () => {
+	const scrollToTop = str => {
 		window.scrollTo({ top: 0, behavior: 'smooth' })
+		if (str === 'menu') {
+			setMenu(!menu)
+		}
 	}
-
 	const onMouseEnter = () => {
 		setHover(true)
 	}
@@ -193,9 +195,13 @@ const Header = observer(() => {
 			</div>
 			<div className={menu ? styles.menu : styles.menu__none}>
 				<div className={styles.menuTop}>
-					<a href='#' className={styles.logo}>
+					<Link
+						to={'/'}
+						onClick={() => scrollToTop('menu')}
+						className={styles.logo}
+					>
 						<img src={LogoFooter} alt='logo' />
-					</a>
+					</Link>
 					<div
 						onClick={() => setMenu(!menu)}
 						className={styles.burger__wrapper}

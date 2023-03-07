@@ -11,7 +11,7 @@ import check from '../../assets/svg/check.svg'
 import { Link } from 'react-router-dom'
 
 const FormInvite = () => {
-	const [done, setDone] = useState(true)
+	const [done, setDone] = useState(false)
 	const [bool, setBool] = useState(false)
 	const [invite, setInvite] = useState({
 		name: '',
@@ -21,6 +21,10 @@ const FormInvite = () => {
 		role: '',
 		turnover: '',
 	})
+
+	const scrollToTop = () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' })
+	}
 
 	const handleSubmit = () => {
 		if (
@@ -158,7 +162,7 @@ const FormInvite = () => {
 							<p>The application has been sent</p>
 							<p>Our support team will get back to you soon!</p>
 						</div>
-						<Link to={'/en'}>
+						<Link to={'/en'} onClick={scrollToTop}>
 							<div className={styles.check__btnEN}>
 								<img src={iconRight} alt='' />
 								<p>Back to the home page</p>

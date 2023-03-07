@@ -33,8 +33,8 @@ const Conditions = () => {
 			<div className={styles.conditions__top}>
 				<p className={styles.top__subTitle}>Выгодные условия работы сервиса</p>
 				<p className={styles.top__title}>
-					Платите только за пополнение счета eCards. <span> У нас</span> нет
-					скрытых комиссий
+					Платите только за пополнение счета eCards. <br /> <span> У нас</span>{' '}
+					нет скрытых комиссий
 				</p>
 			</div>
 			<div className={styles.conditions__middle}>
@@ -80,8 +80,8 @@ const Conditions = () => {
 			</div>
 			<div className={styles.conditions__bottom}>
 				<span>
-					Для крупных арбитражных команд с оборотом более <span>100 000$</span>
-					&nbsp;в месяц возможно предоставление индивидуальных условий
+					Для крупных арбитражных команд с оборотом более <br />
+					100 000$ в месяц возможно предоставление индивидуальных условий
 				</span>
 				<div className={styles.btn__invite}>
 					<Link to={'/invite'}>

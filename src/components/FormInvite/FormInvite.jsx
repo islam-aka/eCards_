@@ -11,7 +11,7 @@ import check from '../../assets/svg/check.svg'
 import { Link } from 'react-router-dom'
 
 const FormInvite = () => {
-	const [done, setDone] = useState(true)
+	const [done, setDone] = useState(false)
 	const [bool, setBool] = useState(false)
 	const [invite, setInvite] = useState({
 		name: '',
@@ -21,7 +21,9 @@ const FormInvite = () => {
 		role: '',
 		turnover: '',
 	})
-
+	const scrollToTop = () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' })
+	}
 	const handleSubmit = () => {
 		if (
 			invite.name !== '' &&
@@ -156,7 +158,7 @@ const FormInvite = () => {
 							<p>Заявка отправлена</p>
 							<p>Наша служба поддержки скоро свяжется с вами!</p>
 						</div>
-						<Link to={'/'}>
+						<Link to={'/'} onClick={scrollToTop}>
 							<div className={styles.check__btn}>
 								<img src={iconRight} alt='' />
 								<p>Вернуться на главную</p>

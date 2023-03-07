@@ -46,6 +46,12 @@
 				font-size: 23px;
 				line-height: 120%;
 			}
+			br {
+				display: none;
+				@media screen and (max-width: 580px) {
+					display: block;
+				}
+			}
 		}
 	}
 	.conditions__middle {
@@ -58,6 +64,7 @@
 			border: 1px solid #ffffff;
 			box-shadow: 20px 34px 59px 7px rgba(0, 25, 225, 0.05);
 			border-radius: 10px;
+			margin: 20px 0;
 		}
 		.middle {
 			display: flex;
@@ -181,6 +188,12 @@
 			color: $color-text;
 			@media screen and (max-width: 992px) {
 				max-width: 606px;
+			}
+			br {
+				display: none;
+				@media screen and (max-width: 368px) {
+					display: block;
+				}
 			}
 		}
 
