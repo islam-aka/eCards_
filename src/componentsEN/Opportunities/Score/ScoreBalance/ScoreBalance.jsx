@@ -8,11 +8,9 @@ import { BsPlusLg } from 'react-icons/bs'
 import Circle from '../../../Circle/Circle'
 import CountUp from 'react-countup'
 import { useInView } from 'react-intersection-observer'
-import { useTranslation } from 'react-i18next'
 
 const ScoreBalance = () => {
 	const [refAni, inViewAni] = useInView({ threshold: 0 })
-	const { t } = useTranslation()
 	return (
 		<>
 			<div className={styles.scoreBalance}>

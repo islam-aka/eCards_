@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react'
 import styles from './Role.module.scss'
 import icon from '../../assets/svg/RightIcon.svg'
-import { useTranslation } from 'react-i18next'
 import '../../i18next'
 
 const Role = ({ value, setValue }) => {
-	const { i18n } = useTranslation()
 	const [active, setActive] = useState(true)
 
 	const dropDownActive = () => {

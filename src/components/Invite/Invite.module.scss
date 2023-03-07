@@ -46,10 +46,9 @@
 		@media screen and (max-width: 920px) {
 			overflow: auto;
 			padding-bottom: 30px;
-		}
-		&::-webkit-scrollbar {
-			width: 0;
-			height: 0;
+			&::-webkit-scrollbar {
+				display: none;
+			}
 		}
 
 		.info__item {

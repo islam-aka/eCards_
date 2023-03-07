@@ -268,9 +268,10 @@
 				margin: 0 auto;
 				display: flex;
 				justify-content: center;
-				gap: 4px;
-				padding: 10px 20px;
-				width: 260px;
+				justify-content: center;
+				align-items: flex-end;
+				padding: 12px 20px 10px 15px;
+				width: 275px;
 				height: 40px;
 				background: $primary-main;
 				border-radius: 22px;
@@ -281,15 +282,16 @@
 				color: $white;
 
 				img {
-					transform: rotate(180deg);
+					transform: rotate(180deg) translateY(0.5px);
 				}
 			}
 			.check__btnEN {
 				margin: 0 auto;
 				display: flex;
-				gap: 4px;
-				padding: 10px 20px;
-				width: 253px;
+				justify-content: center;
+				align-items: flex-end;
+				padding: 12px 20px 10px 15px;
+				width: 275px;
 				height: 40px;
 				background: $primary-main;
 				border-radius: 22px;
@@ -300,7 +302,7 @@
 				color: $white;
 
 				img {
-					transform: rotate(180deg);
+					transform: rotate(180deg) translateY(0.5px);
 				}
 			}
 		}
