@@ -96,7 +96,7 @@ const Distribution = () => {
 								<MdPersonOutline color='#ACB9FF' />
 							</div>
 							<div className={styles.block__item}>
-								<p>Л</p>
+								<p>V</p>
 							</div>
 							<div className={styles.block__item}>
 								<MdPersonOutline color='#ACB9FF' />

@@ -41,6 +41,7 @@ const Opportunities = () => {
 			</div>
 
 			<div className={styles.opportunities}>
+				<div className={styles.blockBlur}></div>
 				<Score />
 				<Cards />
 				<div className={styles.blockBlur__opportunities}></div>

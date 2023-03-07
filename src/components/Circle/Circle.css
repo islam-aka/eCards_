@@ -2,10 +2,19 @@
 	width: 152px;
 	height: 152px;
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 768px) {
 	.svg {
 		width: 120px;
 		height: 120px;
+	}
+	.eboqmdWA_0,
+	.eboqmdWA_1,
+	.eboqmdWA_2,
+	.eboqmdWA_3,
+	.eboqmdWA_4,
+	.eboqmdWA_5,
+	.eboqmdWA_6 {
+		animation: none;
 	}
 }
 .eboqmdWA_0 {

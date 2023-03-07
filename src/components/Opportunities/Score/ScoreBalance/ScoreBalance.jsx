@@ -44,7 +44,9 @@ const ScoreBalance = () => {
 								/>
 							</div>
 						)}
-						<p className={styles.about__subTitle}>Весь оборот в USDT</p>
+						<p className={styles.about__subTitle}>
+							Весь оборот <br />в USDT
+						</p>
 					</div>
 				</div>
 
@@ -101,7 +103,6 @@ const ScoreBalance = () => {
 					</div>
 				</div>
 			</div>
-			<div className={styles.blockBlur}></div>
 		</>
 	)
 }

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import logo from '../../assets/svg/Logo.svg'
 import LogoFooter from '../../assets/svg/LogoFooter.svg'
-import iconSupport from '../../assets/img/iconSupport.png'
+import iconSupport from '../../assets/svg/iconSupport.svg'
 import iconRightLogIn from '../../assets/svg/rightLogIn.svg'
 import styles from './Header.module.scss'
 import DropDown from '../DropDown/DropDown'

@@ -58,7 +58,7 @@ const About = () => {
 							)}
 							<p className={styles.about__subTitle}>Virtual cards issued</p>
 						</div>
-						<div ref={ref} className={styles.numbers__two}>
+						<div className={styles.numbers__two}>
 							<img src={icon} alt='icon' />
 							{inView ? (
 								<CountUp
@@ -74,7 +74,7 @@ const About = () => {
 								Buyrs and <br /> affiliate teams
 							</p>
 						</div>
-						<div ref={ref} className={styles.numbers__three}>
+						<div className={styles.numbers__three}>
 							<img src={iconDollar} alt='icon dollar' />
 							<h3 className={styles.about__title}>
 								Over&nbsp;$

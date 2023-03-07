@@ -315,8 +315,11 @@
 					border: 1px solid #748bff;
 					border-radius: 30px;
 					padding: 2px 0px 3px 3px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
 					img {
-						margin-left: -1px;
+						margin-left: -6px;
 					}
 				}
 			}
@@ -501,6 +504,9 @@
 					border: 1px solid #748bff;
 					border-radius: 30px;
 					padding: 2px 0px 3px 3px;
+					img {
+						margin-left: -6px;
+					}
 				}
 			}
 			.btn {

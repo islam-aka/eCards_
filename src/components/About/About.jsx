@@ -60,7 +60,7 @@ const About = () => {
 								Выпущенных виртуальных карт
 							</p>
 						</div>
-						<div ref={ref} className={styles.numbers__two}>
+						<div className={styles.numbers__two}>
 							<img src={icon} alt='icon' />
 							{inView ? (
 								<CountUp
@@ -76,7 +76,7 @@ const About = () => {
 								Баеров и <br /> арбитражных команд
 							</p>
 						</div>
-						<div ref={ref} className={styles.numbers__three}>
+						<div className={styles.numbers__three}>
 							<img src={iconDollar} alt='icon dollar' />
 							<h3 className={styles.about__title}>
 								Более&nbsp;

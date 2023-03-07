@@ -19,7 +19,7 @@ const ScoreBalance = () => {
 				<div ref={refAni} className={styles.ani}>
 					<Circle inView={inViewAni} className={styles.ani} />
 					<div className={styles.statistics}>
-						<TbCurrencyDollar color='#1E1E1E' />
+						<BiEuro color='#1E1E1E' />
 						{inViewAni && (
 							<div>
 								<CountUp
@@ -44,7 +44,7 @@ const ScoreBalance = () => {
 								/>
 							</div>
 						)}
-						<p className={styles.about__subTitle}>Total turnover USDT</p>
+						<p className={styles.about__subTitle}>Total turnover EUR</p>
 					</div>
 				</div>
 
@@ -101,7 +101,6 @@ const ScoreBalance = () => {
 					</div>
 				</div>
 			</div>
-			<div className={styles.blockBlur}></div>
 		</>
 	)
 }
