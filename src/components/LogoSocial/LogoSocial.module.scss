@@ -6,9 +6,6 @@
 	width: 100%;
 	overflow: auto;
 	gap: 20px;
-	&::-webkit-scrollbar {
-		display: none;
-	}
 	@media screen and (max-width: 992px) {
 		gap: 10px;
 	}
@@ -19,9 +16,16 @@
 	@media screen and (max-width: 560px) {
 		overflow-y: scroll;
 		gap: 20px;
+		width: 0;
+		height: 0;
 		&::-webkit-scrollbar {
 			display: none;
 		}
+	}
+	&::-webkit-scrollbar {
+		display: none;
+		width: 0;
+		height: 0;
 	}
 
 	svg {
