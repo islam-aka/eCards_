@@ -3,9 +3,8 @@ import styles from '../../../components/Opportunities/Notification/Notification.
 import iconNotification from '../../../assets/svg/notification.svg'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { useTranslation } from 'react-i18next'
+
 const Notification = () => {
-	const { t } = useTranslation()
 	useEffect(() => {
 		AOS.init()
 		AOS.refresh()
@@ -19,7 +18,7 @@ const Notification = () => {
 				</div>
 				<div className={styles.notification__block}>
 					<p>Notification setup</p>
-					<h2>Notification setup</h2>
+					<h2>Notification system</h2>
 					<p>
 						In your personal account you can set up to receive all the necessary
 						notifications in Telegram: receiving 3D Secure code, reducing the

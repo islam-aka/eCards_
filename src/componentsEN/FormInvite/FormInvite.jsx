@@ -100,7 +100,7 @@ const FormInvite = () => {
 							name={'name'}
 						/>
 						<div className={styles.labs}>
-							<span className={styles.lab}>@</span>
+							<span>@</span>
 							<InputText
 								type={'text'}
 								invite={invite}
@@ -117,8 +117,8 @@ const FormInvite = () => {
 							labels={'Specify your field*'}
 							name={'vertical'}
 						/>
-						<div className={styles.labs}>
-							<span className={styles.lab}>$</span>
+						<div className={styles.lab}>
+							<span>$</span>
 							<InputText
 								type={'number'}
 								invite={invite}

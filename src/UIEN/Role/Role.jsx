@@ -31,13 +31,13 @@ const Role = ({ value, setValue }) => {
 								: styles.selectUndefined
 						}
 					>
-						Select the role*
+						Specify your position*
 					</span>
 				) : (
 					<span
 						className={value.role === '' ? styles.select__none : styles.select}
 					>
-						Select the role*
+						Specify your position*
 					</span>
 				)}
 
@@ -50,22 +50,22 @@ const Role = ({ value, setValue }) => {
 			</div>
 			<div className={styles.dropdown__list}>
 				<div
-					onClick={() => handlerChange('ПП')}
+					onClick={() => handlerChange('Affiliate Program')}
 					className={styles.dropdown__list__item}
 				>
-					<p>ПП</p>
+					<p>Affiliate Program</p>
 				</div>
 				<div
-					onClick={() => handlerChange('Арбитражная команда')}
+					onClick={() => handlerChange('Affiliate Team')}
 					className={styles.dropdown__list__item}
 				>
-					<p>Арбитражная команда</p>
+					<p>Affiliate Team</p>
 				</div>
 				<div
-					onClick={() => handlerChange('Соло-арбитражник')}
+					onClick={() => handlerChange('Individual Affiliate')}
 					className={styles.dropdown__list__item}
 				>
-					<p>Соло-арбитражник</p>
+					<p>Individual Affiliate</p>
 				</div>
 			</div>
 		</div>

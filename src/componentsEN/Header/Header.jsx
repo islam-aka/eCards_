@@ -15,14 +15,13 @@ const Header = observer(() => {
 	const navigate = useNavigate()
 	const [activeButton, setActiveButton] = useState(0)
 	const [menu, setMenu] = useState(false)
-	const [hover, setHover] = useState(false)
 
 	const handleNavClick = async (index, event) => {
+		const element = document.getElementById(`sectionEN-${index}`)
 		await setMenu(false)
+		await navigate('/en')
 		await event.preventDefault()
 		await store.setLink(index)
-		await navigate('/en')
-		const element = document.getElementById(`sectionEN-${index}`)
 		await element.scrollIntoView({ behavior: 'smooth' })
 	}
 
@@ -33,6 +32,7 @@ const Header = observer(() => {
 		const section3 = document.getElementById('sectionEN-3')
 		const section4 = document.getElementById('sectionEN-4')
 		const section5 = document.getElementById('sectionEN-5')
+
 		switch (scrollPosition) {
 			case scrollPosition >= section1.offsetTop &&
 				scrollPosition < section2.offsetTop:
@@ -54,26 +54,23 @@ const Header = observer(() => {
 				store.setLink(4)
 				setActiveButton(4)
 				break
-			case scrollPosition >= section5.offsetTop:
+			case scrollPosition >= section5.offsetTop &&
+				scrollPosition <= section5.offsetTop - 200:
 				store.setLink(5)
 				setActiveButton(5)
 				break
 		}
+		console.log(scrollPosition, section5.offsetTop)
 	}
 
 	const scrollToTop = str => {
 		window.scrollTo({ top: 0, behavior: 'smooth' })
 		if (str === 'menu') {
+			store.setLink(0)
 			setMenu(!menu)
 		}
 	}
 
-	const onMouseEnter = () => {
-		setHover(true)
-	}
-	const onMouseLeave = () => {
-		setHover(false)
-	}
 	const onMouseEnterNav = i => {
 		setActiveButton(store.link)
 		store.setLink(i)
@@ -154,7 +151,11 @@ const Header = observer(() => {
 				</nav>
 				<div className={styles.header__btn}>
 					<div className={styles.btn__logIn}>
-						<a href='https://ecards.cab' target='_blank'>
+						<a
+							href='https://ecards.cab'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
 							<p>Sign In</p>
 							<img src={iconRightLogIn} alt='icon right' />
 						</a>
@@ -281,7 +282,11 @@ const Header = observer(() => {
 								</a>
 							</li>
 						</ul>
-						<a href='https://t.me/ecards_support' target='_blank'>
+						<a
+							href='https://t.me/ecards_support'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
 							<div className={styles.support}>
 								<p>Support Service</p>
 								<div>
@@ -298,12 +303,12 @@ const Header = observer(() => {
 							</div>
 						</Link>
 
-						<div
-							className={styles.btn__logIn}
-							onMouseEnter={onMouseEnter}
-							onMouseLeave={onMouseLeave}
-						>
-							<a href='https://ecards.cab' target='_blank'>
+						<div className={styles.btn__logIn}>
+							<a
+								href='https://ecards.cab'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
 								<p>Sign In</p>
 							</a>
 							<svg
@@ -317,7 +322,7 @@ const Header = observer(() => {
 									fillRule='evenodd'
 									clipRule='evenodd'
 									d='M0.910582 0.410582C1.23602 0.0851447 1.76366 0.0851447 2.08909 0.410582L7.08909 5.41058C7.41453 5.73602 7.41453 6.26366 7.08909 6.58909L2.08909 11.5891C1.76366 11.9145 1.23602 11.9145 0.910582 11.5891C0.585145 11.2637 0.585145 10.736 0.910582 10.4106L5.32133 5.99984L0.910582 1.58909C0.585145 1.26366 0.585145 0.736018 0.910582 0.410582Z'
-									fill={hover ? '#5d43ff' : '#ffffff'}
+									fill='#ffffff'
 								/>
 								<defs>
 									<linearGradient

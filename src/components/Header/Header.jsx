@@ -5,14 +5,12 @@ import iconSupport from '../../assets/svg/iconSupport.svg'
 import iconRightLogIn from '../../assets/svg/rightLogIn.svg'
 import styles from './Header.module.scss'
 import DropDown from '../DropDown/DropDown'
-import { useTranslation } from 'react-i18next'
 import iconRight from '../../assets/svg/right.svg'
 import { Link, useNavigate } from 'react-router-dom'
 import { Context } from '../..'
 import { observer } from 'mobx-react-lite'
 
 const Header = observer(() => {
-	const { t } = useTranslation()
 	const { store } = useContext(Context)
 	const navigate = useNavigate()
 	const [activeButton, setActiveButton] = useState(0)
@@ -20,11 +18,11 @@ const Header = observer(() => {
 	const [hover, setHover] = useState(false)
 
 	const handleNavClick = async (index, event) => {
+		const element = document.getElementById(`section-${index}`)
 		await setMenu(false)
 		await navigate('/')
 		await event.preventDefault()
 		await store.setLink(index)
-		const element = document.getElementById(`section-${index}`)
 		await element.scrollIntoView({ behavior: 'smooth' })
 	}
 
@@ -68,6 +66,7 @@ const Header = observer(() => {
 	const scrollToTop = str => {
 		window.scrollTo({ top: 0, behavior: 'smooth' })
 		if (str === 'menu') {
+			store.setLink(0)
 			setMenu(!menu)
 		}
 	}
@@ -306,7 +305,11 @@ const Header = observer(() => {
 							onMouseEnter={onMouseEnter}
 							onMouseLeave={onMouseLeave}
 						>
-							<a href='https://ecards.cab' target='_blank'>
+							<a
+								href='https://ecards.cab'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
 								<p>Войти</p>
 							</a>
 							<svg

@@ -233,7 +233,10 @@
 		}
 	}
 }
+
 .link {
-	position: absolute;
-	top: -150px;
+	@media screen and (max-width: 560px) {
+		position: absolute;
+		top: -150px;
+	}
 }

@@ -31,7 +31,7 @@ const MainScreen = () => {
 		<div className={styles.container}>
 			<div className={styles.container__info}>
 				<p className={styles.container__title}>
-					Reliable financial solution for affiliate traffic
+					Reliable financial solution for affiliate marketing
 				</p>
 				<p className={styles.container__subTitle}>
 					Unlimited and free issue of 3D Secure cards, good trust from Facebook,
@@ -82,7 +82,7 @@ const MainScreen = () => {
 
 				<img
 					className={styles.bg}
-					src='https://i.ibb.co/5khnpMK/EN.png'
+					src='https://i.ibb.co/H2qNbX5/EN.png'
 					alt='main screen'
 				/>
 			</div>

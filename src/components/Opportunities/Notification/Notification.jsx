@@ -3,9 +3,8 @@ import styles from './Notification.module.scss'
 import iconNotification from '../../../assets/svg/notification.svg'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { useTranslation } from 'react-i18next'
+
 const Notification = () => {
-	const { t } = useTranslation()
 	useEffect(() => {
 		AOS.init()
 		AOS.refresh()

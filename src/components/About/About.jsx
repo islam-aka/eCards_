@@ -1,31 +1,39 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styles from './About.module.scss'
 import iconCard from '../../assets/svg/card.svg'
 import icon from '../../assets/svg/people.svg'
 import iconDollar from '../../assets/svg/dollar-circle.svg'
 import CountUp from 'react-countup'
-import { useInView } from 'react-intersection-observer'
 import { Context } from '../..'
 
 const About = () => {
 	const { store } = useContext(Context)
-	const [ref, inView] = useInView({ threshold: 0.5 })
+	const [state, setState] = useState(false)
 
-	function test() {
+	function scroll() {
 		const scrollPosition = window.scrollY
+		const blockAni = document.getElementById('block-ani')
 		const section1 = document.getElementById('section1')
 		const section2 = document.getElementById('section2')
+
 		if (
 			scrollPosition >= section1.offsetTop - 150 &&
 			scrollPosition < section2.offsetTop - 200
 		) {
 			store.setLink(1)
 		}
+		if (
+			scrollPosition >= blockAni.offsetTop &&
+			scrollPosition <=
+				blockAni.offsetTop + blockAni.offsetHeight + window.innerHeight
+		) {
+			setState(true)
+		}
 	}
 
 	useEffect(() => {
-		window.addEventListener('scroll', test)
-		return () => window.removeEventListener('scroll', test)
+		window.addEventListener('scroll', scroll)
+		return () => window.removeEventListener('scroll', scroll)
 	})
 
 	return (
@@ -43,10 +51,10 @@ const About = () => {
 							финансовую инфраструктуру для арбитража рекламного трафика
 						</p>
 					</div>
-					<div className={styles.about__numbers}>
-						<div className={styles.numbers__one} ref={ref}>
+					<div className={styles.about__numbers} id='block-ani'>
+						<div className={styles.numbers__one}>
 							<img src={iconCard} alt='icon card' />
-							{inView ? (
+							{state ? (
 								<CountUp
 									className={styles.about__title}
 									delay={0.25}
@@ -62,7 +70,7 @@ const About = () => {
 						</div>
 						<div className={styles.numbers__two}>
 							<img src={icon} alt='icon' />
-							{inView ? (
+							{state ? (
 								<CountUp
 									className={styles.about__title}
 									delay={0.6}
@@ -81,7 +89,7 @@ const About = () => {
 							<h3 className={styles.about__title}>
 								Более&nbsp;
 								<span>
-									{inView ? (
+									{state ? (
 										<CountUp
 											className={styles.about__title}
 											delay={1}

@@ -16,7 +16,6 @@
 	}
 	.card__img {
 		position: relative;
-		z-index: 6;
 		margin-left: -130px;
 		max-width: 670px;
 		width: 100%;
@@ -51,8 +50,6 @@
 		}
 
 		.card__imgOne {
-			-webkit-filter: drop-shadow(0px 17.7415px 17.7415px rgba(0, 0, 0, 0.1));
-			filter: drop-shadow(0px 17.7415px 17.7415px rgba(0, 0, 0, 0.1));
 			position: absolute;
 			z-index: 5;
 			-webkit-transform: translateX(290px);
@@ -78,6 +75,8 @@
 			@media screen and (max-width: 560px) {
 				animation: aniCardOne560 1.5s linear;
 				transform: translate(223px, 127px);
+				-webkit-filter: drop-shadow(0px 17.7415px 17.7415px rgba(0, 0, 0, 0.1));
+				filter: drop-shadow(0px 17.7415px 17.7415px rgba(0, 0, 0, 0.1));
 			}
 			@media screen and (max-width: 420px) {
 				animation: aniCardOne420 1.5s linear;
@@ -110,8 +109,6 @@
 			}
 		}
 		.card__imgTwo {
-			-webkit-filter: drop-shadow(0px 30.8803px 30.8803px rgba(0, 0, 0, 0.1));
-			filter: drop-shadow(0px 30.8803px 30.8803px rgba(0, 0, 0, 0.1));
 			-webkit-animation: aniCardTwo 1.5s linear;
 			animation: aniCardTwo 1.5s linear;
 			position: absolute;
@@ -134,6 +131,8 @@
 			@media screen and (max-width: 560px) {
 				animation: aniCardTwo560 1.5s linear;
 				transform: translate(15px, 10px);
+				-webkit-filter: drop-shadow(0px 30.8803px 30.8803px rgba(0, 0, 0, 0.1));
+				filter: drop-shadow(0px 30.8803px 30.8803px rgba(0, 0, 0, 0.1));
 			}
 			@media screen and (max-width: 320px) {
 				animation: aniCardTwo320 1.5s linear;
@@ -163,8 +162,6 @@
 			}
 		}
 		.card__imgThree {
-			-webkit-filter: drop-shadow(0px 30.8803px 30.8803px rgba(0, 0, 0, 0.1));
-			filter: drop-shadow(0px 30.8803px 30.8803px rgba(0, 0, 0, 0.1));
 			-webkit-animation: aniCardThree 1.5s linear;
 			animation: aniCardThree 1.5s linear;
 			position: absolute;
@@ -188,6 +185,8 @@
 			@media screen and (max-width: 560px) {
 				animation: aniCardThree560 1.5s linear;
 				transform: translate(-13px, 150px);
+				-webkit-filter: drop-shadow(0px 30.8803px 30.8803px rgba(0, 0, 0, 0.1));
+				filter: drop-shadow(0px 30.8803px 30.8803px rgba(0, 0, 0, 0.1));
 			}
 			@media screen and (max-width: 420px) {
 				animation: aniCardThree420 1.5s linear;

@@ -1,4 +1,5 @@
 import InputText from '../../UI/Text/InputText'
+import InputNumber from '../../UI/InputNumber'
 import InputEmail from '../../UI/Email/InputEmail'
 import React, { useEffect, useState } from 'react'
 import imgCardOne from '../../assets/img/cardOne.png'
@@ -96,7 +97,7 @@ const FormInvite = () => {
 							name={'name'}
 						/>
 						<div className={styles.labs}>
-							<span className={styles.lab}>@</span>
+							<span>@</span>
 							<InputText
 								type={'text'}
 								invite={invite}
@@ -114,8 +115,8 @@ const FormInvite = () => {
 							name={'vertical'}
 						/>
 
-						<div className={styles.labs}>
-							<span className={styles.lab}>$</span>
+						<div className={styles.lab}>
+							<span>$</span>
 							<InputText
 								type={'number'}
 								invite={invite}

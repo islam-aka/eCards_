@@ -165,14 +165,29 @@
 			.labs {
 				position: relative;
 				width: 100%;
-				.lab {
+				span {
 					position: absolute;
 					z-index: 2;
-					top: 15px;
+					top: 16px;
 					left: 14px;
+					font-size: 15px;
 				}
 				input {
 					padding-left: 32px;
+				}
+			}
+			.lab {
+				position: relative;
+				width: 100%;
+				span {
+					position: absolute;
+					z-index: 2;
+					top: 17px;
+					left: 14px;
+					font-size: 14px;
+				}
+				input {
+					padding-left: 26px;
 				}
 			}
 
