@@ -54,7 +54,7 @@ const Header = observer(() => {
 				store.setLink(4)
 				setActiveButton(4)
 				break
-			case scrollPosition >= section5.offsetTop &&
+			case scrollPosition + 150 >= section5.offsetTop &&
 				scrollPosition <= section5.offsetTop - 200:
 				store.setLink(5)
 				setActiveButton(5)
