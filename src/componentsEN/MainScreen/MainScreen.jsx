@@ -83,7 +83,8 @@ const MainScreen = () => {
 				<img
 					className={styles.bg}
 					src='https://i.ibb.co/H2qNbX5/EN.png'
-					alt='main screen'
+					alt='EN'
+					border='0'
 				/>
 			</div>
 		</div>
