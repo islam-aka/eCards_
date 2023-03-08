@@ -4,20 +4,13 @@ import iconInfinitely from '../../../assets/svg/infinitely.svg'
 import imgCardOne from '../../../assets/cards/cardOne.png'
 import imgCardTwo from '../../../assets/cards/cardTwo.png'
 import imgCardThree from '../../../assets/cards/cardThree.png'
-import blockBlur from '../../../assets/cards/blockBlur.png'
 
 import { useInView } from 'react-intersection-observer'
-import { useTranslation } from 'react-i18next'
 
 const Cards = () => {
 	const [ref, inView] = useInView({ threshold: 0 })
-	const { t } = useTranslation()
 	return (
 		<div ref={ref} className={styles.cards}>
-			<div className={styles.blockBlur__cards}>
-				<img src={blockBlur} alt='' />
-			</div>
-
 			<div className={styles.card__img}>
 				{inView && (
 					<>

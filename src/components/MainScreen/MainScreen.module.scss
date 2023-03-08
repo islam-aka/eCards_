@@ -146,13 +146,20 @@
 			}
 			.btn__conditions {
 				cursor: pointer;
+				display: -webkit-box;
+				display: -ms-flexbox;
 				display: flex;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
 				align-items: center;
 				gap: 10.67px;
 				padding: 10px 20px;
 				background: rgba(255, 255, 255, 0.5);
 				border: 1px solid $primary-main;
+				-webkit-transition: all 0.2s ease-in-out;
+				-o-transition: all 0.2s ease-in-out;
 				transition: all 0.2s ease-in-out;
+				-webkit-backdrop-filter: blur(18px);
 				backdrop-filter: blur(18px);
 				border-radius: 22px;
 				color: $primary-main;
@@ -254,9 +261,9 @@
 				width: 480px;
 				height: 480px;
 				opacity: 0.1;
+				-webkit-filter: blur(50px);
 				filter: blur(50px);
 				display: none;
-
 				@media screen and (max-width: 560px) {
 					width: 250px;
 					height: 250px;
@@ -276,6 +283,7 @@
 				width: 480px;
 				height: 480px;
 				opacity: 0.1;
+				-webkit-filter: blur(50px);
 				filter: blur(50px);
 				display: none;
 				@media screen and (max-width: 560px) {
@@ -332,6 +340,7 @@
 			width: 480px;
 			height: 480px;
 			opacity: 0.2;
+			-webkit-filter: blur(50px);
 			filter: blur(50px);
 			@media screen and (max-width: 1280px) {
 				left: -80px;
@@ -370,6 +379,7 @@
 			top: -60px;
 			right: -350px;
 			opacity: 0.2;
+			-webkit-filter: blur(50px);
 			filter: blur(50px);
 			@media screen and (max-width: 768px) {
 				display: none;

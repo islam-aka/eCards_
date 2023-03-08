@@ -7,6 +7,7 @@ import 'aos'
 import Data from './Data/Data'
 import Notification from './Notification/Notification'
 import { Context } from '../..'
+import blockBlur from '../../assets/cards/blockBlur.png'
 
 const Opportunities = () => {
 	const { store } = useContext(Context)
@@ -35,12 +36,15 @@ const Opportunities = () => {
 				<p>eCards provides</p>
 				<h2>Features</h2>
 			</div>
+			<div className={styles.blockBlur__cards}>
+				<img src={blockBlur} alt='' />
+			</div>
+			<div className={styles.blockBlur}></div>
 
+			<div className={styles.blockBlur__opportunities}></div>
 			<div className={styles.opportunities}>
-				<div className={styles.blockBlur}></div>
 				<Score />
 				<Cards />
-				<div className={styles.blockBlur__opportunities}></div>
 
 				<Distribution />
 

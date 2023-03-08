@@ -70,48 +70,66 @@
 		position: relative;
 		z-index: 6;
 		width: 100%;
-
-		.blockBlur__opportunities {
-			position: absolute;
-			z-index: 1;
-			width: 520px;
-			height: 520px;
-			left: 992px;
-			top: 713px;
-			background: -o-linear-gradient(336.52deg, #ff8de6 7.05%, #4c3fe7 105.43%);
-			background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
-			opacity: 0.3;
-			-webkit-filter: blur(112px);
-			filter: blur(112px);
-			@media screen and (max-width: 768px) {
-				opacity: 0.2;
-				left: 217px;
-				top: 730px;
-			}
-			@media screen and (max-width: 560px) {
-				display: none;
-			}
+	}
+	.blockBlur__cards {
+		position: absolute;
+		z-index: 1;
+		width: 520px;
+		height: 520px;
+		left: -260px;
+		top: 480px;
+		background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
+		opacity: 0.25;
+		box-shadow: 4px 4px 100px 0px rgba(34, 60, 80, 0.2);
+		filter: blur(71px);
+		@media screen and (max-width: 768px) {
+			top: 595px;
+			left: -300px;
 		}
-		.blockBlur {
-			background: -o-linear-gradient(336.52deg, #ff8de6 7.05%, #4c3fe7 105.43%);
-			background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
+		@media screen and (max-width: 560px) {
+			display: none;
+		}
+	}
+	.blockBlur__opportunities {
+		position: absolute;
+		z-index: 1;
+		width: 520px;
+		height: 520px;
+		left: 992px;
+		top: 713px;
+		background: -o-linear-gradient(336.52deg, #ff8de6 7.05%, #4c3fe7 105.43%);
+		background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
+		opacity: 0.3;
+		-webkit-filter: blur(112px);
+		filter: blur(112px);
+		@media screen and (max-width: 768px) {
 			opacity: 0.2;
-			-webkit-filter: blur(112px);
-			position: absolute;
-			z-index: 1;
-			width: 520px;
-			height: 520px;
-			right: -285px;
-			top: -214px;
+			left: 217px;
+			top: 730px;
+		}
+		@media screen and (max-width: 560px) {
+			display: none;
+		}
+	}
+	.blockBlur {
+		background: -o-linear-gradient(336.52deg, #ff8de6 7.05%, #4c3fe7 105.43%);
+		background: linear-gradient(113.48deg, #ff8de6 7.05%, #4c3fe7 105.43%);
+		opacity: 0.2;
+		-webkit-filter: blur(112px);
+		position: absolute;
+		z-index: 1;
+		width: 520px;
+		height: 520px;
+		right: -285px;
+		top: -214px;
 
-			filter: blur(112px);
-			@media screen and (max-width: 560px) {
-				display: none;
-			}
-			@media screen and (max-width: 575px) {
-				right: -50px;
-				top: -300px;
-			}
+		filter: blur(112px);
+		@media screen and (max-width: 560px) {
+			display: none;
+		}
+		@media screen and (max-width: 575px) {
+			right: -50px;
+			top: -300px;
 		}
 	}
 	img {

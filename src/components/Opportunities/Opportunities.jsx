@@ -9,6 +9,7 @@ import Notification from './Notification/Notification'
 import { Context } from '../..'
 import { useInView } from 'react-intersection-observer'
 import { useTranslation } from 'react-i18next'
+import blockBlur from '../../assets/cards/blockBlur.png'
 
 const Opportunities = () => {
 	const { t } = useTranslation()
@@ -39,12 +40,14 @@ const Opportunities = () => {
 				<p>eCards предоставляет</p>
 				<h2>Возможности и фичи</h2>
 			</div>
-
+			<div className={styles.blockBlur__cards}>
+				<img src={blockBlur} alt='' />
+			</div>
+			<div className={styles.blockBlur}></div>
+			<div className={styles.blockBlur__opportunities}></div>
 			<div className={styles.opportunities}>
-				<div className={styles.blockBlur}></div>
 				<Score />
 				<Cards />
-				<div className={styles.blockBlur__opportunities}></div>
 
 				<Distribution />
 

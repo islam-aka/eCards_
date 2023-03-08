@@ -303,23 +303,4 @@
 			}
 		}
 	}
-	.blockBlur__cards {
-		position: absolute;
-		z-index: 1;
-		width: 520px;
-		height: 520px;
-		left: -260px;
-		top: 390px;
-		background: linear-gradient(45.12deg, #7aafff 7.03%, #642dff 98.91%);
-		opacity: 0.25;
-		box-shadow: 4px 4px 100px 0px rgba(34, 60, 80, 0.2);
-		filter: blur(71px);
-		@media screen and (max-width: 768px) {
-			top: 595px;
-			left: -300px;
-		}
-		@media screen and (max-width: 560px) {
-			display: none;
-		}
-	}
 }
