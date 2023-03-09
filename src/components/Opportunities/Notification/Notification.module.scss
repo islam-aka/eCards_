@@ -94,9 +94,9 @@
 		}
 	}
 	.notification__right {
-		animation: ani 0.5s linear;
 		position: relative;
 		width: 596px;
+		animation: ani 0.5s linear;
 		margin-top: -20px;
 		margin-right: -50px;
 		z-index: 4;
@@ -143,6 +143,7 @@
 				top: 112px;
 			}
 			@media screen and (max-width: 560px) {
+				margin-left: -36px;
 				top: 72px;
 			}
 			img {
@@ -151,7 +152,10 @@
 					width: 700px !important;
 				}
 				@media screen and (max-width: 575px) {
-					width: 560px !important;
+					width: 550px !important;
+				}
+				@media screen and (max-width: 560px) {
+					width: 660px !important;
 				}
 			}
 		}
@@ -191,6 +195,7 @@
 		}
 	}
 }
+
 @keyframes ani {
 	from {
 		transform: translate(100%, 0);

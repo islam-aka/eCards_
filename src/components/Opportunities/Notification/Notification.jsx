@@ -1,19 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import styles from './Notification.module.scss'
 import iconNotification from '../../../assets/svg/notification.svg'
+import useWindowWidth from '../../../hooks/hooksWidth'
 
 const Notification = () => {
 	const [state, setState] = useState(false)
+	let WindowWidth = useWindowWidth()
 
 	function scroll() {
 		const scrollPosition = window.scrollY
 		const blockAni = document.getElementById('block-ani-noti')
 
-		if (
-			scrollPosition >=
-			blockAni.parentNode.parentNode.offsetTop + blockAni.offsetTop - 700
-		) {
-			setState(true)
+		if (WindowWidth >= 570) {
+			if (
+				scrollPosition >=
+				blockAni.parentNode.parentNode.parentNode.offsetTop + 300
+			) {
+				setState(true)
+			}
+		} else {
+			if (
+				scrollPosition >=
+				blockAni.parentNode.parentNode.offsetTop * 2 + 300
+			) {
+				setState(true)
+			}
 		}
 	}
 	useEffect(() => {
@@ -37,8 +48,8 @@ const Notification = () => {
 					</p>
 				</div>
 			</div>
-			{state && (
-				<div className={styles.notification__right}>
+			<div className={styles.notification__right}>
+				{state && (
 					<>
 						<div className={styles.notiOne}>
 							<img
@@ -53,8 +64,8 @@ const Notification = () => {
 							/>
 						</div>
 					</>
-				</div>
-			)}
+				)}
+			</div>
 			<div className={styles.blockBlur__notification}></div>
 		</div>
 	)

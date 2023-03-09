@@ -3,25 +3,31 @@ import styles from '../../../components/Opportunities/Distribution/Distribution.
 import iconProfile from '../../../assets/svg/profile-2user.svg'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { MdPersonOutline } from 'react-icons/md'
+import useWindowWidth from '../../../hooks/hooksWidth'
 
 const Distribution = () => {
 	const [state, setState] = useState(false)
+	let WindowWidth = useWindowWidth()
 
 	function scroll() {
 		const scrollPosition = window.scrollY
 		const blockAni = document.getElementById('block-ani-dist')
-
-		if (
-			scrollPosition >=
-			blockAni.parentNode.parentNode.parentNode.offsetTop + 300
-		) {
-			setState(true)
+		if (WindowWidth >= 570) {
+			if (
+				scrollPosition >=
+				blockAni.parentNode.parentNode.parentNode.offsetTop + 300
+			) {
+				setState(true)
+			}
+		} else {
+			if (
+				scrollPosition >=
+				blockAni.parentNode.parentNode.parentNode.offsetTop + 800
+			) {
+				setState(true)
+			}
 		}
 	}
-	useEffect(() => {
-		window.addEventListener('scroll', scroll)
-		return () => window.removeEventListener('scroll', scroll)
-	})
 	return (
 		<div className={styles.distribution}>
 			<div className={styles.distribution__left}>

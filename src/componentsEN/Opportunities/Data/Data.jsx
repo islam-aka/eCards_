@@ -2,16 +2,24 @@ import React, { useEffect, useState } from 'react'
 import styles from '../../../components/Opportunities/Data/Data.module.scss'
 import icon from '../../../assets/data/Vector.svg'
 import iconDownload from '../../../assets/svg/download.svg'
+import useWindowWidth from '../../../hooks/hooksWidth'
 
 const Data = () => {
 	const [state, setState] = useState(false)
+	let WindowWidth = useWindowWidth()
 
 	function scroll() {
 		const scrollPosition = window.scrollY
 		const blockAni = document.getElementById('block-ani-data')
 
-		if (scrollPosition >= blockAni.parentNode.parentNode.offsetTop + 700) {
-			setState(true)
+		if (WindowWidth >= 570) {
+			if (scrollPosition >= blockAni.parentNode.parentNode.offsetTop + 700) {
+				setState(true)
+			}
+		} else {
+			if (scrollPosition >= blockAni.parentNode.parentNode.offsetTop + 1300) {
+				setState(true)
+			}
 		}
 	}
 	useEffect(() => {

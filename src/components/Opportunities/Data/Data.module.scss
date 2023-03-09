@@ -22,6 +22,7 @@
 			display: none;
 		}
 	}
+
 	.data__left {
 		width: 464px;
 		position: relative;
@@ -311,6 +312,16 @@
 				}
 			}
 		}
+	}
+}
+
+@keyframes ani {
+	0% {
+		transform: translate(-100%, 0);
+	}
+
+	100% {
+		transform: translate(0, 0);
 	}
 }
 

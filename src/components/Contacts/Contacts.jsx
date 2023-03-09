@@ -21,9 +21,9 @@ const Contacts = () => {
 	}, [])
 
 	return (
-		<>
+		<div>
+			<div id='section-5' className={styles.link}></div>
 			<div id='section5' className={styles.contact}>
-				<div id='section-5' className={styles.link}></div>
 				<div className={styles.contact__left}>
 					<p className={styles.contact__subTitle}>Контакты</p>
 					<h3 className={styles.contact__left_titleRu}>
@@ -53,7 +53,7 @@ const Contacts = () => {
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	)
 }
 

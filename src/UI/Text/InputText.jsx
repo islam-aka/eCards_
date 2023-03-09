@@ -2,7 +2,7 @@ import { TextField } from '@mui/material'
 import React from 'react'
 import styles from './Input.module.scss'
 
-const Input = ({ invite, fun, name, labels, type, lab }) => {
+const Input = ({ invite, fun, name, labels, type }) => {
 	let bool
 	const indices = []
 	if (invite.email) {
@@ -16,18 +16,15 @@ const Input = ({ invite, fun, name, labels, type, lab }) => {
 		}
 	}
 	return (
-		<div className={lab !== '$' ? styles.lab : styles.labs}>
-			<span>{lab}</span>
-			<TextField
-				className={invite[name] !== '' ? styles.inp : styles.inpEmpty}
-				id='demo-helper-text-aligned-no-helper'
-				type={type}
-				label={labels}
-				value={invite[name]}
-				name={name}
-				onChange={e => fun(e)}
-			/>
-		</div>
+		<TextField
+			className={invite[name] !== '' ? styles.inp : styles.inpEmpty}
+			id='demo-helper-text-aligned-no-helper'
+			type={type}
+			label={labels}
+			value={invite[name]}
+			name={name}
+			onChange={e => fun(e)}
+		/>
 	)
 }
 

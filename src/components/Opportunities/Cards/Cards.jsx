@@ -4,16 +4,23 @@ import iconInfinitely from '../../../assets/svg/infinitely.svg'
 import imgCardOne from '../../../assets/cards/cardOne.png'
 import imgCardTwo from '../../../assets/cards/cardTwo.png'
 import imgCardThree from '../../../assets/cards/cardThree.png'
+import useWindowWidth from '../../../hooks/hooksWidth'
 
 const Cards = () => {
 	const [state, setState] = useState(false)
-
+	let WindowWidth = useWindowWidth()
 	function scroll() {
 		const scrollPosition = window.scrollY
 		const blockAni = document.getElementById('block-ani-card')
 
-		if (scrollPosition >= blockAni.parentNode.parentNode.offsetTop) {
-			setState(true)
+		if (WindowWidth >= 570) {
+			if (scrollPosition >= blockAni.parentNode.parentNode.offsetTop) {
+				setState(true)
+			}
+		} else {
+			if (scrollPosition >= blockAni.parentNode.parentNode.offsetTop + 250) {
+				setState(true)
+			}
 		}
 	}
 	useEffect(() => {

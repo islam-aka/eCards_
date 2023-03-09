@@ -7,21 +7,34 @@ import { TbCurrencyDollar } from 'react-icons/tb'
 import { BsPlusLg } from 'react-icons/bs'
 import Circle from '../../../Circle/Circle'
 import CountUp from 'react-countup'
+import useWindowWidth from '../../../../hooks/hooksWidth'
 
 const ScoreBalance = () => {
 	const [state, setState] = useState(false)
+	let WindowWidth = useWindowWidth()
 
 	function scroll() {
 		const scrollPosition = window.scrollY
 		const blockAni = document.getElementById('block-ani-circle')
 
-		if (
-			scrollPosition >=
-			blockAni.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode
-				.parentNode.offsetTop -
-				600
-		) {
-			setState(true)
+		if (WindowWidth >= 570) {
+			if (
+				scrollPosition >=
+				blockAni.parentNode.parentNode.parentNode.parentNode.parentNode
+					.parentNode.parentNode.offsetTop -
+					600
+			) {
+				setState(true)
+			}
+		} else {
+			if (
+				scrollPosition >=
+				blockAni.parentNode.parentNode.parentNode.parentNode.parentNode
+					.parentNode.parentNode.offsetTop -
+					350
+			) {
+				setState(true)
+			}
 		}
 	}
 

@@ -95,15 +95,16 @@ const FormInvite = () => {
 							labels={'Имя*'}
 							name={'name'}
 						/>
-
-						<InputText
-							type={'text'}
-							invite={invite}
-							fun={handleChange}
-							labels={'Телеграм*'}
-							name={'telegram'}
-							lab={'@'}
-						/>
+						<div className={styles.labs}>
+							<span>@</span>
+							<InputText
+								type={'text'}
+								invite={invite}
+								fun={handleChange}
+								labels={'Телеграм*'}
+								name={'telegram'}
+							/>
+						</div>
 
 						<InputText
 							type={'text'}
@@ -113,15 +114,16 @@ const FormInvite = () => {
 							name={'vertical'}
 						/>
 
-						<InputText
-							type={'number'}
-							invite={invite}
-							fun={handleChange}
-							labels={'Примерный оборот в месяц на рекламу, $*'}
-							name={'turnover'}
-							lab={'$'}
-						/>
-
+						<div className={styles.lab}>
+							<span>$</span>
+							<InputText
+								type={'number'}
+								invite={invite}
+								fun={handleChange}
+								labels={'Примерный оборот в месяц на рекламу, $*'}
+								name={'turnover'}
+							/>
+						</div>
 						<Role value={invite} setValue={setInvite} />
 						<div
 							onClick={handleSubmit}

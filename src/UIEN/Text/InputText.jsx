@@ -15,7 +15,6 @@ const Input = ({ invite, fun, name, labels, type, lab }) => {
 			bool = true
 		}
 	}
-	console.log('lab')
 	return (
 		<div>
 			<span>{lab}</span>
