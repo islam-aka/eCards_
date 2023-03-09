@@ -94,9 +94,9 @@
 		}
 	}
 	.notification__right {
+		animation: ani 0.5s linear;
 		position: relative;
 		width: 596px;
-		animation: noti 0.7s linear;
 		margin-top: -20px;
 		margin-right: -50px;
 		z-index: 4;
@@ -189,5 +189,13 @@
 		@media screen and (max-width: 560px) {
 			display: none;
 		}
+	}
+}
+@keyframes ani {
+	from {
+		transform: translate(100%, 0);
+	}
+	to {
+		transform: translate(0, 0);
 	}
 }

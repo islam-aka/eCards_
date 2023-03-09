@@ -14,7 +14,6 @@ const Contacts = () => {
 		if (scrollPosition + 250 >= section5.offsetTop) {
 			store.setLink(5)
 		}
-		console.log(scrollPosition + 250, section5.offsetTop)
 	}
 
 	useEffect(() => {

@@ -131,7 +131,8 @@
 			margin-right: 0;
 		}
 		.ani {
-			transition: 2s;
+			transform: translate(0, 0);
+			animation: ani 0.5s linear;
 			position: relative;
 			width: 581.37px;
 			height: 286px;
@@ -430,14 +431,6 @@
 		}
 	}
 
-	@keyframes aniOne {
-		0% {
-			transform: translateX(695px);
-		}
-		100% {
-			transform: translate(200px, 10px);
-		}
-	}
 	@keyframes aniTwo {
 		0% {
 			opacity: 0;
@@ -447,6 +440,14 @@
 		}
 		100% {
 			opacity: 1;
+		}
+	}
+	@keyframes ani {
+		from {
+			transform: translate(+100%, 0);
+		}
+		to {
+			transform: translate(0, 0);
 		}
 	}
 }

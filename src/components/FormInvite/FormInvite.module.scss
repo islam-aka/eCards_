@@ -171,6 +171,9 @@
 					top: 16px;
 					left: 14px;
 					font-size: 15px;
+					@media screen and (max-width: 768px) {
+						top: 18px;
+					}
 				}
 				input {
 					padding-left: 32px;
@@ -185,6 +188,9 @@
 					top: 17px;
 					left: 14px;
 					font-size: 14px;
+					@media screen and (max-width: 768px) {
+						top: 17px;
+					}
 				}
 				input {
 					padding-left: 26px;

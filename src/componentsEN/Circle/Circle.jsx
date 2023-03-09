@@ -1,10 +1,10 @@
 import React from 'react'
 import '../../components/Circle/Circle.css'
 
-const Circle = ({ inView }) => {
+const Circle = ({ state }) => {
 	return (
 		<div className='svg'>
-			{inView && (
+			{state && (
 				<svg
 					className='svg'
 					viewBox='0 0 153 153'

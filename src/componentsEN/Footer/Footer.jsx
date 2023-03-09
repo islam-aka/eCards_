@@ -8,11 +8,9 @@ import { Context } from '../..'
 
 const Footer = () => {
 	const { store } = useContext(Context)
-	const [menu, setMenu] = useState(false)
 	const navigate = useNavigate()
 
 	const handleNavClick = async (index, event) => {
-		await setMenu(false)
 		await event.preventDefault()
 		await store.setLink(index)
 		await navigate('/en')

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '../../../../components/Opportunities/Score/ScoreBalance/ScoreBalance.module.scss'
 import icon from '../../../../assets/score/wallet-money.svg'
 import { IoIosArrowForward } from 'react-icons/io'
@@ -7,18 +7,36 @@ import { TbCurrencyDollar } from 'react-icons/tb'
 import { BsPlusLg } from 'react-icons/bs'
 import Circle from '../../../Circle/Circle'
 import CountUp from 'react-countup'
-import { useInView } from 'react-intersection-observer'
 
 const ScoreBalance = () => {
-	const [refAni, inViewAni] = useInView({ threshold: 0 })
+	const [state, setState] = useState(false)
+
+	function scroll() {
+		const scrollPosition = window.scrollY
+		const blockAni = document.getElementById('block-ani-circle')
+
+		if (
+			scrollPosition >=
+			blockAni.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode
+				.parentNode.offsetTop -
+				600
+		) {
+			setState(true)
+		}
+	}
+	useEffect(() => {
+		window.addEventListener('scroll', scroll)
+		return () => window.removeEventListener('scroll', scroll)
+	})
+
 	return (
 		<>
 			<div className={styles.scoreBalance}>
-				<div ref={refAni} className={styles.ani}>
-					<Circle inView={inViewAni} className={styles.ani} />
-					<div className={styles.statistics}>
+				<div className={styles.ani}>
+					<Circle state={state} className={styles.ani} />
+					<div id='block-ani-circle' className={styles.statistics}>
 						<BiEuro color='#1E1E1E' />
-						{inViewAni && (
+						{state && (
 							<div>
 								<CountUp
 									className={styles.statistics__title}

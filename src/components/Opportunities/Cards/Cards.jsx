@@ -1,20 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './Cards.module.scss'
 import iconInfinitely from '../../../assets/svg/infinitely.svg'
 import imgCardOne from '../../../assets/cards/cardOne.png'
 import imgCardTwo from '../../../assets/cards/cardTwo.png'
 import imgCardThree from '../../../assets/cards/cardThree.png'
 
-import { useInView } from 'react-intersection-observer'
-import { useTranslation } from 'react-i18next'
-
 const Cards = () => {
-	const [ref, inView] = useInView({ threshold: 0 })
-	const { t } = useTranslation()
+	const [state, setState] = useState(false)
+
+	function scroll() {
+		const scrollPosition = window.scrollY
+		const blockAni = document.getElementById('block-ani-card')
+
+		if (scrollPosition >= blockAni.parentNode.parentNode.offsetTop) {
+			setState(true)
+		}
+	}
+	useEffect(() => {
+		window.addEventListener('scroll', scroll)
+		return () => window.removeEventListener('scroll', scroll)
+	})
 	return (
-		<div ref={ref} className={styles.cards}>
+		<div id='block-ani-card' className={styles.cards}>
 			<div className={styles.card__img}>
-				{inView && (
+				{state && (
 					<>
 						<div className={styles.card__imgOne}>
 							<img src={imgCardTwo} alt='card ' />

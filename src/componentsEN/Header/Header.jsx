@@ -34,23 +34,23 @@ const Header = observer(() => {
 		const section5 = document.getElementById('sectionEN-5')
 
 		switch (scrollPosition) {
-			case scrollPosition >= section1.offsetTop &&
-				scrollPosition < section2.offsetTop:
+			case scrollPosition + 100 >= section1.offsetTop &&
+				scrollPosition < section2.offsetTop - 100:
 				store.setLink(1)
 				setActiveButton(1)
 				break
-			case scrollPosition >= section2.offsetTop &&
-				scrollPosition < section3.offsetTop:
+			case scrollPosition + 100 >= section2.offsetTop &&
+				scrollPosition < section3.offsetTop - 100:
 				store.setLink(2)
 				setActiveButton(2)
 				break
-			case scrollPosition >= section3.offsetTop &&
-				scrollPosition < section4.offsetTop:
+			case scrollPosition + 100 >= section3.offsetTop &&
+				scrollPosition < section4.offsetTop - 100:
 				store.setLink(3)
 				setActiveButton(3)
 				break
-			case scrollPosition >= section4.offsetTop &&
-				scrollPosition < section5.offsetTop:
+			case scrollPosition + 100 >= section4.offsetTop &&
+				scrollPosition < section5.offsetTop - 100:
 				store.setLink(4)
 				setActiveButton(4)
 				break
@@ -60,7 +60,6 @@ const Header = observer(() => {
 				setActiveButton(5)
 				break
 		}
-		console.log(scrollPosition, section5.offsetTop)
 	}
 
 	const scrollToTop = str => {

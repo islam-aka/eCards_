@@ -26,7 +26,7 @@
 		width: 464px;
 		position: relative;
 		z-index: 7;
-
+		animation: ani 0.5s linear;
 		@media screen and (max-width: 1200px) {
 			margin-left: -75px;
 			width: 420px;
@@ -164,6 +164,7 @@
 		}
 
 		.checkeds {
+			animation: aniTwo 1s linear;
 			width: auto;
 			height: auto;
 			position: absolute;
@@ -310,5 +311,17 @@
 				}
 			}
 		}
+	}
+}
+
+@keyframes aniTwo {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
