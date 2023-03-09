@@ -1,5 +1,4 @@
 import InputText from '../../UI/Text/InputText'
-import InputNumber from '../../UI/InputNumber'
 import InputEmail from '../../UI/Email/InputEmail'
 import React, { useEffect, useState } from 'react'
 import imgCardOne from '../../assets/img/cardOne.png'
@@ -96,16 +95,15 @@ const FormInvite = () => {
 							labels={'Имя*'}
 							name={'name'}
 						/>
-						<div className={styles.labs}>
-							<span>@</span>
-							<InputText
-								type={'text'}
-								invite={invite}
-								fun={handleChange}
-								labels={'Телеграм*'}
-								name={'telegram'}
-							/>
-						</div>
+
+						<InputText
+							type={'text'}
+							invite={invite}
+							fun={handleChange}
+							labels={'Телеграм*'}
+							name={'telegram'}
+							lab={'@'}
+						/>
 
 						<InputText
 							type={'text'}
@@ -115,16 +113,15 @@ const FormInvite = () => {
 							name={'vertical'}
 						/>
 
-						<div className={styles.lab}>
-							<span>$</span>
-							<InputText
-								type={'number'}
-								invite={invite}
-								fun={handleChange}
-								labels={'Примерный оборот в месяц на рекламу, $*'}
-								name={'turnover'}
-							/>
-						</div>
+						<InputText
+							type={'number'}
+							invite={invite}
+							fun={handleChange}
+							labels={'Примерный оборот в месяц на рекламу, $*'}
+							name={'turnover'}
+							lab={'$'}
+						/>
+
 						<Role value={invite} setValue={setInvite} />
 						<div
 							onClick={handleSubmit}
