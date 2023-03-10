@@ -31,8 +31,8 @@ const Conditions = () => {
 			<div className={styles.conditions__top}>
 				<p className={styles.top__subTitle}>Выгодные условия работы сервиса</p>
 				<p className={styles.top__title}>
-					Платите только за пополнение счета eCards. <br /> <span> У нас</span>{' '}
-					нет скрытых комиссий
+					Платите только за пополнение счета eCards. <br /> У нас нет скрытых
+					комиссий
 				</p>
 			</div>
 			<div className={styles.conditions__middle}>

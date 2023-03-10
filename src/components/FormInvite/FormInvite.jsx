@@ -40,12 +40,12 @@ const FormInvite = () => {
 			invite.turnover !== undefined
 		) {
 			const formData = new FormData()
-			formData.append('entry.1383840126', invite.email)
-			formData.append('entry.1245351463', invite.name)
-			formData.append('entry.994764012', `@${invite.telegram}`)
-			formData.append('entry.1350535204', invite.vertical)
-			formData.append('entry.1737398789', invite.turnover)
-			formData.append('entry.579265941', invite.role)
+			formData.append('entry.1316420441', invite.email)
+			formData.append('entry.1122239894', invite.name)
+			formData.append('entry.1651853333', `@${invite.telegram}`)
+			formData.append('entry.305907740', invite.vertical)
+			formData.append('entry.405418901', invite.turnover)
+			formData.append('entry.984063852', invite.role)
 			fetch(
 				`https://docs.google.com/forms/d/e/1FAIpQLSfNQefzlZJhD5lMaGGlJC5HaufdXbpbOwPsBtweZvimaahJ0Q/formResponse`,
 				{
