@@ -38,7 +38,7 @@ const Home = () => {
 		}
 	}
 	useEffect(() => {
-		document.title = 'Stripe | Plateforme de traitement de paiements en ligne'
+		document.title = 'eCards | Virtual cards for your advertising'
 		if (url) {
 			scrollToElement(url)
 		}

@@ -38,7 +38,7 @@ const Home = () => {
 		}
 	}
 	useEffect(() => {
-		document.title = 'eCards Виртуальные карты для вашей рекламы'
+		document.title = 'eCards | Виртуальные карты для вашей рекламы'
 		if (url) {
 			scrollToElement(url)
 		}
