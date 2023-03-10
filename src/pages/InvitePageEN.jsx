@@ -16,7 +16,8 @@ const InvitePage = () => {
 	return (
 		<>
 			<Helmet>
-				<title>eCards | Virtual cards for your advertising</title>
+				<title>eCards | Virtual cards</title>
+				<meta name='description' content='Virtual cards for your advertising' />
 			</Helmet>
 			<Header />
 			<Invite />

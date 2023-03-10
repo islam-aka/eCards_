@@ -50,7 +50,11 @@ const Home = () => {
 			{check !== false && (currentPath === '/en' ? <CookieEN /> : <Cookie />)}
 			<div className={styles.home}>
 				<Helmet>
-					<title>eCards | Виртуальные карты для вашей рекламы</title>
+					<title>eCards | Виртуальные карты</title>
+					<meta
+						name='description'
+						content='Виртуальные карты для вашей рекламы'
+					/>
 				</Helmet>
 				<Suspense fallback={''}>
 					<Header />
