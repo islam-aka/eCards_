@@ -9,7 +9,7 @@ const InvitePage = () => {
 	const { store } = useContext(Context)
 
 	useEffect(() => {
-		document.title = 'eCards | Virtual cards for your advertising'
+		document.title = 'eCards Virtual cards for your advertising'
 		store.setLink(0)
 	})
 

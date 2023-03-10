@@ -38,7 +38,7 @@ const Home = () => {
 		}
 	}
 	useEffect(() => {
-		document.title = 'eCards | Virtual cards for your advertising'
+		document.title = 'eCards Virtual cards for your advertising'
 		if (url) {
 			scrollToElement(url)
 		}
