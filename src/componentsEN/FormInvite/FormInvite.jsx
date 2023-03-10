@@ -49,7 +49,7 @@ const FormInvite = () => {
 			formData.append('entry.405418901', invite.turnover)
 			formData.append('entry.984063852', invite.role)
 			fetch(
-				`https://docs.google.com/forms/d/e/1FAIpQLSfNQefzlZJhD5lMaGGlJC5HaufdXbpbOwPsBtweZvimaahJ0Q/formResponse`,
+				`https://docs.google.com/forms/d/e/1FAIpQLSfIDAiSRUCUNyELG_hUF7G1zOGpDLhl4kmyAU4TSyVs8tu-jA/formResponse`,
 				{
 					method: 'POST',
 					body: formData,

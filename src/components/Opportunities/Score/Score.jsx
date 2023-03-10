@@ -3,10 +3,8 @@ import styles from './Score.module.scss'
 import iconWallet from '../../../assets/svg/wallet-money.svg'
 
 import ScoreBalance from './ScoreBalance/ScoreBalance'
-import { useTranslation } from 'react-i18next'
 
 const Score = () => {
-	const { t } = useTranslation()
 	return (
 		<>
 			<div className={styles.score}>

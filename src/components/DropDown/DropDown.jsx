@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import styles from './DropDown.module.scss'
 import iconBottom from '../../assets/svg/rightBlue.svg'
-import '../../i18next'
 import { useNavigate } from 'react-router-dom'
 
 const DropDown = () => {

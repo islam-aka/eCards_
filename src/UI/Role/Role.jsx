@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import styles from './Role.module.scss'
 import icon from '../../assets/svg/RightIcon.svg'
-import '../../i18next'
 
 const Role = ({ value, setValue }) => {
 	const [active, setActive] = useState(true)
