@@ -9,7 +9,7 @@ const InvitePage = () => {
 	const { store } = useContext(Context)
 
 	useEffect(() => {
-		document.title = 'eCards Virtual cards for your advertising'
+		document.title = 'Stripe | Plateforme de traitement de paiements en ligne'
 		store.setLink(0)
 	})
 
