@@ -9,9 +9,9 @@ import Conditions from '../componentsEN/Conditions/Conditions'
 import Partners from '../componentsEN/Partners/Partners'
 import Contacts from '../componentsEN/Contacts/Contacts'
 import Footer from '../componentsEN/Footer/Footer'
+import { Helmet } from 'react-helmet'
 
 const Home = () => {
-	document.title = 'eCards | Virtual cards for your advertising'
 	const { url } = useParams()
 
 	function scrollToElement(url) {
@@ -28,6 +28,9 @@ const Home = () => {
 
 	return (
 		<div className={styles.home}>
+			<Helmet>
+				<title>eCards | Virtual cards for your advertising</title>
+			</Helmet>
 			<Suspense fallback={''}>
 				<Header />
 				<MainScreen />

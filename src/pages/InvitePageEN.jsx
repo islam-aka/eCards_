@@ -4,6 +4,7 @@ import Header from '../componentsEN/Header/Header'
 import Invite from '../componentsEN/Invite/Invite'
 import FormInvite from '../componentsEN/FormInvite/FormInvite'
 import { Context } from '..'
+import { Helmet } from 'react-helmet'
 
 const InvitePage = () => {
 	const { store } = useContext(Context)
@@ -14,6 +15,9 @@ const InvitePage = () => {
 
 	return (
 		<>
+			<Helmet>
+				<title>eCards | Virtual cards for your advertising</title>
+			</Helmet>
 			<Header />
 			<Invite />
 			<FormInvite />

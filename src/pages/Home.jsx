@@ -1,4 +1,5 @@
 import React, { Suspense, useEffect } from 'react'
+import { Helmet } from 'react-helmet'
 import styles from './Home.module.scss'
 import { useParams } from 'react-router-dom'
 import Header from '../components/Header/Header'
@@ -11,7 +12,6 @@ import Contacts from '../components/Contacts/Contacts'
 import Footer from '../components/Footer/Footer'
 
 const Home = () => {
-	document.title = 'eCards | Виртуальные карты для вашей рекламы'
 	const { url } = useParams()
 
 	function scrollToElement(url) {
@@ -29,6 +29,9 @@ const Home = () => {
 
 	return (
 		<div className={styles.home}>
+			<Helmet>
+				<title>eCards | Виртуальные карты для вашей рекламы</title>
+			</Helmet>
 			<Suspense fallback={''}>
 				<Header />
 				<MainScreen />

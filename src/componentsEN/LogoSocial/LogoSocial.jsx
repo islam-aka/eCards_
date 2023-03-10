@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import useWindowWidth from '../../hooks/hooksWidth'
-import styles from './LogoSocial.module.scss'
+import styles from '../../components/LogoSocial/LogoSocial.module.scss'
 
 const LogoSocial = () => {
 	const [hover, setHover] = useState({
