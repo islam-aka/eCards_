@@ -9,7 +9,6 @@ import Conditions from '../componentsEN/Conditions/Conditions'
 import Partners from '../componentsEN/Partners/Partners'
 import Contacts from '../componentsEN/Contacts/Contacts'
 import Footer from '../componentsEN/Footer/Footer'
-import { Helmet } from 'react-helmet'
 import Cookie from '../components/Cookie/Cookie'
 import CookieEN from '../componentsEN/Cookie/Cookie'
 
@@ -39,6 +38,7 @@ const Home = () => {
 		}
 	}
 	useEffect(() => {
+		document.title = 'eCards | Virtual cards for your advertising'
 		if (url) {
 			scrollToElement(url)
 		}
@@ -49,13 +49,6 @@ const Home = () => {
 		<>
 			{check !== false && (currentPath === '/en' ? <CookieEN /> : <Cookie />)}
 			<div className={styles.home}>
-				<Helmet>
-					<title>eCards | Virtual cards</title>
-					<meta
-						name='description'
-						content='Virtual cards for your advertising'
-					/>
-				</Helmet>
 				<Suspense fallback={''}>
 					<Header />
 					<MainScreen />

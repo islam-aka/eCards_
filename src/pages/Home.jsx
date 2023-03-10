@@ -1,5 +1,4 @@
 import React, { Suspense, useEffect, useState } from 'react'
-import { Helmet } from 'react-helmet'
 import styles from './Home.module.scss'
 import { useNavigate, useParams } from 'react-router-dom'
 import Header from '../components/Header/Header'
@@ -39,6 +38,7 @@ const Home = () => {
 		}
 	}
 	useEffect(() => {
+		document.title = 'eCards | Виртуальные карты для вашей рекламы'
 		if (url) {
 			scrollToElement(url)
 		}
@@ -49,13 +49,6 @@ const Home = () => {
 		<>
 			{check !== false && (currentPath === '/en' ? <CookieEN /> : <Cookie />)}
 			<div className={styles.home}>
-				<Helmet>
-					<title>eCards | Виртуальные карты</title>
-					<meta
-						name='description'
-						content='Виртуальные карты для вашей рекламы'
-					/>
-				</Helmet>
 				<Suspense fallback={''}>
 					<Header />
 					<MainScreen />

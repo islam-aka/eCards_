@@ -4,24 +4,17 @@ import Header from '../components/Header/Header'
 import Invite from '../components/Invite/Invite'
 import FormInvite from '../components/FormInvite/FormInvite'
 import { Context } from '..'
-import { Helmet } from 'react-helmet'
 
 const InvitePage = () => {
 	const { store } = useContext(Context)
 
 	useEffect(() => {
+		document.title = 'eCards | Виртуальные карты для вашей рекламы'
 		store.setLink(0)
 	})
 
 	return (
 		<>
-			<Helmet>
-				<title>eCards | Виртуальные карты</title>
-				<meta
-					name='description'
-					content='Виртуальные карты для вашей рекламы'
-				/>
-			</Helmet>
 			<Header />
 			<Invite />
 			<FormInvite />
