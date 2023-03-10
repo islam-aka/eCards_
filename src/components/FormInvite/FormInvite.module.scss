@@ -286,6 +286,7 @@
 				}
 			}
 			.check__btn {
+				transition: 0.2s;
 				margin: 0 auto;
 				display: flex;
 				justify-content: center;
@@ -301,12 +302,15 @@
 				line-height: 120%;
 				letter-spacing: 0.003em;
 				color: $white;
-
+				&:hover {
+					background: #5d43ff;
+				}
 				img {
 					transform: rotate(180deg) translateY(0.5px);
 				}
 			}
 			.check__btnEN {
+				transition: 0.2s;
 				margin: 0 auto;
 				display: flex;
 				justify-content: center;
@@ -321,7 +325,9 @@
 				line-height: 120%;
 				letter-spacing: 0.003em;
 				color: $white;
-
+				&:hover {
+					background: #5d43ff;
+				}
 				img {
 					transform: rotate(180deg) translateY(0.5px);
 				}

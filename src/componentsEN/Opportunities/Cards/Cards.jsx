@@ -52,10 +52,12 @@ const Cards = () => {
 				</div>
 				<div className={styles.card__block}>
 					<p>Card issue</p>
-					<h2>Allocation of cards by buyers and grouping of employees</h2>
+					<h2>Unlimited instant issuance of virtual cards</h2>
 					<p>
-						Connect an unlimited number of employees to your account, create
-						groups of buyers and distribute cards between them
+						VISA, MasterCard, UnionPay cards are available on the platform. Bins
+						are constantly replenished. Only a few clicks are required for the
+						multiple cards issue. There are no restrictions on the amount of
+						cards
 					</p>
 				</div>
 			</div>

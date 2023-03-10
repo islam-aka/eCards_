@@ -13,7 +13,7 @@ const Data = () => {
 		const blockAni = document.getElementById('block-ani-data')
 
 		if (WindowWidth >= 570) {
-			if (scrollPosition >= blockAni.parentNode.parentNode.offsetTop + 700) {
+			if (scrollPosition >= blockAni.parentNode.parentNode.offsetTop + 600) {
 				setState(true)
 			}
 		} else {
@@ -29,37 +29,39 @@ const Data = () => {
 	return (
 		<div id='block-ani-data' className={styles.data}>
 			<div className={styles.blockBlur__data}></div>
-			{state && (
-				<div className={styles.data__left}>
-					<div className={styles.left__block}>
-						<div className={styles.icon}>
-							<img src={icon} alt='icon download' />
-						</div>
-						<div className={styles.left__info}>
-							<h3>Экспорт таблицы</h3>
-							<p>"Выберите в каком формате экспортировать таблицу</p>
-						</div>
-						<div className={styles.left__btn}>
-							<div className={styles.close}>
-								<span>Закрыть</span>
+			<div className={styles.data__left}>
+				{state && (
+					<div className={styles.ani}>
+						<div className={styles.left__block}>
+							<div className={styles.icon}>
+								<img src={icon} alt='icon download' />
 							</div>
-							<div className={styles.export}>
-								<span>Экспортировать</span>
+							<div className={styles.left__info}>
+								<h3>Экспорт таблицы</h3>
+								<p>"Выберите в каком формате экспортировать таблицу</p>
+							</div>
+							<div className={styles.left__btn}>
+								<div className={styles.close}>
+									<span>Закрыть</span>
+								</div>
+								<div className={styles.export}>
+									<span>Экспортировать</span>
+								</div>
+							</div>
+						</div>
+						<div className={styles.checkeds}>
+							<div className={styles.checked__one}>
+								<span className={styles.checked}></span>
+								<p>В формате СSV</p>
+							</div>
+							<div className={styles.checked__two}>
+								<span className={styles.checked}></span>
+								<p>Таблица Excel</p>
 							</div>
 						</div>
 					</div>
-					<div className={styles.checkeds}>
-						<div className={styles.checked__one}>
-							<span className={styles.checked}></span>
-							<p>В формате СSV</p>
-						</div>
-						<div className={styles.checked__two}>
-							<span className={styles.checked}></span>
-							<p>Таблица Excel</p>
-						</div>
-					</div>
-				</div>
-			)}
+				)}
+			</div>
 			<div className={styles.data__right}>
 				<div className={styles.data__icon}>
 					<img src={iconDownload} alt='icon download' />

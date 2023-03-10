@@ -13,7 +13,7 @@ const Data = () => {
 		const blockAni = document.getElementById('block-ani-data')
 
 		if (WindowWidth >= 570) {
-			if (scrollPosition >= blockAni.parentNode.parentNode.offsetTop + 700) {
+			if (scrollPosition >= blockAni.parentNode.parentNode.offsetTop + 600) {
 				setState(true)
 			}
 		} else {
@@ -29,37 +29,39 @@ const Data = () => {
 	return (
 		<div id='block-ani-data' className={styles.data}>
 			<div className={styles.blockBlur__data}></div>
-			{state && (
-				<div className={styles.data__left}>
-					<div className={styles.left__block}>
-						<div className={styles.icon}>
-							<img src={icon} alt=' icon download' />
-						</div>
-						<div className={styles.left__info}>
-							<h3>Export table</h3>
-							<p>Choose format to export the table</p>
-						</div>
-						<div className={styles.left__btn}>
-							<div className={styles.close}>
-								<span>Close</span>
+			<div className={styles.data__left}>
+				{state && (
+					<div className={styles.ani}>
+						<div className={styles.left__block}>
+							<div className={styles.icon}>
+								<img src={icon} alt=' icon download' />
 							</div>
-							<div className={styles.export}>
-								<span>Export</span>
+							<div className={styles.left__info}>
+								<h3>Export table</h3>
+								<p>Choose format to export the table</p>
+							</div>
+							<div className={styles.left__btn}>
+								<div className={styles.close}>
+									<span>Close</span>
+								</div>
+								<div className={styles.export}>
+									<span>Export</span>
+								</div>
+							</div>
+						</div>
+						<div className={styles.checkeds}>
+							<div className={styles.checked__one}>
+								<span className={styles.checked}></span>
+								<p>CSV file</p>
+							</div>
+							<div className={styles.checked__two}>
+								<span className={styles.checked}></span>
+								<p>Excel</p>
 							</div>
 						</div>
 					</div>
-					<div className={styles.checkeds}>
-						<div className={styles.checked__one}>
-							<span className={styles.checked}></span>
-							<p>CSV file</p>
-						</div>
-						<div className={styles.checked__two}>
-							<span className={styles.checked}></span>
-							<p>Excel</p>
-						</div>
-					</div>
-				</div>
-			)}
+				)}
+			</div>
 			<div className={styles.data__right}>
 				<div className={styles.data__icon}>
 					<img src={iconDownload} alt='icon download' />

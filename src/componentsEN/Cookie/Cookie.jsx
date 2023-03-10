@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
-import styles from './Cookie.module.scss'
+import styles from '../../components/Cookie/Cookie.module.scss'
 import cookieImg from '../../assets/img/cookieImg.png'
 import cookieIcon from '../../assets/svg/iconCookie.svg'
 
 const Cookie = () => {
 	const [first, setfirst] = useState(false)
-	const check = () => {}
+	function acceptCookie() {
+		setfirst(true)
+		localStorage.setItem('locales', 'en')
+	}
+
 	return (
 		<div className={!first ? styles.container : styles.container__none}>
 			<div className={styles.cookie}>
@@ -14,23 +18,14 @@ const Cookie = () => {
 						<img src={cookieImg} alt='cookie' />
 					</div>
 					<p>
-						Our website use cookies. By continuing navigating, we assume your
-						permission to deploy cookies as detailed in our Privacy Policy.
+						By using this site, you consent to the use of cookies and other
+						similar technologies to help us make it more convenient for you
 					</p>
-					<span>By using our website you agree to our Cookie Policy</span>
 				</div>
-				<div className={styles.cookie__right}>
-					<div onClick={() => setfirst(true)} className={styles.accept}>
-						<img src={cookieIcon} alt='icon cookie' />
-						<p>Accept cookies</p>
-					</div>
-					<div className={styles.reject} onClick={() => setfirst(true)}>
-						<p>Decline</p>
-					</div>
-					<div className={styles.close} onClick={() => setfirst(true)}>
-						<div className={styles.close__line_top}></div>
-						<div className={styles.close__line_bottom}></div>
-					</div>
+
+				<div onClick={() => acceptCookie()} className={styles.accept}>
+					<img src={cookieIcon} alt='icon cookie' />
+					<p>Accept cookies</p>
 				</div>
 			</div>
 		</div>

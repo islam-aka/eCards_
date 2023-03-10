@@ -11,10 +11,10 @@ const Notification = () => {
 		const scrollPosition = window.scrollY
 		const blockAni = document.getElementById('block-ani-noti')
 
-		if (WindowWidth >= 570) {
+		if (WindowWidth >= 560) {
 			if (
 				scrollPosition >=
-				blockAni.parentNode.parentNode.parentNode.offsetTop + 300
+				blockAni.parentNode.parentNode.offsetTop * 2 - 300
 			) {
 				setState(true)
 			}
@@ -31,6 +31,7 @@ const Notification = () => {
 		window.addEventListener('scroll', scroll)
 		return () => window.removeEventListener('scroll', scroll)
 	})
+
 	return (
 		<div id='block-ani-noti' className={styles.notification}>
 			<div className={styles.notification__left}>
@@ -50,7 +51,7 @@ const Notification = () => {
 			</div>
 			<div className={styles.notification__right}>
 				{state && (
-					<>
+					<div className={styles.ani}>
 						<div className={styles.notiOne}>
 							<img
 								src='https://i.ibb.co/Ch5KFbS/notiOne.png'
@@ -63,7 +64,7 @@ const Notification = () => {
 								alt='notification system'
 							/>
 						</div>
-					</>
+					</div>
 				)}
 			</div>
 			<div className={styles.blockBlur__notification}></div>

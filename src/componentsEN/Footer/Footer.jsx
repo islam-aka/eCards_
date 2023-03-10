@@ -64,11 +64,11 @@ const Footer = () => {
 							</li>
 						</ul>
 					</nav>
-					<div className={styles.footer__info}>
+					{/* <div className={styles.footer__info}>
 						<img src={icon} alt='icon' />
 						<p className={styles.info}>eCards 2023</p>
 						<p>Privacy Policy</p>
-					</div>
+					</div> */}
 				</div>
 				<div className={styles.footer__right}>
 					<div className={styles.btn}>
@@ -102,14 +102,14 @@ const Footer = () => {
 						</a>
 					</h3>
 				</div>
-				<div className={styles.footer__info__mobbile}>
+				{/* <div className={styles.footer__info__mobbile}>
 					<div>
 						<img src={icon} alt='icon' />
 						<p className={styles.info}>eCards 2023</p>
 					</div>
 
 					<p>Privacy Policy</p>
-				</div>
+				</div> */}
 			</div>
 			<div className={styles.footer__bg}>
 				<img src={icons} alt='icon' />

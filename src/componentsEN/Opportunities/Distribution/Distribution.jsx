@@ -28,11 +28,16 @@ const Distribution = () => {
 			}
 		}
 	}
+	useEffect(() => {
+		window.addEventListener('scroll', scroll)
+		return () => window.removeEventListener('scroll', scroll)
+	})
+
 	return (
 		<div className={styles.distribution}>
 			<div className={styles.distribution__left}>
 				<div className={styles.distribution__icon}>
-					<img src={iconProfile} />
+					<img src={iconProfile} alt='wallet icon' />
 				</div>
 				<div className={styles.distribution__info}>
 					<p>Allocation and grouping</p>

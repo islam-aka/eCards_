@@ -11,7 +11,7 @@ import check from '../../assets/svg/check.svg'
 import { Link } from 'react-router-dom'
 
 const FormInvite = () => {
-	const [done, setDone] = useState(false)
+	const [done, setDone] = useState(true)
 	const [bool, setBool] = useState(false)
 	const [invite, setInvite] = useState({
 		name: '',
@@ -120,7 +120,7 @@ const FormInvite = () => {
 								type={'number'}
 								invite={invite}
 								fun={handleChange}
-								labels={'Примерный оборот в месяц на рекламу, $*'}
+								labels={'Примерный оборот в месяц на рекламу*'}
 								name={'turnover'}
 							/>
 						</div>

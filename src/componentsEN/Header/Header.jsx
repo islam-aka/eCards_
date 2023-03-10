@@ -17,6 +17,7 @@ const Header = observer(() => {
 	const [menu, setMenu] = useState(false)
 
 	const handleNavClick = async (index, event) => {
+		setActiveButton(index)
 		const element = document.getElementById(`sectionEN-${index}`)
 		await setMenu(false)
 		await navigate('/en')
@@ -81,7 +82,7 @@ const Header = observer(() => {
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll)
 		return () => window.removeEventListener('scroll', handleScroll)
-	}, [activeButton, menu, store.link])
+	}, [store, store.link, activeButton])
 
 	return (
 		<div className={styles.container}>
@@ -97,7 +98,7 @@ const Header = observer(() => {
 								onMouseLeave={onMouseLeaveNav}
 								href='/en'
 								onClick={event => handleNavClick(1, event)}
-								className={store.link === 1 ? styles.active : styles.noActive}
+								className={activeButton === 1 ? styles.active : styles.noActive}
 							>
 								About eСards
 							</a>
@@ -108,7 +109,7 @@ const Header = observer(() => {
 								onMouseLeave={onMouseLeaveNav}
 								href='/en'
 								onClick={event => handleNavClick(2, event)}
-								className={store.link === 2 ? styles.active : styles.noActive}
+								className={activeButton === 2 ? styles.active : styles.noActive}
 							>
 								Features
 							</a>
@@ -119,7 +120,7 @@ const Header = observer(() => {
 								onMouseLeave={onMouseLeaveNav}
 								href='/en'
 								onClick={event => handleNavClick(3, event)}
-								className={store.link === 3 ? styles.active : styles.noActive}
+								className={activeButton === 3 ? styles.active : styles.noActive}
 							>
 								Pricing
 							</a>
@@ -130,7 +131,7 @@ const Header = observer(() => {
 								onMouseLeave={onMouseLeaveNav}
 								href='/en'
 								onClick={event => handleNavClick(4, event)}
-								className={store.link === 4 ? styles.active : styles.noActive}
+								className={activeButton === 4 ? styles.active : styles.noActive}
 							>
 								Partners
 							</a>
@@ -141,7 +142,7 @@ const Header = observer(() => {
 								onMouseLeave={onMouseLeaveNav}
 								href='/en'
 								onClick={event => handleNavClick(5, event)}
-								className={store.link === 5 ? styles.active : styles.noActive}
+								className={activeButton === 5 ? styles.active : styles.noActive}
 							>
 								Contacts
 							</a>
@@ -151,7 +152,7 @@ const Header = observer(() => {
 				<div className={styles.header__btn}>
 					<div className={styles.btn__logIn}>
 						<a
-							href='https://ecards.cab'
+							href='https://pro.ecards.cab'
 							target='_blank'
 							rel='noopener noreferrer'
 						>
@@ -304,7 +305,7 @@ const Header = observer(() => {
 
 						<div className={styles.btn__logIn}>
 							<a
-								href='https://ecards.cab'
+								href='https://pro.ecards.cab'
 								target='_blank'
 								rel='noopener noreferrer'
 							>

@@ -11,6 +11,7 @@ import Contacts from '../components/Contacts/Contacts'
 import Footer from '../components/Footer/Footer'
 
 const Home = () => {
+	document.title = 'eCards | Виртуальные карты для вашей рекламы'
 	const { url } = useParams()
 
 	function scrollToElement(url) {

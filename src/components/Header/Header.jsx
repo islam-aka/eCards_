@@ -18,6 +18,7 @@ const Header = observer(() => {
 	const [hover, setHover] = useState(false)
 
 	const handleNavClick = async (index, event) => {
+		setActiveButton(index)
 		const element = document.getElementById(`section-${index}`)
 		await setMenu(false)
 		await navigate('/')
@@ -60,6 +61,8 @@ const Header = observer(() => {
 				store.setLink(5)
 				setActiveButton(5)
 				break
+			default:
+				break
 		}
 	}
 
@@ -85,9 +88,10 @@ const Header = observer(() => {
 	}
 
 	useEffect(() => {
+		setActiveButton(store.link)
 		window.addEventListener('scroll', handleScroll)
 		return () => window.removeEventListener('scroll', handleScroll)
-	}, [activeButton, menu, store.link])
+	}, [store, store.link, activeButton])
 
 	return (
 		<div className={styles.container}>
@@ -103,7 +107,7 @@ const Header = observer(() => {
 								onMouseLeave={onMouseLeaveNav}
 								href='/'
 								onClick={event => handleNavClick(1, event)}
-								className={store.link === 1 ? styles.active : styles.noActive}
+								className={activeButton === 1 ? styles.active : styles.noActive}
 							>
 								О eСards
 							</a>
@@ -114,7 +118,7 @@ const Header = observer(() => {
 								onMouseLeave={onMouseLeaveNav}
 								href='/'
 								onClick={event => handleNavClick(2, event)}
-								className={store.link === 2 ? styles.active : styles.noActive}
+								className={activeButton === 2 ? styles.active : styles.noActive}
 							>
 								Возможности
 							</a>
@@ -125,7 +129,7 @@ const Header = observer(() => {
 								onMouseLeave={onMouseLeaveNav}
 								href='/'
 								onClick={event => handleNavClick(3, event)}
-								className={store.link === 3 ? styles.active : styles.noActive}
+								className={activeButton === 3 ? styles.active : styles.noActive}
 							>
 								Условия
 							</a>
@@ -136,7 +140,7 @@ const Header = observer(() => {
 								onMouseLeave={onMouseLeaveNav}
 								href='/'
 								onClick={event => handleNavClick(4, event)}
-								className={store.link === 4 ? styles.active : styles.noActive}
+								className={activeButton === 4 ? styles.active : styles.noActive}
 							>
 								Партнеры
 							</a>
@@ -147,7 +151,7 @@ const Header = observer(() => {
 								onMouseLeave={onMouseLeaveNav}
 								href='/'
 								onClick={event => handleNavClick(5, event)}
-								className={store.link === 5 ? styles.active : styles.noActive}
+								className={activeButton === 5 ? styles.active : styles.noActive}
 							>
 								Контакты
 							</a>
@@ -156,7 +160,11 @@ const Header = observer(() => {
 				</nav>
 				<div className={styles.header__btn}>
 					<div className={styles.btn__logIn}>
-						<a href='https://ecards.cab' target='_blank'>
+						<a
+							href='https://pro.ecards.cab '
+							target='_blank'
+							rel='noopener noreferrer'
+						>
 							<p>Войти</p>
 							<img src={iconRightLogIn} alt='icon right' />
 						</a>
@@ -283,7 +291,11 @@ const Header = observer(() => {
 								</a>
 							</li>
 						</ul>
-						<a href='https://t.me/ecards_support' target='_blank'>
+						<a
+							href='https://t.me/ecards_support'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
 							<div className={styles.support}>
 								<p>Служба поддержки</p>
 								<div>
@@ -306,7 +318,7 @@ const Header = observer(() => {
 							onMouseLeave={onMouseLeave}
 						>
 							<a
-								href='https://ecards.cab'
+								href='https://pro.ecards.cab'
 								target='_blank'
 								rel='noopener noreferrer'
 							>

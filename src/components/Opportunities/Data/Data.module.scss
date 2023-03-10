@@ -27,7 +27,6 @@
 		width: 464px;
 		position: relative;
 		z-index: 7;
-		animation: ani 0.5s linear;
 		@media screen and (max-width: 1200px) {
 			margin-left: -75px;
 			width: 420px;
@@ -47,117 +46,121 @@
 		@media screen and (max-width: 350px) {
 			margin-left: -50px;
 		}
-		.left__block {
-			padding: 20px;
-			width: 360px;
-			height: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			background: $white;
-			box-shadow: 20px 34px 59px 7px rgba(0, 25, 225, 0.05);
-			border-radius: 20px;
-			@media screen and (max-width: 768px) {
-				width: 259.78px;
-			}
-			.icon {
+		.ani {
+			animation: ani 0.5s linear;
+
+			.left__block {
+				padding: 20px;
+				width: 360px;
+				height: auto;
 				display: flex;
-				justify-content: center;
+				flex-direction: column;
 				align-items: center;
-				width: 100px;
-				height: 100px;
-				background: #f1f3ff;
-				border-radius: 50%;
-				margin-bottom: 20px;
-				@media screen and (max-width: 1200px) {
-					width: 85px;
-					height: 85px;
+				background: $white;
+				box-shadow: 20px 34px 59px 7px rgba(0, 25, 225, 0.05);
+				border-radius: 20px;
+				@media screen and (max-width: 768px) {
+					width: 259.78px;
 				}
-			}
-			.left__info {
-				width: 100%;
-				h3 {
-					font-style: normal;
-					font-weight: 500;
-					font-size: 18px;
-					line-height: 120%;
-					letter-spacing: 0.003em;
-					color: $color-text;
-					text-align: center;
-					margin-bottom: 11px;
-					@media screen and (max-width: 1200px) {
-						width: 100%;
-						font-size: 15.4641px;
-						line-height: 120%;
-					}
-				}
-				P {
-					font-weight: 400;
-					font-size: 14px;
-					line-height: 130%;
-					text-align: center;
-					letter-spacing: 0.003em;
-					color: $text-non-active;
-					@media screen and (max-width: 992px) {
-						width: 98%;
-						white-space: nowrap;
-						overflow: hidden;
-						text-overflow: ellipsis;
-					}
-				}
-			}
-			.left__btn {
-				display: flex;
-				gap: 10px;
-				margin-top: 30px;
-				.close {
+				.icon {
 					display: flex;
-					align-items: center;
 					justify-content: center;
-					width: 155px;
-					height: 30px;
-					background: $white;
-					border: 1px solid $primary-main;
-					border-radius: 16px;
-					@media screen and (max-width: 768px) {
-						width: 112.16px;
-						height: 21.68px;
+					align-items: center;
+					width: 100px;
+					height: 100px;
+					background: #f1f3ff;
+					border-radius: 50%;
+					margin-bottom: 20px;
+					@media screen and (max-width: 1200px) {
+						width: 85px;
+						height: 85px;
 					}
-					span {
+				}
+				.left__info {
+					width: 100%;
+					h3 {
+						font-style: normal;
+						font-weight: 500;
+						font-size: 18px;
+						line-height: 120%;
+						letter-spacing: 0.003em;
+						color: $color-text;
+						text-align: center;
+						margin-bottom: 11px;
+						@media screen and (max-width: 1200px) {
+							width: 100%;
+							font-size: 15.4641px;
+							line-height: 120%;
+						}
+					}
+					P {
 						font-weight: 400;
 						font-size: 14px;
 						line-height: 130%;
 						text-align: center;
 						letter-spacing: 0.003em;
-						color: $primary-main;
-						@media screen and (max-width: 768px) {
-							font-size: 10px;
-							line-height: 130%;
+						color: $text-non-active;
+						@media screen and (max-width: 992px) {
+							width: 98%;
+							white-space: nowrap;
+							overflow: hidden;
+							text-overflow: ellipsis;
 						}
 					}
 				}
-				.export {
+				.left__btn {
 					display: flex;
-					align-items: center;
-					justify-content: center;
-					width: 155px;
-					height: 30px;
-					border-radius: 16px;
-					background: #748bff;
-					@media screen and (max-width: 768px) {
-						width: 112.16px;
-						height: 21.68px;
-					}
-					span {
-						font-weight: 400;
-						font-size: 14px;
-						line-height: 130%;
-						text-align: center;
-						letter-spacing: 0.003em;
-						color: $white;
+					gap: 10px;
+					margin-top: 30px;
+					.close {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 155px;
+						height: 30px;
+						background: $white;
+						border: 1px solid $primary-main;
+						border-radius: 16px;
 						@media screen and (max-width: 768px) {
-							font-size: 10px;
+							width: 112.16px;
+							height: 21.68px;
+						}
+						span {
+							font-weight: 400;
+							font-size: 14px;
 							line-height: 130%;
+							text-align: center;
+							letter-spacing: 0.003em;
+							color: $primary-main;
+							@media screen and (max-width: 768px) {
+								font-size: 10px;
+								line-height: 130%;
+							}
+						}
+					}
+					.export {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 155px;
+						height: 30px;
+						border-radius: 16px;
+						background: #748bff;
+						@media screen and (max-width: 768px) {
+							width: 112.16px;
+							height: 21.68px;
+						}
+						span {
+							font-weight: 400;
+							font-size: 14px;
+							line-height: 130%;
+							text-align: center;
+							letter-spacing: 0.003em;
+							color: $white;
+							@media screen and (max-width: 768px) {
+								font-size: 10px;
+								line-height: 130%;
+							}
 						}
 					}
 				}

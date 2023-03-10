@@ -1,30 +1,48 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styles from './DropDown.module.scss'
 import iconBottom from '../../assets/svg/rightBlue.svg'
-import { useTranslation } from 'react-i18next'
 import '../../i18next'
 import { useNavigate } from 'react-router-dom'
 
 const DropDown = () => {
-	const { i18n } = useTranslation()
 	const [active, setActive] = useState(true)
+	const dropdownRef = useRef(null)
 	const currentPath = window.location.pathname
 	const navigate = useNavigate()
+
 	const dropDownActive = () => {
 		setActive(!active)
 	}
 
-	const check = () => {
+	const checkDropDown = () => {
 		if (currentPath === '/invite') {
 			navigate('/inviteEN')
 			localStorage.setItem('locales', 'en')
 		} else {
+			localStorage.setItem('locales', 'en')
 			navigate('/en')
 		}
 	}
 
+	useEffect(() => {
+		const handleClickOutside = event => {
+			if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+				setActive(true)
+			}
+		}
+
+		window.addEventListener('scroll', handleClickOutside)
+
+		document.addEventListener('click', handleClickOutside, true)
+		return () => {
+			document.removeEventListener('click', handleClickOutside, true)
+		}
+	}, [])
 	return (
-		<div className={!active ? styles.dropdown : styles.dropdown__none}>
+		<div
+			ref={dropdownRef}
+			className={!active ? styles.dropdown : styles.dropdown__none}
+		>
 			<div className={styles.dropdown__select} onClick={dropDownActive}>
 				<span className={styles.select}>RU</span>
 				<img
@@ -37,7 +55,10 @@ const DropDown = () => {
 				<div className={styles.dropdown__list__itemActive}>
 					<p>RU</p>
 				</div>
-				<div className={styles.dropdown__list__item} onClick={() => check()}>
+				<div
+					className={styles.dropdown__list__item}
+					onClick={() => checkDropDown()}
+				>
 					<p>EN</p>
 				</div>
 			</div>

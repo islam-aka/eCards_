@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import Cookie from './components/Cookie/Cookie'
 import CookieEN from './componentsEN/Cookie/Cookie'
 
@@ -10,19 +10,22 @@ import InvitePageEN from './pages/InvitePageEN'
 
 function App() {
 	const [check, setCheck] = useState(true)
+	const navigate = useNavigate()
 	const currentPath = window.location.pathname
-	function checkCookie() {
-		const cookies = document.cookie.split(';')
-		const myCookie = cookies.find(cookie =>
-			cookie.trim().startsWith('language=')
-		)
 
-		if (localStorage.getItem('i18nextLng')) {
+	const checkCookie = () => {
+		if (localStorage.getItem('locales') !== null) {
+			if (localStorage.getItem('locales') === 'ru') {
+				navigate('/')
+			} else {
+				navigate('/en')
+			}
+			setCheck(false)
 		} else {
-			setCheck(myCookie === undefined)
+			navigate('/en')
+			setCheck(true)
 		}
 	}
-
 	useEffect(() => {
 		checkCookie()
 	}, [check])

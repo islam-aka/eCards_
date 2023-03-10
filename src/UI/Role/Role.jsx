@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styles from './Role.module.scss'
 import icon from '../../assets/svg/RightIcon.svg'
 import '../../i18next'
 
 const Role = ({ value, setValue }) => {
 	const [active, setActive] = useState(true)
+	const dropdownRef = useRef(null)
 
 	const dropDownActive = () => {
 		setActive(!active)
@@ -15,12 +16,25 @@ const Role = ({ value, setValue }) => {
 		setValue({ ...value, role: str })
 	}
 
-	useEffect(() => {}, [active])
+	useEffect(() => {
+		const handleClickOutside = event => {
+			if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+				setActive(true)
+			}
+		}
+
+		window.addEventListener('scroll', handleClickOutside)
+
+		document.addEventListener('click', handleClickOutside, true)
+		return () => {
+			document.removeEventListener('click', handleClickOutside, true)
+		}
+	})
 
 	return (
 		<div
 			className={!active ? styles.dropdown : styles.dropdown__none}
-			tabIndex={6}
+			ref={dropdownRef}
 		>
 			<div className={styles.dropdown__select} onClick={dropDownActive}>
 				{active ? (

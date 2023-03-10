@@ -11,6 +11,7 @@ import Contacts from '../componentsEN/Contacts/Contacts'
 import Footer from '../componentsEN/Footer/Footer'
 
 const Home = () => {
+	document.title = 'eCards | Virtual cards for your advertising'
 	const { url } = useParams()
 
 	function scrollToElement(url) {
@@ -19,7 +20,6 @@ const Home = () => {
 			element.scrollIntoView({ behavior: 'smooth' })
 		}
 	}
-
 	useEffect(() => {
 		if (url) {
 			scrollToElement(url)

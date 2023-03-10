@@ -115,6 +115,8 @@
 	}
 
 	.distribution__right {
+		width: auto;
+		height: auto;
 		@media screen and (max-width: 1430px) {
 			margin-right: -200px;
 		}
@@ -122,19 +124,19 @@
 			margin-right: -295px;
 		}
 		@media screen and (max-width: 768px) {
-			width: 400px;
 			margin-right: -255px;
 		}
 		@media screen and (max-width: 560px) {
 			margin-right: -155px;
 			margin-left: 55px;
 			margin-right: 0;
+			height: 200px;
 		}
 		.ani {
 			transform: translate(0, 0);
 			animation: ani 0.5s linear;
 			position: relative;
-			width: 581.37px;
+			width: 550px;
 			height: 286px;
 			background: $white;
 			box-shadow: 20px 34px 59px 7px rgba(0, 25, 225, 0.05);
