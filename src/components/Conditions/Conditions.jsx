@@ -25,8 +25,6 @@ const Conditions = () => {
 		return () => window.removeEventListener('scroll', test)
 	}, [])
 
-	const { t } = useTranslation()
-
 	return (
 		<div id='section3' className={styles.container}>
 			<div id='section-3' className={styles.link}></div>

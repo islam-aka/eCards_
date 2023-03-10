@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from 'react'
-import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { Context } from '../..'
 import iconRight from '../../assets/svg/right.svg'
@@ -24,8 +23,6 @@ const Conditions = () => {
 		window.addEventListener('scroll', test)
 		return () => window.removeEventListener('scroll', test)
 	}, [])
-
-	const { t } = useTranslation()
 
 	return (
 		<div id='sectionEN3' className={styles.container}>

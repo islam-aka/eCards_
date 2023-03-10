@@ -5,10 +5,8 @@ import iconTwo from '../../assets/svg/icon-logo 2.svg'
 import iconRight from '../../assets/svg/rightLogIn.svg'
 import { Link } from 'react-router-dom'
 import { Context } from '../..'
-import { useTranslation } from 'react-i18next'
 
 const Partners = () => {
-	const { t } = useTranslation()
 	const { store } = useContext(Context)
 	function test() {
 		const scrollPosition = window.scrollY
@@ -25,7 +23,7 @@ const Partners = () => {
 	useEffect(() => {
 		window.addEventListener('scroll', test)
 		return () => window.removeEventListener('scroll', test)
-	}, [])
+	})
 	return (
 		<div id='sectionEN4' className={styles.container}>
 			<div id='sectionEN-4' className={styles.link}></div>

@@ -11,7 +11,7 @@ const InvitePage = () => {
 
 	useEffect(() => {
 		store.setLink(0)
-	}, [])
+	})
 
 	return (
 		<>

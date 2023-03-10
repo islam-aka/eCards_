@@ -1,7 +1,7 @@
-import React, { Suspense, useEffect } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import styles from './Home.module.scss'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import Header from '../components/Header/Header'
 import MainScreen from '../components/MainScreen/MainScreen'
 import About from '../components/About/About'
@@ -10,10 +10,14 @@ import Conditions from '../components/Conditions/Conditions'
 import Partners from '../components/Partners/Partners'
 import Contacts from '../components/Contacts/Contacts'
 import Footer from '../components/Footer/Footer'
+import Cookie from '../components/Cookie/Cookie'
+import CookieEN from '../componentsEN/Cookie/Cookie'
 
 const Home = () => {
 	const { url } = useParams()
-
+	const [check, setCheck] = useState(true)
+	const navigate = useNavigate()
+	const currentPath = window.location.pathname
 	function scrollToElement(url) {
 		const element = document.getElementById(`#${url}`)
 		if (element) {
@@ -21,28 +25,45 @@ const Home = () => {
 		}
 	}
 
+	const checkCookie = () => {
+		if (localStorage.getItem('locales') !== null) {
+			if (localStorage.getItem('locales') === 'ru') {
+				navigate('/')
+			} else {
+				navigate('/en')
+			}
+			setCheck(false)
+		} else {
+			navigate('/en')
+			setCheck(true)
+		}
+	}
 	useEffect(() => {
 		if (url) {
 			scrollToElement(url)
 		}
-	}, [url])
+		checkCookie()
+	}, [check, url])
 
 	return (
-		<div className={styles.home}>
-			<Helmet>
-				<title>eCards | Виртуальные карты для вашей рекламы</title>
-			</Helmet>
-			<Suspense fallback={''}>
-				<Header />
-				<MainScreen />
-				<About />
-				<Opportunities />
-				<Conditions />
-				<Partners />
-				<Contacts />
-				<Footer />
-			</Suspense>
-		</div>
+		<>
+			{check !== false && (currentPath === '/en' ? <CookieEN /> : <Cookie />)}
+			<div className={styles.home}>
+				<Helmet>
+					<title>eCards | Виртуальные карты для вашей рекламы</title>
+				</Helmet>
+				<Suspense fallback={''}>
+					<Header />
+					<MainScreen />
+					<About />
+					<Opportunities />
+					<Conditions />
+					<Partners />
+					<Contacts />
+					<Footer />
+				</Suspense>
+			</div>
+		</>
 	)
 }
 

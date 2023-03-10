@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react'
+import React, { useContext, useEffect } from 'react'
 import styles from './Opportunities.module.scss'
 import Score from './Score/Score'
 import Cards from './Cards/Cards'
@@ -8,11 +8,9 @@ import Data from './Data/Data'
 import Notification from './Notification/Notification'
 import { Context } from '../..'
 import { useInView } from 'react-intersection-observer'
-import { useTranslation } from 'react-i18next'
 import blockBlur from '../../assets/cards/blockBlur.png'
 
 const Opportunities = () => {
-	const { t } = useTranslation()
 	const { store } = useContext(Context)
 	const [ref, inView] = useInView({ threshold: 0.5 })
 
