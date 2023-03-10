@@ -11,7 +11,7 @@ import check from '../../assets/svg/check.svg'
 import { Link } from 'react-router-dom'
 
 const FormInvite = () => {
-	const [done, setDone] = useState(true)
+	const [done, setDone] = useState(false)
 	const [bool, setBool] = useState(false)
 	const [invite, setInvite] = useState({
 		name: '',
